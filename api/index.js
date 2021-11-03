@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 8800;
+const path = require('path');
 
 // library
 var morgan = require('morgan');
@@ -17,18 +18,46 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
 
 // middleware
 app.use(morgan('dev'));
+
 app.use(helmet());
+
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
+
 // router
+const userRoute = require('./routers/userRoute');
 const authRoute = require('./routers/authRoute');
 const postRoute = require('./routers/postRoute');
+const commentRoute = require('./routers/commentRoute');
+const subCommentRoute = require('./routers/subCommentRoute');
+const storyRoute = require('./routers/storyRoute');
+const conversationRoute = require('./routers/conversationRoute');
+const messageRoute = require('./routers/messageRoute');
 
 // app
+app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
+app.use('/api/comments', commentRoute);
+app.use('/api/subcomments', subCommentRoute);
+app.use('/api/stories', storyRoute);
+app.use('/api/conversations', conversationRoute);
+app.use('/api/messages', messageRoute);
 
+// upload file
+const storagePost = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/images/post');
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+  // Date.now() + '_' +
+});
+
+const upload = multer({ storage: storagePost });
 //Uploading multiple files
 app.post(
   '/api/uploads',
