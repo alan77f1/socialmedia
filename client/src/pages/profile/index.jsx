@@ -85,6 +85,48 @@ function Profile(props) {
                         </ul>
                         <div className='mainIntroduceBtn'>Chỉnh sửa chi tiết</div>
                     </div>
+
+                    <div className='mainFriend'>
+                        <div className='mainFriendTop'>
+                            <div className='mainFriendTopTitle'>Bạn bè</div>
+                            <div className='mainFriendTopLink'>Xem tất cả bạn bè</div>
+                        </div>
+                        <div className='mainFriendInfo'>545 người bạn</div>
+                        <ul className='mainFriendList'>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                            <li className='mainFriendItem'>
+                                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                                <div className='mainFriendItemName'>Phương thảo</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='profileMainRight'>profileMainRight</div>
             </div>
