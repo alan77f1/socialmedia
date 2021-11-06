@@ -17,53 +17,33 @@ function SideBar({ currentUser }) {
           </div>
         </li>
         <li className='sideBarItem'>
-          <img
-            src='./assets/sidebar/friend.png'
-            alt=''
-            className='sideBarItemBadge'
-          />
+          <img src='./assets/sidebar/friend.png' alt='' className='sideBarItemBadge' />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>Bạn bè</span>
             <span className='sideBarItemInfo'>3 Bạn mới</span>
           </div>
         </li>
         <li className='sideBarItem'>
-          <img
-            src='./assets/sidebar/group.png'
-            alt=''
-            className='sideBarItemBadge'
-          />
+          <img src='./assets/sidebar/group.png' alt='' className='sideBarItemBadge' />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>Nhóm</span>
             <span className='sideBarItemInfo'>9+ dấu trang mới</span>
           </div>
         </li>
         <li className='sideBarItem'>
-          <img
-            src='./assets/sidebar/store.png'
-            alt=''
-            className='sideBarItemBadge'
-          />
+          <img src='./assets/sidebar/store.png' alt='' className='sideBarItemBadge' />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>Marketplace</span>
           </div>
         </li>
         <li className='sideBarItem'>
-          <img
-            src='./assets/sidebar/flag.png'
-            alt=''
-            className='sideBarItemBadge'
-          />
+          <img src='./assets/sidebar/flag.png' alt='' className='sideBarItemBadge' />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>Trang</span>
           </div>
         </li>
         <li className='sideBarItem'>
-          <img
-            src='./assets/sidebar/video.png'
-            alt=''
-            className='sideBarItemBadge'
-          />
+          <img src='./assets/sidebar/video.png' alt='' className='sideBarItemBadge' />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>Watch</span>
             <span className='sideBarItemInfo'>7 Video mới</span>
@@ -91,15 +71,9 @@ function SideBar({ currentUser }) {
           </div>
         </li>
         <li className='shortcuts'>
-          <img
-            src='./assets/ads/timviecnhanh.jpg'
-            alt=''
-            className='shortcutsImg'
-          />
+          <img src='./assets/ads/timviecnhanh.jpg' alt='' className='shortcutsImg' />
           <div className='shortcutsText'>
-            <span className='shortcutsName'>
-              Cộng đồng Front-end(HTML/CSS/JS)
-            </span>
+            <span className='shortcutsName'>Cộng đồng Front-end(HTML/CSS/JS)</span>
           </div>
         </li>
         <li className='shortcuts'>
@@ -116,15 +90,9 @@ function SideBar({ currentUser }) {
           </div>
         </li>
         <li className='shortcuts'>
-          <img
-            src='./assets/ads/timviecnhanh.jpg'
-            alt=''
-            className='shortcutsImg'
-          />
+          <img src='./assets/ads/timviecnhanh.jpg' alt='' className='shortcutsImg' />
           <div className='shortcutsText'>
-            <span className='shortcutsName'>
-              Cộng đồng Front-end(HTML/CSS/JS)
-            </span>
+            <span className='shortcutsName'>Cộng đồng Front-end(HTML/CSS/JS)</span>
           </div>
         </li>
         <li className='shortcuts'>
@@ -159,9 +127,8 @@ function SideBar({ currentUser }) {
         </li>
       </ul>
       <div className='sideBarPolicies'>
-        <a href='/'>Quyền riêng tư</a> · <a href='/'>Điều khoản</a> ·
-        <a href='/'>Quảng cáo</a> · <a href='/'>Lựa chọn quảng cáo</a> ·
-        <a href='/'>Cookie</a> · <a href='/'>Xem thêm</a> ·
+        <a href='/'>Quyền riêng tư</a> · <a href='/'>Điều khoản</a> ·<a href='/'>Quảng cáo</a> ·{' '}
+        <a href='/'>Lựa chọn quảng cáo</a> ·<a href='/'>Cookie</a> · <a href='/'>Xem thêm</a> ·
         <a href='/'>Facebook © 2021</a>
       </div>
     </div>
