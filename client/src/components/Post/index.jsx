@@ -1,6 +1,7 @@
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import PublicIcon from '@material-ui/icons/Public';
 import { format } from 'timeago.js';
+import './Post.css';
 
 Post.propTypes = {};
 
