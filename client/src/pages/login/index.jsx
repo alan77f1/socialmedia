@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import './Login.css';
 import CloseIcon from '@mui/icons-material/Close';
+import { loginCall, registerCall } from '../../context/useAuth';
 import { AuthContext } from '../../context/AuthProvider';
 
 Login.propTypes = {};
@@ -9,6 +10,10 @@ function Login(props) {
     const [openRegister, setOpenRegister] = useState(false);
 
     const yyyy = new Date().getFullYear();
+
+    const email = useRef();
+    const password = useRef();
+    const firstName = useRef();
     const lastName = useRef();
     const dayOfBirth = useRef();
     const monthOfBirth = useRef();
@@ -17,10 +22,18 @@ function Login(props) {
 
     const { user, isFetching, dispatch } = useContext(AuthContext);
 
+    const handleLogin = (e) => {
+        e.preventDefault();
+        loginCall({ email: email.current.value, password: password.current.value }, dispatch);
+    };
+
     const handleRegister = (e) => {
         e.preventDefault();
         const newUser = {
+            firstName: firstName.current.value,
             lastName: lastName.current.value,
+            email: email.current.value,
+            password: password.current.value,
             birthDay: `${dayOfBirth.current.value}/${monthOfBirth.current.value}/${yearOfBirth.current.value}`,
             sex: sex.current.value,
         };
@@ -41,12 +54,12 @@ function Login(props) {
                     </h3>
                 </div>
                 <div className='loginRight'>
-                    <form className='loginRightForm'>
+                    <form className='loginRightForm' onSubmit={handleLogin}>
                         <div className='loginRightFormInput'>
-                            <input type='text' placeholder='Email' />
+                            <input type='text' placeholder='Email' ref={email} />
                         </div>
                         <div className='loginRightFormInput'>
-                            <input type='password' placeholder='Mật khẩu' />
+                            <input type='password' placeholder='Mật khẩu' ref={password} />
                         </div>
 
                         {isFetching ? (
@@ -95,7 +108,7 @@ function Login(props) {
                                 <div className=' grid__col-6-12'>
                                     <div className='grid__col'>
                                         <div className='registerInput'>
-                                            <input type='text' placeholder='Họ' />
+                                            <input type='text' placeholder='Họ' ref={firstName} />
                                         </div>
                                     </div>
                                 </div>
@@ -112,6 +125,7 @@ function Login(props) {
                                             <input
                                                 type='text'
                                                 placeholder='Số di động hoặc email'
+                                                ref={email}
                                             />
                                         </div>
                                     </div>
@@ -119,7 +133,11 @@ function Login(props) {
                                 <div className=' grid__col-12-12'>
                                     <div className='grid__col'>
                                         <div className='registerInput'>
-                                            <input type='text' placeholder='Mật khẩu' />
+                                            <input
+                                                type='text'
+                                                placeholder='Mật khẩu'
+                                                ref={password}
+                                            />
                                         </div>
                                     </div>
                                 </div>
