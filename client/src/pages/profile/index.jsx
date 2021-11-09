@@ -40,11 +40,17 @@ function Profile(props) {
       <div className='profileTopBg2'></div>
 
       <div className='profileTop'>
-        <img src={`${PF}/coverImg/cover1.jpeg`} alt='' className='profileTopCoverImg' />
+        <img
+          src={`${PF}/coverImg/cover1.jpeg`}
+          alt=''
+          className='profileTopCoverImg'
+        />
         <div className='profileTopWrap'>
           <div className='profileTopAvatar'>
             <img
-              src={`${PF}/${currentUser.avatar ? `person/${currentUser.avatar}` : NO_AVARTAR}`}
+              src={`${PF}/${
+                currentUser.avatar ? `person/${currentUser.avatar}` : NO_AVARTAR
+              }`}
               alt=''
               className='profileTopAvatarImg'
             />
@@ -83,7 +89,9 @@ function Profile(props) {
           <li className='profileBottomActionItem'>
             <CreateIcon style={{ fontSize: 'inherit' }} />
 
-            <div className='profileBottomActionItemText'>Chỉnh sửa trang cá nhân</div>
+            <div className='profileBottomActionItemText'>
+              Chỉnh sửa trang cá nhân
+            </div>
           </li>
 
           <li className='profileBottomActionItem'>
@@ -97,14 +105,24 @@ function Profile(props) {
             <div className='mainIntroduceTitle'>Giới thiệu</div>
             <ul className='mainIntroduceList'>
               <li className='mainIntroduceItem'>
-                <img src='./assets/profile/bagIcon.png' alt='' className='mainIntroduceItemBadge' />
-                <div className='mainIntroduceItemText'>Đã tốt nghiệp tại THPT Sơn Thịnh</div>
+                <img
+                  src='./assets/profile/bagIcon.png'
+                  alt=''
+                  className='mainIntroduceItemBadge'
+                />
+                <div className='mainIntroduceItemText'>
+                  Đã tốt nghiệp tại THPT Sơn Thịnh
+                </div>
               </li>
               <li className='mainIntroduceItem'>
-                <img src='./assets/profile/bagIcon.png' alt='' className='mainIntroduceItemBadge' />
+                <img
+                  src='./assets/profile/bagIcon.png'
+                  alt=''
+                  className='mainIntroduceItemBadge'
+                />
                 <div className='mainIntroduceItemText'>
-                  sinh viên tại Đại học Bách khoa Hà Nội - Hanoi University of Science and
-                  Technology
+                  sinh viên tại Đại học Bách khoa Hà Nội - Hanoi University of
+                  Science and Technology
                 </div>
               </li>
               <li className='mainIntroduceItem'>
@@ -129,7 +147,9 @@ function Profile(props) {
                   alt=''
                   className='mainIntroduceItemBadge'
                 />
-                <div className='mainIntroduceItemText'>Tham gia vào Tháng 6 năm 2016</div>
+                <div className='mainIntroduceItemText'>
+                  Tham gia vào Tháng 6 năm 2016
+                </div>
               </li>
             </ul>
             <div className='mainIntroduceBtn'>Chỉnh sửa chi tiết</div>
@@ -143,35 +163,67 @@ function Profile(props) {
             <div className='mainFriendInfo'>545 người bạn</div>
             <ul className='mainFriendList'>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
               <li className='mainFriendItem'>
-                <img src='./assets/ad.png' alt='' className='mainFriendItemImg' />
+                <img
+                  src='./assets/ad.png'
+                  alt=''
+                  className='mainFriendItemImg'
+                />
                 <div className='mainFriendItemName'>Phương thảo</div>
               </li>
             </ul>
