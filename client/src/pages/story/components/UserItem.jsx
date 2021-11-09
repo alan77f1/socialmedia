@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { NO_AVARTAR, PF } from '../../../constants';
 
@@ -6,11 +7,27 @@ UserItem.propTypes = {
 };
 
 function UserItem(props) {
-  const { followingUser, storyAuthor, changeStoryView = null } = props;
+  const {
+    followingUser,
+    storyAuthor,
+    changeStoryView = null,
+    currentUser,
+    stories,
+  } = props;
+  const [isWatched, setIsWatched] = useState(true);
 
   const changeStoryViewerHandler = (user) => {
     if (changeStoryView) changeStoryView(user);
   };
+
+  useEffect(() => {
+    const storyUser = stories.filter(
+      (storyUser) => storyUser[0].userId === followingUser._id
+    )[0];
+    setIsWatched(
+      storyUser.every((aStory) => aStory.viewerIds.includes(currentUser._id))
+    );
+  }, [currentUser, followingUser, stories]);
 
   return (
     <li
@@ -21,7 +38,13 @@ function UserItem(props) {
       onClick={() => changeStoryViewerHandler(followingUser)}
     >
       <div className='storyUserInfo'>
-        <div className=''>
+        <div
+          className={
+            isWatched
+              ? 'storyUserInfoAvatarWrap watched'
+              : 'storyUserInfoAvatarWrap'
+          }
+        >
           <img
             src={`${PF}/${
               followingUser.avatar
