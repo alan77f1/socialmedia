@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NO_AVARTAR, PF } from '../../constants';
 import { sortDateUtils } from '../../utils/utils';
+import './Story.css';
 
 StoryItem.propTypes = {};
 
