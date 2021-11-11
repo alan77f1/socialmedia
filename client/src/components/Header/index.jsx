@@ -12,7 +12,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { NO_AVARTAR, PF } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
-
+import './Header.css';
 Header.propTypes = {};
 
 function Header(props) {
