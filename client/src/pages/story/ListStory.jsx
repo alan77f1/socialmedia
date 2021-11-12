@@ -1,18 +1,21 @@
 import axios from 'axios';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import StoryItem from './components/StoryItem';
 
 ListStory.propTypes = {};
 
 function ListStory(props) {
   const { user: currentUser } = useContext(AuthContext);
+  const [stories, setStories] = useState([]);
 
   useEffect(() => {
     (async () => {
       // get stories
 
       const storiesRes = await axios.get(`/stories/${currentUser._id}`);
+      setStories(storiesRes.data);
     })();
   }, [currentUser]);
 
@@ -43,7 +46,11 @@ function ListStory(props) {
             Bộ sưu tập tin của bạn bè, các trang và nhóm mà bạn theo dõi
           </div>
         </div>
-        <div className='pageRightStoryList'></div>
+        <div className='pageRightStoryList'>
+          {stories.map((story, index) => (
+            <StoryItem key={index} story={story} currentUser={currentUser} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import StoryForm from '../../components/Story/StoryForm';
-import './StoryPage.css';
+
 import { AuthContext } from '../../context/AuthProvider';
 import { NO_AVARTAR, PF } from '../../constants';
 
