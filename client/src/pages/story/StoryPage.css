@@ -241,3 +241,34 @@
 .pageLeftBtnText {
   margin-left: 8px;
 }
+
+/* My reaction */
+.myReaction {
+  position: absolute;
+  bottom: 32px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+}
+
+.myReactionIconList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.myReactionIconItem {
+  width: 25px;
+  height: 25px;
+}
+
+.myReactionIconItem + .myReactionIconItem {
+  margin-left: 2px;
+}
+
+.myReactionText {
+  margin-left: 16px;
+  font-size: 14px;
+  color: #fff;
+}
