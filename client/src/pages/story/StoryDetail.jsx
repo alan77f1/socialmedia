@@ -9,6 +9,7 @@ import UserItem from './components/UserItem';
 
 StoryDetail.propTypes = {};
 
+// code ngu, khong ngoi phan tich tu dau, gio tach component kho !!!!!!!!!!!!!!
 function StoryDetail(props) {
   const { user: currentUser } = useContext(AuthContext);
   const [stories, setStories] = useState(); /* total story */
