@@ -1,8 +1,14 @@
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
+import { format } from 'timeago.js';
 import { NO_AVARTAR, PF } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
+import {
+  chooseLikeTypeUtils,
+  likeBtnHanderUtils,
+  likeUtils,
+} from '../../utils/utils';
 
 SubCommentItem.propTypes = {};
 
@@ -24,6 +30,15 @@ function SubCommentItem({ subComment }) {
   };
 
   const chooseLikeTypeHandler = async (data) => {
+    chooseLikeTypeUtils(
+      likes,
+      currentUser,
+      data,
+      setLikes,
+      setCurrentLikeIndex,
+      setOpenChooseLikeType
+    );
+
     await axios.put(`/subcomments/${subComment._id}/changelikes`, {
       userId: currentUser._id,
       type: data.type,
@@ -38,11 +53,19 @@ function SubCommentItem({ subComment }) {
       styleColor: 'rgb(32, 120, 244)',
       text: 'Thích',
     };
+
+    likeBtnHanderUtils(likes, currentUser, setLikes, setCurrentLikeIndex, data);
+    await axios.put(`/subcomments/${subComment._id}/likes`, {
+      userId: currentUser._id,
+      type: data.type,
+      text: data.text,
+      styleColor: data.styleColor,
+    });
   };
 
   // view icon liketype
   useEffect(() => {
-    setLikeViewer('');
+    setLikeViewer(likeUtils(likes));
   }, [likes]);
 
   return (
@@ -245,7 +268,9 @@ function SubCommentItem({ subComment }) {
               </ul>
             </div>
             <div className='commentItemContentActionItem'>Phản hồi</div>
-            <div className='commentItemContentTime'></div>
+            <div className='commentItemContentTime'>
+              {format(subComment.createdAt)}
+            </div>
           </div>
         </div>
       </div>
