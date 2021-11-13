@@ -1,9 +1,50 @@
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
 import { NO_AVARTAR, PF } from '../../constants';
+import { AuthContext } from '../../context/AuthProvider';
 
 SubCommentItem.propTypes = {};
 
 function SubCommentItem({ subComment }) {
+  const { user: currentUser } = useContext(AuthContext);
+  const [openChooseLikeType, setOpenChooseLikeType] = useState(false);
+  const [likes, setLikes] = useState(subComment.likes);
+  const [currentLikeIndex, setCurrentLikeIndex] = useState(
+    likes.findIndex((like) => like.userId === currentUser._id)
+  );
+  const [likeViewer, setLikeViewer] = useState([]);
+
+  const handleMouseEnter = () => {
+    setOpenChooseLikeType(true);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenChooseLikeType(false);
+  };
+
+  const chooseLikeTypeHandler = async (data) => {
+    await axios.put(`/subcomments/${subComment._id}/changelikes`, {
+      userId: currentUser._id,
+      type: data.type,
+      text: data.text,
+      styleColor: data.styleColor,
+    });
+  };
+
+  const likeBtnHandler = async () => {
+    const data = {
+      type: 'like',
+      styleColor: 'rgb(32, 120, 244)',
+      text: 'Thích',
+    };
+  };
+
+  // view icon liketype
+  useEffect(() => {
+    setLikeViewer('');
+  }, [likes]);
+
   return (
     <>
       <div className='commentItemAvatar'>
@@ -23,21 +64,36 @@ function SubCommentItem({ subComment }) {
           <div className='commentItemContentLeft'>
             <div className='commentItemContentName'>{subComment.fullName}</div>
             <div className='commentItemContentText'>{subComment.text}</div>
-            <div className='reportItemQuantity'></div>
-            <ul className='reportItemDetail'>
-              <li className='reportItemDetailItem'>
-                <img src='./assets/feed/like.svg' alt='' />
-                <div className='reportItemDetailItemQuantity'>53</div>
-              </li>
-              <li className='reportItemDetailItem'>
-                <img src='./assets/feed/haha.svg' alt='' />
-                <div className='reportItemDetailItemQuantity'>32</div>
-              </li>
-              <li className='reportItemDetailItem'>
-                <img src='./assets/feed/angry.svg' alt='' />
-                <div className='reportItemDetailItemQuantity'>32</div>
-              </li>
-            </ul>
+            {likeViewer.length > 0 && (
+              <ul
+                className={
+                  subComment.text.length <= 35
+                    ? 'commentItemContentReportAction shortComment'
+                    : 'commentItemContentReportAction'
+                }
+              >
+                {likeViewer.map((element, index) => (
+                  <li key={index} className='reportItem'>
+                    <img src={`./assets/feed/${element[0]}.svg`} alt='' />
+                  </li>
+                ))}
+                <div className='reportItemQuantity'>{likes.length}</div>
+                <ul className='reportItemDetail'>
+                  <li className='reportItemDetailItem'>
+                    <img src='./assets/feed/like.svg' alt='' />
+                    <div className='reportItemDetailItemQuantity'>53</div>
+                  </li>
+                  <li className='reportItemDetailItem'>
+                    <img src='./assets/feed/haha.svg' alt='' />
+                    <div className='reportItemDetailItemQuantity'>32</div>
+                  </li>
+                  <li className='reportItemDetailItem'>
+                    <img src='./assets/feed/angry.svg' alt='' />
+                    <div className='reportItemDetailItemQuantity'>32</div>
+                  </li>
+                </ul>
+              </ul>
+            )}
           </div>
           <div className='commentItemContentRight'>
             <MoreHorizIcon />
@@ -45,52 +101,141 @@ function SubCommentItem({ subComment }) {
         </div>
         <div className='commentItemBottom'>
           <div className='commentItemContentAction'>
-            <div>
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {currentLikeIndex >= 0 ? (
+                <div
+                  className='commentItemContentActionItem'
+                  style={{ color: likes[currentLikeIndex]?.styleColor }}
+                  onClick={likeBtnHandler}
+                >
+                  {likes[currentLikeIndex]?.text}
+                </div>
+              ) : (
+                <div
+                  className='commentItemContentActionItem'
+                  onClick={likeBtnHandler}
+                >
+                  Thích
+                </div>
+              )}
+
               {/* Like comment list btn */}
-              <ul>
-                <li className='commentLikeBtnItem'>
+              <ul
+                className={
+                  openChooseLikeType
+                    ? 'commentLikeBtnList open'
+                    : 'commentLikeBtnList'
+                }
+              >
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'like',
+                      text: 'Thích',
+                      styleColor: 'rgb(32, 120, 244)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/like.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'haha',
+                      text: 'Haha',
+                      styleColor: 'rgb(247, 177, 37)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/haha.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'lovely',
+                      text: 'Thương thương',
+                      styleColor: 'rgb(247, 177, 37)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/lovely.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'heart',
+                      text: 'Yêu thích',
+                      styleColor: 'rgb(243, 62, 88)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/heart.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'wow',
+                      text: 'Wow',
+                      styleColor: 'rgb(247, 177, 37)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/wow.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'sad',
+                      text: 'Buồn',
+                      styleColor: 'rgb(247, 177, 37)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/sad.svg'
                     alt=''
                     className='commentLikeBtnItemImg'
                   />
                 </li>
-                <li className='commentLikeBtnItem'>
+                <li
+                  className='commentLikeBtnItem'
+                  onClick={() =>
+                    chooseLikeTypeHandler({
+                      type: 'angry',
+                      text: 'Phẫn nộ',
+                      styleColor: 'rgb(233, 113, 15)',
+                    })
+                  }
+                >
                   <img
                     src='./assets/feed/angry.svg'
                     alt=''
