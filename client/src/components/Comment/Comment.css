@@ -1,0 +1,131 @@
+.comment {
+  padding-top: 12px;
+}
+
+.commentTop {
+  display: flex;
+  align-items: center;
+}
+
+.commentTopAvatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+/* css for feedback comment*/
+.commentTop.feedback {
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.commentTop.feedback .commentTopAvatar {
+  width: 25px;
+  height: 25px;
+}
+
+.commentTopInput {
+  padding: 2px 2px 2px 16px;
+  background-color: #3a3b3c;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  position: relative;
+}
+
+.commentTopInput input {
+  background-color: #3a3b3c;
+  border: none;
+  flex: 1;
+  color: #b0b3b8;
+  font-size: 14px;
+}
+
+.commentTopInput input::placeholder {
+  font-size: 14px;
+  color: #b0b3b8;
+}
+
+.commentTopInput input:focus {
+  outline: none;
+}
+
+.commentTopInputAttach {
+  display: flex;
+}
+
+.commentTopInputAttachItem {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  /* background-color: #9b9b9b44; */
+
+  position: relative;
+}
+
+.commentTopInputAttachItem:hover {
+  background-color: #9b9b9b44;
+  cursor: pointer;
+}
+
+.commentTopInputAttachItemBg {
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  filter: invert(86%) sepia(5%) saturate(241%) hue-rotate(179deg)
+    brightness(86%) contrast(80%);
+
+  top: 6px;
+  right: 4px;
+}
+
+.commentTopInputAttachEmoji {
+  list-style: none;
+  padding: 0;
+  width: 314px;
+  height: 320px;
+  background-color: #242526;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  padding: 4px;
+
+  box-shadow: 0px 2px 26px 4px rgba(0, 0, 0, 0.63);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+}
+
+.commentTopInputAttachEmoji li {
+  margin-bottom: 10px;
+  font-size: 25px;
+  height: 25px;
+}
+
+.commentTopInputAttachEmoji::-webkit-scrollbar {
+  width: 4px;
+  display: none;
+}
+
+.commentTopInputAttachEmoji:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.commentTopInputAttachEmoji::-webkit-scrollbar-thumb {
+  background-color: rgba(109, 109, 109, 0.823);
+  border-radius: 8px;
+}
+
+.commentTopInputAttachEmoji::-webkit-scrollbar-track {
+  background-color: #acacac06;
+}
