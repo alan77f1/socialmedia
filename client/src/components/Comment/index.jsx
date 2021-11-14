@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { NO_AVARTAR, PF } from '../../constants';
+import { NO_AVARTAR, PF, TYPE_COMMENTPOST } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
+import './Comment.css';
+import CommentItem from './CommentItem';
+import FormComment from './FormComment';
 
 Comment.propTypes = {};
 
@@ -20,6 +23,19 @@ function Comment({ post, totalComment, setTotalComment }) {
       const count = await axios.get(`/comments/count?postId=${post._id}`, {
         postId: post._id,
       });
+
+      // ----Code chua clean----
+      // setComments(sortDateUtils(res.data));
+      // setComments(res.data);
+      // if (comments.length === 0) {
+      //     console.log('true');
+      //     setComments(res.data);
+      // } else {
+      //     console.log(res.data);
+      //     console.log([...comments, ...res.data]);
+      // }
+
+      // ----Code da dc clean----
       setComments((prev) => [...prev, ...res.data]);
       setTotalComment(count.data);
     })();
@@ -34,6 +50,7 @@ function Comment({ post, totalComment, setTotalComment }) {
   };
 
   const readMoreHandler = async () => {
+    // setComments(sortDateUtils([...comments, res.data]));
     setSkip(skip + 3);
   };
 
@@ -47,10 +64,25 @@ function Comment({ post, totalComment, setTotalComment }) {
           alt=''
           className='commentTopAvatar'
         />
+        {/* <input type="text" ref={autoFocusRef}></input> */}
+        <FormComment
+          autoFocusRef={autoFocusRef}
+          currentUser={currentUser}
+          setComments={setComments}
+          comments={comments}
+          postId={post._id}
+          type={TYPE_COMMENTPOST}
+        />
       </div>
       <ul className='commentList'>
         {comments.map((comment) => (
-          <li key={comment._id} className='commentItem'></li>
+          <li key={comment._id} className='commentItem'>
+            <CommentItem
+              key={comment._id}
+              comment={comment}
+              currentUser={currentUser}
+            />
+          </li>
         ))}
       </ul>
       <div className='commentMore' onClick={scrollToCommentHandler}>
