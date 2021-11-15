@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import './OnlineFriend.css';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
