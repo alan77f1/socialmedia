@@ -1,4 +1,5 @@
 import React from 'react';
+import './FriendRequest.css';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 FriendRequest.propTypes = {};
