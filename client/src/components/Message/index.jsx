@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { NO_AVARTAR, PF } from '../../constants';
+import './Message.css';
 import { format } from 'timeago.js';
 
 Message.propTypes = {};
