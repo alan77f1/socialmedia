@@ -42,6 +42,27 @@ function Message({ own, conversation, message, wrap, period }) {
               {format(message.createdAt)}
             </div>
           )}
+          <div className='message' ref={scrollRef}>
+            {wrap ? (
+              <>
+                <div className='messageWrapUser'></div>
+                <div className='messageContentText'>{message.text}</div>
+              </>
+            ) : (
+              <div className='messageWrapFirst'>
+                <img
+                  src={`${PF}/${
+                    conversation.receiver.avatar
+                      ? `person/${conversation.receiver.avatar}`
+                      : NO_AVARTAR
+                  }`}
+                  alt=''
+                  className='messageAvatar'
+                />
+                <div className='messageContentText'>{message.text}</div>
+              </div>
+            )}
+          </div>
         </>
       )}
     </>
