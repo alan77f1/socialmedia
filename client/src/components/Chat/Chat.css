@@ -1,265 +1,266 @@
 .chat {
-    position: fixed;
-    width: 330px;
-    height: 455px;
-    background-color: #242526;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  position: fixed;
+  width: 330px;
+  height: 455px;
+  background-color: #242526;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 
-    bottom: 0;
-    /* right: 90px; */
-    border: 0.5px solid #393a3c90;
-    border-bottom: none;
+  bottom: 0;
+  /* right: 90px; */
+  border: 0.5px solid #393a3c90;
+  border-bottom: none;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .chatTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 8px;
+  padding: 8px;
 
-    border-bottom: 0.5px solid #393a3c90;
+  border-bottom: 0.5px solid #393a3c90;
 }
 
 .chatTopUser {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .chatTopUserAvatar {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  position: relative;
 }
 
 .chatTopUserAvatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 
-    display: block;
+  display: block;
 }
 
 .chatTopUserAvatarBadge {
-    width: 8px;
-    height: 8px;
-    background-color: #31a24c;
-    border-radius: 50%;
-    position: absolute;
-    border: 2px solid #242526;
-    bottom: 0px;
-    right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #31a24c;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #242526;
+  bottom: 0px;
+  right: -4px;
 }
 
 .chatTopUserInfo {
 }
 
 .chatTopUserInfoName {
-    color: #e4e0d8;
-    font-size: 15px;
-    font-weight: 500;
+  color: #e4e0d8;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .chatTopUserInfoState {
-    color: #cbd1ca;
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 5px;
+  color: #cbd1ca;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
 }
 
 .chatTopAction {
-    display: flex;
+  display: flex;
 }
 
 .chatTopActionItem {
-    color: #cbd1ca;
-    margin-left: 4px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  color: #cbd1ca;
+  margin-left: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .chat.active .chatTopActionItem {
-    color: #0084ff;
+  color: #0084ff;
 }
 
 .chatTopActionItem:hover {
-    cursor: pointer;
-    background-color: #3a3b3c;
+  cursor: pointer;
+  background-color: #3a3b3c;
 }
 
 .chatContent {
-    flex: 1;
-    width: calc(100% - 16px);
-    padding: 8px;
-    overflow-y: scroll;
+  flex: 1;
+  width: calc(100% - 16px);
+  padding: 8px;
+  overflow-y: scroll;
 }
 
 .chatContent::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .chatContent::-webkit-scrollbar-thumb {
-    background-color: rgba(109, 109, 109, 0.576);
-    border-radius: 8px;
+  background-color: rgba(109, 109, 109, 0.576);
+  border-radius: 8px;
 }
 
 .chatContent::-webkit-scrollbar-track {
-    background-color: #acacac06;
+  background-color: #acacac06;
 }
 
 .chatBottom {
-    height: 54px;
-    border-top: 0.5px solid #393a3c90;
-    padding: 0 10px;
+  height: 54px;
+  border-top: 0.5px solid #393a3c90;
+  padding: 0 10px;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .chatBottomInput {
-    background-color: #3a3b3c;
-    padding-left: 10px;
-    flex: 1;
-    border-radius: 20px;
+  background-color: #3a3b3c;
+  padding-left: 10px;
+  flex: 1;
+  border-radius: 20px;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .chatBottomInput input {
-    background-color: #3a3b3c;
-    border: none;
-    outline: none;
-    color: #e4e6eb;
-    font-size: 14px;
-    font-weight: 400;
-    flex: 1;
+  background-color: #3a3b3c;
+  border: none;
+  outline: none;
+  color: #e4e6eb;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
 }
 
 .chatBottomInputIcon {
-    width: 36px;
-    height: 36px;
+  width: 36px;
+  height: 36px;
 
-    border-radius: 50%;
-    /* display: flex;
+  border-radius: 50%;
+  /* display: flex;
     align-items: center; */
-    position: relative;
+  position: relative;
 }
 
 .chatBottomInputIcon:hover {
-    background-color: #464748;
-    cursor: pointer;
+  background-color: #464748;
+  cursor: pointer;
 }
 
 .chatBottomInputIconBg {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    margin-left: 8px;
-    filter: invert(49%) sepia(8%) saturate(69%) hue-rotate(169deg) brightness(92%) contrast(93%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 8px;
+  filter: invert(49%) sepia(8%) saturate(69%) hue-rotate(169deg) brightness(92%)
+    contrast(93%);
 
-    position: absolute;
-    top: 6px;
-    left: -2px;
+  position: absolute;
+  top: 6px;
+  left: -2px;
 }
 
 .chat.active .chatBottomInputIconBg {
-    filter: invert(34%) sepia(24%) saturate(6194%) hue-rotate(195deg) brightness(103%)
-        contrast(108%);
+  filter: invert(34%) sepia(24%) saturate(6194%) hue-rotate(195deg)
+    brightness(103%) contrast(108%);
 }
 
 .chatBottomLikeIcon {
-    color: #666768;
-    margin-left: 4px;
-    width: 34px;
-    height: 34px;
+  color: #666768;
+  margin-left: 4px;
+  width: 34px;
+  height: 34px;
 
-    border-radius: 50%;
-    font-size: 22px;
+  border-radius: 50%;
+  font-size: 22px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chat.active .chatBottomLikeIcon {
-    color: #0084ff;
+  color: #0084ff;
 }
 
 .chatBottomLikeIcon:hover {
-    color: #0084ff;
-    cursor: pointer;
-    background-color: #3a3b3c;
+  color: #0084ff;
+  cursor: pointer;
+  background-color: #3a3b3c;
 }
 
 .chatZoomOut {
-    position: fixed;
-    bottom: 40px;
-    /* right: 90px; */
-    right: 18px;
-    border-bottom: none;
+  position: fixed;
+  bottom: 40px;
+  /* right: 90px; */
+  right: 18px;
+  border-bottom: none;
 
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 
-    transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .chatZoomOutImg {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 50px;
-    height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
 }
 
 .chatZoomOutBadge {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #31a24c;
-    border: 2px solid #3a3b3c;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #31a24c;
+  border: 2px solid #3a3b3c;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .chatZoomOutClose {
-    position: absolute;
-    top: -4px;
-    right: -5px;
+  position: absolute;
+  top: -4px;
+  right: -5px;
 
-    color: #999ca0;
-    font-size: 18px;
-    width: 22px;
-    height: 22px;
-    background-color: #2b2c2e;
-    border-radius: 50%;
+  color: #999ca0;
+  font-size: 18px;
+  width: 22px;
+  height: 22px;
+  background-color: #2b2c2e;
+  border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    transform: scale(0);
-    transition: all 0.2s;
+  transform: scale(0);
+  transition: all 0.2s;
 }
 
 .chatZoomOutClose:hover {
-    background-color: #444548;
+  background-color: #444548;
 }
 
 .chatZoomOut:hover .chatZoomOutClose {
-    transform: scale(1);
+  transform: scale(1);
 }

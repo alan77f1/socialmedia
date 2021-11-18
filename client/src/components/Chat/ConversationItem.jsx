@@ -5,10 +5,11 @@ import SendIcon from '@mui/icons-material/Send';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // import { io } from 'socket.io-client';
 import { NO_AVARTAR, PF } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
+import Message from '../Message';
 
 ConversationItem.propTypes = {
   changeZoomState: PropTypes.func,
@@ -24,12 +25,40 @@ function ConversationItem({
   arrivalMessage,
   emitSendMessage,
 }) {
+  // console.log(conversation);
   const { user: currentUser } = useContext(AuthContext);
   const [messages, setMessages] = useState([]);
   const [messageSender, setMessageSender] = useState('');
   const [converastionDB, setConverastionDB] = useState();
+  // const [arrivalMessage, setArrivalMessage] = useState(null);
+
+  // socket
+  // const socket = useRef();
+  // useEffect(() => {
+  //     socket.current = io('ws://localhost:8900');
+  //     // console.log('render: ', socket.current);
+  //     socket.current.on('getMessage', (data) => {
+  //         // console.log('data', data);
+  //         setArrivalMessage({
+  //             senderId: data.senderId,
+  //             text: data.text,
+  //             createdAt: Date.now(),
+  //         });
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //     socket.current.emit('addUser', currentUser._id);
+  //     // socket.current.on('getUsers', (users) => {
+  //     //     console.log('socket users:', users);
+  //     // });
+  // }, [currentUser]);
+
   useEffect(() => {
     console.log('conversationDB', converastionDB);
+
+    // console.log('members', members);
+    // console.log('arrivalMessage', arrivalMessage);
     if (
       arrivalMessage &&
       converastionDB?.memberIds.includes(arrivalMessage.senderId)
@@ -80,6 +109,20 @@ function ConversationItem({
     };
 
     if (emitSendMessage) emitSendMessage('sendMessage', sendMessage);
+
+    // socket.current.emit('sendMessage', {
+    //     senderId: currentUser._id,
+    //     receiverId: conversation.receiver._id,
+    //     text: messageSender,
+    // });
+
+    // const sendMessage = {
+    //     senderId: currentUser._id,
+    //     receiverId: conversation.receiver._id,
+    //     text: messageSender,
+    // };
+
+    // messageChatArrival(sendMessage, dispatch);
 
     setMessageSender('');
     setMessages([...messages, savedMessage.data]);
@@ -136,6 +179,19 @@ function ConversationItem({
           const period =
             Math.floor((duration / (1000 * 60 * 60)) % 24) * 60 +
             Math.floor((duration / (1000 * 60)) % 60);
+
+          return (
+            <Message
+              key={index}
+              conversation={conversation}
+              message={message}
+              own={message.senderId === currentUser._id}
+              wrap={
+                message.senderId === array[index - 1]?.senderId && period <= 20
+              }
+              period={period}
+            />
+          );
         })}
       </div>
       <div className='chatBottom'>
