@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import './OnlineFriend.css';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,26 +7,6 @@ import { NO_AVARTAR, PF } from '../../constants';
 OnlineFriend.propTypes = {};
 
 function OnlineFriend({ friends }) {
-  const { data } = useContext('');
-  const { user: currentUser } = useContext('');
-
-  const openConversationHandler = (friendInfo) => {
-    const conversation = {
-      key: `${currentUser._id}_${friendInfo._id}`,
-      receiver: friendInfo,
-      sender: currentUser,
-    };
-
-    // check if conversation is open [CHECK IN LOCALSTORAGE]
-    if (data.some((item) => item.key === conversation.key)) {
-      const conversationIndex = data.findIndex(
-        (item) => item.id === conversation.id
-      );
-      const updatedConversation = data.splice(conversationIndex, 1)[0];
-      updatedConversation.isZoomOut = !updatedConversation.isZoomOut;
-    }
-  };
-
   return (
     <div className='onlineFriend'>
       <div className='onlineFriendTop'>
@@ -46,24 +25,12 @@ function OnlineFriend({ friends }) {
       </div>
       <ul className='onlineFriendList'>
         {friends.map((friend) => (
-          <li
-            key={friend._id}
-            className='onlineFirendItem'
-            onClick={() => openConversationHandler(friend)}
-          >
+          <li key={friend._id} className='onlineFirendItem'>
             <div className='onlineFriendItemAvatarWrap'>
-              <img
-                src={`${PF}/${
-                  friend.avatar ? `person/${friend.avatar}` : NO_AVARTAR
-                }`}
-                alt=''
-                className='onlineFriendItemAvatar'
-              />
+              <img src='' alt='' className='onlineFriendItemAvatar' />
               <div className='onlineFriendItemBadge'></div>
             </div>
-            <span className='onlineFriendItemName'>
-              {friend.firstName} {friend.lastName}
-            </span>
+            <span className='onlineFriendItemName'>firstName</span>
           </li>
         ))}
       </ul>

@@ -12,7 +12,6 @@ function Comment({ post, totalComment, setTotalComment }) {
   const { user: currentUser } = useContext(AuthContext);
   const [comments, setComments] = useState([]); //comment of a post
 
-  const viewInputRef = useRef();
   const autoFocusRef = useRef();
   const [skip, setSkip] = useState(0);
 
@@ -24,30 +23,11 @@ function Comment({ post, totalComment, setTotalComment }) {
         postId: post._id,
       });
 
-      // ----Code chua clean----
-      // setComments(sortDateUtils(res.data));
-      // setComments(res.data);
-      // if (comments.length === 0) {
-      //     console.log('true');
-      //     setComments(res.data);
-      // } else {
-      //     console.log(res.data);
-      //     console.log([...comments, ...res.data]);
-      // }
-
       // ----Code da dc clean----
       setComments((prev) => [...prev, ...res.data]);
       setTotalComment(count.data);
     })();
   }, [post._id, skip]);
-
-  const scrollToCommentHandler = () => {
-    viewInputRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
-    autoFocusRef.current.focus({ preventScroll: true });
-  };
 
   const readMoreHandler = async () => {
     // setComments(sortDateUtils([...comments, res.data]));
@@ -56,7 +36,7 @@ function Comment({ post, totalComment, setTotalComment }) {
 
   return (
     <div className='comment'>
-      <div className='commentTop' ref={viewInputRef}>
+      <div className='commentTop'>
         <img
           src={`${PF}/${
             currentUser.avatar ? `person/${currentUser.avatar}` : NO_AVARTAR
@@ -85,9 +65,7 @@ function Comment({ post, totalComment, setTotalComment }) {
           </li>
         ))}
       </ul>
-      <div className='commentMore' onClick={scrollToCommentHandler}>
-        Viết bình luận ...
-      </div>
+      <div className='commentMore'>Viết bình luận ...</div>
       {totalComment - comments.length > 0 && (
         <div className='commentMore' onClick={readMoreHandler}>
           Xem thêm {`(${totalComment - comments.length})`} bình luận

@@ -16,12 +16,6 @@ Chat.propTypes = {
 function Chat(props) {
   const { user: currentUser } = useContext(AuthContext);
 
-  const { data: conversationsStore, dispatch } =
-    useContext(ConversationsContext);
-  const [conversations, setConversations] = useState([]);
-  const zoomInConversations = conversations.filter(
-    (cov) => cov.isZoomOut === false
-  );
   const zoomOutConversations = conversations.filter(
     (cov) => cov.isZoomOut === true
   );
@@ -51,21 +45,6 @@ function Chat(props) {
     // });
   }, [currentUser]);
 
-  useEffect(() => {
-    setConversations(conversationsStore);
-  }, [conversationsStore]);
-
-  const handleZoomOutState = (conversationKey, zoomState) => {
-    const conversationIndex = conversations.findIndex(
-      (conversation) => conversation.key === conversationKey
-    );
-    const updatedConversation = conversations.splice(conversationIndex, 1)[0];
-    updatedConversation.isZoomOut = zoomState;
-
-    const newConversation = [...conversations, updatedConversation];
-    toggleConversation(newConversation, dispatch);
-  };
-
   const emitSendMessageHandler = (event, sendMessage) => {
     socket.current.emit('sendMessage', sendMessage);
   };
@@ -79,7 +58,6 @@ function Chat(props) {
           key={index}
           conversation={conversation}
           index={index}
-          changeZoomState={handleZoomOutState}
           arrivalMessage={arrivalMessage}
           emitSendMessage={emitSendMessageHandler}
         />
@@ -89,7 +67,6 @@ function Chat(props) {
           key={conversation.key}
           className='chatZoomOut'
           style={{ bottom: `${index * (40 + 20) + 40}px` }}
-          onClick={() => handleZoomOutState(conversation.key, false)}
         >
           <img
             src={`${PF}/${
