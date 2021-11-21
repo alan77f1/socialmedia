@@ -1,13 +1,47 @@
+import axios from 'axios';
+import React, { useState } from 'react';
 import { NO_AVARTAR, PF } from '../../constants';
 import './Share.css';
 
 Share.propTypes = {};
 
 function Share({ currentUser, posts, setPosts }) {
+  const [desc, setDesc] = useState('');
+  const [files, setFiles] = useState(null);
+
   const handleShareSubmmit = async (e) => {
     e.preventDefault();
 
     const imgCollections = [];
+    if (files) {
+      const formData = new FormData();
+
+      for (const key of Object.keys(files)) {
+        formData.append('imgCollections', files[key]);
+        imgCollections.push(files[key].name);
+      }
+
+      try {
+        await axios.post('./uploads', formData);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    const newPost = {
+      userId: currentUser._id,
+      desc: desc,
+      imgCollections: imgCollections,
+    };
+
+    const res = await axios.post('./posts', newPost);
+    setPosts([res.data, ...posts]);
+    setDesc('');
+    setFiles(null);
+  };
+
+  const handleDescChange = (e) => {
+    setDesc(e.target.value);
   };
 
   return (
@@ -24,8 +58,43 @@ function Share({ currentUser, posts, setPosts }) {
           type='text'
           placeholder={`${currentUser.lastName} ơi, bạn đang nghĩ gì thế?`}
           className='shareTopInput'
+          value={desc}
+          onChange={handleDescChange}
         />
       </div>
+
+      {files && (
+        <div className='shareImgContainer'>
+          {Object.keys(files)
+            .slice(0, 4)
+            .map((key, index) => (
+              <div key={index} className='shareImgItemWrap'>
+                {index < 3 ? (
+                  <>
+                    <img
+                      src={URL.createObjectURL(files[key])}
+                      alt=''
+                      className='shareImg'
+                    />
+                  </>
+                ) : (
+                  <>
+                    <img
+                      src={URL.createObjectURL(files[key])}
+                      alt=''
+                      className='shareImg'
+                    />
+                    {Object.keys(files).length > 4 && (
+                      <div className='moreImg'>
+                        +{Object.keys(files).length - 4}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            ))}
+        </div>
+      )}
 
       <div className='shareBottom'>
         <div className='shareBottomAction'>
@@ -39,13 +108,6 @@ function Share({ currentUser, posts, setPosts }) {
           <span className='shareBottomActionItemText'>Video trực tiếp</span>
         </div>
         <label htmlFor='file' className='shareBottomAction'>
-          <div
-            className='shareBottomActionItemBg'
-            style={{
-              backgroundImage: `url("/assets/feed/imgAction.png")`,
-              backgroundPosition: '0 -275px',
-            }}
-          ></div>
           <span className='shareBottomActionItemText'>Ảnh/Video</span>
         </label>
         <input
@@ -54,15 +116,9 @@ function Share({ currentUser, posts, setPosts }) {
           id='file'
           accept='.png, .jpeg, .jpg'
           multiple
+          onChange={(e) => setFiles(e.target.files)}
         />
         <div className='shareBottomAction'>
-          <div
-            className='shareBottomActionItemBg'
-            style={{
-              backgroundImage: `url("/assets/feed/imgAction.png")`,
-              backgroundPosition: '0 -50px',
-            }}
-          ></div>
           <span className='shareBottomActionItemText'>Cảm xúc/Hoạt động</span>
         </div>
       </div>
