@@ -25,14 +25,12 @@
   padding: 12px 12px;
   border: none;
   background-color: #3a3b3c;
-  justify-content: space-between;
   border-radius: 20px;
   color: #b0b3b8;
 }
 
 .shareTopInput:focus {
   outline: none;
-  object-fit: cover;
 }
 
 .shareTopInput::placeholder {
@@ -81,9 +79,8 @@
 .shareImgContainer {
   /* position: relative; */
   width: 100%;
-  height: 200px;
   margin-top: 10px;
-  height: 24px;
+
   display: flex;
   /* flex-wrap: wrap; */
 }
@@ -109,7 +106,7 @@
   position: absolute;
   top: 2px;
   right: 2px;
-  color: #0e64e6;
+  color: #f0f2f5;
   cursor: pointer;
 
   width: 20px;
@@ -121,11 +118,14 @@
 
 .moreImg {
   position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-size: 60px;
   color: white;
+
   top: 0;
   left: 0;
   width: 100%;

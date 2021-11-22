@@ -17,11 +17,22 @@ function Share({ currentUser, posts, setPosts }) {
     if (files) {
       const formData = new FormData();
 
+      // const imgs = [];
+      // for (let i = 0; i < files.length; i++) {
+      //     // append name before file to prevent proxy error
+      //     formData.append(`names[${i}]`, Date.now() + files[i].name);
+      //     formData.append(`images[${i}]`, files[i]);
+      //     imgs.push(`/${Date.now() + files[i].name}`);
+      // }
       for (const key of Object.keys(files)) {
         formData.append('imgCollections', files[key]);
         imgCollections.push(files[key].name);
       }
 
+      // Display the values
+      // for (var value of formData.values()) {
+      //     console.log(value);
+      // }
       try {
         await axios.post('./uploads', formData);
       } catch (error) {
