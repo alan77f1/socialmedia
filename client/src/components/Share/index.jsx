@@ -1,3 +1,4 @@
+import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { NO_AVARTAR, PF } from '../../constants';
@@ -76,6 +77,7 @@ function Share({ currentUser, posts, setPosts }) {
                       alt=''
                       className='shareImg'
                     />
+                    <CloseIcon className='shareCancelImg' />
                   </>
                 ) : (
                   <>
@@ -84,6 +86,7 @@ function Share({ currentUser, posts, setPosts }) {
                       alt=''
                       className='shareImg'
                     />
+                    <CloseIcon className='shareCancelImg' />
                     {Object.keys(files).length > 4 && (
                       <div className='moreImg'>
                         +{Object.keys(files).length - 4}
@@ -108,6 +111,13 @@ function Share({ currentUser, posts, setPosts }) {
           <span className='shareBottomActionItemText'>Video trực tiếp</span>
         </div>
         <label htmlFor='file' className='shareBottomAction'>
+          <div
+            className='shareBottomActionItemBg'
+            style={{
+              backgroundImage: `url("/assets/feed/imgAction.png")`,
+              backgroundPosition: '0 -275px',
+            }}
+          ></div>
           <span className='shareBottomActionItemText'>Ảnh/Video</span>
         </label>
         <input
@@ -119,6 +129,13 @@ function Share({ currentUser, posts, setPosts }) {
           onChange={(e) => setFiles(e.target.files)}
         />
         <div className='shareBottomAction'>
+          <div
+            className='shareBottomActionItemBg'
+            style={{
+              backgroundImage: `url("/assets/feed/imgAction.png")`,
+              backgroundPosition: '0 -50px',
+            }}
+          ></div>
           <span className='shareBottomActionItemText'>Cảm xúc/Hoạt động</span>
         </div>
       </div>
