@@ -3,7 +3,6 @@ import './RightBar.css';
 import axios from 'axios';
 
 RightBar.propTypes = {};
-
 function RightBar({ currentUser }) {
   const [friends, setFriends] = useState([]);
 

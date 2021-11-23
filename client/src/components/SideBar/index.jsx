@@ -1,6 +1,6 @@
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React from 'react';
-
+import { NO_AVARTAR, PF } from '../../constants';
 import './SideBar.css';
 
 SideBar.propTypes = {};

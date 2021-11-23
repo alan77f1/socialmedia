@@ -1,12 +1,22 @@
+import React, { useContext } from 'react';
 import './OnlineFriend.css';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { NO_AVARTAR, PF } from '../../constants';
+import { ConversationsContext } from '../../context/conversations/ConversationsProvider';
+import {
+  openConversation,
+  toggleConversation,
+} from '../../context/conversations/useConversations';
+import { AuthContext } from '../../context/AuthProvider';
 
 OnlineFriend.propTypes = {};
 
 function OnlineFriend({ friends }) {
+  const { data, dispatch } = useContext(ConversationsContext);
+  const { user: currentUser } = useContext(AuthContext);
+
   const openConversationHandler = (friendInfo) => {
     const conversation = {
       key: `${currentUser._id}_${friendInfo._id}`,
@@ -23,7 +33,9 @@ function OnlineFriend({ friends }) {
       updatedConversation.isZoomOut = !updatedConversation.isZoomOut;
 
       const newConversation = [...data, updatedConversation];
+      toggleConversation(newConversation, dispatch);
     } else {
+      openConversation(conversation, dispatch);
     }
   };
 

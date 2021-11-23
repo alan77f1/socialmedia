@@ -2,13 +2,11 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import CreateIcon from '@mui/icons-material/Create';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Post from '../../components/Post';
 import Share from '../../components/Share';
 import { NO_AVARTAR, PF } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
-import { sortDateUtils } from '../../utils/utils';
 import './Profile.css';
 
 Profile.propTypes = {};
@@ -17,22 +15,12 @@ function Profile(props) {
   const { user: currentUser } = useContext(AuthContext);
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      const res = await axios.get(`/posts/${currentUser._id}/me`);
-      setPosts(sortDateUtils(res.data));
-    })();
-  }, [currentUser]);
-
   // useEffect(() => {
-  //     document.addEventListener('scroll', function (e) {
-  //         console.log(window.scrollY);
-  //     });
-  // }, []);
-  // useEffect(() => {
-  //     setHeight(heightRef.current.offsetTop);
-  //     console.log(heightRef.current.offsetTop);
-  // }, [heightRef]);
+  //   (async () => {
+  //     const res = await axios.get(`/posts/${currentUser._id}/me`);
+  //     setPosts(sortDateUtils(res.data));
+  //   })();
+  // }, [currentUser]);
 
   return (
     <div className='profile'>
