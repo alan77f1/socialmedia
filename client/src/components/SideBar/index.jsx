@@ -10,6 +10,13 @@ function SideBar({ currentUser }) {
     <div className='sideBar'>
       <ul className='sideBarList mt16'>
         <li className='sideBarItem'>
+          <img
+            src={`${PF}/${
+              currentUser.avatar ? `person/${currentUser.avatar}` : NO_AVARTAR
+            }`}
+            alt=''
+            className='sideBarItemImg'
+          />
           <div className='sideBarItemText'>
             <span className='sideBarItemName'>
               {currentUser.firstName} {currentUser.lastName}
@@ -77,6 +84,12 @@ function SideBar({ currentUser }) {
         </li>
       </ul>
 
+      <hr className='sideBarHr' />
+
+      <div className='shortcutsTitle'>
+        <span className='shortcutsTitleText'>Lối tắt của bạn</span>
+        <div className='shortcutsTitleAction'>Chỉnh sửa</div>
+      </div>
       <ul className='sideBarList'>
         <li className='shortcuts'>
           <img src='./assets/ads/gearvn.jpg' alt='' className='shortcutsImg' />
@@ -115,6 +128,11 @@ function SideBar({ currentUser }) {
             alt=''
             className='shortcutsImg'
           />
+          <div className='shortcutsText'>
+            <span className='shortcutsName'>
+              Cộng đồng Front-end(HTML/CSS/JS)
+            </span>
+          </div>
         </li>
         <li className='shortcuts'>
           <img src='./assets/ads/gearvn.jpg' alt='' className='shortcutsImg' />
