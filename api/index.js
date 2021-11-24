@@ -13,7 +13,7 @@ const helmet = require('helmet');
 // use library
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
-  console.log('---connected to mongoDB---');
+  console.log('Connected to mongoDB');
 });
 
 // middleware
@@ -71,5 +71,5 @@ app.post(
   }
 );
 app.listen(port, () => {
-  console.log(`------API START AT: http://localhost:${port}-----`);
+  console.log(`------  API START AT: http://localhost:${port}  -----`);
 });
