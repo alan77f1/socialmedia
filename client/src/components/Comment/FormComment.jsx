@@ -18,6 +18,18 @@ function FormComment({
 }) {
   const [myComment, setMyComment] = useState(initComment || '');
   const [currentPostId, setCurrentPostId] = useState('');
+  const [showEmoji, setShowEmoji] = useState(false);
+  const emojiRef = useRef(null);
+
+  const handleOutsideClick = (e) => {
+    if (emojiRef.current && !emojiRef.current.contains(e.target)) {
+      setShowEmoji(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick, true);
+  }, []);
 
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
@@ -57,6 +69,15 @@ function FormComment({
     setMyComment(e.target.value);
   };
 
+  const showEmojiHandler = () => {
+    setShowEmoji(!showEmoji);
+  };
+
+  const addEmojiHanler = (icon) => {
+    const newComment = myComment + icon.props.children;
+    setMyComment(newComment);
+    setShowEmoji(false);
+  };
 
   return (
     <form className='commentTopInput' onSubmit={handleCommentSubmit}>
@@ -81,6 +102,9 @@ function FormComment({
           {showEmoji && (
             <ul className='commentTopInputAttachEmoji' ref={emojiRef}>
               {EMOJI_ICON.map((icon, index) => (
+                <li key={index} onClick={() => addEmojiHanler(icon)}>
+                  {icon}
+                </li>
               ))}
             </ul>
           )}
