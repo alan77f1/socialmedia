@@ -8,24 +8,24 @@ import './Home.css';
 Home.propTypes = {};
 
 function Home(props) {
-  const { user: currentUser } = useContext(AuthContext);
-  return (
-    <div>
-      <div className='container'>
-        <div className='homePage'>
-          <div className='cLeft'>
-            <SideBar currentUser={currentUser} />
-          </div>
-          <div className='cMiddle'>
-            <Feed currentUser={currentUser} />
-          </div>
-          <div className='cRight'>
-            <RightBar currentUser={currentUser} />
-          </div>
+    const { user: currentUser } = useContext(AuthContext);
+    return (
+        <div>
+            <div className="container">
+                <div className="homePage">
+                    <div className="cLeft">
+                        <SideBar currentUser={currentUser} />
+                    </div>
+                    <div className="cMiddle">
+                        <Feed currentUser={currentUser} />
+                    </div>
+                    <div className="cRight">
+                        <RightBar currentUser={currentUser} />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Home;

@@ -11,28 +11,28 @@ import Profile from './pages/profile';
 import Story from './pages/story';
 
 function App() {
-  const { user: currentUser } = useContext(AuthContext);
+    const { user: currentUser } = useContext(AuthContext);
 
-  // Ifsocket
-  const socket = useRef();
-  useEffect(() => {
-    socket.current = io('ws://localhost:8900');
-  }, []);
+    // Ifsocket
+    const socket = useRef();
+    useEffect(() => {
+        socket.current = io('ws://localhost:8900');
+    }, []);
 
-  return (
-    <Router>
-      {currentUser && <Header />}
-      <Switch>
-        <Route path='/profile'>{currentUser ? <Profile /> : <Login />}</Route>
-        <Route path='/stories'>{currentUser ? <Story /> : <Login />}</Route>
-        <Route path='/' exact>
-          {currentUser ? <Home /> : <Login />}
-        </Route>
-      </Switch>
+    return (
+        <Router>
+            {currentUser && <Header />}
+            <Switch>
+                <Route path="/profile">{currentUser ? <Profile /> : <Login />}</Route>
+                <Route path="/stories">{currentUser ? <Story /> : <Login />}</Route>
+                <Route path="/" exact>
+                    {currentUser ? <Home /> : <Login />}
+                </Route>
+            </Switch>
 
-      <Chat />
-    </Router>
-  );
+            <Chat />
+        </Router>
+    );
 }
 
 export default App;

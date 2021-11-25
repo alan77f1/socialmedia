@@ -63,6 +63,32 @@
     height: 36px;
 }
 
+.sideBarItemText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    justify-content: space-between;
+}
+
+.sideBarItemName,
+.shortcutsName {
+    color: #cfd1d5;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.shortcutsName {
+    margin-left: 8px;
+}
+
+.sideBarItemInfo {
+    margin-top: 5px;
+    color: #2a75d5;
+    font-size: 12px;
+    position: relative;
+    margin-left: 12px;
+}
+
 .sideBarItemInfo::after {
     content: '';
     width: 8px;
