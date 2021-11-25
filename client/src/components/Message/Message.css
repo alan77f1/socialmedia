@@ -1,60 +1,60 @@
 .message {
-  display: flex;
-  margin-top: 3px;
+    display: flex;
+    margin-top: 3px;
 }
 
 .messageAvatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .messageContent {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .messageContentText {
-  padding: 8px 12px;
-  border-radius: 15px;
-  background-color: #3a3b3c;
-  color: #e4e6eb;
-  font-size: 14px;
-  font-weight: 400;
-  max-width: 200px;
-  min-width: 30px;
-  margin-left: 6px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 200px;
+    min-width: 30px;
+    margin-left: 6px;
 }
 
 .messageContentTime {
-  color: #a6aaa5;
-  font-size: 12px;
-  font-weight: 400;
-  margin-top: 5px;
-  margin-left: 10px;
-  text-align: center;
-  margin-top: 14px;
+    color: #a6aaa5;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: 14px;
 }
 
 .message.own {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .own .messageContentText {
-  background-color: #0099ff;
+    background-color: #0099ff;
 }
 
 .own .messageContentTime {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Wrap user */
 .messageWrapUser {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
 .messageWrapFirst {
-  margin-top: 16px;
-  display: flex;
+    margin-top: 16px;
+    display: flex;
 }
