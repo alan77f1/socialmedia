@@ -4,14 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthContextProvider } from './context/AuthProvider';
+import { ConversationsContextProvider } from './context/conversations/ConversationsProvider';
+import { MessagesContextProvider } from './context/message/MessagesProvider';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <AuthContextProvider>
-            <App />
-        </AuthContextProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
+  <React.StrictMode>
+    <AuthContextProvider>
+      <ConversationsContextProvider>
+        <MessagesContextProvider>
+          <App />
+        </MessagesContextProvider>
+      </ConversationsContextProvider>
+    </AuthContextProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
