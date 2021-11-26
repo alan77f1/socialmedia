@@ -2,22 +2,22 @@ import { createContext, useReducer } from 'react';
 import AuthReducer from './AuthReducer';
 
 const initialState = {
-    user: JSON.parse(localStorage.getItem('USER')),
-    isFetching: false,
-    error: null,
+  user: JSON.parse(localStorage.getItem('USER')),
+  isFetching: false,
+  error: null,
 };
 
 export const AuthContext = createContext(initialState);
 
 export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AuthReducer, initialState);
+  const [state, dispatch] = useReducer(AuthReducer, initialState);
 
-    const store = {
-        user: state.user,
-        isFetching: state.isFetching,
-        error: state.error,
-        dispatch,
-    };
+  const store = {
+    user: state.user,
+    isFetching: state.isFetching,
+    error: state.error,
+    dispatch,
+  };
 
-    return <AuthContext.Provider value={store}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={store}>{children}</AuthContext.Provider>;
 };
