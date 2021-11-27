@@ -24,6 +24,17 @@ function Comment({ post, totalComment, setTotalComment }) {
         postId: post._id,
       });
 
+      // ----Code chua clean----
+      // setComments(sortDateUtils(res.data));
+      // setComments(res.data);
+      // if (comments.length === 0) {
+      //     console.log('true');
+      //     setComments(res.data);
+      // } else {
+      //     console.log(res.data);
+      //     console.log([...comments, ...res.data]);
+      // }
+
       // ----Code da dc clean----
       setComments((prev) => [...prev, ...res.data]);
       setTotalComment(count.data);
@@ -31,10 +42,7 @@ function Comment({ post, totalComment, setTotalComment }) {
   }, [post._id, skip]);
 
   const scrollToCommentHandler = () => {
-    viewInputRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
+    viewInputRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     autoFocusRef.current.focus({ preventScroll: true });
   };
 
