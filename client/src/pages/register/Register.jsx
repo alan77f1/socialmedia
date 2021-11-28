@@ -1,7 +1,6 @@
-import axios from "axios";
-import { useRef } from "react";
-import "./register.css";
-import { useHistory } from "react-router";
+import axios from 'axios';
+import { useRef } from 'react';
+import { useHistory } from 'react-router';
 
 export default function Register() {
   const username = useRef();
@@ -21,8 +20,8 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
-        history.push("/login");
+        await axios.post('/auth/register', user);
+        history.push('/login');
       } catch (err) {
         console.log(err);
       }
@@ -40,19 +39,8 @@ export default function Register() {
         </div>
         <div className="loginRight">
           <form className="loginBox" onSubmit={handleClick}>
-            <input
-              placeholder="Username"
-              required
-              ref={username}
-              className="loginInput"
-            />
-            <input
-              placeholder="Email"
-              required
-              ref={email}
-              className="loginInput"
-              type="email"
-            />
+            <input placeholder="Username" required ref={username} className="loginInput" />
+            <input placeholder="Email" required ref={email} className="loginInput" type="email" />
             <input
               placeholder="Password"
               required

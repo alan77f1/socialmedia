@@ -24,10 +24,11 @@ function App() {
       {currentUser ? <Home /> : <Register />}
       <Switch>
         <Route path="/" exact>
-          <Route path="/profile">{currentUser ? <Profile /> : <Login />}</Route>
           <Route path="/register"></Route>
+          <Route path="/profile/:username"></Route>
           <Route path="/stories">{currentUser ? <Story /> : <Login />}</Route>
         </Route>
+        <Profile />
       </Switch>
 
       <Chat />
