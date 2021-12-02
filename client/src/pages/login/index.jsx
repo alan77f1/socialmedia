@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import './Login.css';
 import { loginCall } from '../../context/useAuth';
 import { AuthContext } from '../../context/AuthProvider';
@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/AuthProvider';
 Login.propTypes = {};
 
 function Login(props) {
+  const [openRegister, setOpenRegister] = useState(false);
   const email = useRef();
   const password = useRef();
 
@@ -52,11 +53,12 @@ function Login(props) {
 
             <div className="loginRightFormForgotPassword">Quên mật khẩu?</div>
             <hr className="loginRightFormHr" />
-            <div className="loginRightFormNav">Tạo tài khoản mới</div>
+            <div className="loginRightFormNav" onClick={() => setOpenRegister(true)}>
+              Tạo tài khoản mới
+            </div>
           </form>
         </div>
       </div>
-      {/* Register */}
     </div>
   );
 }

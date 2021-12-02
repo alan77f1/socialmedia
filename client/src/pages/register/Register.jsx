@@ -1,36 +1,39 @@
-import axios from 'axios';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { useHistory } from 'react-router';
-
+import { registerCall } from '../../context/useAuth';
+import { AuthContext } from '../../context/AuthProvider';
+import './Register.css';
 export default function Register() {
   const [openRegister, setOpenRegister] = useState(false);
 
   const yyyy = new Date().getFullYear();
-  const username = useRef();
   const email = useRef();
   const password = useRef();
-  const passwordAgain = useRef();
-  const history = useHistory();
+  const firstName = useRef();
+  const lastName = useRef();
+  const dayOfBirth = useRef();
+  const monthOfBirth = useRef();
+  const yearOfBirth = useRef();
+  const sex = useRef();
 
-  const handleClick = async (e) => {
+  const { user, isFetching, dispatch } = useContext(AuthContext);
+  const handleRegister = (e) => {
     e.preventDefault();
-    if (passwordAgain.current.value !== password.current.value) {
-      passwordAgain.current.setCustomValidity("Passwords don't match!");
-    } else {
-      const user = {
-        username: username.current.value,
-        email: email.current.value,
-        password: password.current.value,
-      };
-      try {
-        await axios.post('/auth/register', user);
-        history.push('/login');
-      } catch (err) {
-        console.log(err);
-      }
-    }
+    const newUser = {
+      firstName: firstName.current.value,
+      lastName: lastName.current.value,
+      email: email.current.value,
+      password: password.current.value,
+      birthDay: `${dayOfBirth.current.value}/${monthOfBirth.current.value}/${yearOfBirth.current.value}`,
+      sex: sex.current.value,
+    };
+    registerCall(newUser, dispatch);
+    window.location.reload();
+
+    // setOpenRegister(false);
   };
+
+  console.log(user);
 
   return (
     <div className="registerModalWrap">
