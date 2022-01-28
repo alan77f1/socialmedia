@@ -1,4 +1,4 @@
-exports.postStory = async (req, res) => {
+exports.post = async (req, res) => {
   try {
     const story = new Story(req.body);
     const savedStory = await story.save();

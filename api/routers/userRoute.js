@@ -1,7 +1,7 @@
 var express = require('express');
-var router = express.Router();
 const User = require('./../models/User');
 
+var router = express.Router();
 // get user by id || username: api/users
 router.get('/', async (req, res) => {
     const userId = req.query.userId;
