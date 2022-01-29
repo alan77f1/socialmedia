@@ -18,12 +18,9 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
 
 // middleware
 app.use(morgan('dev'));
-
 app.use(helmet());
-
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));
-
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // router
@@ -59,17 +56,13 @@ const storagePost = multer.diskStorage({
 
 const upload = multer({ storage: storagePost });
 //Uploading multiple files
-app.post(
-  '/api/uploads',
-  upload.array('imgCollections', 10),
-  (req, res, next) => {
-    try {
-      return res.status(200).json('File uploaded successfully');
-    } catch (error) {
-      console.log(error);
-    }
+app.post('/api/uploads', upload.array('imgCollections', 10), (req, res, next) => {
+  try {
+    return res.status(200).json('File uploaded successfully');
+  } catch (error) {
+    console.log(error);
   }
-);
+});
 app.listen(port, () => {
   console.log(`------  API START AT: http://localhost:${port}  -----`);
 });
