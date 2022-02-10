@@ -22,9 +22,10 @@ const getUser = (userId) => {
 };
 
 io.on('connection', (socket) => {
-  // connect
+  //when ceonnect
   console.log(socket.id + '_connected');
 
+  //take userId and socketId from user
   socket.on('addUser', (userId) => {
     addUser(userId, socket.id);
     io.emit('getUsers', users);
@@ -45,7 +46,7 @@ io.on('connection', (socket) => {
     }
   });
 
-  //disconnect
+  //when disconnect
   socket.on('disconnect', () => {
     console.log(socket.id + '_disconnected');
     removeUser(socket.id);
