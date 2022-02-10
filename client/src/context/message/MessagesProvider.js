@@ -6,11 +6,11 @@ const initialState = '';
 export const MessagesContext = createContext(initialState);
 
 export const MessagesContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(MessagesReducer, initialState);
-  const store = {
-    data: state,
-    dispatch,
-  };
+    const [state, dispatch] = useReducer(MessagesReducer, initialState);
+    const store = {
+        data: state,
+        dispatch,
+    };
 
-  return <MessagesContext.Provider value={store}>{children}</MessagesContext.Provider>;
+    return <MessagesContext.Provider value={store}>{children}</MessagesContext.Provider>;
 };

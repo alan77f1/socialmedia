@@ -39,12 +39,12 @@ function Chat(props) {
         });
     }, []);
 
-    useEffect(() => {
-        socket.current.emit('addUser', currentUser._id);
-        // socket.current.on('getUsers', (users) => {
-        //     console.log('socket users:', users);
-        // });
-    }, [currentUser]);
+    // useEffect(() => {
+    //     socket.current.emit('addUser', currentUser._id);
+    //     // socket.current.on('getUsers', (users) => {
+    //     //     console.log('socket users:', users);
+    //     // });
+    // }, [currentUser]);
 
     useEffect(() => {
         setConversations(conversationsStore);
