@@ -1,4 +1,5 @@
 const Story = require('./../models/Story');
+const User = require('../models/User');
 exports.post = async (req, res) => {
   try {
     const story = new Story(req.body);
