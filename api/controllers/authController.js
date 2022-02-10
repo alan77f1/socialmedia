@@ -1,3 +1,4 @@
+const User = require('./../models/User');
 exports.postLogin = async function (req, res) {
   try {
     const user = await User.findOne({ email: req.body.email });

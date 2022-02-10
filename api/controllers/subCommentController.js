@@ -1,3 +1,5 @@
+import { SubComment } from '../models/SubComment.js';
+
 exports.postSubComment = async (req, res) => {
   const newSubComment = new SubComment(req.body);
   try {

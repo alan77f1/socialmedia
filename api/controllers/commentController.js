@@ -1,3 +1,5 @@
+import { Comment } from '../models/Comment.js';
+
 exports.postComment = async (req, res) => {
   const newComment = new Comment(req.body);
   try {

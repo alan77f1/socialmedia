@@ -1,3 +1,5 @@
+import { Conversation } from '../models/Conversation.js';
+
 exports.postConversation = async (req, res) => {
   try {
     const conversation = new Conversation(req.body);

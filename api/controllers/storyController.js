@@ -1,3 +1,4 @@
+import { Story } from '../models/Story.js';
 exports.post = async (req, res) => {
   try {
     const story = new Story(req.body);

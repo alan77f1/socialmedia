@@ -1,3 +1,4 @@
+import { Message } from '../models/Message.js';
 exports.postMessage = async (req, res) => {
   try {
     const message = new Message(req.body);

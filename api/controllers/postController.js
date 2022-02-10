@@ -1,3 +1,4 @@
+import { Post } from '../models/Post.js';
 exports.post = async function (req, res) {
   const newPost = new Post(req.body);
   try {
