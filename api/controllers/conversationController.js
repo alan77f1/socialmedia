@@ -1,5 +1,4 @@
-import { Conversation } from '../models/Conversation.js';
-
+const Conversation = require('./../models/Conversation');
 exports.postConversation = async (req, res) => {
   try {
     const conversation = new Conversation(req.body);

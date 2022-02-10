@@ -1,5 +1,7 @@
-import { Post } from '../models/Post.js';
-exports.post = async function (req, res) {
+const Post = require('./../models/Post');
+const User = require('./../models/User');
+
+exports.postCreate = async function (req, res) {
   const newPost = new Post(req.body);
   try {
     const savedPost = await newPost.save();

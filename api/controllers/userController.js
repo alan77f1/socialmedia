@@ -1,3 +1,4 @@
+const User = require('./../models/User');
 exports.getUser = async (req, res) => {
   const userId = req.query.userId;
   const username = req.query.username;

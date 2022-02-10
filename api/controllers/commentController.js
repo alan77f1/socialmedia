@@ -1,5 +1,4 @@
-import { Comment } from '../models/Comment.js';
-
+const Comment = require('./../models/Comment');
 exports.postComment = async (req, res) => {
   const newComment = new Comment(req.body);
   try {

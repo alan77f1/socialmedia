@@ -1,4 +1,4 @@
-import { Story } from '../models/Story.js';
+const Story = require('./../models/Story');
 exports.post = async (req, res) => {
   try {
     const story = new Story(req.body);
