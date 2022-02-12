@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
+<<<<<<< HEAD
 const User = require('./../models/User');
+=======
+const authController = require('../controllers/authController');
+>>>>>>> 404bdc79b6a3a538334b6a29d9165a2073097866
 
 // register: [POST] api/auth/register
 router.post('/register', async function (req, res) {

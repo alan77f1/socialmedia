@@ -6,7 +6,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect, useRef, useState } from 'react';
-// import { io } from 'socket.io-client';
+import { io } from 'socket.io-client';
 import { NO_AVARTAR, PF } from '../../constants';
 import { AuthContext } from '../../context/AuthProvider';
 import Message from '../Message';

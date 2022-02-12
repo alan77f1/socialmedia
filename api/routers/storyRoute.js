@@ -1,9 +1,14 @@
 const express = require('express');
+<<<<<<< HEAD
 const router = express.Router();
 const Story = require('../models/Story');
 const User = require('../models/User');
+=======
+const storyController = require('../controllers/storyController');
+>>>>>>> 404bdc79b6a3a538334b6a29d9165a2073097866
 
 // [POST] stories/
+<<<<<<< HEAD
 router.post('/', async (req, res) => {
     try {
         const story = new Story(req.body);
@@ -12,6 +17,10 @@ router.post('/', async (req, res) => {
     } catch (error) {
         res.status(500).json(error);
     }
+=======
+router.post('/', function (req, res) {
+  storyController.postStory;
+>>>>>>> 404bdc79b6a3a538334b6a29d9165a2073097866
 });
 
 // [GET] stories/

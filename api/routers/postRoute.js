@@ -1,9 +1,14 @@
 const express = require('express');
+<<<<<<< HEAD
 const User = require('../models/User');
 const router = express.Router();
 const Post = require('./../models/Post');
+=======
+const postController = require('../controllers/postController');
+>>>>>>> 404bdc79b6a3a538334b6a29d9165a2073097866
 
 // create: [POST] api/posts
+<<<<<<< HEAD
 router.post('/', async function (req, res) {
     const newPost = new Post(req.body);
     try {
@@ -13,6 +18,9 @@ router.post('/', async function (req, res) {
         res.status(500).json(error);
     }
 });
+=======
+router.post('/', postController.postCreate);
+>>>>>>> 404bdc79b6a3a538334b6a29d9165a2073097866
 
 // get my post and friends'post: [GET] api/posts
 router.get('/:userId', async function (req, res) {
