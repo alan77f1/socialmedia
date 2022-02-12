@@ -13,14 +13,17 @@ const helmet = require('helmet');
 // use library
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
-  console.log('Connected to mongoDB');
+    console.log('---connected to mongoDB---');
 });
 
 // middleware
 app.use(morgan('dev'));
+
 app.use(helmet());
+
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));
+
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // router
@@ -45,24 +48,24 @@ app.use('/api/messages', messageRoute);
 
 // upload file
 const storagePost = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/images/post');
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-  // Date.now() + '_' +
+    destination: (req, file, cb) => {
+        cb(null, 'public/images/post');
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    },
+    // Date.now() + '_' +
 });
 
 const upload = multer({ storage: storagePost });
 //Uploading multiple files
 app.post('/api/uploads', upload.array('imgCollections', 10), (req, res, next) => {
-  try {
-    return res.status(200).json('File uploaded successfully');
-  } catch (error) {
-    console.log(error);
-  }
+    try {
+        return res.status(200).json('File uploaded successfully');
+    } catch (error) {
+        console.log(error);
+    }
 });
 app.listen(port, () => {
-  console.log(`------  API START AT: http://localhost:${port}  -----`);
+    console.log(`------API START AT: http://localhost:${port}-----`);
 });

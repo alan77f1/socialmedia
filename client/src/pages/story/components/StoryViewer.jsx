@@ -5,6 +5,8 @@ import { PropTypes } from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import { format } from 'timeago.js';
 import { NO_AVARTAR, PF } from '../../../constants';
+import ProgressTimeOut from './ProgressTimeOut';
+import StoryAction from './StoryAction';
 
 StoryViewer.propTypes = {
     changeStoryIndex: PropTypes.func,
@@ -116,6 +118,12 @@ function StoryViewer(props) {
                 onMouseMove={mouseMoveHandler}
                 onMouseOut={mouseOutHandler}
             >
+                <ProgressTimeOut
+                    storyViewer={storyViewer}
+                    showStoryIndex={showStoryIndex}
+                    pauseFlagMouse={pauseFlagMouse}
+                />
+
                 <div className="storyItemWrap">
                     <div className="storyItemUser">
                         <img
@@ -135,6 +143,7 @@ function StoryViewer(props) {
                             <div className="storyItemTextBottm">Cavendish music</div>
                         </div>
                     </div>
+                    <StoryAction pauseFlagBtn={pauseFlagBtn} pauseFlagMouse={pauseFlagMouse} />
                 </div>
                 {firstStory?._id !== storyViewer[showStoryIndex]?._id && (
                     <div id="storyPrevBtn" onClick={() => changeStoryIndexHandler(-1)}>

@@ -1,394 +1,394 @@
 .comment {
-  padding-top: 12px;
+    padding-top: 12px;
 }
 
 .commentTop {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .commentTopAvatar {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 8px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
 }
 
 /* css for feedback comment*/
 .commentTop.feedback {
-  margin-top: 6px;
-  margin-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 2px;
 }
 .commentTop.feedback .commentTopAvatar {
-  width: 25px;
-  height: 25px;
+    width: 25px;
+    height: 25px;
 }
 
 .commentTopInput {
-  padding: 2px 2px 2px 16px;
-  background-color: #3a3b3c;
-  border-radius: 20px;
+    padding: 2px 2px 2px 16px;
+    background-color: #3a3b3c;
+    border-radius: 20px;
 
-  display: flex;
-  align-items: center;
-  flex: 1;
+    display: flex;
+    align-items: center;
+    flex: 1;
 
-  position: relative;
+    position: relative;
 }
 
 .commentTopInput input {
-  background-color: #3a3b3c;
-  border: none;
-  flex: 1;
-  color: #b0b3b8;
-  font-size: 14px;
+    background-color: #3a3b3c;
+    border: none;
+    flex: 1;
+    color: #b0b3b8;
+    font-size: 14px;
 }
 
 .commentTopInput input::placeholder {
-  font-size: 14px;
-  color: #b0b3b8;
+    font-size: 14px;
+    color: #b0b3b8;
 }
 
 .commentTopInput input:focus {
-  outline: none;
+    outline: none;
 }
 
 .commentTopInputAttach {
-  display: flex;
+    display: flex;
 }
 
 .commentTopInputAttachItem {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  /* background-color: #9b9b9b44; */
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    /* background-color: #9b9b9b44; */
 
-  position: relative;
+    position: relative;
 }
 
 .commentTopInputAttachItem:hover {
-  background-color: #9b9b9b44;
-  cursor: pointer;
+    background-color: #9b9b9b44;
+    cursor: pointer;
 }
 
 .commentTopInputAttachItemBg {
-  position: absolute;
-  width: 20px;
-  height: 18px;
-  margin-left: 5px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  filter: invert(86%) sepia(5%) saturate(241%) hue-rotate(179deg) brightness(86%) contrast(80%);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    filter: invert(86%) sepia(5%) saturate(241%) hue-rotate(179deg) brightness(86%) contrast(80%);
 
-  top: 6px;
-  right: 4px;
+    top: 6px;
+    right: 4px;
 }
 
 .commentTopInputAttachEmoji {
-  list-style: none;
-  padding: 0;
-  width: 314px;
-  height: 320px;
-  background-color: #242526;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 45px;
-  right: 0;
-  padding: 4px;
+    list-style: none;
+    padding: 0;
+    width: 314px;
+    height: 320px;
+    background-color: #242526;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    padding: 4px;
 
-  box-shadow: 0px 2px 26px 4px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 2px 26px 4px rgba(0, 0, 0, 0.63);
 
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .commentTopInputAttachEmoji li {
-  margin-bottom: 10px;
-  font-size: 25px;
-  height: 25px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    height: 25px;
 }
 
 .commentTopInputAttachEmoji::-webkit-scrollbar {
-  width: 4px;
-  display: none;
+    width: 4px;
+    display: none;
 }
 
 .commentTopInputAttachEmoji:hover::-webkit-scrollbar {
-  display: block;
+    display: block;
 }
 
 .commentTopInputAttachEmoji::-webkit-scrollbar-thumb {
-  background-color: rgba(109, 109, 109, 0.823);
-  border-radius: 8px;
+    background-color: rgba(109, 109, 109, 0.823);
+    border-radius: 8px;
 }
 
 .commentTopInputAttachEmoji::-webkit-scrollbar-track {
-  background-color: #acacac06;
+    background-color: #acacac06;
 }
 
 /* Comment list */
 .commentList {
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
 .commentItem {
-  display: flex;
-  margin-top: 8px;
+    display: flex;
+    margin-top: 8px;
 }
 .commentItem + .commentItem {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .commentItemContentWrap {
-  flex: 1;
+    flex: 1;
 }
 
 .commentItemAvatarImg {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 8px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
 }
 
 .commentItemContent {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .commentItemContentLeft {
-  padding: 8px 14px;
-  background-color: #3a3b3c;
-  color: #e4e6eb;
-  font-size: 14px;
-  font-weight: 300;
-  border-radius: 22px;
-  margin-right: 5px;
+    padding: 8px 14px;
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 22px;
+    margin-right: 5px;
 
-  position: relative;
+    position: relative;
 }
 
 .commentItemContentRight {
-  color: #b6b2b1;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+    color: #b6b2b1;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  opacity: 0;
+    opacity: 0;
 }
 
 .commentItemContent:hover .commentItemContentRight {
-  opacity: 1;
+    opacity: 1;
 }
 
 .commentItemContentRight:hover {
-  background-color: #3a3b3c;
+    background-color: #3a3b3c;
 }
 
 .commentItemContentName {
-  font-weight: 400;
-  font-size: 15px;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 .commentItemContentText {
-  margin-top: 5px;
-  line-height: 1.3;
+    margin-top: 5px;
+    line-height: 1.3;
 }
 
 .commentItemContentAction {
-  display: flex;
-  font-size: 14px;
-  color: #949496;
-  font-weight: 500;
-  padding: 8px 12px 0;
-  align-items: center;
+    display: flex;
+    font-size: 14px;
+    color: #949496;
+    font-weight: 500;
+    padding: 8px 12px 0;
+    align-items: center;
 
-  position: relative; /* postion for list likebtn in subcomment*/
+    position: relative; /* postion for list likebtn in subcomment*/
 }
 
 .commentItemContentActionItem {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
 .commentItemContentActionItem:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .commentItemContentTime {
-  font-weight: 300;
-  font-size: 12px;
+    font-weight: 300;
+    font-size: 12px;
 }
 
 .commentMore {
-  font-size: 15px;
-  font-weight: 500;
-  color: #b6b6b6;
-  margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #b6b6b6;
+    margin-top: 10px;
 }
 
 .commentMore:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .commentItemContentReportAction {
-  cursor: pointer;
-  padding: 2px 4px;
-  background-color: #3a3b3c;
-  border-radius: 20px;
-  border: 0.5px solid rgba(118, 117, 117, 0.385);
-  list-style: none;
+    cursor: pointer;
+    padding: 2px 4px;
+    background-color: #3a3b3c;
+    border-radius: 20px;
+    border: 0.5px solid rgba(118, 117, 117, 0.385);
+    list-style: none;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  position: absolute;
-  bottom: -16px;
-  right: -2px;
+    position: absolute;
+    bottom: -16px;
+    right: -2px;
 }
 
 .commentItemContentReportAction.shortComment {
-  bottom: 10px;
-  right: -120px;
+    bottom: 10px;
+    right: -120px;
 }
 
 .commentItemContentReportAction .reportItem {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .reportItemQuantity {
-  font-size: 12px;
-  font-weight: 400;
-  color: #b6b6b6;
-  margin-left: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b6b6b6;
+    margin-left: 4px;
 }
 
 .reportItemDetail {
-  list-style: none;
-  padding: 0 12px 8px;
-  background-color: rgb(146, 146, 146);
-  border-radius: 10px;
-  position: absolute;
-  width: 50px;
-  top: 22px;
-  left: 0;
-  display: none;
-  z-index: 1;
+    list-style: none;
+    padding: 0 12px 8px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 10px;
+    position: absolute;
+    width: 50px;
+    top: 22px;
+    left: 0;
+    display: none;
+    z-index: 1;
 }
 
 .commentItemContentReportAction:hover .reportItemDetail {
-  display: block;
+    display: block;
 
-  transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .reportItemDetailItem {
-  display: flex;
-  margin-top: 8px;
+    display: flex;
+    margin-top: 8px;
 }
 
 .reportItemDetailItem img {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .reportItemDetailItemQuantity {
-  margin-left: 8px;
-  color: #333;
-  font-weight: 500;
-  font-size: 14px;
+    margin-left: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 /* subcomment */
 .subcommentReadMore {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
 
 .subcommentReadMoreBg {
-  position: absolute;
-  width: 20px;
-  height: 18px;
-  margin-left: 5px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  filter: invert(86%) sepia(5%) saturate(241%) hue-rotate(179deg) brightness(86%) contrast(80%);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    filter: invert(86%) sepia(5%) saturate(241%) hue-rotate(179deg) brightness(86%) contrast(80%);
 
-  top: 0;
-  left: 8px;
+    top: 0;
+    left: 8px;
 }
 
 .subcommentReadMoreText {
-  color: #b6b6b6;
-  font-size: 14px;
-  margin: 4px 30px;
-  font-weight: bold;
+    color: #b6b6b6;
+    font-size: 14px;
+    margin: 4px 30px;
+    font-weight: bold;
 }
 
 .subcommentReadMore:hover .subcommentReadMoreText {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* list likebtn in subcomment */
 
 .commentLikeBtnList {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 
-  background-color: #212222;
-  padding: 5px 4px;
-  border-radius: 30px;
-  border: 0.5px solid rgb(82, 82, 82);
+    background-color: #212222;
+    padding: 5px 4px;
+    border-radius: 30px;
+    border: 0.5px solid rgb(82, 82, 82);
 
-  position: absolute;
-  bottom: 30px;
-  left: -4px;
+    position: absolute;
+    bottom: 30px;
+    left: -4px;
 
-  display: none;
+    display: none;
 }
 
 .commentLikeBtnList.open {
-  display: flex;
+    display: flex;
 }
 
 .commentLikeBtnList::after {
-  position: absolute;
-  bottom: -16px;
-  content: '';
-  width: 150px;
-  height: 20px;
-  background-color: transparent;
+    position: absolute;
+    bottom: -16px;
+    content: '';
+    width: 150px;
+    height: 20px;
+    background-color: transparent;
 }
 
 .commentLikeBtnItem {
-  line-height: 0;
-  padding: 0 2px;
+    line-height: 0;
+    padding: 0 2px;
 }
 
 .commentLikeBtnItemImg {
-  width: 32px;
-  height: 32px;
-  transform: scale(0.95);
-  cursor: pointer;
+    width: 32px;
+    height: 32px;
+    transform: scale(0.95);
+    cursor: pointer;
 }
 
 .commentLikeBtnItem:hover .commentLikeBtnItemImg {
-  transform: scale(1.05);
-  transition: all 0.2s;
+    transform: scale(1.05);
+    transition: all 0.2s;
 }

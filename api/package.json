@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon --inspect ./index.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "prettier": "2.4.1"
   }
 }
