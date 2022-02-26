@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { POST_TYPES } from "./redux/actions/postAction";
-import { GLOBALTYPES } from "./redux/actions/globalTypes";
-import { NOTIFY_TYPES } from "./redux/actions/notifyAction";
-import { MESS_TYPES } from "./redux/actions/messageAction";
+import React, { useEffect, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { POST_TYPES } from './redux/actions/postAction';
+import { GLOBALTYPES } from './redux/actions/globalTypes';
+import { NOTIFY_TYPES } from './redux/actions/notifyAction';
+import { MESS_TYPES } from './redux/actions/messageAction';
 
-import audiobell from "./audio/got-it-done-613.mp3";
+import audiobell from './audio/got-it-done-613.mp3';
 
 const spawnNotification = (body, icon, url, title) => {
   let options = {
@@ -16,7 +16,7 @@ const spawnNotification = (body, icon, url, title) => {
 
   n.onclick = (e) => {
     e.preventDefault();
-    window.open(url, "_blank");
+    window.open(url, '_blank');
   };
 };
 
@@ -24,92 +24,88 @@ const SocketClient = () => {
   const { auth, socket, notify, online, call } = useSelector((state) => state);
   const dispatch = useDispatch();
 
+  // saved value now
   const audioRef = useRef();
 
   // joinUser
   useEffect(() => {
-    socket.emit("joinUser", auth.user);
+    socket.emit('joinUser', auth.user);
   }, [socket, auth.user]);
 
   // Likes
   useEffect(() => {
-    socket.on("likeToClient", (newPost) => {
+    socket.on('likeToClient', (newPost) => {
       dispatch({ type: POST_TYPES.UPDATE_POST, payload: newPost });
     });
 
-    return () => socket.off("likeToClient");
+    return () => socket.off('likeToClient');
   }, [socket, dispatch]);
 
   useEffect(() => {
-    socket.on("unLikeToClient", (newPost) => {
+    socket.on('unLikeToClient', (newPost) => {
       dispatch({ type: POST_TYPES.UPDATE_POST, payload: newPost });
     });
 
-    return () => socket.off("unLikeToClient");
+    return () => socket.off('unLikeToClient');
   }, [socket, dispatch]);
 
   // Comments
   useEffect(() => {
-    socket.on("createCommentToClient", (newPost) => {
+    socket.on('createCommentToClient', (newPost) => {
       dispatch({ type: POST_TYPES.UPDATE_POST, payload: newPost });
     });
 
-    return () => socket.off("createCommentToClient");
+    return () => socket.off('createCommentToClient');
   }, [socket, dispatch]);
 
   useEffect(() => {
-    socket.on("deleteCommentToClient", (newPost) => {
+    socket.on('deleteCommentToClient', (newPost) => {
       dispatch({ type: POST_TYPES.UPDATE_POST, payload: newPost });
     });
 
-    return () => socket.off("deleteCommentToClient");
+    return () => socket.off('deleteCommentToClient');
   }, [socket, dispatch]);
 
   // Follow
   useEffect(() => {
-    socket.on("followToClient", (newUser) => {
+    socket.on('followToClient', (newUser) => {
       dispatch({ type: GLOBALTYPES.AUTH, payload: { ...auth, user: newUser } });
     });
 
-    return () => socket.off("followToClient");
+    return () => socket.off('followToClient');
   }, [socket, dispatch, auth]);
 
   useEffect(() => {
-    socket.on("unFollowToClient", (newUser) => {
+    socket.on('unFollowToClient', (newUser) => {
       dispatch({ type: GLOBALTYPES.AUTH, payload: { ...auth, user: newUser } });
     });
 
-    return () => socket.off("unFollowToClient");
+    return () => socket.off('unFollowToClient');
   }, [socket, dispatch, auth]);
 
   // Notification
   useEffect(() => {
-    socket.on("createNotifyToClient", (msg) => {
+    socket.on('createNotifyToClient', (msg) => {
       dispatch({ type: NOTIFY_TYPES.CREATE_NOTIFY, payload: msg });
 
       if (notify.sound) audioRef.current.play();
-      spawnNotification(
-        msg.user.username + " " + msg.text,
-        msg.user.avatar,
-        msg.url,
-        "UTC2-NETWORK"
-      );
+      spawnNotification(msg.user.username + ' ' + msg.text, msg.user.avatar, msg.url, 'INSTAGRAM');
     });
 
-    return () => socket.off("createNotifyToClient");
+    return () => socket.off('createNotifyToClient');
   }, [socket, dispatch, notify.sound]);
 
   useEffect(() => {
-    socket.on("removeNotifyToClient", (msg) => {
+    socket.on('removeNotifyToClient', (msg) => {
       dispatch({ type: NOTIFY_TYPES.REMOVE_NOTIFY, payload: msg });
     });
 
-    return () => socket.off("removeNotifyToClient");
+    return () => socket.off('removeNotifyToClient');
   }, [socket, dispatch]);
 
   // Message
   useEffect(() => {
-    socket.on("addMessageToClient", (msg) => {
+    socket.on('addMessageToClient', (msg) => {
       dispatch({ type: MESS_TYPES.ADD_MESSAGE, payload: msg });
 
       dispatch({
@@ -122,16 +118,16 @@ const SocketClient = () => {
       });
     });
 
-    return () => socket.off("addMessageToClient");
+    return () => socket.off('addMessageToClient');
   }, [socket, dispatch]);
 
   // Check User Online / Offline
   useEffect(() => {
-    socket.emit("checkUserOnline", auth.user);
+    socket.emit('checkUserOnline', auth.user);
   }, [socket, auth.user]);
 
   useEffect(() => {
-    socket.on("checkUserOnlineToMe", (data) => {
+    socket.on('checkUserOnlineToMe', (data) => {
       data.forEach((item) => {
         if (!online.includes(item.id)) {
           dispatch({ type: GLOBALTYPES.ONLINE, payload: item.id });
@@ -139,51 +135,51 @@ const SocketClient = () => {
       });
     });
 
-    return () => socket.off("checkUserOnlineToMe");
+    return () => socket.off('checkUserOnlineToMe');
   }, [socket, dispatch, online]);
 
   useEffect(() => {
-    socket.on("checkUserOnlineToClient", (id) => {
+    socket.on('checkUserOnlineToClient', (id) => {
       if (!online.includes(id)) {
         dispatch({ type: GLOBALTYPES.ONLINE, payload: id });
       }
     });
 
-    return () => socket.off("checkUserOnlineToClient");
+    return () => socket.off('checkUserOnlineToClient');
   }, [socket, dispatch, online]);
 
   // Check User Offline
   useEffect(() => {
-    socket.on("CheckUserOffline", (id) => {
+    socket.on('CheckUserOffline', (id) => {
       dispatch({ type: GLOBALTYPES.OFFLINE, payload: id });
     });
 
-    return () => socket.off("CheckUserOffline");
+    return () => socket.off('CheckUserOffline');
   }, [socket, dispatch]);
 
   // Call User
   useEffect(() => {
-    socket.on("callUserToClient", (data) => {
+    socket.on('callUserToClient', (data) => {
       dispatch({ type: GLOBALTYPES.CALL, payload: data });
     });
 
-    return () => socket.off("callUserToClient");
+    return () => socket.off('callUserToClient');
   }, [socket, dispatch]);
 
   useEffect(() => {
-    socket.on("userBusy", (data) => {
+    socket.on('userBusy', (data) => {
       dispatch({
         type: GLOBALTYPES.ALERT,
         payload: { error: `${call.username} is busy!` },
       });
     });
 
-    return () => socket.off("userBusy");
+    return () => socket.off('userBusy');
   }, [socket, dispatch, call]);
 
   return (
     <>
-      <audio controls ref={audioRef} style={{ display: "none" }}>
+      <audio controls ref={audioRef} style={{ display: 'none' }}>
         <source src={audiobell} type="audio/mp3" />
       </audio>
     </>

@@ -1,1 +1,1 @@
-export const BASE_URL = "https://utc2network.herokuapp.com";
+export const BASE_URL = 'https://instagram.herokuapp.com';
