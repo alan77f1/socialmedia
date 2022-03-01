@@ -1,32 +1,32 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { GLOBALTYPES } from "../redux/actions/globalTypes";
-import { createPost, updatePost } from "../redux/actions/postAction";
-import Icons from "./Icons";
-import { imageShow, videoShow } from "../utils/mediaShow";
+import React, { useState, useRef, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { GLOBALTYPES } from '../redux/actions/globalTypes';
+import { createPost, updatePost } from '../redux/actions/postAction';
+import Icons from './Icons';
+import { imageShow, videoShow } from '../utils/mediaShow';
 
 const StatusModal = () => {
   const { auth, theme, status, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState('');
   const [images, setImages] = useState([]);
 
   const [stream, setStream] = useState(false);
   const videoRef = useRef();
   const refCanvas = useRef();
-  const [tracks, setTracks] = useState("");
+  const [tracks, setTracks] = useState('');
 
   const handleChangeImages = (e) => {
     const files = [...e.target.files];
-    let err = "";
+    let err = '';
     let newImages = [];
 
     files.forEach((file) => {
-      if (!file) return (err = "Tập Tin Không Tồn Tại.");
+      if (!file) return (err = 'Tập Tin Không Tồn Tại.');
 
       if (file.size > 1024 * 1024 * 5) {
-        return (err = "Dung Lượng Tối Đa 5mb.");
+        return (err = 'Dung Lượng Tối Đa 5mb.');
       }
 
       return newImages.push(file);
@@ -62,10 +62,10 @@ const StatusModal = () => {
     const width = videoRef.current.clientWidth;
     const height = videoRef.current.clientHeight;
 
-    refCanvas.current.setAttribute("width", width);
-    refCanvas.current.setAttribute("height", height);
+    refCanvas.current.setAttribute('width', width);
+    refCanvas.current.setAttribute('height', height);
 
-    const ctx = refCanvas.current.getContext("2d");
+    const ctx = refCanvas.current.getContext('2d');
     ctx.drawImage(videoRef.current, 0, 0, width, height);
     let URL = refCanvas.current.toDataURL();
     setImages([...images, { camera: URL }]);
@@ -81,7 +81,7 @@ const StatusModal = () => {
     if (images.length === 0)
       return dispatch({
         type: GLOBALTYPES.ALERT,
-        payload: { error: "Vui Lòng Thêm Ảnh Của Bạn." },
+        payload: { error: 'Vui Lòng Thêm Ảnh Của Bạn.' },
       });
 
     if (status.onEdit) {
@@ -90,7 +90,7 @@ const StatusModal = () => {
       dispatch(createPost({ content, images, auth, socket }));
     }
 
-    setContent("");
+    setContent('');
     setImages([]);
     if (tracks) tracks.stop();
     dispatch({ type: GLOBALTYPES.STATUS, payload: false });
@@ -127,9 +127,9 @@ const StatusModal = () => {
             placeholder={`${auth.user.username}, Bạn Đang Nghĩ Gì?`}
             onChange={(e) => setContent(e.target.value)}
             style={{
-              filter: theme ? "invert(1)" : "invert(0)",
-              color: theme ? "white" : "#111",
-              background: theme ? "rgba(0,0,0,.03)" : "",
+              filter: theme ? 'invert(1)' : 'invert(0)',
+              color: theme ? 'white' : '#111',
+              background: theme ? 'rgba(0,0,0,.03)' : '',
             }}
           />
 
@@ -169,11 +169,11 @@ const StatusModal = () => {
                 ref={videoRef}
                 width="100%"
                 height="100%"
-                style={{ filter: theme ? "invert(1)" : "invert(0)" }}
+                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
               />
 
               <span onClick={handleStopStream}>&times;</span>
-              <canvas ref={refCanvas} style={{ display: "none" }} />
+              <canvas ref={refCanvas} style={{ display: 'none' }} />
             </div>
           )}
 
