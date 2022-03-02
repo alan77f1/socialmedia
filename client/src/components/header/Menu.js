@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../redux/actions/authAction";
-import { GLOBALTYPES } from "../../redux/actions/globalTypes";
-import Avatar from "../Avatar";
-import NotifyModal from "../NotifyModal";
-import ChangePassword from "../profile/changePassword";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../redux/actions/authAction';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import Avatar from '../Avatar';
+import NotifyModal from '../NotifyModal';
+import ChangePassword from '../profile/changePassword';
 
 const Menu = () => {
   const navLinks = [
-    { label: "Home", icon: "home", path: "/" },
-    { label: "Message", icon: "inbox", path: "/message" },
-    { label: "Discover", icon: "explore", path: "/discover" },
+    { label: 'Home', icon: 'home', path: '/' },
+    { label: 'Message', icon: 'message', path: '/message' },
+    { label: 'Discover', icon: 'explore', path: '/discover' },
   ];
   const [showDialogPassword, setShowDialogPassword] = useState(false);
   const { auth, theme, notify } = useSelector((state) => state);
@@ -19,7 +19,7 @@ const Menu = () => {
   const { pathname } = useLocation();
 
   const isActive = (pn) => {
-    if (pn === pathname) return "active";
+    if (pn === pathname) return 'active';
   };
 
   return (
@@ -44,7 +44,7 @@ const Menu = () => {
           >
             <span
               className="material-icons"
-              style={{ color: notify.data.length > 0 ? "crimson" : "" }}
+              style={{ color: notify.data.length > 0 ? 'crimson' : '' }}
             >
               notifications
             </span>
@@ -55,7 +55,7 @@ const Menu = () => {
           <div
             className="dropdown-menu"
             aria-labelledby="navbarDropdown"
-            style={{ transform: "translateX(75px)" }}
+            style={{ transform: 'translateX(75px)' }}
           >
             <NotifyModal />
           </div>
@@ -88,11 +88,8 @@ const Menu = () => {
                 })
               }
             >
-              {theme ? "Giao Diện Sáng" : "Giao Diện Tối"}
+              {theme ? 'Giao Diện Sáng' : 'Giao Diện Tối'}
             </label>
-            {/* <Link className="dropdown-item" to="/">
-              Đổi Mật Khẩu
-            </Link> */}
 
             <label
               // htmlFor="setShowDialogPassword"
@@ -105,19 +102,13 @@ const Menu = () => {
             </label>
 
             <div className="dropdown-divider"></div>
-            <Link
-              className="dropdown-item"
-              to="/"
-              onClick={() => dispatch(logout())}
-            >
+            <Link className="dropdown-item" to="/" onClick={() => dispatch(logout())}>
               Đăng Xuất
             </Link>
           </div>
         </li>
       </ul>
-      {showDialogPassword && (
-        <ChangePassword setShowDialogPassword={setShowDialogPassword} />
-      )}
+      {showDialogPassword && <ChangePassword setShowDialogPassword={setShowDialogPassword} />}
     </div>
   );
 };
