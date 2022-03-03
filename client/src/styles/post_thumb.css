@@ -34,6 +34,7 @@
   align-items: center;
   opacity: 0;
   transition: 0.3s;
+  border-radius: 10px !important;
 }
 .post_thumb_display:hover .post_thumb_menu {
   opacity: 1;

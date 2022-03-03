@@ -14,7 +14,7 @@ const Message = () => {
                 align-items-center flex-column h-100"
         >
           <i className="fas fa-inbox text-primary" style={{ fontSize: '5rem' }} />
-          <h4>Tin Nhắn</h4>
+          <h4>Message</h4>
         </div>
       </div>
     </div>

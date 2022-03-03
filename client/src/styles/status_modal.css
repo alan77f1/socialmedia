@@ -14,8 +14,9 @@
   background: white;
   margin: 30px auto;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
+
 .status_header {
   display: flex;
   justify-content: space-between;

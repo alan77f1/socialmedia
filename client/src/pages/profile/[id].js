@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Info from "../../components/profile/Info";
-import Posts from "../../components/profile/Posts";
-import Saved from "../../components/profile/Saved";
+import Info from '../../components/profile/Info';
+import Posts from '../../components/profile/Posts';
+import Saved from '../../components/profile/Saved';
 
-import { useSelector, useDispatch } from "react-redux";
-import LoadIcon from "../../images/loading.gif";
-import { getProfileUsers } from "../../redux/actions/profileAction";
-import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import LoadIcon from '../../images/loading.gif';
+import { getProfileUsers } from '../../redux/actions/profileAction';
+import { useParams } from 'react-router-dom';
 
 const Profile = () => {
   const { profile, auth } = useSelector((state) => state);
@@ -28,17 +28,11 @@ const Profile = () => {
 
       {auth.user._id === id && (
         <div className="profile_tab">
-          <button
-            className={saveTab ? "" : "active"}
-            onClick={() => setSaveTab(false)}
-          >
-            Bài Đăng
+          <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
+            Bài viết
           </button>
-          <button
-            className={saveTab ? "active" : ""}
-            onClick={() => setSaveTab(true)}
-          >
-            Đã Lưu
+          <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
+            Đã lưu
           </button>
         </div>
       )}
