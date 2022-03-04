@@ -3,8 +3,9 @@
   "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "engines": {
-    "node": "v16.14.0",
-    "npm": "8.3.1"
+    "node": "v14.17.3",
+    "npm": "8.3.1",
+    "yarn": "1.22.17"
   },
   "private": true,
   "dependencies": {
