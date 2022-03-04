@@ -1,12 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const PostThumb = ({ posts, result }) => {
   const { theme } = useSelector((state) => state);
 
-  if (result === 0)
-    return <h2 className="text-center text-danger">Không Có Bài Đăng</h2>;
+  if (result === 0) return <h2 className="text-center text-danger">Không Có Bài Đăng</h2>;
 
   return (
     <div className="post_thumb">
@@ -18,13 +17,13 @@ const PostThumb = ({ posts, result }) => {
                 controls
                 src={post.images[0].url}
                 alt={post.images[0].url}
-                style={{ filter: theme ? "invert(1)" : "invert(0)" }}
+                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
               />
             ) : (
               <img
                 src={post.images[0].url}
                 alt={post.images[0].url}
-                style={{ filter: theme ? "invert(1)" : "invert(0)" }}
+                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
               />
             )}
 

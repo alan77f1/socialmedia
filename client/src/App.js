@@ -10,7 +10,6 @@ import Register from './pages/register';
 import Forgot from './pages/forgotPassword';
 import Reset from './pages/resetPassword';
 
-
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
 import StatusModal from './components/StatusModal';
@@ -90,6 +89,7 @@ function App() {
           <Route exact path="/forgot_password" component={isLogged ? NotFound : Forgot} />
           <Route exact path="/reset/:token" component={isLogged ? NotFound : Reset} />
 
+          {/* check is login for local Storage*/}
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />
         </div>

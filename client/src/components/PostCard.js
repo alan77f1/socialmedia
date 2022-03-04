@@ -3,8 +3,8 @@ import CardHeader from './home/post_card/CardHeader';
 import CardBody from './home/post_card/CardBody';
 import CardFooter from './home/post_card/CardFooter';
 
-import Comments from './home/Comments';
-import InputComment from './home/InputComment';
+import Comments from './home/comments/Comments';
+import InputComment from './home/comments/InputComment';
 
 const PostCard = ({ post, theme }) => {
   return (

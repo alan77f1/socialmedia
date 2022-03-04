@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Avatar from "../Avatar";
-import EditProfile from "./EditProfile";
+import React, { useState, useEffect } from 'react';
+import Avatar from '../Avatar';
+import EditProfile from './EditProfile';
 // import ChangePassword from "./changePassword";
-import FollowBtn from "../FollowBtn";
-import Followers from "./Followers";
-import Following from "./Following";
-import { GLOBALTYPES } from "../../redux/actions/globalTypes";
+import FollowBtn from '../FollowBtn';
+import Followers from './Followers';
+import Following from './Following';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 
 const Info = ({ id, auth, profile, dispatch }) => {
   const [userData, setUserData] = useState([]);
@@ -43,10 +43,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
               <h2>{user.username}</h2>
 
               {user._id === auth.user._id ? (
-                <button
-                  className="btn btn-outline-info"
-                  onClick={() => setOnEdit(true)}
-                >
+                <button className="btn btn-outline-info" onClick={() => setOnEdit(true)}>
                   Chỉnh Sửa Thông Tin
                 </button>
               ) : (
@@ -92,16 +89,10 @@ const Info = ({ id, auth, profile, dispatch }) => {
           {/* {onEdit && <ChangePassword setOnEdit={setOnEdit} />} */}
 
           {showFollowers && (
-            <Followers
-              users={user.followers}
-              setShowFollowers={setShowFollowers}
-            />
+            <Followers users={user.followers} setShowFollowers={setShowFollowers} />
           )}
           {showFollowing && (
-            <Following
-              users={user.following}
-              setShowFollowing={setShowFollowing}
-            />
+            <Following users={user.following} setShowFollowing={setShowFollowing} />
           )}
         </div>
       ))}

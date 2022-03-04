@@ -7,7 +7,7 @@ import LikeButton from '../../LikeButton';
 import { useSelector, useDispatch } from 'react-redux';
 import CommentMenu from './CommentMenu';
 import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
-import InputComment from '../InputComment';
+import InputComment from './InputComment';
 
 const CommentCard = ({ children, comment, post, commentId }) => {
   const { auth, theme } = useSelector((state) => state);
@@ -106,7 +106,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
               )}
             </div>
           )}
-
+          {/* edit comment card */}
           <div style={{ cursor: 'pointer' }}>
             <small className="text-muted mr-3">{moment(comment.createdAt).fromNow()}</small>
 
