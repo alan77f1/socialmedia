@@ -76,10 +76,10 @@ const CardFooter = ({ post }) => {
           <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
           <Link to={`/post/${post._id}`} className="text-dark">
-            <i className="far fa-comments" />
+            <i className="far fa-comment" />
           </Link>
 
-          <i className="far fa-share-square" src={Send} onClick={() => setIsShare(!isShare)} />
+          <i className="far fa-share-s    quare" src={Send} onClick={() => setIsShare(!isShare)} />
 
           {/* <img src={Send} alt="Send" onClick={() => setIsShare(!isShare)} /> */}
         </div>
