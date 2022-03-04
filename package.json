@@ -1,7 +1,7 @@
 {
-  "name": "insta",
+  "name": "instagram",
   "version": "1.0.0",
-  "description": "",
+  "description": "Network to showcase fullstack",
   "main": "server.js",
   "engines": {
     "node": "v14.17.3",
@@ -16,7 +16,7 @@
     "client-install": "cd client && npm install",
     "install-all": "concurrently \"npm run server-install\" \"npm run client-install\" ",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
