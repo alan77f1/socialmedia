@@ -36,6 +36,8 @@ npm run dev
 - [React](https://reactjs.org/) - Front end UI
 - [Nodejs](https://nodejs.org/en/) - Language used for backend
 - [Express](https://expressjs.com/) - Minimalist web framework
+- [Redux](https://redux.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ## License
 
