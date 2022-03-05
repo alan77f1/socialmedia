@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://instagram.herokuapp.com';
+export const BASE_URL = 'https://instagramclonestack.herokuapp.com';
