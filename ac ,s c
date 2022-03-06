@@ -1,0 +1,280 @@
+[33mcommit 28443cdd781f5d2f20aaf1cd1a488c71aba5505b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 21:07:47 2022 +0700
+
+    Done
+
+[33mcommit a740552593d08b493e766f598ae1c92ac6dfb818[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 21:02:58 2022 +0700
+
+    Done
+
+[33mcommit 75ed47b73865075c04ac3637833c50bf713dc5eb[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 20:53:35 2022 +0700
+
+    Updated
+
+[33mcommit 0f88cd20265b1f22b4a223e4064e33cedeb77a09[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 20:47:09 2022 +0700
+
+    Added procfile config
+
+[33mcommit defbbec6c2e01fc4aef06cbd6669d1216f5c52a1[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 20:26:59 2022 +0700
+
+    Finished deploy app on heroku
+
+[33mcommit 043f9bcd75fb34e1bdde870e50d455c2f1ddd7e8[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 20:02:49 2022 +0700
+
+    Updated README.md
+
+[33mcommit b1164122cb1864b17b16e0f1c3cd33baa3200d1f[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Mar 5 19:53:52 2022 +0700
+
+    Added app run guide
+
+[33mcommit f9b84a295718fa1b6dba2f53510584f44dde353c[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 22:21:12 2022 +0700
+
+    Fixed error deploy
+
+[33mcommit 381742adc21008de689fc75590a3639035fea9ac[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 21:50:52 2022 +0700
+
+    Config
+
+[33mcommit 3e092a3e331f1229eaadcd7d40bd35c559d1e628[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 21:30:53 2022 +0700
+
+    Config
+
+[33mcommit fecccd59ba6572a6b2c46d3852266531ff5f3784[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 21:11:46 2022 +0700
+
+    Updated something
+
+[33mcommit 3ef04840c75568e27e4daa0b734a2bb03ec0eaba[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 21:00:24 2022 +0700
+
+    Added version npm for packpage client
+
+[33mcommit 855b0b834b17a6b4b9c6ef9946cb438ec9ec6ca9[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 11:30:10 2022 +0700
+
+    Build
+
+[33mcommit 078f1c5640ae8fe940e94c085c040cb354fb84ca[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 11:10:55 2022 +0700
+
+    Updated version node
+
+[33mcommit 32af59fe4980c58a7e1bbf9a674fd546965a569d[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 11:05:23 2022 +0700
+
+    Added engines node for packpage client
+
+[33mcommit 1ff1af8ce225566d00c0965da8cac34687823edf[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 10:51:22 2022 +0700
+
+    Deploy heroku
+
+[33mcommit ecbd0a847417e2772f26eabceaf75b032ed8acd7[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Mar 4 08:51:54 2022 +0700
+
+    Fixed some components
+
+[33mcommit 8f5fa3eafb459d4f1a57bebf6b233ef95ea7233e[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Mar 3 13:11:07 2022 +0700
+
+    Make it better
+
+[33mcommit 833dcc669a0992dad0e80023216d4e685e6919c3[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Wed Mar 2 22:15:10 2022 +0700
+
+    Handle something
+
+[33mcommit cc54c61e8f793097246a644dc587776c3d1a79cf[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Tue Mar 1 15:30:16 2022 +0700
+
+    Make it better
+
+[33mcommit f0b6ef8254f72175d21cc5e12678bd8d23e47167[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Feb 26 23:23:21 2022 +0700
+
+    Make it better
+
+[33mcommit 91ed28c8d41a0e589cc38694332a1c07345b01f6[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Wed Feb 23 18:43:16 2022 +0700
+
+    Make it better
+
+[33mcommit 57b7200103472ca723eb11fbb5efbf3d78747531[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Wed Feb 23 18:30:36 2022 +0700
+
+    Updated some feature
+
+[33mcommit 4c3d154fa44298db58e1d0030ea56dc4b686ecc6[m
+Merge: c6a233b2 404bdc79
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Feb 12 21:19:53 2022 +0700
+
+    Added
+
+[33mcommit c6a233b23bc36a905631b6d855c35dfeb41c5ef0[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Feb 12 21:19:08 2022 +0700
+
+    Added
+
+[33mcommit 404bdc79b6a3a538334b6a29d9165a2073097866[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Feb 12 21:07:57 2022 +0700
+
+    Updated some feature
+
+[33mcommit 6da6f2d961c8983be451fc2903bc34ded217ceb0[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Feb 10 15:50:55 2022 +0700
+
+    Updated some component
+
+[33mcommit 114709b86495770c458770fbf0114c8ebe245ebe[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Feb 10 12:40:06 2022 +0700
+
+    Finished section controller
+
+[33mcommit 4748cdf9575b9a386fb0a4b038c6a7036c22106a[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Feb 10 11:10:08 2022 +0700
+
+    Fixed: router section api
+
+[33mcommit 047c680d8cb482bbe25c8a42620a66abf9a579c0[m
+Author: Bùi Văn Tân <67332180+buivantann@users.noreply.github.com>
+Date:   Thu Feb 10 10:43:40 2022 +0700
+
+    HPNY Tan
+
+[33mcommit 347e576bbc9b67ccc8daa80fde2f9da67eed69e4[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Feb 10 10:42:29 2022 +0700
+
+    Refactor: controller api
+
+[33mcommit 13eec61efba8e73106d46aaa7fcb2c12d59be6e6[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Feb 10 09:32:57 2022 +0700
+
+    Added some comment for socketIO
+
+[33mcommit 6f6f7f9d6617eb4a962496059b84ef3fe5b3f496[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Jan 29 08:55:09 2022 +0700
+
+    Refactor: fixed something app
+
+[33mcommit a7451a5dfca865e345f7d9d31f5b1ef6c44c1b9c[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sat Jan 29 08:36:23 2022 +0700
+
+    Refactor: added user controller
+
+[33mcommit 6f5f19e30bf4ce8fbfadd404943fb67823168966[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Jan 28 15:24:11 2022 +0700
+
+    Refactor: added sub comment controller
+
+[33mcommit cc69b3cd6593c9fee076d0bc86a1a3e15447265e[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Jan 28 15:17:34 2022 +0700
+
+    Refactor: added story controller
+
+[33mcommit d6128fe2e39760751df8bfd10b1ca06d905ee7d6[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Jan 28 07:44:54 2022 +0700
+
+    Refactor: Build back postController
+
+[33mcommit 92274e61e841fc0381e256daa1dd82fc129456ab[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Jan 27 20:47:04 2022 +0700
+
+    Refactor: some controller
+
+[33mcommit 414a6d0771c63d5a01b414548b8c7373c0cf71a5[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Jan 27 11:12:15 2022 +0700
+
+    Added auth and comment for controllers
+
+[33mcommit 4046e9cad8787b750e84dadb773f5eecb1964567[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Jan 27 10:47:56 2022 +0700
+
+    Create controllers for section api
+
+[33mcommit b44071297642c7af2146a7a331c18f3afb5b7c80[m
+Author: Bùi Văn Tân <67332180+buivantann@users.noreply.github.com>
+Date:   Thu Jan 27 10:45:41 2022 +0700
+
+    Update README.md
+
+[33mcommit 16cdb082af6bf46c7fad133dba4da38e86d4adb7[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Fri Dec 3 12:17:00 2021 +0700
+
+    Added section sass
+
+[33mcommit c3b7695f8c3f4fe9318dfa021f5f71fdae4fe1bb[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Thu Dec 2 15:07:33 2021 +0700
+
+    Handle UI for Register pages
+
+[33mcommit 84de4eaf8e26a34165e2044d3729919e48468237[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Wed Dec 1 09:31:14 2021 +0700
+
+    Fixed: section Register
+
+[33mcommit 879eecdbe055167d8f29846356c0742b35154f20[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Tue Nov 30 08:07:37 2021 +0700
+
+    Handle UI for section Register pages
+
+[33mcommit b7268d8aff57679de18658b8cefb5644e637b534[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Mon Nov 29 09:16:05 2021 +0700
+
+    Fixed: Updated section login pages
+
+[33mcommit f54a4aa460f039de74579666ed657a0ad0c6c664[m
+Author: buivantan01 <buivantan1234566@gmail.com>
+Date:   Sun Nov 28 10:
