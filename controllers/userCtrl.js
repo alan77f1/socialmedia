@@ -1,4 +1,4 @@
-const Users = require("../models/userModel");
+const Users = require('../models/userModel');
 
 const userCtrl = {
   searchUser: async (req, res) => {
@@ -7,7 +7,7 @@ const userCtrl = {
         username: { $regex: req.query.username },
       })
         .limit(10)
-        .select("fullname username avatar");
+        .select('fullname username avatar');
 
       res.json({ users });
     } catch (err) {
@@ -17,10 +17,9 @@ const userCtrl = {
   getUser: async (req, res) => {
     try {
       const user = await Users.findById(req.params.id)
-        .select("-password")
-        .populate("followers following", "-password");
-      if (!user)
-        return res.status(400).json({ msg: "Người dùng không tồn tại." });
+        .select('-password')
+        .populate('followers following', '-password');
+      if (!user) return res.status(400).json({ msg: 'Người dùng không tồn tại.' });
 
       res.json({ user });
     } catch (err) {
@@ -29,12 +28,8 @@ const userCtrl = {
   },
   updateUser: async (req, res) => {
     try {
-      const { avatar, fullname, mobile, address, story, website, gender } =
-        req.body;
-      if (!fullname)
-        return res
-          .status(400)
-          .json({ msg: "Vui lòng thêm tên đầy đủ của bạn." });
+      const { avatar, fullname, mobile, address, story, website, gender } = req.body;
+      if (!fullname) return res.status(400).json({ msg: 'Vui lòng thêm tên đầy đủ của bạn.' });
 
       await Users.findOneAndUpdate(
         { _id: req.user._id },
@@ -49,7 +44,7 @@ const userCtrl = {
         }
       );
 
-      res.json({ msg: "Cập nhật thành công!" });
+      res.json({ msg: 'Cập nhật thành công!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -60,8 +55,7 @@ const userCtrl = {
         _id: req.params.id,
         followers: req.user._id,
       });
-      if (user.length > 0)
-        return res.status(500).json({ msg: "Bạn đã theo dõi người dùng này." });
+      if (user.length > 0) return res.status(500).json({ msg: 'Bạn đã theo dõi người dùng này.' });
 
       const newUser = await Users.findOneAndUpdate(
         { _id: req.params.id },
@@ -69,7 +63,7 @@ const userCtrl = {
           $push: { followers: req.user._id },
         },
         { new: true }
-      ).populate("followers following", "-password");
+      ).populate('followers following', '-password');
 
       await Users.findOneAndUpdate(
         { _id: req.user._id },
@@ -92,7 +86,7 @@ const userCtrl = {
           $pull: { followers: req.user._id },
         },
         { new: true }
-      ).populate("followers following", "-password");
+      ).populate('followers following', '-password');
 
       await Users.findOneAndUpdate(
         { _id: req.user._id },
@@ -118,21 +112,21 @@ const userCtrl = {
         { $sample: { size: Number(num) } },
         {
           $lookup: {
-            from: "users",
-            localField: "followers",
-            foreignField: "_id",
-            as: "followers",
+            from: 'users',
+            localField: 'followers',
+            foreignField: '_id',
+            as: 'followers',
           },
         },
         {
           $lookup: {
-            from: "users",
-            localField: "following",
-            foreignField: "_id",
-            as: "following",
+            from: 'users',
+            localField: 'following',
+            foreignField: '_id',
+            as: 'following',
           },
         },
-      ]).project("-password");
+      ]).project('-password');
 
       return res.json({
         users,

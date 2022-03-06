@@ -1,5 +1,5 @@
-const Conversations = require("../models/conversationModel");
-const Messages = require("../models/messageModel");
+const Conversations = require('../models/conversationModel');
+const Messages = require('../models/messageModel');
 
 class APIfeatures {
   constructor(query, queryString) {
@@ -25,10 +25,7 @@ const messageCtrl = {
 
       const newConversation = await Conversations.findOneAndUpdate(
         {
-          $or: [
-            { recipients: [sender, recipient] },
-            { recipients: [recipient, sender] },
-          ],
+          $or: [{ recipients: [sender, recipient] }, { recipients: [recipient, sender] }],
         },
         {
           recipients: [sender, recipient],
@@ -50,7 +47,7 @@ const messageCtrl = {
 
       await newMessage.save();
 
-      res.json({ msg: "Tạo thành công !" });
+      res.json({ msg: 'Tạo thành công !' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -65,8 +62,8 @@ const messageCtrl = {
       ).paginating();
 
       const conversations = await features.query
-        .sort("-updatedAt")
-        .populate("recipients", "avatar username fullname");
+        .sort('-updatedAt')
+        .populate('recipients', 'avatar username fullname');
 
       res.json({
         conversations,
@@ -88,7 +85,7 @@ const messageCtrl = {
         req.query
       ).paginating();
 
-      const messages = await features.query.sort("-createdAt");
+      const messages = await features.query.sort('-createdAt');
 
       res.json({
         messages,
@@ -104,7 +101,7 @@ const messageCtrl = {
         _id: req.params.id,
         sender: req.user._id,
       });
-      res.json({ msg: "Xoá thành công!" });
+      res.json({ msg: 'Xoá thành công!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -119,7 +116,7 @@ const messageCtrl = {
       });
       await Messages.deleteMany({ conversation: newConver._id });
 
-      res.json({ msg: "Xoá thành công!" });
+      res.json({ msg: 'Xoá thành công!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
