@@ -1,6 +1,4 @@
-# Current active heroku session
-
-[Instagram](https://instagram-clone-mernstack.herokuapp.com)(demo)
+# Current active heroku session [InstagramClone](https://instagram-clone-mernstack.herokuapp.com)
 
 # Instagram Clone
 
