@@ -15,7 +15,7 @@
 
 If interested in testing the website, follow the instructions below.
 
-### Clone repo
+### Step 1. Clone repo
 
 Clone repository 
 
@@ -25,7 +25,7 @@ git clone https://github.com/buivantann/instagram-clone.git
 
 
 
-### Prerequisites
+### Step 2. Prerequisites
 
 Once the repository is cloned and up in running in your personalized IDE, you will need to do the following command in both the root directory and under client
 
@@ -33,7 +33,7 @@ Once the repository is cloned and up in running in your personalized IDE, you wi
 npm install
 ```
 
-### Running
+### Step 3. Running
 
 Once you've installed the prerequisites, cd back into the root directory and run the command below. Note, you will not be able to utilizing the website properly without a backend (MongoDb).
 
