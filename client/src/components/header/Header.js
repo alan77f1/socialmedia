@@ -11,11 +11,8 @@ const Header = () => {
             bg-light justify-content-between align-middle"
       >
         <Link to="/" className="logo">
-          <h1
-            className="navbar-brand text-uppercase p-0 m-0"
-            onClick={() => window.scrollTo({ top: 0 })}
-          >
-            instagram
+          <h1 className="navbar-brand p-0 m-0" onClick={() => window.scrollTo({ top: 0 })}>
+            Instagram
           </h1>
         </Link>
 
