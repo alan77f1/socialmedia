@@ -2,10 +2,6 @@
 
 [Instagram](https://instagram-clone-mernstack.herokuapp.com)(demo)
 
-!!!NOTE!!!
-
-I do not keep up with active registering on the website, this is merely a proof of concept. Any weird pictures are filtered, BUT textbox entries are not currently filtered!
-
 # Instagram Clone
 
 Application strives to achieve a basic developer's facebook meaning the following are used: comments, likes/dislikes, registration, profiles, and posts to discuss topics with like minded individuals. This is accomplished through using mongodb, react, nodejs, and express.
