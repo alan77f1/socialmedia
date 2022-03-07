@@ -38,14 +38,6 @@ npm run dev
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-<!-- 
-link_url_client
-310738195530-gln7jej02pbgeii2thk8540iph2s4kio.apps.googleusercontent.com
-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
-1//04QrGblDE9DfBCgYIARAAGAQSNwF-L9IrlItD2hbdmlpBsjkj9VP6dc-R7XNPQtyxMieVaJz9dzse_Mt3hzSn4gaHNFwRw67HRlY  
-mongodb+srv://username:<password>@cluster0.8lnx4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
- -->
   
 
 ## Acknowledgments
