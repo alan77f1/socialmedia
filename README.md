@@ -1,7 +1,5 @@
 # Current active heroku session [InstagramClone](https://instagram-clone-mernstack.herokuapp.com)
 
-# Instagram Clone
-
 #### Application strives to achieve a basic developer's instagram meaning the following are used: 
 
 - Register/Login/ForgotPassword/ResetPassword
@@ -9,6 +7,16 @@
 - Chat message with socket.io
 - Profile, delete and follower friend
 - And more...
+
+
+## Built By  
+
+- [MongoDb](https://www.mongodb.com/) - Database used
+- [React](https://reactjs.org/) - Front end UI
+- [Nodejs](https://nodejs.org/en/) - Language used for backend
+- [Express](https://expressjs.com/) - Minimalist web framework
+- [Redux](https://redux.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
 
 ## Getting Started
@@ -41,13 +49,3 @@ Once you've installed the prerequisites, cd back into the root directory and run
 npm run dev
 ```
 
-## Built By  
-
-- [MongoDb](https://www.mongodb.com/) - Database used
-- [React](https://reactjs.org/) - Front end UI
-- [Nodejs](https://nodejs.org/en/) - Language used for backend
-- [Express](https://expressjs.com/) - Minimalist web framework
-- [Redux](https://redux.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
-
-  
