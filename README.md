@@ -4,11 +4,28 @@
 
 # Instagram Clone
 
-Application strives to achieve a basic developer's facebook meaning the following are used: comments, likes/dislikes, registration, profiles, and posts to discuss topics with like minded individuals. This is accomplished through using mongodb, react, nodejs, and express.
+#### Application strives to achieve a basic developer's instagram meaning the following are used: 
+
+- Register/Login/ForgotPassword/ResetPassword
+- create Post, comment, reply (drop favorites)
+- Chat message with socket.io
+- Profile, delete and follower friend
+- And more...
+
 
 ## Getting Started
 
 If interested in testing the website, follow the instructions below.
+
+### Clone repo
+
+Clone repository 
+
+```
+git clone https://github.com/buivantann/instagram-clone.git
+```
+
+
 
 ### Prerequisites
 
@@ -26,7 +43,7 @@ Once you've installed the prerequisites, cd back into the root directory and run
 npm run dev
 ```
 
-## Built With
+## Built By  
 
 - [MongoDb](https://www.mongodb.com/) - Database used
 - [React](https://reactjs.org/) - Front end UI
