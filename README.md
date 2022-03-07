@@ -1,6 +1,6 @@
 # Current active heroku session
 
-https://instagrammern.herokuapp.com/
+[Instagram](https://instagram-clone-mernstack.herokuapp.com)(demo)
 
 !!!NOTE!!!
 
