@@ -1,7 +1,7 @@
-import React from "react";
-import UserCard from "../UserCard";
-import FollowBtn from "../FollowBtn";
-import { useSelector } from "react-redux";
+import React from 'react';
+import UserCard from '../UserCard';
+import FollowBtn from '../FollowBtn';
+import { useSelector } from 'react-redux';
 
 const Followers = ({ users, setShowFollowers }) => {
   const { auth } = useSelector((state) => state);
@@ -13,11 +13,7 @@ const Followers = ({ users, setShowFollowers }) => {
 
         <div className="follow_content">
           {users.map((user) => (
-            <UserCard
-              key={user._id}
-              user={user}
-              setShowFollowers={setShowFollowers}
-            >
+            <UserCard key={user._id} user={user} setShowFollowers={setShowFollowers}>
               {auth.user._id !== user._id && <FollowBtn user={user} />}
             </UserCard>
           ))}
