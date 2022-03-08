@@ -164,7 +164,7 @@ const Register = () => {
           </label>
         </div>
 
-        <button type="submit" className="btn btn-dark w-100">
+        <button type="submit" className="btn btn-primary w-100">
           Đăng Ký
         </button>
 

@@ -105,7 +105,7 @@ const commentCtrl = {
         }
       );
 
-      res.json({ msg: 'Đẫ xoá bình luận!' });
+      res.json({ msg: 'Đã xoá bình luận!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

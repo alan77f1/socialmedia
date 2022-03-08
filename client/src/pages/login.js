@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="auth_page">
       <form onSubmit={handleSubmit}>
-        <h3 className="text-uppercase text-center mb-4">Instagram</h3>
+        <h2 className="text-center mb-4">Instagram</h2>
 
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email</label>
@@ -69,7 +69,7 @@ const Login = () => {
 
         <button
           type="submit"
-          className="btn btn-dark w-100"
+          className="btn btn-primary w-100"
           disabled={email && password ? false : true}
         >
           Đăng Nhập
