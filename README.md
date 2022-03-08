@@ -15,8 +15,18 @@
 - [React](https://reactjs.org/) - Front end UI
 - [Nodejs](https://nodejs.org/en/) - Language used for backend
 - [Express](https://expressjs.com/) - Minimalist web framework
-- [Redux](https://redux.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
+- [Redux](https://redux.js.org/) 
+- [Bootstrap](https://getbootstrap.com/) - Design UI
+- [Socket.io](https://socket.io/) - to comment vs chat realtime
+- [Peerjs](https://peerjs.com/) - to call with call video
+- [JWT](https://jwt.io/) - authentication with authorization
+
+
+A xài socket.io để bình luận vs chat realtime
+
+Peerjs để call với call video
+
+Jwt để authentication with authorization
 
 
 ## Getting Started
