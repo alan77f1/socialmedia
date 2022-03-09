@@ -9,9 +9,8 @@ const authCtrl = {
   register: async (req, res) => {
     try {
       const { fullname, username, email, password, gender } = req.body;
-      let newUserName = username.toLowerCase().replace(/ /g, '');
 
-      const user_name = await Users.findOne({ username: newUserName });
+      const user_name = await Users.findOne({ username });
       if (user_name) return res.status(400).json({ msg: 'Tên đăng nhập này đã tồn tại.' });
 
       const user_email = await Users.findOne({ email });
@@ -24,7 +23,7 @@ const authCtrl = {
 
       const newUser = new Users({
         fullname,
-        username: newUserName,
+        username,
         email,
         password: passwordHash,
         gender,
@@ -40,7 +39,6 @@ const authCtrl = {
         path: '/api/refresh_token',
         maxAge: 30 * 24 * 60 * 60 * 1000, // 30days
       });
-
       await newUser.save();
 
       res.json({
@@ -66,6 +64,7 @@ const authCtrl = {
 
       if (!user) return res.status(400).json({ msg: 'Email này chưa được đăng ký.' });
 
+      //  user.password of Users model
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) return res.status(400).json({ msg: 'Mật khẩu không chính xác.' });
 
@@ -139,7 +138,6 @@ const authCtrl = {
         return res.status(400).json({ msg: 'Mật khẩu phải có ít nhất 6 kí tự.' });
 
       const passwordHash = await bcrypt.hash(newPassword, 12);
-
       await Users.findOneAndUpdate(
         { _id: user._id },
         {
@@ -187,6 +185,7 @@ const authCtrl = {
   },
 };
 
+// payload is property of table
 const createAccessToken = (payload) => {
   return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
     expiresIn: '1d',

@@ -140,7 +140,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
           <Link to={`/profile/${onReply.user._id}`} className="mr-1">
             @{onReply.user.username}:
           </Link>
-        </InputComment>
+        </InputComment> 
       )}
 
       {children}
