@@ -11,8 +11,8 @@
 
 ## Built By  
 
-- [MongoDb](https://www.mongodb.com/) - Database used
-- [React](https://reactjs.org/) - Front end UI
+- [MongoDb](https://www.mongodb.com/) - Database design
+- [React](https://reactjs.org/) - Front end 
 - [Nodejs](https://nodejs.org/en/) - Language used for backend
 - [Express](https://expressjs.com/) - Minimalist web framework
 - [Redux](https://redux.js.org/) -  State management
