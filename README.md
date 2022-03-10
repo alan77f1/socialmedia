@@ -15,7 +15,7 @@
 - [React](https://reactjs.org/) - Front end UI
 - [Nodejs](https://nodejs.org/en/) - Language used for backend
 - [Express](https://expressjs.com/) - Minimalist web framework
-- [Redux](https://redux.js.org/) 
+- [Redux](https://redux.js.org/) -  State management
 - [Bootstrap](https://getbootstrap.com/) - Design UI
 - [Socket.io](https://socket.io/) - to comment vs chat realtime
 - [Peerjs](https://peerjs.com/) - to call with call video
