@@ -56,4 +56,7 @@ Once you've installed the prerequisites, cd back into the root directory and run
 ```
 npm run dev
 ```
+<!-- 
+## Snapshots 📷 -->
+
 
