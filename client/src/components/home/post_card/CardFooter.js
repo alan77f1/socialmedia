@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Send from '../../../images/send.svg';
+import Send from '../../../assets/images/send.svg';
 import LikeButton from '../../LikeButton';
 import { useSelector, useDispatch } from 'react-redux';
 import { likePost, unLikePost, savePost, unSavePost } from '../../../redux/actions/postAction';

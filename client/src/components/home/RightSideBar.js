@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import UserCard from '../UserCard';
 import FollowBtn from '../FollowBtn';
-import LoadIcon from '../../images/loading.gif';
+import LoadIcon from '../../assets/images/loading.gif';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 
 const RightSideBar = () => {

@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import Status from "../components/home/Status";
-import Posts from "../components/home/Posts";
-import RightSideBar from "../components/home/RightSideBar";
+import Status from '../components/home/Status';
+import Posts from '../components/home/Posts';
+import RightSideBar from '../components/home/RightSideBar';
 
-import { useSelector } from "react-redux";
-import LoadIcon from "../images/loading.gif";
+import { useSelector } from 'react-redux';
+import LoadIcon from '../assets/images/loading.gif';
 
 let scroll = 0;
 
 const Home = () => {
   const { homePosts } = useSelector((state) => state);
 
-  window.addEventListener("scroll", () => {
-    if (window.location.pathname === "/") {
+  window.addEventListener('scroll', () => {
+    if (window.location.pathname === '/') {
       scroll = window.pageYOffset;
       return scroll;
     }
@@ -21,7 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      window.scrollTo({ top: scroll, behavior: "smooth" });
+      window.scrollTo({ top: scroll, behavior: 'smooth' });
     }, 100);
   }, []);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import NoNotice from '../images/notice.png';
+import NoNotice from '../assets/images/notice.png';
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import moment from 'moment';
