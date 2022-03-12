@@ -2,7 +2,7 @@
 .status {
   background: white;
   box-shadow: 0 0 5px #ddd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0, 0.125);
   border-radius: 10px;
@@ -13,9 +13,9 @@
   outline: none;
   border-radius: 30px;
   color: #555;
-  padding: 0 10px;
+  padding: 0 15px;
   text-align: left;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .status .statusBtn:hover {
   background: #ddd;

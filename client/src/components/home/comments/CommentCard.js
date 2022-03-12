@@ -3,7 +3,7 @@ import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-import LikeButton from '../../LikeButton';
+import LikeButton from '../../button/LikeBtn';
 import { useSelector, useDispatch } from 'react-redux';
 import CommentMenu from './CommentMenu';
 import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
@@ -140,7 +140,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
           <Link to={`/profile/${onReply.user._id}`} className="mr-1">
             @{onReply.user.username}:
           </Link>
-        </InputComment> 
+        </InputComment>
       )}
 
       {children}

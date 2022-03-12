@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
+const connectDatabase = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const SocketServer = require('./socketServer');
+const SocketServer = require('./SocketServer');
 const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
@@ -31,20 +31,8 @@ app.use('/api', require('./routes/commentRouter'));
 app.use('/api', require('./routes/notifyRouter'));
 app.use('/api', require('./routes/messageRouter'));
 
-const URI = process.env.MONGODB_URL;
-mongoose.connect(
-  URI,
-  {
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (err) => {
-    if (err) throw err;
-    console.log('Connected to mongodb');
-  }
-);
+// Connecting to database
+connectDatabase();
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));

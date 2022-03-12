@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middleware/auth');
-const userCtrl = require('../controllers/userCtrl');
+const userCtrl = require('../controllers/userController');
 
 router.get('/search', auth, userCtrl.searchUser);
 

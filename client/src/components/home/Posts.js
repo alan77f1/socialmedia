@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PostCard from '../PostCard';
 
 import LoadIcon from '../../assets/images/loading.gif';
-import LoadMoreBtn from '../LoadMoreBtn';
+import LoadMoreBtn from '../button/LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { POST_TYPES } from '../../redux/actions/postAction';
 

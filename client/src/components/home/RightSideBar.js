@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import UserCard from '../UserCard';
-import FollowBtn from '../FollowBtn';
+import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 

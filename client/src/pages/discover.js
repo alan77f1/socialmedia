@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoverPosts, DISCOVER_TYPES } from '../redux/actions/discoverAction';
 import LoadIcon from '../assets/images/loading.gif';
 import PostThumb from '../components/PostThumb';
-import LoadMoreBtn from '../components/LoadMoreBtn';
+import LoadMoreBtn from '../components/button/LoadMoreBtn';
 import { getDataAPI } from '../utils/fetchData';
 
 const Discover = () => {

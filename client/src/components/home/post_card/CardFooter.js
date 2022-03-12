@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Send from '../../../assets/images/send.svg';
-import LikeButton from '../../LikeButton';
+import LikeButton from '../../button/LikeBtn';
 import { useSelector, useDispatch } from 'react-redux';
 import { likePost, unLikePost, savePost, unSavePost } from '../../../redux/actions/postAction';
 import ShareModal from '../../ShareModal';
