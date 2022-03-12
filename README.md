@@ -5,7 +5,7 @@ Instagram is a leading social media platform across the globe. It has an ability
 #### Application strives to achieve a basic developer's instagram meaning the following are used: 
 
 - User can Register/Login/ForgotPassword/ResetPassword
-- User can post anything like: text,feeling,activities, photos, videos etc...
+- User can post anything like: text,feeling,activities, photos, etc...
 - User can edit or delete the post.
 - User can like, comment or share the post and it is totally live.
 - User can make his profile and also it is editable.
