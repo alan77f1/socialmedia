@@ -45,6 +45,8 @@ git clone https://github.com/buivantann/instagram-clone.git
 
 Once the repository is cloned and up in running in your personalized IDE, you will need to do the following command in both the root directory and under client
 
+cd client
+
 ```
 npm install
 ```
