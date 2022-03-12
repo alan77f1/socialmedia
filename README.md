@@ -1,25 +1,33 @@
-# Current active heroku session [InstagramClone](https://instagram-clone-mernstack.herokuapp.com)
+# Current active heroku session [Instagram Clone](https://instagram-clone-mernstack.herokuapp.com)
+Instagram is a leading social media platform across the globe. It has an ability to connect and share with the people you care about.
+
 
 #### Application strives to achieve a basic developer's instagram meaning the following are used: 
 
-- Register/Login/ForgotPassword/ResetPassword
-- create Post, comment, reply (drop favorites)
-- Chat message with socket.io
-- Profile, delete and follower friend
+- User can Register/Login/ForgotPassword/ResetPassword
+- User can post anything like: text,feeling,activities, photos, videos etc...
+- User can edit or delete the post.
+- User can like, comment or share the post and it is totally live.
+- User can make his profile and also it is editable.
+- User can message to his friends.
 - And more...
 
 
-## Built By  
+## Technology Stack Used 💻
 
-- [MongoDb](https://www.mongodb.com/) - Database used
-- [React](https://reactjs.org/) - Front end UI
+- [MongoDb](https://www.mongodb.com/) - Database design
+- [React](https://reactjs.org/) - Front end 
 - [Nodejs](https://nodejs.org/en/) - Language used for backend
 - [Express](https://expressjs.com/) - Minimalist web framework
-- [Redux](https://redux.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
+- [Redux](https://redux.js.org/) -  State management
+- [Bootstrap](https://getbootstrap.com/) - Design UI
+- [Socket.io](https://socket.io/) - to comment vs chat realtime
+- [Peerjs](https://peerjs.com/) - to call with call video
+- [JWT](https://jwt.io/) - authentication with authorization
 
 
-## Getting Started
+
+## How to run the project 📑
 
 If interested in testing the website, follow the instructions below.
 
@@ -48,4 +56,7 @@ Once you've installed the prerequisites, cd back into the root directory and run
 ```
 npm run dev
 ```
+<!-- 
+## Snapshots 📷 -->
+
 
