@@ -1,4 +1,4 @@
-# Current active heroku session [Instagram (Clone) 🌐](https://instagram-clone-mernstack.herokuapp.com)
+# Current active heroku session [Instagram Clone](https://instagram-clone-mernstack.herokuapp.com)
 Instagram is a leading social media platform across the globe. It has an ability to connect and share with the people you care about.
 
 
