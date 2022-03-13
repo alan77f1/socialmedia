@@ -78,11 +78,11 @@ const StatusModal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (images.length === 0)
-      return dispatch({
-        type: GLOBALTYPES.ALERT,
-        payload: { error: 'Vui Lòng Thêm Ảnh Của Bạn.' },
-      });
+    // if (images.length === 0)
+    //   return dispatch({
+    //     type: GLOBALTYPES.ALERT,
+    //     payload: { error: 'Vui Lòng Thêm Ảnh Của Bạn.' },
+    //   });
 
     if (status.onEdit) {
       dispatch(updatePost({ content, images, auth, status }));

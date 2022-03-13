@@ -22,7 +22,7 @@ const postCtrl = {
     try {
       const { content, images } = req.body;
 
-      if (images.length === 0) return res.status(400).json({ msg: 'Vui lòng thêm ảnh của bạn.' });
+      // if (images.length === 0) return res.status(400).json({ msg: 'Vui lòng thêm ảnh của bạn.' });
 
       const newPost = new Posts({
         content,
