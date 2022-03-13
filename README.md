@@ -16,14 +16,14 @@ Instagram is a leading social media platform across the globe. It has an ability
 ## Technology Stack Used 💻
 
 - [MongoDb](https://www.mongodb.com/) - Database design
-- [React](https://reactjs.org/) - Front end 
-- [Nodejs](https://nodejs.org/en/) - Language used for backend
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Nodejs](https://nodejs.org/en/) - A web framework for Node Js
 - [Express](https://expressjs.com/) - Minimalist web framework
-- [Redux](https://redux.js.org/) -  State management
+- [Redux](https://redux.js.org/) - A library for state management
 - [Bootstrap](https://getbootstrap.com/) - Design UI
-- [Socket.io](https://socket.io/) - to comment vs chat realtime
-- [Peerjs](https://peerjs.com/) - to call with call video
-- [JWT](https://jwt.io/) - authentication with authorization
+- [Socket.io](https://socket.io/) - A library for comment vs chat realtime
+- [Peerjs](https://peerjs.com/) -  A library for call with call video
+- [JWT](https://jwt.io/) - A library for authentication of users
 
 
 
