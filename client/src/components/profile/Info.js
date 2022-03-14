@@ -22,7 +22,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
       setUserData(newData);
     }
   }, [id, auth, dispatch, profile.users]);
-
+  // click status modal
   useEffect(() => {
     if (showFollowers || showFollowing || onEdit) {
       dispatch({ type: GLOBALTYPES.MODAL, payload: true });

@@ -37,7 +37,7 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
       {children}
       <input
         type="text"
-        placeholder="Thêm bình luận của bạn..."
+        placeholder="Viết bình luận..."
         value={content}
         onChange={(e) => setContent(e.target.value)}
         style={{
