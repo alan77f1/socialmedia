@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import MsgDisplay from './MsgDisplay';
 import Icons from '../Icons';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import { imageShow } from '../../utils/mediaShow';
+import { imageShow, videoShow } from '../../utils/mediaShow';
 import { imageUpload } from '../../utils/imageUpload';
 import {
   addMessage,
@@ -237,7 +237,9 @@ const RightSide = () => {
       <div className="show_media" style={{ display: media.length > 0 ? 'grid' : 'none' }}>
         {media.map((item, index) => (
           <div key={index} id="file_media">
-            {item.type.match(/video/i) && imageShow(URL.createObjectURL(item), theme)}
+            {item.type.match(/video/i)
+              ? videoShow(URL.createObjectURL(item), theme)
+              : imageShow(URL.createObjectURL(item), theme)}
             <span onClick={() => handleDeleteMedia(index)}>&times;</span>
           </div>
         ))}
@@ -270,8 +272,12 @@ const RightSide = () => {
           />
         </div>
 
-        <button type="submit" disabled={text || media.length > 0 ? false : true}>
-          Gửi
+        <button
+          type="submit"
+          className="material-icons"
+          disabled={text || media.length > 0 ? false : true}
+        >
+          send
         </button>
       </form>
     </>
