@@ -2,8 +2,46 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 const Login = () => {
+  // const login = async (event) => {
+  //   event.preventDefault();
+
+  //   try {
+  //     const loginData = await loginUser(loginForm);
+  //     if (!loginData.success) {
+  //       setAlert({ message: loginData.message });
+  //       setTimeout(() => setAlert(null), 5000);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // const responseGoogle = async (response) => {
+  //   if (!response.profileObj) return;
+  //   try {
+  //     const registerData = await registerUser(response.profileObj);
+  //     if (!registerData.success) setAlert(registerData.message);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // const responseFacebook = async (response) => {
+  //   const loginFB = {
+  //     email: response.email ? response.email : response.userID,
+  //   };
+  //   if (!response.email) return;
+  //   try {
+  //     const registerData = await registerUser(loginFB);
+  //     if (!registerData.success) setAlert(registerData.message);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   const initialState = { email: '', password: '' };
   const [userData, setUserData] = useState(initialState);
   const { email, password } = userData;
@@ -85,6 +123,33 @@ const Login = () => {
             Hãy Đăng Ký
           </Link>
         </p>
+
+        <div className="container-btn-api">
+          {/* <GoogleLogin
+            clientId="455854470240-d6stpuonh3g1jh4ob8m6mn4bssg7uc48.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <button
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                className="button-api-login"
+              >
+                <img src={IconGG} alt="" style={{ width: 36, height: 36 }} />
+              </button>
+            )}
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+          <FacebookLogin
+            appId="459560505029470"
+            fields="name,email,picture"
+            textButton=""
+            cssClass="button-api-login"
+            icon={<img src={IconFB} alt="" style={{ width: 42, height: 42 }} />}
+            callback={responseFacebook}
+          /> */}
+        </div>
       </form>
     </div>
   );

@@ -38,13 +38,13 @@ const FollowBtn = ({ user }) => {
   return (
     <>
       {followed ? (
-        <button className="btn btn-outline-danger" onClick={handleUnFollow}>
-          Bỏ Theo Dõi
-        </button>
+        <dev className="btn btn-danger" onClick={handleUnFollow}>
+          Xóa
+        </dev>
       ) : (
-        <button className="btn btn-outline-info" onClick={handleFollow}>
-          Theo Dõi
-        </button>
+        <dev className="btn btn-primary" onClick={handleFollow}>
+          Theo dõi
+        </dev>
       )}
     </>
   );

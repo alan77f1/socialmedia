@@ -39,7 +39,7 @@ const CardHeader = ({ post }) => {
               {post.user.username}
             </Link>
           </h6>
-          <small className="text-muted">{moment(post.createdAt).fromNow()}</small>
+          <small className="text-muted">{moment(post.createdAt).locale('es').fromNow()}</small>
         </div>
       </div>
 

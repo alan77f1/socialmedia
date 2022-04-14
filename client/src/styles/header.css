@@ -1,20 +1,20 @@
 .header {
-  width: 1000px;
+  width: 1910px;
   min-height: 70px;
   position: sticky;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   z-index: 2;
   box-shadow: 0 0 10px #ddd;
   background: #f8f9fa;
   border: 1px solid rgb(0, 0, 0, 0.125);
-  border-radius: 0 0 10px 10px;
-  /* margin-top: -1px; */
+  text-align: center;
+  justify-content: center;
 }
 .header .navbar {
-  width: 100%;
+  width: 1000px;
   height: 100%;
-  border-radius: 12px;
+  margin-left: 450px;
 }
 .header .logo h1 {
   font-size: 1.8rem;
@@ -23,6 +23,7 @@
 }
 
 /* ----------- Header Menu ---------- */
+
 .header .menu li {
   opacity: 0.5;
 }
