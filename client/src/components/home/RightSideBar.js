@@ -17,14 +17,13 @@ const RightSideBar = () => {
       <div className="d-flex align-items-center my-2">
         <h6 className="text-black">Gợi ý cho bạn</h6>
         {!suggestions.loading && (
-          <i
-            // className="fas fa-redo"
+          <h6 // className="fas fa-redo"
             className="text-black"
             style={{ cursor: 'pointer', marginLeft: '120px' }}
             onClick={() => dispatch(getSuggestions(auth.token))}
           >
             Xem thêm
-          </i>
+          </h6>
         )}
       </div>
 

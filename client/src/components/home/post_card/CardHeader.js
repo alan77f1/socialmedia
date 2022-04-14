@@ -62,7 +62,7 @@ const CardHeader = ({ post }) => {
           )}
 
           {/* <div className="dropdown-item" onClick={handleCopyLink}>
-            <span className="material-icons">content_copy</span> Sao Chép
+           <span className="material-icons">content_copy</span> Sao Chép
           </div> */}
         </div>
       </div>
