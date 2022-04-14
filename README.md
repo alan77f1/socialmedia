@@ -37,12 +37,16 @@ Giảng viên: Thầy Nguyễn Lê Minh.
    thả cảm xúc: thích bài đăng, thích bình luận (haha, wow, thích, tức giận ...)
 7. tìm kiếm người dùng
 8. Quản lý thông tin người dùng:
+
    - Chỉnh sửa thông tin
    - Số người theo dõi
    - Đang theo dõi
-9. Thống kê doanh thu.
-10. Mã hóa mật khẩu sang bằng bcrypt
-11. Chat Messenger với socket
+
+9. Quản lý tin nhắn message
+
+10. Thống kê doanh thu.
+11. Mã hóa mật khẩu sang bằng bcrypt
+
 12. Quản lý bài viết đã lưu.
 13. Nhận xét và đánh giá bài viết.
 14. Xử lý page not found.

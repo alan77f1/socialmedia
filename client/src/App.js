@@ -25,7 +25,7 @@ import { GLOBALTYPES } from './redux/actions/globalTypes';
 import SocketClient from './SocketClient';
 
 import { getNotifies } from './redux/actions/notifyAction';
-import CallModal from './components/message/CallModal';
+
 import Peer from 'peerjs';
 
 function App() {
@@ -83,7 +83,6 @@ function App() {
 
           {status && <StatusModal />}
           {auth.token && <SocketClient />}
-          {call && <CallModal />}
 
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={isLogged ? NotFound : Register} />

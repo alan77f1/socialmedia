@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '../Avatar';
-import { imageShow, videoShow } from '../../utils/mediaShow';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteMessages } from '../../redux/actions/messageAction';
 import Times from './Times';
@@ -35,11 +35,6 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
               {msg.text}
             </div>
           )}
-          {msg.media.map((item, index) => (
-            <div key={index}>
-              {item.url.match(/video/i) ? videoShow(item.url, theme) : imageShow(item.url, theme)}
-            </div>
-          ))}
         </div>
 
         {msg.call && (
