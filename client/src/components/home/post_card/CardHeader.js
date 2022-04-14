@@ -49,21 +49,19 @@ const CardHeader = ({ post }) => {
           more_horiz
         </span>
 
-        <div className="dropdown-menu">
-          {auth.user._id === post.user._id && (
-            <>
-              <div className="dropdown-item" onClick={handleEditPost}>
-                <span className="material-icons">create</span> Chỉnh Sửa
-              </div>
-              <div className="dropdown-item" onClick={handleDeletePost}>
-                <span className="material-icons">delete_outline</span> Xoá
-              </div>
-            </>
-          )}
+        {auth.user._id === post.user._id && (
+          <>
+            <div className="dropdown-item" onClick={handleEditPost}>
+              <span className="material-icons">create</span> Chỉnh Sửa
+            </div>
+            <div className="dropdown-item" onClick={handleDeletePost}>
+              <span className="material-icons">delete_outline</span> Xoá
+            </div>
+          </>
+        )}
 
-          {/* <div className="dropdown-item" onClick={handleCopyLink}>
-           <span className="material-icons">content_copy</span> Sao Chép
-          </div> */}
+        <div className="dropdown-item" onClick={handleCopyLink}>
+          <span className="material-icons">content_copy</span> Sao Chép
         </div>
       </div>
     </div>
