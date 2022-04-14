@@ -107,7 +107,7 @@ const StatusModal = () => {
     <div className="status_modal">
       <form onSubmit={handleSubmit}>
         <div className="status_header">
-          <h5 className="m-0">Tạo bài viết mới</h5>
+          <h5 style={{ marginLeft: '220px' }}>Tạo bài viết mới</h5>
           <span
             onClick={() =>
               dispatch({
@@ -119,89 +119,88 @@ const StatusModal = () => {
             &times;
           </span>
         </div>
-        <div className="status_footer">
-          <div className="status_body w-50">
-            <textarea
-              name="content"
-              value={content}
-              placeholder={`${auth.user.username}, Bạn Đang Nghĩ Gì?`}
-              onChange={(e) => setContent(e.target.value)}
-              style={{
-                filter: theme ? 'invert(1)' : 'invert(0)',
-                color: theme ? 'white' : '#111',
-                background: theme ? 'rgba(0,0,0,.03)' : '',
-              }}
-            />
 
-            <div className="d-flex">
-              <div className="flex-fill"></div>
-              <Icons setContent={setContent} content={content} theme={theme} />
-            </div>
+        <div className="status_body">
+          <textarea
+            name="content"
+            value={content}
+            placeholder={`${auth.user.username}, Bạn Đang Nghĩ Gì?`}
+            onChange={(e) => setContent(e.target.value)}
+            style={{
+              filter: theme ? 'invert(1)' : 'invert(0)',
+              color: theme ? 'white' : '#111',
+              background: theme ? 'rgba(0,0,0,.03)' : '',
+            }}
+          />
 
-            <div className="show_images">
-              {images.map((img, index) => (
-                <div key={index} id="file_img">
-                  {img.camera ? (
-                    imageShow(img.camera, theme)
-                  ) : img.url ? (
-                    <>
-                      {img.url.match(/video/i)
-                        ? videoShow(img.url, theme)
-                        : imageShow(img.url, theme)}
-                    </>
-                  ) : (
-                    <>
-                      {img.type.match(/video/i)
-                        ? videoShow(URL.createObjectURL(img), theme)
-                        : imageShow(URL.createObjectURL(img), theme)}
-                    </>
-                  )}
-                  <span onClick={() => deleteImages(index)}>&times;</span>
-                </div>
-              ))}
-            </div>
+          <div className="d-flex">
+            <div className="flex-fill"></div>
+            <Icons setContent={setContent} content={content} theme={theme} />
+          </div>
 
-            {stream && (
-              <div className="stream position-relative">
-                <video
-                  autoPlay
-                  muted
-                  ref={videoRef}
-                  width="100%"
-                  height="100%"
-                  style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
-                />
-
-                <span onClick={handleStopStream}>&times;</span>
-                <canvas ref={refCanvas} style={{ display: 'none' }} />
+          <div className="show_images">
+            {images.map((img, index) => (
+              <div key={index} id="file_img">
+                {img.camera ? (
+                  imageShow(img.camera, theme)
+                ) : img.url ? (
+                  <>
+                    {img.url.match(/video/i)
+                      ? videoShow(img.url, theme)
+                      : imageShow(img.url, theme)}
+                  </>
+                ) : (
+                  <>
+                    {img.type.match(/video/i)
+                      ? videoShow(URL.createObjectURL(img), theme)
+                      : imageShow(URL.createObjectURL(img), theme)}
+                  </>
+                )}
+                <span onClick={() => deleteImages(index)}>&times;</span>
               </div>
-            )}
+            ))}
+          </div>
 
-            <div className="input_images">
+          {stream && (
+            <div className="stream position-relative">
+              <video
+                autoPlay
+                muted
+                ref={videoRef}
+                width="100%"
+                height="100%"
+                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
+              />
+
+              <span onClick={handleStopStream}>&times;</span>
+              <canvas ref={refCanvas} style={{ display: 'none' }} />
+            </div>
+          )}
+          <div className="status_footer">
+            <div className="input_images w-50">
               {!stream && (
                 <>
-                  {/* <i className="fas fa-camera" onClick={handleStream} /> */}
-
-                  <div className="file_upload">
-                    <i className="fas fa-image" />
-                    <input
-                      type="file"
-                      name="file"
-                      id="file"
-                      multiple
-                      accept="image/*,video/*"
-                      onChange={handleChangeImages}
-                    />
+                  <div className="file_upload ">
+                    <button className="btn btn-primary w-100" type="submit">
+                      <input
+                        type="file"
+                        name="file"
+                        id="file"
+                        multiple
+                        accept="image/*,video/*"
+                        onChange={handleChangeImages}
+                      />
+                      Chọn ảnh
+                    </button>
                   </div>
                 </>
               )}
             </div>
-          </div>
-
-          <div className="status_footer w-50">
-            <button className="btn btn-primary w-100" type="submit">
-              Đăng bài
-            </button>
+            <div className="status_footer w-50">
+              <button className="btn btn-primary w-100" type="submit">
+                Đăng bài
+              </button>
+            </div>
           </div>
         </div>
       </form>
