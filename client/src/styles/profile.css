@@ -53,11 +53,11 @@
 }
 
 .info_container .follow_btn {
-  color: teal;
+  color: black;
   cursor: pointer;
 }
 .info_container .follow_btn span:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* -------------- Profile Edit ------------ */

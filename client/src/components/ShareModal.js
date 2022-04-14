@@ -4,14 +4,8 @@ import {
   EmailIcon,
   FacebookShareButton,
   FacebookIcon,
-  TelegramShareButton,
-  TelegramIcon,
   TwitterShareButton,
   TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  RedditShareButton,
-  RedditIcon,
 } from 'react-share';
 
 const ShareModal = ({ url, theme }) => {

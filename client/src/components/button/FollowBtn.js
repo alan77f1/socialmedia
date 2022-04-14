@@ -39,7 +39,7 @@ const FollowBtn = ({ user }) => {
     <>
       {followed ? (
         <dev className="btn btn-danger" onClick={handleUnFollow}>
-          Xóa
+          Bỏ theo dõi
         </dev>
       ) : (
         <dev className="btn btn-primary" onClick={handleFollow}>

@@ -75,7 +75,7 @@ const Menu = () => {
 
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
             <Link className="dropdown-item" to={`/profile/${auth.user._id}`}>
-              Thông Tin
+              Trang cá nhân
             </Link>
 
             <label
@@ -88,7 +88,7 @@ const Menu = () => {
                 })
               }
             >
-              {theme ? 'Giao Diện Sáng' : 'Giao Diện Tối'}
+              {theme ? 'Giao diện sáng' : 'Giao diện tối'}
             </label>
 
             <label
@@ -98,12 +98,12 @@ const Menu = () => {
                 setShowDialogPassword(true);
               }}
             >
-              Đổi Mật Khẩu
+              Đổi mật khẩu
             </label>
 
             <div className="dropdown-divider"></div>
             <Link className="dropdown-item" to="/" onClick={() => dispatch(logout())}>
-              Đăng Xuất
+              Đăng xuất
             </Link>
           </div>
         </li>

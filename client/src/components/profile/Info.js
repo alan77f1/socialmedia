@@ -43,8 +43,8 @@ const Info = ({ id, auth, profile, dispatch }) => {
               <h2>{user.username}</h2>
 
               {user._id === auth.user._id ? (
-                <button className="btn btn-outline-info" onClick={() => setOnEdit(true)}>
-                  Chỉnh Sửa Thông Tin
+                <button className="btn btn-primary" onClick={() => setOnEdit(true)}>
+                  Chỉnh sửa trang cá nhân
                 </button>
               ) : (
                 <FollowBtn user={user} />
@@ -67,10 +67,10 @@ const Info = ({ id, auth, profile, dispatch }) => {
 
             <div className="follow_btn">
               <span className="mr-4" onClick={() => setShowFollowers(true)}>
-                {user.followers.length} Người Theo Dõi
+                {user.followers.length} Người theo dõi
               </span>
               <span className="ml-4" onClick={() => setShowFollowing(true)}>
-                {user.following.length} Đang Theo Dõi
+                {user.following.length} Đang theo dõi
               </span>
             </div>
 

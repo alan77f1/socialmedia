@@ -178,9 +178,7 @@ const StatusModal = () => {
           )}
 
           <div className="input_images">
-            {stream ? (
-              <i className="fas fa-camera" onClick={handleCapture} />
-            ) : (
+            {!stream && (
               <>
                 <i className="fas fa-camera" onClick={handleStream} />
 
@@ -201,7 +199,7 @@ const StatusModal = () => {
         </div>
 
         <div className="status_footer">
-          <button className="btn btn-secondary w-100" type="submit">
+          <button className="btn btn-primary w-300" type="submit">
             Đăng
           </button>
         </div>

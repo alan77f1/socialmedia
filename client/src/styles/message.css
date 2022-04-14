@@ -4,7 +4,7 @@
   border: 1px solid #ddd;
   margin-top: 15px;
   border-radius: 3px;
-  background: #fbfbfb;
+  background: #ffffff;
   border-radius: 10px;
 }
 
@@ -15,14 +15,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f8f8;
+  background: #ffffff;
 }
 .message_header input {
   flex: 1;
   height: 100%;
   border: none;
   outline: none;
-  background: #f8f8f8;
+  background: #ffffff;
   padding: 0 5px;
 }
 .message_chat_list {

@@ -90,7 +90,7 @@ const LeftSide = () => {
         <input
           type="text"
           value={search}
-          placeholder="Nhập để tìm kiếm..."
+          placeholder="Tìm kiếm trên Message"
           onChange={(e) => setSearch(e.target.value)}
         />
 

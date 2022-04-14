@@ -14,14 +14,17 @@ const RightSideBar = () => {
     <div className="mt-3">
       <UserCard user={auth.user} />
 
-      <div className="d-flex justify-content-between align-items-center my-2">
-        <h5 className="text-danger">Gợi ý cho bạn</h5>
+      <div className="d-flex align-items-center my-2">
+        <h6 className="text-black">Gợi ý cho bạn</h6>
         {!suggestions.loading && (
           <i
-            className="fas fa-redo"
-            style={{ cursor: 'pointer' }}
+            // className="fas fa-redo"
+            className="text-black"
+            style={{ cursor: 'pointer', marginLeft: '120px' }}
             onClick={() => dispatch(getSuggestions(auth.token))}
-          />
+          >
+            Xem thêm
+          </i>
         )}
       </div>
 

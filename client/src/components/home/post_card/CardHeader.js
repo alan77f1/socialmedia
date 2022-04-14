@@ -3,6 +3,7 @@ import Avatar from '../../Avatar';
 import { Link, useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import moment from 'moment';
+import 'moment/locale/vi';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
 import { deletePost } from '../../../redux/actions/postAction';
 import { BASE_URL } from '../../../utils/config';
@@ -39,7 +40,7 @@ const CardHeader = ({ post }) => {
               {post.user.username}
             </Link>
           </h6>
-          <small className="text-muted">{moment(post.createdAt).locale('es').fromNow()}</small>
+          <small className="text-muted">{moment(post.createdAt).fromNow()}</small>
         </div>
       </div>
 
@@ -60,9 +61,9 @@ const CardHeader = ({ post }) => {
             </>
           )}
 
-          <div className="dropdown-item" onClick={handleCopyLink}>
+          {/* <div className="dropdown-item" onClick={handleCopyLink}>
             <span className="material-icons">content_copy</span> Sao Chép
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

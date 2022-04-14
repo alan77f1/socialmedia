@@ -9,7 +9,8 @@
   overflow: auto;
 }
 .status_modal form {
-  max-width: 450px;
+  max-width: 650px;
+  height: 500px;
   width: 100%;
   background: white;
   margin: 30px auto;
