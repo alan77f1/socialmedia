@@ -9,8 +9,8 @@
   overflow: auto;
 }
 .status_modal form {
-  max-width: 650px;
-  height: 500px;
+  max-width: 600px;
+  height: 420px;
   width: 100%;
   background: white;
   margin: 30px auto;
@@ -58,6 +58,11 @@
   left: 0;
   opacity: 0;
 }
+
+.status_footer {
+  display: flex;
+}
+
 .status_body .show_images {
   max-height: 270px;
   width: 100%;
