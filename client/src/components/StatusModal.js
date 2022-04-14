@@ -25,7 +25,7 @@ const StatusModal = () => {
     files.forEach((file) => {
       if (!file) return (err = 'Tập Tin Không Tồn Tại.');
 
-      if (file.size > 1024 * 1024 * 5) {
+      if (file.size > 1024 * 1024 * 10) {
         return (err = 'Dung Lượng Tối Đa 5mb.');
       }
 

@@ -31,6 +31,7 @@ Giảng viên: Thầy Nguyễn Lê Minh.
 4. Đổi mật khẩu, quên mật khẩu thông qua gửi mail.
 5. Quản lý bài viết:
    - Thêm sửa xóa bài viết
+   - Upload ảnh và video
    - Đăng nhiều hình ảnh cho bài viết
 6. Quản lý bình luận:
    trả lời,
