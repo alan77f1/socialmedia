@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getDiscoverPosts, DISCOVER_TYPES } from '../redux/actions/discoverAction';
-import LoadIcon from '../assets/images/loading.gif';
-import PostThumb from '../components/PostThumb';
-import LoadMoreBtn from '../components/button/LoadMoreBtn';
-import { getDataAPI } from '../utils/fetchData';
+import { getDiscoverPosts, DISCOVER_TYPES } from 'redux/actions/discoverAction';
+import LoadIcon from 'assets/images/loading.gif';
+import PostThumb from 'components/common/PostThumb';
+import LoadMoreBtn from 'components/layout/button/LoadMoreBtn';
+import { getDataAPI } from 'utils/fetchData';
 
 const Discover = () => {
   const { auth, discover } = useSelector((state) => state);

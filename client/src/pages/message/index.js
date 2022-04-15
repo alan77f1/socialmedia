@@ -1,5 +1,5 @@
 import React from 'react';
-import LeftSide from '../../components/message/LeftSide';
+import LeftSide from 'components/layout/message/LeftSide';
 
 const Message = () => {
   return (

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 
-import Status from '../components/home/Status';
-import Posts from '../components/home/Posts';
-import RightSideBar from '../components/home/RightSideBar';
+import Status from 'components/layout/home/Status';
+import Posts from 'components/layout/home/Posts';
+import RightSideBar from 'components/layout/home/RightSideBar';
 
 import { useSelector } from 'react-redux';
-import LoadIcon from '../assets/images/loading.gif';
+import LoadIcon from 'assets/images/loading.gif';
 
 let scroll = 0;
 

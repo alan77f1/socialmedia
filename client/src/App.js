@@ -1,30 +1,30 @@
 import { useEffect } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-import PageRender from './routes/PageRender';
-import PrivateRouter from './routes/PrivateRouter';
+import PageRender from 'routes/PageRender';
+import PrivateRouter from 'routes/PrivateRouter';
 
-import Home from './pages/home';
-import Login from './pages/login';
-import Register from './pages/register';
-import Forgot from './pages/forgotPassword';
-import Reset from './pages/resetPassword';
+import Home from 'pages/home';
+import Login from 'pages/login';
+import Register from 'pages/register';
+import Forgot from 'pages/forgotPassword';
+import Reset from 'pages/resetPassword';
 
-import Alert from './components/alert/Alert';
-import Header from './components/header/Header';
-import StatusModal from './components/StatusModal';
-import NotFound from './components/NotFound';
+import Alert from 'components/layout/alert/Alert';
+import Header from 'components/layout/header/Header';
+import StatusModal from 'components/common/StatusModal';
+import NotFound from 'components/common/NotFound';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { refreshToken } from './redux/actions/authAction';
-import { getPosts } from './redux/actions/postAction';
-import { getSuggestions } from './redux/actions/suggestionsAction';
+import { refreshToken } from 'redux/actions/authAction';
+import { getPosts } from 'redux/actions/postAction';
+import { getSuggestions } from 'redux/actions/suggestionsAction';
 
 import io from 'socket.io-client';
-import { GLOBALTYPES } from './redux/actions/globalTypes';
-import SocketClient from './SocketClient';
+import { GLOBALTYPES } from 'redux/actions/globalTypes';
+import SocketClient from 'SocketClient';
 
-import { getNotifies } from './redux/actions/notifyAction';
+import { getNotifies } from 'redux/actions/notifyAction';
 
 import Peer from 'peerjs';
 

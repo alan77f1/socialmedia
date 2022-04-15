@@ -1,6 +1,6 @@
 import { GLOBALTYPES, DeleteData } from './globalTypes';
-import { getDataAPI, patchDataAPI } from '../../utils/fetchData';
-import { imageUpload } from '../../utils/imageUpload';
+import { getDataAPI, patchDataAPI } from 'utils/fetchData';
+import { imageUpload } from 'utils/imageUpload';
 import { createNotify, removeNotify } from '../actions/notifyAction';
 
 export const PROFILE_TYPES = {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import Info from '../../components/profile/Info';
-import Posts from '../../components/profile/Posts';
-import Saved from '../../components/profile/Saved';
+import Info from 'components/layout/profile/Info';
+import Posts from 'components/layout/profile/Posts';
+import Saved from 'components/layout/profile/Saved';
 
 import { useSelector, useDispatch } from 'react-redux';
-import LoadIcon from '../../assets/images/loading.gif';
-import { getProfileUsers } from '../../redux/actions/profileAction';
+import LoadIcon from 'assets/images/loading.gif';
+import { getProfileUsers } from 'redux/actions/profileAction';
 import { useParams } from 'react-router-dom';
 
 const Profile = () => {

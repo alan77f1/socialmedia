@@ -1,6 +1,6 @@
 import { GLOBALTYPES, EditData, DeleteData } from './globalTypes';
 import { POST_TYPES } from './postAction';
-import { postDataAPI, patchDataAPI, deleteDataAPI } from '../../utils/fetchData';
+import { postDataAPI, patchDataAPI, deleteDataAPI } from 'utils/fetchData';
 import { createNotify, removeNotify } from '../actions/notifyAction';
 
 export const createComment =

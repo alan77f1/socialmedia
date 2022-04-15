@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPost } from '../../redux/actions/postAction';
-import LoadIcon from '../../assets/images/loading.gif';
-import PostCard from '../../components/PostCard';
+import { getPost } from 'redux/actions/postAction';
+import LoadIcon from 'assets/images/loading.gif';
+import PostCard from 'components/common/PostCard';
 
 const Post = () => {
   const { id } = useParams();

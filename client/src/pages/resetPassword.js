@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 // import { resetPassword } from "../redux/actions/authAction";
-import { postDataAPI } from "../utils/fetchData";
-import { GLOBALTYPES } from "../redux/actions/globalTypes";
-import validReset from "../utils/validreset";
+import { postDataAPI } from 'utils/fetchData';
+import { GLOBALTYPES } from 'redux/actions/globalTypes';
+import validReset from 'utils/validreset';
 
 function ResetPassword() {
   const { token } = useParams();
@@ -14,8 +14,8 @@ function ResetPassword() {
   // const dispatch = useDispatch();
   const history = useHistory();
   const initialState = {
-    password: "",
-    cf_password: "",
+    password: '',
+    cf_password: '',
   };
 
   const [typePass, setTypePass] = useState(false);
@@ -25,20 +25,19 @@ function ResetPassword() {
 
   const { password, cf_password } = data;
   useEffect(() => {
-    if (auth.token) history.push("/");
+    if (auth.token) history.push('/');
   }, [auth.token, history]);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
-    setData({ ...data, [name]: value, err: "", success: "" });
+    setData({ ...data, [name]: value, err: '', success: '' });
   };
   const handleSubmit = async (dispatch) => {
     // e.preventDefault();
     const check = validReset(data);
-    if (check.errLength > 0)
-      return dispatch({ type: GLOBALTYPES.ALERT, payload: check.errMsg });
+    if (check.errLength > 0) return dispatch({ type: GLOBALTYPES.ALERT, payload: check.errMsg });
     try {
-      const res = await postDataAPI("reset", data, token);
+      const res = await postDataAPI('reset', data, token);
       setData({ ...data });
       dispatch({
         type: GLOBALTYPES.ALERT,
@@ -70,23 +69,19 @@ function ResetPassword() {
 
           <div className="pass">
             <input
-              type={typePass ? "text" : "password"}
+              type={typePass ? 'text' : 'password'}
               className="form-control"
               id="exampleInputPassword1"
               onChange={handleChangeInput}
               value={password}
               name="password"
-              style={{ background: `${alert.password ? "#fd2d6a14" : ""}` }}
+              style={{ background: `${alert.password ? '#fd2d6a14' : ''}` }}
             />
 
-            <small onClick={() => setTypePass(!typePass)}>
-              {typePass ? "Hide" : "Show"}
-            </small>
+            <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
           </div>
 
-          <small className="form-text text-danger">
-            {alert.password ? alert.password : ""}
-          </small>
+          <small className="form-text text-danger">{alert.password ? alert.password : ''}</small>
         </div>
 
         <div className="form-group">
@@ -94,22 +89,20 @@ function ResetPassword() {
 
           <div className="pass">
             <input
-              type={typeCfPass ? "text" : "password"}
+              type={typeCfPass ? 'text' : 'password'}
               className="form-control"
               id="cf_password"
               onChange={handleChangeInput}
               value={cf_password}
               name="cf_password"
-              style={{ background: `${alert.cf_password ? "#fd2d6a14" : ""}` }}
+              style={{ background: `${alert.cf_password ? '#fd2d6a14' : ''}` }}
             />
 
-            <small onClick={() => setTypeCfPass(!typeCfPass)}>
-              {typeCfPass ? "Hide" : "Show"}
-            </small>
+            <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
           </div>
 
           <small className="form-text text-danger">
-            {alert.cf_password ? alert.cf_password : ""}
+            {alert.cf_password ? alert.cf_password : ''}
           </small>
         </div>
         <button type="submit" className="btn btn-dark w-100">

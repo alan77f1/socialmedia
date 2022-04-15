@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { forgotPassword } from '../redux/actions/authAction';
+import { forgotPassword } from 'redux/actions/authAction';
 
 const ForgotPassword = () => {
   const { auth, alert } = useSelector((state) => state);

@@ -156,3 +156,67 @@ const Login = () => {
 };
 
 export default Login;
+
+// import Loading from 'components/common/Loading';
+// import Modal from 'components/common/Modal';
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import facebookIcon from '../assets/images/facebook.svg';
+// import githubIcon from '../assets/images/github.svg';
+// import googleIcon from '../assets/images/google.svg';
+
+// function Login() {
+//   return (
+//     <>
+//       <div className="auth">
+//         <div className="wrapper">
+//           <div className="auth-heading">
+//             <h3>Sign in</h3>
+//           </div>
+//           <form className="auth-form">
+//             <div>
+//               <label htmlFor="email">Email</label>
+//               <input id="email" type="text" placeholder="Email" />
+//             </div>
+//             <div>
+//               <label htmlFor="password">Password</label>
+//               <input id="password" type="password" placeholder="Password" />
+//             </div>
+//             <div className="auth-form-submit">
+//               <button type="submit">Sign in </button>
+//             </div>
+//           </form>
+//           <div className="devider">
+//             <span>or continue with</span>
+//           </div>
+//           <div className="auth-social">
+//             <div className="auth-social-item">
+//               <img src={googleIcon} alt="" />
+//               <span>Continue with Google</span>
+//             </div>
+//             <div className="auth-social-item">
+//               <img src={facebookIcon} alt="" />
+//               <span>Continue with Facebook</span>
+//             </div>
+//             <div className="auth-social-item">
+//               <img src={githubIcon} alt="" />
+//               <span>Continue with Github</span>
+//             </div>
+//           </div>
+//           <div className="auth-footer">
+//             <span>Don't have an account? </span>
+//             <Link to="/register" className="auth-footer-link">
+//               Register for free
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+
+//       <Modal>
+//         <Loading />
+//       </Modal>
+//     </>
+//   );
+// }
+
+// export default Login;
