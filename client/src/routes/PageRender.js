@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import NotFound from 'components/common/NotFound';
+import NotFound from '../components/common/NotFound';
 import { useSelector } from 'react-redux';
 
 const generatePage = (pageName) => {
-  const component = () => require(`../pages/${pageName}`).default;
+  const component = () => require(`../features/${pageName}`).default;
 
   try {
     return React.createElement(component());

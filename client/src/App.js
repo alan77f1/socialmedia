@@ -1,31 +1,32 @@
 import { useEffect } from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import PageRender from 'routes/PageRender';
-import PrivateRouter from 'routes/PrivateRouter';
+import PageRender from './routes/PageRender';
+import PrivateRouter from './routes/PrivateRouter';
 
-import Home from 'pages/home';
-import Login from 'pages/login';
-import Register from 'pages/register';
-import Forgot from 'pages/forgotPassword';
-import Reset from 'pages/resetPassword';
+import Home from './features/home';
+import Login from './features/login';
+import Register from './features/register';
+import Forgot from './features/forgotPassword';
+import Reset from './features/resetPassword';
+import Body from './Body';
 
-import Alert from 'components/layout/alert/Alert';
-import Header from 'components/layout/header/Header';
-import StatusModal from 'components/common/StatusModal';
-import NotFound from 'components/common/NotFound';
+import Alert from './components/alert/Alert';
+import Header from './components/header/Header';
+import StatusModal from './components/common/StatusModal';
+import NotFound from './components/common/NotFound';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { refreshToken } from 'redux/actions/authAction';
-import { getPosts } from 'redux/actions/postAction';
-import { getSuggestions } from 'redux/actions/suggestionsAction';
+import { refreshToken } from './redux/actions/authAction';
+import { getPosts } from './redux/actions/postAction';
+import { getSuggestions } from './redux/actions/suggestionsAction';
 
 import io from 'socket.io-client';
-import { GLOBALTYPES } from 'redux/actions/globalTypes';
-import SocketClient from 'SocketClient';
+import { GLOBALTYPES } from './redux/actions/globalTypes';
+import SocketClient from './SocketClient';
 
-import { getNotifies } from 'redux/actions/notifyAction';
-
+import { getNotifies } from './redux/actions/notifyAction';
+import CallModal from './components/message/CallModal';
 import Peer from 'peerjs';
 
 function App() {
@@ -77,19 +78,18 @@ function App() {
 
       <input type="checkbox" id="theme" />
       <div className={`App ${(status || modal) && 'mode'}`}>
-        {auth.token && <Header />}
         <div className="main">
-          {/* token true */}
-
+          {auth.token && <Header />}
           {status && <StatusModal />}
           {auth.token && <SocketClient />}
+          {call && <CallModal />}
+          <Body />
 
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={isLogged ? NotFound : Register} />
           <Route exact path="/forgot_password" component={isLogged ? NotFound : Forgot} />
           <Route exact path="/reset/:token" component={isLogged ? NotFound : Reset} />
 
-          {/* check is login for local Storage*/}
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import NoNotice from 'assets/images/notice.png';
+import NoNotice from '../../assets/images/notice.png';
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import moment from 'moment';
-import { isReadNotify, NOTIFY_TYPES, deleteAllNotifies } from 'redux/actions/notifyAction';
+import { isReadNotify, NOTIFY_TYPES, deleteAllNotifies } from '../../redux/actions/notifyAction';
 
 const NotifyModal = () => {
   const { auth, notify } = useSelector((state) => state);

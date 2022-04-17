@@ -9,15 +9,14 @@
   overflow: auto;
 }
 .status_modal form {
-  max-width: 600px;
-  height: 420px;
+  max-width: 650px;
+  height: 435px;
   width: 100%;
   background: white;
   margin: 30px auto;
   padding: 20px;
   border-radius: 15px;
 }
-
 .status_header {
   display: flex;
   justify-content: space-between;
@@ -38,33 +37,22 @@
   outline: none;
   resize: none;
 }
-.status_body .input_images {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
-.status_body .input_images i {
-  font-size: 2rem;
-  cursor: pointer;
-}
+/* .status_body .input_images {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .status_body .input_images i {
+    font-size: 2rem;
+    cursor: pointer;
+  } */
 .status_body .input_images .file_upload {
   overflow: hidden;
   margin: 0 10px;
-  position: relative;
-}
-.status_body .input_images .file_upload #file {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.status_footer {
-  display: flex;
 }
 
 .status_body .show_images {
-  max-height: 270px;
+  max-height: 100px;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;

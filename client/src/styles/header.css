@@ -3,7 +3,7 @@
   min-height: 70px;
   position: sticky;
   /* top: 0;
-  left: 0; */
+    left: 0; */
   z-index: 2;
   background: #ffffff;
   border: 1.7px solid #dbdbdb;
@@ -20,9 +20,7 @@
   font-family: 'Kolker Brush', cursive;
   font-weight: normal;
 }
-
 /* ----------- Header Menu ---------- */
-
 .header .menu li {
   opacity: 0.5;
 }
@@ -40,7 +38,6 @@
 .header .menu label {
   cursor: pointer;
 }
-
 .header .menu .notify_length {
   position: absolute;
   top: 45%;
@@ -50,7 +47,6 @@
   font-weight: bold;
   font-size: 10px;
 }
-
 /* ---------- Header Search -------- */
 .header .search_form {
   position: relative;
