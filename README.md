@@ -6,7 +6,7 @@ Họ và tên: Bùi Văn Tân
 
 ## Đề tài: Quản lý mạng xã hội
 
-Giảng viên: Thầy Nguyễn Lê Minh.
+Giảng viên:
 
 ## Phần 1: Công nghệ sử dụng:
 
@@ -44,23 +44,16 @@ Giảng viên: Thầy Nguyễn Lê Minh.
    - Đang theo dõi
 
 9. Quản lý tin nhắn message
-
-10. Thống kê doanh thu.
-11. Mã hóa mật khẩu sang bằng bcrypt
-
-12. Quản lý bài viết đã lưu.
-13. Nhận xét và đánh giá bài viết.
-14. Xử lý page not found.
-15. Xem thêm bài viết (load more)
-16. Gợi ý các người dùng liên quan.
-17. Tạo được bài viết nổi bật, bài viết mới.
-18. Tạo được bài viết freeship.
-19. Tạo được bài viết giảm giá nhiều.
-20. Xem báo cáo doanh thu theo tháng,năm.
-21. Hiển thị thông tin chi tiết bài viết.
-22. Deploy website.
-23. Chia sẻ bài viết lên facebook , Twitter, Email
-24. Hủy đơn hàng.
+10. Mã hóa mật khẩu người dùng
+11. Quản lý bài viết đã lưu.
+12. Xử lý page not found.
+13. Xem thêm bài viết (load more)
+14. Gợi ý các bạn bè liên quan.
+15. Xem số lượng người theo dõi và đang theo dõi.
+16. Hiển thị thông tin chi tiết bài viết.
+17. Deploy website.
+18. Chia sẻ bài viết lên facebook , Twitter, Email
+19. Hủy đơn hàng.
 
 ## Phần 3: Các chức năng chưa hoàn thành:
 
