@@ -31,6 +31,12 @@ circle:nth-of-type(2) {
   stroke-dasharray: 157;
   animation: loader1 2s linear infinite;
 }
+
+@keyframes text {
+  50% {
+    opacity: 0.1;
+  }
+}
 @keyframes loader {
   to {
     transform: rotate(360deg);
@@ -41,7 +47,7 @@ circle:nth-of-type(2) {
     transform: rotate(-360deg);
   }
 }
-.container p {
+.container text {
   position: absolute;
   color: rgb(197, 3, 147);
   text-transform: uppercase;
