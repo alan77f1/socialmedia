@@ -24,12 +24,12 @@ circle {
 circle:nth-of-type(1) {
   stroke: rgb(118, 62, 177);
   stroke-dasharray: 220px;
-  animation: loader 1s linear infinite;
+  animation: loader 2s linear infinite;
 }
 circle:nth-of-type(2) {
   stroke: rgb(237, 116, 56);
   stroke-dasharray: 157;
-  animation: loader1 1s linear infinite;
+  animation: loader1 2s linear infinite;
 }
 @keyframes loader {
   to {
