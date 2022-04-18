@@ -11,17 +11,14 @@ const Header = () => {
            justify-content-between align-middle"
       >
         <Link to="/" className="logo">
-          <h1 className="navbar-brand p-0 m-0" onClick={() => window.scrollTo({ top: 0 })}>
+          <h4 className="navbar-brand p-0 m-0" onClick={() => window.scrollTo({ top: 0 })}>
             Instagram
-          </h1>
+          </h4>
         </Link>
-
         <Search />
-
         <Menu />
       </nav>
     </div>
   );
 };
-
 export default Header;

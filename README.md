@@ -1,3 +1,11 @@
+## đồng ý kết bạn
+
+## đănn nhập với gg fb
+
+## xử lý loangding
+
+## bỏ theo dõi -> show cái status model
+
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
 
 Họ và tên: Bùi Văn Tân
