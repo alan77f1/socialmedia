@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { login } from "../redux/actions/authAction";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { login } from '../redux/actions/authAction';
+import { useDispatch, useSelector } from 'react-redux';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+
+import facebookIcon from '../assets/images/facebook.svg';
+import googleIcon from '../assets/images/google.svg';
 
 const Login = () => {
-  const initialState = { email: "", password: "" };
+  const initialState = { email: '', password: '' };
   const [userData, setUserData] = useState(initialState);
   const { email, password } = userData;
 
@@ -14,8 +19,31 @@ const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  // const responseGoogle = async (response) => {
+  //   if (!response.profileObj) return;
+  //   try {
+  //     const registerData = await registerUser(response.profileObj);
+  //     if (!registerData.success) setAlert(registerData.message);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // const responseFacebook = async (response) => {
+  //   const loginFB = {
+  //     email: response.email ? response.email : response.userID,
+  //   };
+  //   if (!response.email) return;
+  //   try {
+  //     const registerData = await registerUser(loginFB);
+  //     if (!registerData.success) setAlert(registerData.message);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   useEffect(() => {
-    if (auth.token) history.push("/");
+    if (auth.token) history.push('/');
   }, [auth.token, history]);
 
   const handleChangeInput = (e) => {
@@ -31,7 +59,7 @@ const Login = () => {
   return (
     <div className="auth_page">
       <form onSubmit={handleSubmit}>
-        <h3 className="text-uppercase text-center mb-4">UTC2-Network</h3>
+        <h3 className="text-uppercase text-center mb-4">Instagram</h3>
 
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email</label>
@@ -51,11 +79,11 @@ const Login = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
+          <label htmlFor="exampleInputPassword1">Mật khẩu</label>
 
           <div className="pass">
             <input
-              type={typePass ? "text" : "password"}
+              type={typePass ? 'text' : 'password'}
               className="form-control"
               id="exampleInputPassword1"
               onChange={handleChangeInput}
@@ -63,27 +91,62 @@ const Login = () => {
               name="password"
             />
 
-            <small onClick={() => setTypePass(!typePass)}>
-              {typePass ? "Hide" : "Show"}
-            </small>
+            <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
           </div>
         </div>
 
-        <button
-          type="submit"
-          className="btn btn-dark w-100"
-          disabled={email && password ? false : true}
-        >
-          Đăng Nhập
-        </button>
+        {/* <div className="container-btn-api">
+          <GoogleLogin
+            clientId="455854470240-d6stpuonh3g1jh4ob8m6mn4bssg7uc48.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <button
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+                className="button-api-login"
+              >
+                <img src={IconGG} alt="" style={{ width: 36, height: 36 }} />
+              </button>
+            )}
+            buttonText="Login"
+            // onSuccess={responseGoogle}
+            // onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+          <FacebookLogin
+            appId="459560505029470"
+            fields="name,email,picture"
+            textButton=""
+            cssClass="button-api-login"
+            icon={<img src={IconFB} alt="" style={{ width: 42, height: 42 }} />}
+            // callback={responseFacebook}
+          />
+        </div> */}
 
-        <Link to="/forgot_password" style={{ color: "crimson" }}>
+        <div className="auth-social">
+          <button
+            className="auth-social-item"
+            type="submit"
+            disabled={email && password ? false : true}
+          >
+            Đăng Nhập
+          </button>
+          <div className="auth-social-item">
+            <img src={googleIcon} alt="" />
+            <span>Continue with Google</span>
+          </div>
+          <div className="auth-social-item">
+            <img src={facebookIcon} alt="" />
+            <span>Continue with Facebook</span>
+          </div>
+        </div>
+
+        <Link to="/forgot_password" style={{ color: 'crimson' }}>
           Quên Mật Khẩu?
         </Link>
 
         <p className="my-2">
-          Bạn chưa có tài khoản?{" "}
-          <Link to="/register" style={{ color: "crimson" }}>
+          Bạn chưa có tài khoản?{' '}
+          <Link to="/register" style={{ color: 'crimson' }}>
             Hãy Đăng Ký
           </Link>
         </p>
