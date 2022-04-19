@@ -10,11 +10,12 @@ import ChangePassword from '../profile/changePassword';
 const Menu = () => {
   const navLinks = [
     { label: 'Home', icon: 'home', path: '/' },
+    { label: 'Add', icon: 'add', path: '/post' },
     { label: 'Message', icon: 'message', path: '/message' },
     { label: 'Discover', icon: 'explore', path: '/discover' },
   ];
   const [showDialogPassword, setShowDialogPassword] = useState(false);
-  const { auth, theme, notify } = useSelector((state) => state);
+  const { auth, notify } = useSelector((state) => state);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
 
@@ -77,19 +78,6 @@ const Menu = () => {
             <Link className="dropdown-item" to={`/profile/${auth.user._id}`}>
               Trang cá nhân
             </Link>
-
-            <label
-              htmlFor="theme"
-              className="dropdown-item"
-              onClick={() =>
-                dispatch({
-                  type: GLOBALTYPES.THEME,
-                  payload: !theme,
-                })
-              }
-            >
-              {theme ? 'Giao diện sáng' : 'Giao diện tối'}
-            </label>
 
             <label
               // htmlFor="setShowDialogPassword"

@@ -1,0 +1,34 @@
+/* -------- Chat Input----- */
+.chat_input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-top: 1px solid #ddd;
+
+  input {
+    width: 100%;
+    height: 49px;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    background: white;
+  }
+
+  .file_upload {
+    position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+
+    #file {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+}

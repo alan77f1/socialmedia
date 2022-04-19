@@ -72,10 +72,8 @@ const Login = () => {
             onChange={handleChangeInput}
             value={email}
           />
-          d
-          <small id="emailHelp" className="form-text text-muted">
-            Chúng tôi sẽ không chia sẻ thông tin của bạn cho bất kỳ ai.
-          </small>
+
+          <small id="emailHelp" className="form-text text-muted"></small>
         </div>
 
         <div className="form-group">

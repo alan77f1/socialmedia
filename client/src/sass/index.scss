@@ -1,29 +1,35 @@
-/* -------- AUTH ---------- */
 @import './components/auth';
-/* -------- LOADING ---------- */
+
 @import './components/loading';
-/* -------- Header ---------- */
+
 @import './components/header';
-/* -------- Avatar ---------- */
+
 @import './components/avatar';
-/* -------- Header ---------- */
+
 @import './components/header';
-/* -------- Profile ---------- */
+
 @import './components/profile';
-/* -------- Home ---------- */
+
 @import './components/home';
-/* -------- Status Modal ---------- */
+
 @import './components/status_modal';
-/* -------- Comments ---------- */
+
 @import './components/comments';
-/* -------- Post Thumb ---------- */
+
 @import './components/post_thumb';
-/* -------- Message---------- */
-@import './components/message';
-/* -------- Icons---------- */
+
+@import './components/message/chat';
+
+@import './components/message/container';
+
+@import './components/message/message';
+
+@import './components/message/media';
+
+@import './components/posts';
+
 @import './components/icons';
 
-/* --------- Responsive ------ */
 @media (max-width: 766px) {
   .header .navbar .logo {
     display: none;
