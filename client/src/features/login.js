@@ -72,7 +72,7 @@ const Login = () => {
             onChange={handleChangeInput}
             value={email}
           />
-
+          d
           <small id="emailHelp" className="form-text text-muted">
             Chúng tôi sẽ không chia sẻ thông tin của bạn cho bất kỳ ai.
           </small>
@@ -94,33 +94,6 @@ const Login = () => {
             <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
           </div>
         </div>
-
-        {/* <div className="container-btn-api">
-          <GoogleLogin
-            clientId="455854470240-d6stpuonh3g1jh4ob8m6mn4bssg7uc48.apps.googleusercontent.com"
-            render={(renderProps) => (
-              <button
-                onClick={renderProps.onClick}
-                disabled={renderProps.disabled}
-                className="button-api-login"
-              >
-                <img src={IconGG} alt="" style={{ width: 36, height: 36 }} />
-              </button>
-            )}
-            buttonText="Login"
-            // onSuccess={responseGoogle}
-            // onFailure={responseGoogle}
-            cookiePolicy={'single_host_origin'}
-          />
-          <FacebookLogin
-            appId="459560505029470"
-            fields="name,email,picture"
-            textButton=""
-            cssClass="button-api-login"
-            icon={<img src={IconFB} alt="" style={{ width: 42, height: 42 }} />}
-            // callback={responseFacebook}
-          />
-        </div> */}
 
         <div className="auth-social">
           <button

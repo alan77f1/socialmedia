@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './sass/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DataProvider from './redux/store';

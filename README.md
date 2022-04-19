@@ -25,8 +25,8 @@ Giảng viên:
 - [Redux](https://redux.js.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Socket.io](https://socket.io/)
-- [Peerjs](https://peerjs.com/)
-- [JWT](https://jwt.io/)
+- [SASS](https://sass-lang.com/)
+- [Docker](https://www.docker.com/)
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
