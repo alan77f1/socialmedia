@@ -27,8 +27,8 @@ const PostThumb = ({ posts, result }) => {
               />
             )}
 
-            <div className="post_thumb_menu">
-              <i className="far fa-star">{post.likes.length}</i>
+            <div className="post_thumb_display-menu">
+              <i className="far fa-heart">{post.likes.length}</i>
               <i className="far fa-comments">{post.comments.length}</i>
             </div>
           </div>

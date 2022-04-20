@@ -37,8 +37,8 @@ const Info = ({ id, auth, profile, dispatch }) => {
         <div className="info_container" key={user._id}>
           <Avatar src={user.avatar} size="supper-avatar" />
 
-          <div className="info_content">
-            <div className="info_content_title">
+          <div className="container_content">
+            <div className="container_content-title">
               {/* <h2>Thông Tin</h2> */}
               <h2>{user.username}</h2>
 
