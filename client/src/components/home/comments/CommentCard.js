@@ -7,10 +7,10 @@ import LikeButton from '../../common/LikeButton';
 import { useSelector, useDispatch } from 'react-redux';
 import CommentMenu from './CommentMenu';
 import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
-import InputComment from '../InputComment';
+import InputComment from '../comments/InputComment';
 
 const CommentCard = ({ children, comment, post, commentId }) => {
-  const { auth, theme } = useSelector((state) => state);
+  const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const [content, setContent] = useState('');
@@ -76,13 +76,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
       </Link>
 
       <div className="comment_content">
-        <div
-          className="flex-fill"
-          style={{
-            filter: theme ? 'invert(1)' : 'invert(0)',
-            color: theme ? 'white' : '#111',
-          }}
-        >
+        <div className="flex-fill">
           {onEdit ? (
             <textarea rows="5" value={content} onChange={(e) => setContent(e.target.value)} />
           ) : (

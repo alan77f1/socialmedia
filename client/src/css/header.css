@@ -1,0 +1,112 @@
+.header {
+  width: auto;
+
+  position: sticky;
+  /* top: 0;
+    left: 0; */
+  z-index: 2;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  justify-content: center;
+}
+.header .navbar {
+  width: 100%;
+  height: 55px;
+  /* margin-left: 250px; */
+}
+
+.header .logo-search {
+  display: flex;
+}
+
+.header .logo h4 {
+  font-size: 1.3rem;
+  font-family: 'Kolker Brush', cursive;
+  font-weight: normal;
+  align-items: center;
+}
+/* ----------- Header Menu ---------- */
+
+.header .menu-control {
+  margin-right: 700px;
+}
+
+.header .menu li {
+  opacity: 0.5;
+}
+.header .menu li.active {
+  opacity: 1;
+}
+.header .menu .material-icons {
+  font-size: 29px;
+}
+.header .menu .dropdown-menu {
+  position: absolute;
+  left: inherit;
+  right: 0;
+}
+.header .menu label {
+  cursor: pointer;
+}
+.header .menu .notify_length {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+}
+/* ---------- Header Search -------- */
+.header .search_form {
+  position: relative;
+  margin-right: 200px;
+}
+.header .search_form #search {
+  background: #f1f1f1;
+  border: 0.5px solid #ddd;
+  min-width: 200px;
+  width: 80%;
+  height: 29px;
+  outline: none;
+  text-indent: 5px;
+  border-radius: 9px;
+}
+.header .search_form .search_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  pointer-events: none;
+}
+.header .search_form .search_icon .material-icons {
+  font-size: 14px;
+  transform: translateY(3px);
+}
+.header .search_form .close_search {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+  font-weight: 900;
+  color: crimson;
+}
+.header .search_form .users {
+  position: absolute;
+  width: 100%;
+  min-width: 250px;
+  background: #fafafa;
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+  margin-top: 3px;
+}
+.header .search_form .loading {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+}

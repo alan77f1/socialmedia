@@ -13,7 +13,7 @@ const CardFooter = ({ post }) => {
 
   const [isShare, setIsShare] = useState(false);
 
-  const { auth, theme, socket } = useSelector((state) => state);
+  const { auth, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const [saved, setSaved] = useState(false);
@@ -97,7 +97,7 @@ const CardFooter = ({ post }) => {
         <h6 style={{ padding: '0 25px', cursor: 'pointer' }}>{post.comments.length} Bình luận</h6>
       </div>
 
-      {isShare && <ShareModal url={`${BASE_URL}/post/${post._id}`} theme={theme} />}
+      {isShare && <ShareModal url={`${BASE_URL}/post/${post._id}`} />}
     </div>
   );
 };

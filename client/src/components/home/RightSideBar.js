@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import Note from '../../components/home/Note';
 import UserCard from '../common/UserCard';
 import FollowBtn from '../common/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
@@ -12,7 +12,7 @@ const RightSideBar = () => {
 
   return (
     <div className="mt-3">
-      <UserCard user={auth.user} />
+      <Note />
 
       <div className="d-flex align-items-center my-2">
         <h6 className="text-black">Gợi ý cho bạn</h6>
@@ -48,9 +48,9 @@ const RightSideBar = () => {
         >
           Liên Hệ
         </a>
-        <small className="d-block">Chào Mừng Đến Với INSTAGRAM</small>
+        <small className="d-block">Chào Mừng Đến Với UTC2 News</small>
 
-        <small>&copy; 2022 INSTAGRAM FROM BUI VAN TAN</small>
+        <small>&copy; 2022 MẠNG XÃ HỘI UTC2 FROM BÙI VĂN TÂN</small>
       </div>
     </div>
   );

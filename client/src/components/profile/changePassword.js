@@ -5,7 +5,7 @@ import { useHistory, Link } from 'react-router-dom';
 import { changePassword } from '../../redux/actions/authAction';
 
 const ChangePassword = ({ setShowDialogPassword }) => {
-  const { auth, alert, theme } = useSelector((state) => state);
+  const { auth, alert } = useSelector((state) => state);
   const dispatch = useDispatch();
   const history = useHistory();
   const initialState = {
@@ -43,11 +43,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
 
       <form onSubmit={handleSubmit}>
         <div className="info_avatar">
-          <img
-            src={auth.user.avatar}
-            alt="avatar"
-            style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
-          />
+          <img src={auth.user.avatar} alt="avatar" />
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Nhập Email Đăng Ký</label>

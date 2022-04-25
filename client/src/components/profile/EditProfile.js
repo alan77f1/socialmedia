@@ -1,25 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { checkImage } from "../../utils/imageUpload";
-import { GLOBALTYPES } from "../../redux/actions/globalTypes";
-import { updateProfileUser } from "../../redux/actions/profileAction";
+import { checkImage } from '../../utils/imageUpload';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { updateProfileUser } from '../../redux/actions/profileAction';
 
 const EditProfile = ({ setOnEdit }) => {
   const initState = {
-    fullname: "",
-    mobile: "",
-    address: "",
-    website: "",
-    story: "",
-    gender: "",
+    fullname: '',
+    mobile: '',
+    address: '',
+    gender: '',
   };
   const [userData, setUserData] = useState(initState);
-  const { fullname, mobile, address, website, story, gender } = userData;
+  const { fullname, mobile, address, gender } = userData;
 
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState('');
 
-  const { auth, theme } = useSelector((state) => state);
+  const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,30 +50,17 @@ const EditProfile = ({ setOnEdit }) => {
 
   return (
     <div className="edit_profile">
-      <button
-        className="btn btn-danger btn_close"
-        onClick={() => setOnEdit(false)}
-      >
+      <button className="btn btn-danger btn_close" onClick={() => setOnEdit(false)}>
         Đóng
       </button>
 
       <form onSubmit={handleSubmit}>
         <div className="info_avatar">
-          <img
-            src={avatar ? URL.createObjectURL(avatar) : auth.user.avatar}
-            alt="avatar"
-            style={{ filter: theme ? "invert(1)" : "invert(0)" }}
-          />
+          <img src={avatar ? URL.createObjectURL(avatar) : auth.user.avatar} alt="avatar" />
           <span>
             <i className="fas fa-camera" />
             <p>Thay Đổi</p>
-            <input
-              type="file"
-              name="file"
-              id="file_up"
-              accept="image/*"
-              onChange={changeAvatar}
-            />
+            <input type="file" name="file" id="file_up" accept="image/*" onChange={changeAvatar} />
           </span>
         </div>
 
@@ -93,9 +78,9 @@ const EditProfile = ({ setOnEdit }) => {
             <small
               className="text-danger position-absolute"
               style={{
-                top: "50%",
-                right: "5px",
-                transform: "translateY(-50%)",
+                top: '50%',
+                right: '5px',
+                transform: 'translateY(-50%)',
               }}
             >
               {fullname.length}/25
@@ -123,33 +108,6 @@ const EditProfile = ({ setOnEdit }) => {
             className="form-control"
             onChange={handleInput}
           />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="website">Website</label>
-          <input
-            type="text"
-            name="website"
-            value={website}
-            className="form-control"
-            onChange={handleInput}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="story">Giới Thiệu</label>
-          <textarea
-            name="story"
-            value={story}
-            cols="30"
-            rows="4"
-            className="form-control"
-            onChange={handleInput}
-          />
-
-          <small className="text-danger d-block text-right">
-            {story.length}/200
-          </small>
         </div>
 
         <label htmlFor="gender">Giới Tính</label>

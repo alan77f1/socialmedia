@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import PageRender from './routes/PageRender';
 import PrivateRouter from './routes/PrivateRouter';
@@ -9,7 +9,6 @@ import Login from './features/login';
 import Register from './features/register';
 import Forgot from './features/forgotPassword';
 import Reset from './features/resetPassword';
-import Body from './Body';
 
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
@@ -77,20 +76,17 @@ function App() {
 
       <div className={`App ${(status || modal) && 'mode'}`}>
         {auth.token && <Header />}
-        <div className="main">
-          {status && <StatusModal />}
-          {auth.token && <SocketClient />}
 
-          <Body />
+        {status && <StatusModal />}
+        {auth.token && <SocketClient />}
 
-          <Route exact path="/" component={auth.token ? Home : Login} />
-          <Route exact path="/register" component={isLogged ? NotFound : Register} />
-          <Route exact path="/forgot_password" component={isLogged ? NotFound : Forgot} />
-          <Route exact path="/reset/:token" component={isLogged ? NotFound : Reset} />
+        <Route exact path="/" component={auth.token ? Home : Login} />
+        <Route exact path="/register" component={isLogged ? NotFound : Register} />
+        <Route exact path="/forgot_password" component={isLogged ? NotFound : Forgot} />
+        <Route exact path="/reset/:token" component={isLogged ? NotFound : Reset} />
 
-          <PrivateRouter exact path="/:page" component={PageRender} />
-          <PrivateRouter exact path="/:page/:id" component={PageRender} />
-        </div>
+        <PrivateRouter exact path="/:page" component={PageRender} />
+        <PrivateRouter exact path="/:page/:id" component={PageRender} />
       </div>
     </Router>
   );

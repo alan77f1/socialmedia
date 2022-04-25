@@ -1,3 +1,9 @@
+git config --global core.compression 0
+
+git clone --depth 1 https://github.com/buivantann/instagram.git
+
+redux quản lý state / dữ liệu trong app của bạn
+
 ## đồng ý kết bạn
 
 ## đănn nhập với gg fb
@@ -6,13 +12,15 @@
 
 ## bỏ theo dõi -> show cái status model
 
+## phân quyền giáo viên và sv
+
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
 
 Họ và tên: Bùi Văn Tân
 
 - Lớp: Công nghệ thông tin - K60
 
-## Đề tài: Quản lý mạng xã hội
+## Đề tài: Quản lý mạng xã hội UTC2
 
 Giảng viên:
 
@@ -25,44 +33,34 @@ Giảng viên:
 - [Redux](https://redux.js.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Socket.io](https://socket.io/)
-- [SASS](https://sass-lang.com/)
+- [Material UI](https://mui.com/)
 - [Docker](https://www.docker.com/)
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
 1. Xây dựng cơ sở dữ liệu.
-2. Đăng nhập :
-   - Đăng ký tài khoản
-   - Đăng nhập với Facebook
-   - Đăng nhập với Google.
-3. Đăng xuất
-4. Đổi mật khẩu, quên mật khẩu thông qua gửi mail.
-5. Quản lý bài viết:
+2. Đăng ký, Đăng nhập :
+3. Đổi mật khẩu, quên mật khẩu thông qua gửi mail.
+4. Quản lý bài viết:
    - Thêm sửa xóa bài viết
    - Upload ảnh và video
-   - Đăng nhiều hình ảnh cho bài viết
-6. Quản lý bình luận:
-   trả lời,
-   thả cảm xúc: thích bài đăng, thích bình luận (haha, wow, thích, tức giận ...)
-7. tìm kiếm người dùng
-8. Quản lý thông tin người dùng:
-
+   - Hỗ trọ đăng và hiển thị nhiều ảnh
+5. Quản lý bình luận:
+   - trả lời,
+   - thả cảm xúc: thích bài đăng, thích bình luận (thích)
+6. Tìm kiếm người dùng
+7. Quản lý thông tin người dùng:
    - Chỉnh sửa thông tin
    - Số người theo dõi
    - Đang theo dõi
-
-9. Quản lý tin nhắn message
-
-10. Mã hóa mật khẩu người dùng
-11. Quản lý bài viết đã lưu.
-12. Xử lý page not found.
-13. Xem thêm bài viết (load more)
-14. Gợi ý các bạn bè liên quan.
-15. Xem số lượng người theo dõi và đang theo dõi.
-16. Hiển thị thông tin chi tiết bài viết.
-17. Deploy website.
-18. Chia sẻ bài viết lên facebook , Twitter, Email
-19. Hủy đơn hàng.
+8. Mã hóa mật khẩu người dùng
+9. Quản lý bài viết đã lưu.
+10. Xem thêm bài viết (load more)
+11. Gợi ý các bạn bè liên quan.
+12. Xem số lượng người theo dõi và đang theo dõi.
+13. Hiển thị thông tin chi tiết bài viết.
+14. Deploy website.
+15. Chia sẻ bài viết lên facebook , Twitter, Email
 
 ## Phần 3: Các chức năng chưa hoàn thành:
 

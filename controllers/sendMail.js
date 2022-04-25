@@ -39,11 +39,11 @@ const sendEmail = (to, url, txt) => {
   const mailOptions = {
     from: SENDER_EMAIL_ADDRESS,
     to: to,
-    subject: 'INSTAGRAM',
+    subject: 'UTC2 News',
     html: `
             <div style="max-width: 700px; margin:auto; border: 10px solid #ddd; padding: 50px 20px; font-size: 110%;">
-            <h2 style="text-align: center; text-transform: uppercase;color: teal;">Chào mừng đến với INSTAGRAM.</h2>
-            <p>Xin chúc mừng! Bạn sắp bắt đầu sử dụng INSTAGRAM.
+            <h2 style="text-align: center; text-transform: uppercase;color: teal;">Chào mừng đến với UTC2 News.</h2>
+            <p>Xin chúc mừng! Bạn sắp bắt đầu sử dụng UTC2 News.
                Chỉ cần nhấp vào nút bên dưới để xác thực địa chỉ email của bạn.
             </p>
             

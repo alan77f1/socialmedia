@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { POST_TYPES } from './redux/actions/postAction';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
 import { NOTIFY_TYPES } from './redux/actions/notifyAction';
-import { MESS_TYPES } from './redux/actions/messageAction';
 
 import audiobell from './assets/audio/got-it-done-613.mp3';
 
@@ -105,69 +104,6 @@ const SocketClient = () => {
     });
 
     return () => socket.off('removeNotifyToClient');
-  }, [socket, dispatch]);
-
-  // Message
-  useEffect(() => {
-    socket.on('addMessageToClient', (msg) => {
-      dispatch({ type: MESS_TYPES.ADD_MESSAGE, payload: msg });
-
-      dispatch({
-        type: MESS_TYPES.ADD_USER,
-        payload: {
-          ...msg.user,
-          text: msg.text,
-          media: msg.media,
-        },
-      });
-    });
-
-    return () => socket.off('addMessageToClient');
-  }, [socket, dispatch]);
-
-  // Check User Online / Offline
-  useEffect(() => {
-    socket.emit('checkUserOnline', auth.user);
-  }, [socket, auth.user]);
-
-  useEffect(() => {
-    socket.on('checkUserOnlineToMe', (data) => {
-      data.forEach((item) => {
-        if (!online.includes(item.id)) {
-          dispatch({ type: GLOBALTYPES.ONLINE, payload: item.id });
-        }
-      });
-    });
-
-    return () => socket.off('checkUserOnlineToMe');
-  }, [socket, dispatch, online]);
-
-  useEffect(() => {
-    socket.on('checkUserOnlineToClient', (id) => {
-      if (!online.includes(id)) {
-        dispatch({ type: GLOBALTYPES.ONLINE, payload: id });
-      }
-    });
-
-    return () => socket.off('checkUserOnlineToClient');
-  }, [socket, dispatch, online]);
-
-  // Check User Offline
-  useEffect(() => {
-    socket.on('CheckUserOffline', (id) => {
-      dispatch({ type: GLOBALTYPES.OFFLINE, payload: id });
-    });
-
-    return () => socket.off('CheckUserOffline');
-  }, [socket, dispatch]);
-
-  // Call User
-  useEffect(() => {
-    socket.on('callUserToClient', (data) => {
-      dispatch({ type: GLOBALTYPES.CALL, payload: data });
-    });
-
-    return () => socket.off('callUserToClient');
   }, [socket, dispatch]);
 
   useEffect(() => {

@@ -1,15 +1,18 @@
 import React from 'react';
-
+import UTC2 from '../../assets/images/uct2.png';
 const Loading = () => {
   return (
-    <div class="container">
+    <div
+      className="position-fixed w-100 h-100 text-center loading"
+      style={{ background: '#0008', color: 'white', top: 0, left: 0, zIndex: 50 }}
+    >
       <svg>
         <circle cx="150" cy="150" r="140"></circle>
         <circle cx="150" cy="150" r="100"></circle>
       </svg>
 
       <text fill="#fff" x="5" y="47">
-        loading...
+        <img src={UTC2} alt="" />
       </text>
     </div>
   );

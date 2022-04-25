@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import Status from '../components/home/Status';
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
 
@@ -26,21 +25,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home row mx-0">
-      <div className="col-md-8">
-        <Status />
-
-        {homePosts.loading ? (
-          <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
-        ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
-          <h2 className="text-center">Không Có Bài Đăng</h2>
-        ) : (
-          <Posts />
-        )}
-      </div>
-
-      <div className="col-md-4">
-        <RightSideBar />
+    <div className="main">
+      <div className="home row mx-0">
+        <div className="col-md-8">
+          {homePosts.loading ? (
+            <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
+          ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
+            <h2 className="text-center">Không Có Bài Đăng</h2>
+          ) : (
+            <Posts />
+          )}
+        </div>
+        <div className="col-md-4">
+          <RightSideBar />
+        </div>
       </div>
     </div>
   );

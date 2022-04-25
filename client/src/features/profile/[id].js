@@ -23,31 +23,33 @@ const Profile = () => {
   }, [id, auth, dispatch, profile.ids]);
 
   return (
-    <div className="profile">
-      <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
+    <div className="main">
+      <div className="profile">
+        <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-      {auth.user._id === id && (
-        <div className="profile_tab">
-          <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
-            Bài Đăng
-          </button>
-          <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
-            Đã Lưu
-          </button>
-        </div>
-      )}
+        {auth.user._id === id && (
+          <div className="profile_tab">
+            <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
+              Bài Đăng
+            </button>
+            <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
+              Đã Lưu
+            </button>
+          </div>
+        )}
 
-      {profile.loading ? (
-        <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
-      ) : (
-        <>
-          {saveTab ? (
-            <Saved auth={auth} dispatch={dispatch} />
-          ) : (
-            <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
-          )}
-        </>
-      )}
+        {profile.loading ? (
+          <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
+        ) : (
+          <>
+            {saveTab ? (
+              <Saved auth={auth} dispatch={dispatch} />
+            ) : (
+              <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

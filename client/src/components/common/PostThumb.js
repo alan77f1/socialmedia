@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const PostThumb = ({ posts, result }) => {
-  const { theme } = useSelector((state) => state);
-
   if (result === 0) return <h2 className="text-center text-danger">Không Có Bài Đăng</h2>;
 
   return (
@@ -13,18 +11,9 @@ const PostThumb = ({ posts, result }) => {
         <Link key={post._id} to={`/post/${post._id}`}>
           <div className="post_thumb_display">
             {post.images[0].url.match(/video/i) ? (
-              <video
-                controls
-                src={post.images[0].url}
-                alt={post.images[0].url}
-                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
-              />
+              <video controls src={post.images[0].url} alt={post.images[0].url} />
             ) : (
-              <img
-                src={post.images[0].url}
-                alt={post.images[0].url}
-                style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}
-              />
+              <img src={post.images[0].url} alt={post.images[0].url} />
             )}
 
             <div className="post_thumb_display-menu">
