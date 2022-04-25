@@ -48,7 +48,7 @@ const Search = () => {
 
       <div className="search_icon" style={{ opacity: search ? 0 : 0.5 }}>
         <span className="material-icons">search</span>
-        <span>Tìm kiếm </span>
+        <span>Tìm kiếm trên UTC2</span>
       </div>
 
       <div

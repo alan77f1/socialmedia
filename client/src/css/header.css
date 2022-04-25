@@ -1,6 +1,5 @@
 .header {
   width: auto;
-
   position: sticky;
   /* top: 0;
     left: 0; */
@@ -11,9 +10,9 @@
   justify-content: center;
 }
 .header .navbar {
-  width: 100%;
-  height: 55px;
   /* margin-left: 250px; */
+  align-items: center;
+  justify-content: center;
 }
 
 .header .logo-search {
@@ -29,7 +28,7 @@
 /* ----------- Header Menu ---------- */
 
 .header .menu-control {
-  margin-right: 700px;
+  margin-right: 200px;
 }
 
 .header .menu li {
@@ -61,17 +60,16 @@
 /* ---------- Header Search -------- */
 .header .search_form {
   position: relative;
-  margin-right: 200px;
 }
 .header .search_form #search {
   background: #f1f1f1;
   border: 0.5px solid #ddd;
-  min-width: 200px;
+  min-width: 250px;
   width: 80%;
-  height: 29px;
+  height: 40px;
   outline: none;
   text-indent: 5px;
-  border-radius: 9px;
+  border-radius: 20px;
 }
 .header .search_form .search_icon {
   position: absolute;
@@ -87,11 +85,11 @@
 }
 .header .search_form .close_search {
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: 7px;
+  right: 10px;
   cursor: pointer;
   font-weight: 900;
-  color: crimson;
+  color: rgb(155, 155, 155);
 }
 .header .search_form .users {
   position: absolute;
@@ -109,4 +107,78 @@
   width: 15px;
   height: 15px;
   transform: translateY(-50%);
+}
+
+.header .headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+/* ok */
+
+/* Header middle */
+.headerLeftMiddle {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 450px;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.headerLeftMiddleItem {
+  color: #b0b3b8;
+  font-size: 30px;
+  line-height: 0;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.headerLeftMiddleItem:hover {
+  background-color: #3a3b3c;
+  cursor: pointer;
+}
+
+.headerLeftMiddleItemActive {
+  color: #002f77;
+}
+
+.headerLeftMiddleItemActive::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #002f77;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.headerLeftMiddleItemActive:hover {
+  background-color: #b0b3b8;
+}
+
+.headerLeftMiddleItemBadge,
+.headerLeftMiddleItemBadgePlus {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  min-width: 18px;
+  min-height: 18px;
+  text-align: center;
+  line-height: 18px;
+  background-color: #f02849;
+  border-radius: 20px;
+  color: #fff;
+  top: 2px;
+  right: 44px;
+}
+
+.headerLeftMiddleItemBadgePlus {
+  padding: 0 4px;
+  right: 35px;
 }
