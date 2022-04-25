@@ -36,7 +36,7 @@ const MenuRight = () => {
           >
             <span
               className="material-icons"
-              style={{ color: notify.data.length > 0 ? 'crimson' : '' }}
+              style={{ color: notify.data.length > 0 ? '#002f77' : '' }}
             >
               notifications
             </span>

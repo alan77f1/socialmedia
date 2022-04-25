@@ -19,25 +19,25 @@ const MenuControl = () => {
   };
 
   return (
-    <div className="menu menu-control">
-      <ul className="headerLeftMiddle">
+    <div className="menu menu-middle">
+      <ul className="header-menu-middle">
         {navLinks.map((link, index) => (
-          <li className="headerLeftMiddleItem headerLeftMiddleItemActive">
+          <li className="menu-middle-item menu-middle-item_active">
             <Link to={link.path}>
-              <HomeIcon style={{ fontSize: 'inherit' }} />
+              <HomeIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
             </Link>
           </li>
         ))}
 
         <li
-          className="headerLeftMiddleItem"
+          className="menu-middle-item"
           onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}
         >
-          <AddCircleIcon style={{ fontSize: 'inherit' }} />
+          <AddCircleIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
         </li>
-        <li className="headerLeftMiddleItem">
-          <GroupIcon style={{ fontSize: 'inherit' }} />
-          <span className="headerLeftMiddleItemBadge">3</span>
+        <li className="menu-middle-item">
+          <GroupIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
+          <span className="menu-middle-item_badge">3</span>
         </li>
       </ul>
     </div>

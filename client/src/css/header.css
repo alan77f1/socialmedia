@@ -1,17 +1,12 @@
 .header {
   width: auto;
   position: sticky;
-  /* top: 0;
-    left: 0; */
+  top: 0;
+  left: 0;
   z-index: 2;
   background: #ffffff;
   border: 1px solid #dbdbdb;
   text-align: center;
-  justify-content: center;
-}
-.header .navbar {
-  /* margin-left: 250px; */
-  align-items: center;
   justify-content: center;
 }
 
@@ -19,24 +14,12 @@
   display: flex;
 }
 
-.header .logo h4 {
-  font-size: 1.3rem;
-  font-family: 'Kolker Brush', cursive;
-  font-weight: normal;
-  align-items: center;
-}
 /* ----------- Header Menu ---------- */
 
-.header .menu-control {
+.header .menu-middle {
   margin-right: 200px;
 }
 
-.header .menu li {
-  opacity: 0.5;
-}
-.header .menu li.active {
-  opacity: 1;
-}
 .header .menu .material-icons {
   font-size: 29px;
 }
@@ -44,6 +27,8 @@
   position: absolute;
   left: inherit;
   right: 0;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 .header .menu label {
   cursor: pointer;
@@ -117,7 +102,7 @@
 /* ok */
 
 /* Header middle */
-.headerLeftMiddle {
+.header-menu-middle {
   display: flex;
   align-items: center;
   list-style: none;
@@ -127,27 +112,27 @@
   margin: 0;
 }
 
-.headerLeftMiddleItem {
+.menu-middle-item {
   color: #b0b3b8;
   font-size: 30px;
   line-height: 0;
   width: 100%;
-  text-align: center;
+  text-align: cmenu-middle-itementer;
   padding: 8px 0;
   border-radius: 4px;
   position: relative;
 }
 
-.headerLeftMiddleItem:hover {
+.menu-middle-item:hover {
   background-color: #3a3b3c;
   cursor: pointer;
 }
 
-.headerLeftMiddleItemActive {
+.menu-middle-item_active {
   color: #002f77;
 }
 
-.headerLeftMiddleItemActive::before {
+.menu-middle-item_active::before {
   content: '';
   width: 100%;
   height: 3px;
@@ -158,12 +143,11 @@
   left: 0;
 }
 
-.headerLeftMiddleItemActive:hover {
+.menu-middle-item_active:hover {
   background-color: #b0b3b8;
 }
 
-.headerLeftMiddleItemBadge,
-.headerLeftMiddleItemBadgePlus {
+.menu-middle-item_badge {
   position: absolute;
   display: block;
   font-size: 14px;
@@ -176,9 +160,4 @@
   color: #fff;
   top: 2px;
   right: 44px;
-}
-
-.headerLeftMiddleItemBadgePlus {
-  padding: 0 4px;
-  right: 35px;
 }
