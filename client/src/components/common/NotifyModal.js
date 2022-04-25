@@ -77,10 +77,6 @@ const NotifyModal = () => {
                 </div>
               )}
             </Link>
-            <small className="text-muted d-flex justify-content-between px-2">
-              {moment(msg.createdAt).fromNow()}
-              {!msg.isRead && <i className="fas fa-circle text-primary" />}
-            </small>
           </div>
         ))}
       </div>

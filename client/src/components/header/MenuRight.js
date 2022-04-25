@@ -6,7 +6,7 @@ import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import Avatar from '../common/Avatar';
 import NotifyModal from '../common/NotifyModal';
 import ChangePassword from '../profile/changePassword';
-import Status from '../home/Status';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 
 import Add from '../../assets/images/add.png';
 
@@ -25,15 +25,8 @@ const MenuRight = () => {
   return (
     <div className="menu menu-right">
       <ul className="navbar-nav flex-row">
-        <li className="nav-item dropdown" style={{ opacity: 1 }}>
-          <span
-            className="nav-link position-relative"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
+        {/* <li className="nav-item dropdown" style={{ opacity: 1 }}>
+          
             <span
               className="material-icons"
               style={{ color: notify.data.length > 0 ? '#002f77' : '' }}
@@ -48,6 +41,21 @@ const MenuRight = () => {
             className="dropdown-menu"
             aria-labelledby="navbarDropdown"
             style={{ transform: 'translateX(75px)' }}
+          >
+            <NotifyModal />
+          </div>
+        </li> */}
+
+        <li className="menu-middle-item_bell">
+          <NotificationsIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
+
+          <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span className="notify_length">{notify.data.length}</span>
+          </span>
+          <div
+            className="dropdown-menu"
+            aria-labelledby="navbarDropdown"
+            style={{ transform: 'translateX(60px)' }}
           >
             <NotifyModal />
           </div>

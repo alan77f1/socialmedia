@@ -35,12 +35,17 @@
 }
 .header .menu .notify_length {
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
-  font-size: 10px;
+  display: block;
+  font-size: 14px;
+  min-width: 18px;
+  min-height: 18px;
+  text-align: center;
+  line-height: 18px;
+  background-color: #f02849;
+  border-radius: 20px;
+  color: #fff;
+  top: 2px;
+  right: -4px;
 }
 /* ---------- Header Search -------- */
 .header .search_form {
@@ -110,6 +115,16 @@
   justify-content: space-around;
   padding: 0;
   margin: 0;
+}
+.menu-middle-item_bell {
+  color: #b0b3b8;
+  font-size: 30px;
+  line-height: 0;
+  width: 100%;
+
+  padding: 8px 0;
+  border-radius: 4px;
+  position: relative;
 }
 
 .menu-middle-item {
