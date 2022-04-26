@@ -14,10 +14,6 @@ const NotifyModal = () => {
     dispatch(isReadNotify({ msg, auth }));
   };
 
-  const handleSound = () => {
-    dispatch({ type: NOTIFY_TYPES.UPDATE_SOUND, payload: !notify.sound });
-  };
-
   const handleDeleteAll = () => {
     const newArr = notify.data.filter((item) => item.isRead === false);
     if (newArr.length === 0) return dispatch(deleteAllNotifies(auth.token));
@@ -30,20 +26,7 @@ const NotifyModal = () => {
   return (
     <div style={{ minWidth: '300px' }}>
       <div className="d-flex justify-content-between align-items-center px-3">
-        <h3>Thông Báo</h3>
-        {notify.sound ? (
-          <i
-            className="fas fa-bell text-danger"
-            style={{ fontSize: '1.2rem', cursor: 'pointer' }}
-            onClick={handleSound}
-          />
-        ) : (
-          <i
-            className="fas fa-bell-slash text-danger"
-            style={{ fontSize: '1.2rem', cursor: 'pointer' }}
-            onClick={handleSound}
-          />
-        )}
+        <h4>Thông Báo</h4>
       </div>
       <hr className="mt-0" />
 
@@ -83,8 +66,8 @@ const NotifyModal = () => {
 
       <hr className="my-1" />
       <div
-        className="text-right text-danger mr-2"
-        style={{ cursor: 'pointer' }}
+        className="text-right mr-2"
+        style={{ cursor: 'pointer', color: 'black' }}
         onClick={handleDeleteAll}
       >
         Xoá Tất Cả

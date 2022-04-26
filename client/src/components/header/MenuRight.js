@@ -8,8 +8,6 @@ import NotifyModal from '../common/NotifyModal';
 import ChangePassword from '../profile/changePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-import Add from '../../assets/images/add.png';
-
 const MenuRight = () => {
   const navLinks = [{ label: 'Home', icon: 'home', path: '/' }];
 
@@ -47,7 +45,9 @@ const MenuRight = () => {
         </li> */}
 
         <li className="menu-middle-item_bell">
-          <NotificationsIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
+          <NotificationsIcon
+            style={{ fontSize: 'inherit', color: '#002f77', marginRight: '5px' }}
+          />
 
           <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span className="notify_length">{notify.data.length}</span>

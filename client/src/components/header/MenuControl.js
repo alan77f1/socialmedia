@@ -6,8 +6,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 
-import Add from '../../assets/images/add.png';
-
 const MenuControl = () => {
   const navLinks = [{ label: 'Home', icon: 'home', path: '/' }];
 
