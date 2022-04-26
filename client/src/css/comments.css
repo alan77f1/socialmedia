@@ -59,3 +59,10 @@
   border: none;
   outline: none;
 }
+
+.comment_card .comment_content .font-weight-bold {
+  cursor: pointer;
+  color: #65676b;
+  font-weight: bold;
+  font-size: 14px;
+}

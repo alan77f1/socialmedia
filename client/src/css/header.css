@@ -158,8 +158,8 @@
   left: 0;
 }
 
-.menu-middle-item_active:hover {
-  background-color: #b0b3b8;
+.menu-middle-item:hover {
+  background-color: #f9cb00;
 }
 
 .menu-middle-item_badge {

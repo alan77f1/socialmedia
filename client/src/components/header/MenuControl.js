@@ -22,7 +22,7 @@ const MenuControl = () => {
     <div className="menu menu-middle">
       <ul className="header-menu-middle">
         {navLinks.map((link, index) => (
-          <li className="menu-middle-item menu-middle-item_active">
+          <li className="menu-middle-item ">
             <Link to={link.path}>
               <HomeIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
             </Link>

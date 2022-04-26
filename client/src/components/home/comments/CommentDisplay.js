@@ -22,15 +22,23 @@ const CommentDisplay = ({ comment, post, replyCm }) => {
 
           {replyCm.length - next > 0 ? (
             <div
-              style={{ cursor: 'pointer', color: 'darkgray' }}
+              style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '10px' }}
               onClick={() => setNext(next + 10)}
             >
-              Xem thêm...
+              Xem thêm bình luận
             </div>
           ) : (
             replyCm.length > 1 && (
-              <div style={{ cursor: 'pointer', color: 'darkgray' }} onClick={() => setNext(1)}>
-                Ẩn bình luận...
+              <div
+                onClick={() => setNext(1)}
+                style={{
+                  cursor: 'pointer',
+                  color: '#65676B',
+                  fontWeight: 'bold',
+                  fontSize: '10px',
+                }}
+              >
+                Ẩn bình luận
               </div>
             )
           )}

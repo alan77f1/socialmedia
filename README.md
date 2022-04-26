@@ -8,10 +8,6 @@ redux quản lý state / dữ liệu trong app của bạn
 
 ## đănn nhập với gg fb
 
-## xử lý loangding
-
-## bỏ theo dõi -> show cái status model
-
 ## phân quyền giáo viên và sv
 
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
@@ -38,29 +34,36 @@ Giảng viên:
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
-1. Xây dựng cơ sở dữ liệu.
-2. Đăng ký, Đăng nhập :
-3. Đổi mật khẩu, quên mật khẩu thông qua gửi mail.
-4. Quản lý bài viết:
+1. Xây dựng cơ sở dữ liệu với mongodb
+2. Quản lý hệ thống :
+   - Đăng nhập và đăng ký
+   - Đổi mât khẩu
+   - Lấy lại mật khẩu thông qua gửi mail.
+   - Đăng xuất
+3. Quản lý bài viết:
    - Thêm sửa xóa bài viết
    - Upload ảnh và video
    - Hỗ trọ đăng và hiển thị nhiều ảnh
+   - Lưu bài viết
+   - Bình luận và thả tim trên bài viết
+4. Quản lý thông báo
+   - Cho những ai đang theo dõi bạn
+   - Bài viết mới nhất của người mà bạn theo dõi
+   - Những ai đã bình luận trên bài viết của bạn
 5. Quản lý bình luận:
-   - trả lời,
-   - thả cảm xúc: thích bài đăng, thích bình luận (thích)
+   - Trả lời bình luận,
+   - Bày tỏ cảm xúc: thích bài đăng, thích bình luận (thích)
 6. Tìm kiếm người dùng
-7. Quản lý thông tin người dùng:
+7. Quản lý thông tin trang cá nhân:
    - Chỉnh sửa thông tin
    - Số người theo dõi
    - Đang theo dõi
 8. Mã hóa mật khẩu người dùng
-9. Quản lý bài viết đã lưu.
+9. Chia sẻ bài viết lên các trang mạng xã hội khác như facebook , Twitter, Email
 10. Xem thêm bài viết (load more)
 11. Gợi ý các bạn bè liên quan.
-12. Xem số lượng người theo dõi và đang theo dõi.
-13. Hiển thị thông tin chi tiết bài viết.
-14. Deploy website.
-15. Chia sẻ bài viết lên facebook , Twitter, Email
+12. Hiển thị thông tin chi tiết bài viết.
+13. Deploy website.
 
 ## Phần 3: Các chức năng chưa hoàn thành:
 

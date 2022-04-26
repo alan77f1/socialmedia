@@ -33,19 +33,19 @@ const Comments = ({ post }) => {
       {comments.length - next > 0 ? (
         <div
           className="p-2 border-top"
-          style={{ cursor: 'pointer', color: 'black' }}
+          style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '10px' }}
           onClick={() => setNext(next + 10)}
         >
-          Xem thêm...
+          Xem thêm bình luận
         </div>
       ) : (
         comments.length > 2 && (
           <div
             className="p-2 border-top"
-            style={{ cursor: 'pointer', color: 'black' }}
+            style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '10px' }}
             onClick={() => setNext(2)}
           >
-            Ẩn bình luận...
+            Ẩn bình luận
           </div>
         )
       )}
