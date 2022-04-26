@@ -22,7 +22,7 @@ const CommentDisplay = ({ comment, post, replyCm }) => {
 
           {replyCm.length - next > 0 ? (
             <div
-              style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '10px' }}
+              style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '14px' }}
               onClick={() => setNext(next + 10)}
             >
               Xem thêm bình luận
@@ -35,7 +35,7 @@ const CommentDisplay = ({ comment, post, replyCm }) => {
                   cursor: 'pointer',
                   color: '#65676B',
                   fontWeight: 'bold',
-                  fontSize: '10px',
+                  fontSize: '14px',
                 }}
               >
                 Ẩn bình luận
