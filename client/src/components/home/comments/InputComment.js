@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
 import Icons from '../../common/Icons';
+import UserCard from '../../common/UserCard';
 
 const InputComment = ({ children, post, onReply, setOnReply }) => {
   const [content, setContent] = useState('');
-
+  const [userData, setUserData] = useState([]);
   const { auth, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -35,6 +36,9 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
   return (
     <form className="card-footer comment_input" onSubmit={handleSubmit}>
       {children}
+
+      <UserCard user={auth.user} />
+
       <input
         type="text"
         placeholder="Viết bình luận..."
@@ -43,10 +47,6 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
       />
 
       <Icons setContent={setContent} content={content} />
-
-      <button type="submit" className="postBtn">
-        Đăng
-      </button>
     </form>
   );
 };
