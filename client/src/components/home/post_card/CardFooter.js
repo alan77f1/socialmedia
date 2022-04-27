@@ -96,7 +96,10 @@ const CardFooter = ({ post }) => {
               backgroundPosition: '0 -175px',
             }}
           ></div>
-          <span className="postBottomActionItemText">Bình luận</span>
+
+          <Link to={`/post/${post._id}`} className="postBottomActionItemText text-dark">
+            Bình luận
+          </Link>
         </div>
         <div className="postBottomActionItem">
           <div
@@ -106,7 +109,9 @@ const CardFooter = ({ post }) => {
               backgroundPosition: '0 -232px',
             }}
           ></div>
-          <span className="postBottomActionItemText">Chia sẻ</span>
+          <span className="postBottomActionItemText" onClick={() => setIsShare(!isShare)}>
+            Chia sẻ
+          </span>
         </div>
 
         {/* {saved ? (
