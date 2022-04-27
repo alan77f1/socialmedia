@@ -1,5 +1,6 @@
 import React from 'react';
 import { EMOJI_ICON } from '../../constants/index';
+import icon from '../../assets/images/iconkaka.png';
 const Icons = ({ setContent, content }) => {
   return (
     <div className="nav-item dropdown" style={{ opacity: 1 }}>
@@ -11,7 +12,9 @@ const Icons = ({ setContent, content }) => {
         aria-haspopup="true"
         aria-expanded="false"
       >
-        <span style={{ opacity: 0.4 }}>😍</span>
+        <span style={{ opacity: 1 }}>
+          <img src={icon}></img>
+        </span>
       </span>
 
       <div className="dropdown-menu" aria-labelledby="navbarDropdown">
