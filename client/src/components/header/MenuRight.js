@@ -23,27 +23,6 @@ const MenuRight = () => {
   return (
     <div className="menu menu-right">
       <ul className="navbar-nav flex-row">
-        {/* <li className="nav-item dropdown" style={{ opacity: 1 }}>
-          
-            <span
-              className="material-icons"
-              style={{ color: notify.data.length > 0 ? '#002f77' : '' }}
-            >
-              notifications
-            </span>
-
-            <span className="notify_length">{notify.data.length}</span>
-          </span>
-
-          <div
-            className="dropdown-menu"
-            aria-labelledby="navbarDropdown"
-            style={{ transform: 'translateX(75px)' }}
-          >
-            <NotifyModal />
-          </div>
-        </li> */}
-
         <li className="menu-middle-item_bell">
           <NotificationsIcon
             style={{ fontSize: 'inherit', color: '#002f77', marginRight: '5px' }}

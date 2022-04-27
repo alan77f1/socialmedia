@@ -17,18 +17,14 @@ const NotifyModal = () => {
   const handleDeleteAll = () => {
     const newArr = notify.data.filter((item) => item.isRead === false);
     if (newArr.length === 0) return dispatch(deleteAllNotifies(auth.token));
-
-    if (window.confirm(`Bạn có ${newArr.length} thông báo chưa đọc. Bạn muốn xoá tất cả?`)) {
-      return dispatch(deleteAllNotifies(auth.token));
-    }
+    return dispatch(deleteAllNotifies(auth.token));
   };
 
   return (
-    <div style={{ minWidth: '300px' }}>
+    <div style={{ minWidth: '425px' }}>
       <div className="d-flex justify-content-between align-items-center px-3">
         <h4>Thông Báo</h4>
       </div>
-      <hr className="mt-0" />
 
       {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" className="w-100" />}
 
@@ -47,7 +43,6 @@ const NotifyModal = () => {
                   <strong className="mr-1">{msg.user.username}</strong>
                   <span>{msg.text}</span>
                 </div>
-                {msg.content && <small>{msg.content.slice(0, 20)}...</small>}
               </div>
 
               {msg.image && (
@@ -67,7 +62,7 @@ const NotifyModal = () => {
       <hr className="my-1" />
       <div
         className="text-right mr-2"
-        style={{ cursor: 'pointer', color: 'black' }}
+        style={{ cursor: 'pointer', color: 'black', padding: '10px' }}
         onClick={handleDeleteAll}
       >
         Xoá Tất Cả

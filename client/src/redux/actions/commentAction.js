@@ -29,8 +29,8 @@ export const createComment =
       const msg = {
         id: res.data.newComment._id,
         text: newComment.reply
-          ? 'Đã nhắc đến bạn trong bình luận.'
-          : 'Đã bình luận trong bài đăng của bạn.',
+          ? 'đã nhắc đến bạn trong bình luận.'
+          : 'đã bình luận vào bài đăng của bạn.',
         recipients: newComment.reply ? [newComment.tag._id] : [post.user._id],
         url: `/post/${post._id}`,
         content: post.content,
@@ -131,8 +131,8 @@ export const deleteComment =
         const msg = {
           id: item._id,
           text: comment.reply
-            ? 'Đã nhắc đến bạn trong bình luận.'
-            : 'Đã bình luận trong bài đăng của bạn.',
+            ? 'đã nhắc đến bạn trong bình luận.'
+            : 'đã bình luận vào bài đăng của bạn.',
           recipients: comment.reply ? [comment.tag._id] : [post.user._id],
           url: `/post/${post._id}`,
         };

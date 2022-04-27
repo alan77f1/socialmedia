@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Note from '../../components/home/Note';
 import UserCard from '../common/UserCard';
 import FollowBtn from '../common/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
@@ -12,8 +11,6 @@ const RightSideBar = () => {
 
   return (
     <div className="mt-3">
-      <Note />
-
       <div className="d-flex align-items-center my-2">
         <h6 className="text-black">Gợi ý cho bạn</h6>
         {!suggestions.loading && (
