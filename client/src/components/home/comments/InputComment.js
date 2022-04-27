@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
 import Icons from '../../common/Icons';
-import UserCard from '../../common/UserCard';
+import UserImg from './UserImg';
 
 const InputComment = ({ children, post, onReply, setOnReply }) => {
   const [content, setContent] = useState('');
@@ -37,7 +37,7 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
     <form className="card-footer comment_input" onSubmit={handleSubmit}>
       {children}
 
-      <UserCard user={auth.user} />
+      <UserImg user={auth.user} />
 
       <input
         type="text"

@@ -12,7 +12,7 @@ const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
         <i onClick={handleLike} className="postBottomActionItemText">
           Thích
         </i>
-      )}
+      )}  
     </div>
   );
 };
