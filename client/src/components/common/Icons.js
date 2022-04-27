@@ -13,7 +13,7 @@ const Icons = ({ setContent, content }) => {
         aria-expanded="false"
       >
         <span style={{ opacity: 1 }}>
-          <img src={icon}></img>
+          <img src={icon} style={{ width: '35px' }}></img>
         </span>
       </span>
 
