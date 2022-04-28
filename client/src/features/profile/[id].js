@@ -30,7 +30,7 @@ const Profile = () => {
         {auth.user._id === id && (
           <div className="profile_tab">
             <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
-              Bài Đăng
+              Bài Viết
             </button>
             <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
               Đã Lưu

@@ -167,7 +167,6 @@
   display: flex;
   justify-content: center;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
 }
 .profile_tab button {
   outline: none;
@@ -182,6 +181,16 @@
 }
 .profile_tab button.active {
   border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+
   opacity: 0.8;
+}
+
+.container_content {
+  width: 400px;
+}
+
+.container_content-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
