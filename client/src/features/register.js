@@ -42,7 +42,7 @@ const Register = () => {
         <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
 
         <div className="form-group">
-          <label htmlFor="fullname">Tên Đầy Đủ</label>
+          <label htmlFor="fullname">Họ và tên</label>
           <input
             type="text"
             className="form-control"
@@ -57,7 +57,7 @@ const Register = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="username">Đăng Nhập</label>
+          <label htmlFor="username">Tên tài khoản</label>
           <input
             type="text"
             className="form-control"
@@ -87,7 +87,7 @@ const Register = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
+          <label htmlFor="exampleInputPassword1">Mật khẩu </label>
 
           <div className="pass">
             <input
@@ -107,7 +107,7 @@ const Register = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="cf_password">Nhập Lại Mật Khẩu</label>
+          <label htmlFor="cf_password">Nhập lại mật khẩu</label>
 
           <div className="pass">
             <input

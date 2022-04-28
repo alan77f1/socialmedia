@@ -31,7 +31,9 @@ const Home = () => {
           {homePosts.loading ? (
             <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
-            <h2 className="text-center">Không Có Bài Đăng</h2>
+            <h3 className="text-center">
+              Bạn Chưa có bài viết nào. Hãy theo dõi bạn bè dể xem bài viết của họ
+            </h3>
           ) : (
             <Posts />
           )}
