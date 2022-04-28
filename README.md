@@ -36,7 +36,9 @@ Giảng viên:
 
 1. Xây dựng cơ sở dữ liệu với mongodb
 2. Quản lý hệ thống :
-   - Đăng nhập và đăng ký
+   - Đăng nhập với gg
+   - Đăng nhập với facebook
+   - Đăng ký tài khoản
    - Đổi mât khẩu
    - Lấy lại mật khẩu thông qua gửi mail.
    - Đăng xuất

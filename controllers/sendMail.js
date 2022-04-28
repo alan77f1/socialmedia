@@ -36,25 +36,6 @@ const sendEmail = (to, url, txt) => {
     },
   });
 
-  // const mailOptions = {
-  //   from: SENDER_EMAIL_ADDRESS,
-  //   to: to,
-  //   subject: 'UTC2 News',
-  //   html: `
-  //           <div style="max-width: 700px; margin:auto; border: 15px solid #F9CB00; padding:50px 20px; border-radius:25px; font-size: 110%;">
-  //           <h2 style="text-align: center; text-transform: uppercase;color: #281756;">Chào mừng đến với UTC2 News.</h2>
-  //           <p>Xin chào mừng! Bạn đến với UTC2 News.
-
-  //           </p>
-
-  //           <p>
-  //              Để xác thực địa chỉ email của bạn. Chỉ cần nhấp vào nút ở đây
-  //           </p>
-
-  //           <a href=${url} style="background: #281756 ; text-decoration: none; color: white; padding: 10px 20px; margin: 10px 0; display: inline-block;border-radius:10px; ">${txt}</a>
-
-  //       `,
-  // };
 
   const mailOptions = {
     from: SENDER_EMAIL_ADDRESS,
