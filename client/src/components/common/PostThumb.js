@@ -14,7 +14,7 @@ const PostThumb = ({ posts, result }) => {
               <img src={post.images[0].url} />
             )}
 
-            <div className="post_thumb_menu">
+            <div className="post_thumb_menu ">
               <i className="far fa-heart">{post.likes.length}</i>
               <i className="far fa-comments">{post.comments.length}</i>
             </div>

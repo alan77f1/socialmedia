@@ -65,9 +65,9 @@
   justify-content: space-between;
 
   cursor: pointer;
+  font-size: 20px;
 }
 .posts .card_icon_menu i {
-  font-size: 25px;
   margin: 5px;
 }
 .posts .card_icon_menu img {
@@ -81,13 +81,6 @@
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.postBottomActionItemLikeWrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .postBottomActionItemLikeImg {
@@ -108,9 +101,7 @@
 }
 
 .postBottomActionItemText {
-  color: #969797;
   font-weight: 500;
-  text-decoration: none;
 }
 
 .postBottomActionItemText:hover {
@@ -131,11 +122,11 @@
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  transition: 0.1s;
 }
 
 .postBottomActionItem:hover {
   background-color: #f0f2f5;
-
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.1s;
 }

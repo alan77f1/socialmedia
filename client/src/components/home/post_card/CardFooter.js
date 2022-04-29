@@ -75,50 +75,37 @@ const CardFooter = ({ post }) => {
         className="d-flex justify-content-between "
         style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}
       >
-        <h6 style={{ padding: '0 25px', cursor: 'pointer' }}>{post.likes.length} Thích</h6>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer' }}>{post.likes.length} Thích</h6>
 
-        <h6 style={{ padding: '0 25px', cursor: 'pointer' }}>{post.comments.length} Bình luận</h6>
+        {saved ? (
+          <i
+            className="fas fa-bookmark text-info"
+            style={{ padding: '5px 15px', cursor: 'pointer' }}
+            onClick={handleUnSavePost}
+          />
+        ) : (
+          <i
+            className="far fa-bookmark"
+            style={{ padding: '5px 15px', cursor: 'pointer' }}
+            onClick={handleSavePost}
+          />
+        )}
+
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer' }}>{post.comments.length} Bình luận</h6>
       </div>
       <div className="card_icon_menu" style={{ borderBottom: '0.5px solid rgb(216,216,216) ' }}>
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
-        {/* <Link to={`/post/${post._id}`} className="text-dark">
-            <i className="far fa-comment" />
-          </Link>
-
-          <img src={Send} alt="Send" onClick={() => setIsShare(!isShare)} /> */}
-
         <div className="postBottomActionItem">
-          <div
-            className="postBottomActionItemBg "
-            style={{
-              backgroundImage: `url("../../../assets/feed/infoImg.png")`,
-              backgroundPosition: '0 -175px',
-            }}
-          ></div>
-
           <Link to={`/post/${post._id}`} className="postBottomActionItemText text-dark">
             Bình luận
           </Link>
         </div>
         <div className="postBottomActionItem">
-          <div
-            className="postBottomActionItemBg "
-            style={{
-              backgroundImage: `url("../../../assets/feed/infoImg.png")`,
-              backgroundPosition: '0 -232px',
-            }}
-          ></div>
           <span className="postBottomActionItemText" onClick={() => setIsShare(!isShare)}>
             Chia sẻ
           </span>
         </div>
-
-        {saved ? (
-          <i className="fas fa-bookmark text-info" onClick={handleUnSavePost} />
-        ) : (
-          <i className="far fa-bookmark" onClick={handleSavePost} />
-        )}
       </div>
 
       {isShare && <ShareModal url={`${BASE_URL}/post/${post._id}`} />}
