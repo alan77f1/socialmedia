@@ -5,14 +5,14 @@ const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
   return (
     <div className="postBottomActionItem">
       {isLike ? (
-        <i onClick={handleUnLike} className="postBottomActionItemText">
+        <span onClick={handleUnLike} className="postBottomActionItemText">
           Thích
-        </i>
+        </span>
       ) : (
-        <i onClick={handleLike} className="postBottomActionItemText">
+        <span onClick={handleLike} className="postBottomActionItemText">
           Thích
-        </i>
-      )}  
+        </span>
+      )}
     </div>
   );
 };

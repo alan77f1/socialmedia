@@ -83,38 +83,12 @@
   position: relative;
 }
 
-.postBottomActionItemLikeImg {
-  width: 20px;
-  height: 20px;
-}
-
-.postBottomActionItemBg {
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  filter: invert(64%) sepia(5%) saturate(37%) hue-rotate(131deg) brightness(92%) contrast(94%);
-}
-
-.postBottomActionItemBg.liked {
-  filter: invert(34%) sepia(93%) saturate(3299%) hue-rotate(204deg) brightness(100%) contrast(90%);
-}
-
 .postBottomActionItemText {
   font-weight: 500;
 }
 
 .postBottomActionItemText:hover {
   text-decoration: none;
-}
-
-.postBottomActionItemText.liked {
-  color: #1877f2;
-}
-
-.filterBottomActionList {
-  display: flex;
-  justify-content: center;
 }
 
 .postBottomActionItem {

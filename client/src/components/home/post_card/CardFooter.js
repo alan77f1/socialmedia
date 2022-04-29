@@ -79,8 +79,8 @@ const CardFooter = ({ post }) => {
 
         {saved ? (
           <i
-            className="fas fa-bookmark text-info"
-            style={{ padding: '5px 15px', cursor: 'pointer' }}
+            className="fas fa-bookmark "
+            style={{ padding: '5px 15px', cursor: 'pointer', color: '#002F77' }}
             onClick={handleUnSavePost}
           />
         ) : (
