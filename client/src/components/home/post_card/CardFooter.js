@@ -96,13 +96,13 @@ const CardFooter = ({ post }) => {
       <div className="card_icon_menu" style={{ borderBottom: '0.5px solid rgb(216,216,216) ' }}>
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
-        <div className="postBottomActionItem">
-          <Link to={`/post/${post._id}`} className="postBottomActionItemText text-dark">
+        <div className="post_bottom_action_item">
+          <Link to={`/post/${post._id}`} className="post_bottom_action_item-Text text-dark">
             Bình luận
           </Link>
         </div>
-        <div className="postBottomActionItem">
-          <span className="postBottomActionItemText" onClick={() => setIsShare(!isShare)}>
+        <div className="post_bottom_action_item">
+          <span className="post_bottom_action_item-Text" onClick={() => setIsShare(!isShare)}>
             Chia sẻ
           </span>
         </div>

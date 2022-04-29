@@ -78,7 +78,7 @@ function App() {
         {auth.token && <Header />}
 
         {status && <StatusModal />}
-        {auth.token && <SocketClient />}
+        {/* {auth.token && <SocketClient />} */}
 
         <Route exact path="/" component={auth.token ? Home : Login} />
         <Route exact path="/register" component={isLogged ? NotFound : Register} />

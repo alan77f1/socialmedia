@@ -3,13 +3,13 @@ import { useSelector } from 'react-redux';
 
 const LikeButton = ({ isLike, handleLike, handleUnLike }) => {
   return (
-    <div className="postBottomActionItem">
+    <div className="post_bottom_action_item">
       {isLike ? (
-        <span onClick={handleUnLike} className="postBottomActionItemText">
+        <span onClick={handleUnLike} className="post_bottom_action_item-Text">
           Thích
         </span>
       ) : (
-        <span onClick={handleLike} className="postBottomActionItemText">
+        <span onClick={handleLike} className="post_bottom_action_item-Text">
           Thích
         </span>
       )}

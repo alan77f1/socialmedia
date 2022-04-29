@@ -77,21 +77,21 @@
   opacity: 0.9;
 }
 
-.postBottomActionItem {
+.post_bottom_action_item {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.postBottomActionItemText {
+.post_bottom_action_item-Text {
   font-weight: 500;
 }
 
-.postBottomActionItemText:hover {
+.post_bottom_action_item-Text:hover {
   text-decoration: none;
 }
 
-.postBottomActionItem {
+.post_bottom_action_item {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@
   transition: 0.1s;
 }
 
-.postBottomActionItem:hover {
+.post_bottom_action_item:hover {
   background-color: #f0f2f5;
   cursor: pointer;
   transition: all 0.1s;
