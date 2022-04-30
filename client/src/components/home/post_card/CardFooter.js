@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Send from '../../../assets/images/send.svg';
 import LikeButton from '../../common/LikeButton';
 import { useSelector, useDispatch } from 'react-redux';
 import { likePost, unLikePost, savePost, unSavePost } from '../../../redux/actions/postAction';
@@ -80,13 +79,25 @@ const CardFooter = ({ post }) => {
         {saved ? (
           <i
             className="fas fa-bookmark "
-            style={{ padding: '5px 15px', cursor: 'pointer', color: '#002F77' }}
+            style={{
+              padding: '5px 15px',
+              cursor: 'pointer',
+              color: '#002F77',
+              fontSize: '25px',
+              marginLeft: '25px',
+            }}
             onClick={handleUnSavePost}
           />
         ) : (
           <i
             className="far fa-bookmark"
-            style={{ padding: '5px 15px', cursor: 'pointer' }}
+            style={{
+              padding: '5px 15px',
+              cursor: 'pointer',
+              color: '#002F77',
+              fontSize: '25px',
+              marginLeft: '25px',
+            }}
             onClick={handleSavePost}
           />
         )}
