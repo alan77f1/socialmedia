@@ -1,7 +1,32 @@
 import React from 'react';
-import { EMOJI_ICON } from '../../constants/index';
 import icon from '../../assets/images/iconkaka.png';
 const Icons = ({ setContent, content }) => {
+  const EMOJI_ICON = [
+    '❤️',
+    '😆',
+    '😯',
+    '😢',
+    '😡',
+    '👍',
+    '👎',
+    '😄',
+    '😂',
+    '😍',
+    '😘',
+    '😗',
+    '😚',
+    '😳',
+    '😭',
+    '😓',
+    '😤',
+    '🤤',
+    '👻',
+    '💀',
+    '🤐',
+    '😴',
+    '😷',
+    '😵',
+  ];
   return (
     <div className="nav-item dropdown" style={{ opacity: 1 }}>
       <span
@@ -12,8 +37,8 @@ const Icons = ({ setContent, content }) => {
         aria-haspopup="true"
         aria-expanded="false"
       >
-        <span style={{ opacity: 1 }}>
-          <img src={icon} style={{ width: '30px' }}></img>
+        <span style={{ opacity: 0.7 }}>
+          <img src={icon} style={{ width: '50px' }}></img>
         </span>
       </span>
 

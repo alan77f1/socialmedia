@@ -5,7 +5,7 @@ import { logout } from '../../redux/actions/authAction';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import Avatar from '../common/Avatar';
 import NotifyModal from '../common/NotifyModal';
-import ChangePassword from '../profile/changePassword';
+import ChangePassword from '../profile/ChangePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const MenuRight = () => {

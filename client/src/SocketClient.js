@@ -4,7 +4,7 @@ import { POST_TYPES } from './redux/actions/postAction';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
 import { NOTIFY_TYPES } from './redux/actions/notifyAction';
 
-import audiobell from './assets/audio/got-it-done-613.mp3';
+
 
 const spawnNotification = (body, icon, url, title) => {
   let options = {
@@ -117,13 +117,7 @@ const SocketClient = () => {
     return () => socket.off('userBusy');
   }, [socket, dispatch, call]);
 
-  return (
-    <>
-      <audio controls ref={audioRef} style={{ display: 'none' }}>
-        <source src={audiobell} type="audio/mp3" />
-      </audio>
-    </>
-  );
+
 };
 
 export default SocketClient;
