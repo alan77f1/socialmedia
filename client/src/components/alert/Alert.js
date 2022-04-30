@@ -25,7 +25,6 @@ const Notify = () => {
         <Toast
           msg={{ title: 'Thành Công', body: alert.success }}
           handleShow={() => dispatch({ type: GLOBALTYPES.ALERT, payload: {} })}
-          bgColor="bg-success"
         />
       )}
     </div>
