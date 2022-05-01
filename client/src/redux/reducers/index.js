@@ -6,6 +6,7 @@ import status from './statusReducer';
 import homePosts from './postReducer';
 import modal from './modalReducer';
 import detailPost from './detailPostReducer';
+import discover from './discoverReducer';
 import suggestions from './suggestionsReducer';
 import socket from './socketReducer';
 import notify from './notifyReducer';
@@ -19,6 +20,7 @@ export default combineReducers({
   homePosts,
   modal,
   detailPost,
+  discover,
   suggestions,
   socket,
   notify,

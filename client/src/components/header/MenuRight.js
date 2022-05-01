@@ -9,8 +9,6 @@ import ChangePassword from '../profile/ChangePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const MenuRight = () => {
-  const navLinks = [{ label: 'Home', icon: 'home', path: '/' }];
-
   const [showDialogPassword, setShowDialogPassword] = useState(false);
   const { auth, notify } = useSelector((state) => state);
   const dispatch = useDispatch();

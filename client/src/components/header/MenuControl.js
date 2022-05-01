@@ -7,7 +7,10 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 
 const MenuControl = () => {
-  const navLinks = [{ label: 'Home', icon: 'home', path: '/' }];
+  const navLinks = [
+    { label: 'Home', icon: 'home', path: '/' },
+    { label: 'Discover', icon: 'explore', path: '/discover' },
+  ];
 
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -20,9 +23,11 @@ const MenuControl = () => {
     <div className="menu menu-middle">
       <ul className="header-menu-middle">
         {navLinks.map((link, index) => (
-          <li className="menu-middle-item ">
+          <li className="menu-middle-item " key={index}>
             <Link to={link.path}>
-              <HomeIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
+              <span className="material-icons" style={{ fontSize: 'inherit', color: '#002f77' }}>
+                {link.icon}
+              </span>
             </Link>
           </li>
         ))}
@@ -32,10 +37,6 @@ const MenuControl = () => {
           onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}
         >
           <AddCircleIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
-        </li>
-        <li className="menu-middle-item">
-          <GroupIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
-          <span className="menu-middle-item_badge">3</span>
         </li>
       </ul>
     </div>
