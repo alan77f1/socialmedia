@@ -4,7 +4,6 @@ export const GLOBALTYPES = {
   STATUS: 'STATUS',
   MODAL: 'MODAL',
   SOCKET: 'SOCKET',
-  PEER: 'PEER',
 };
 
 export const EditData = (data, id, post) => {

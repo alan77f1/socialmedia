@@ -25,7 +25,6 @@ import { GLOBALTYPES } from './redux/actions/globalTypes';
 import SocketClient from './SocketClient';
 
 import { getNotifies } from './redux/actions/notifyAction';
-import Peer from 'peerjs';
 
 function App() {
   const { auth, status, modal } = useSelector((state) => state);
@@ -60,15 +59,6 @@ function App() {
       });
     }
   }, []);
-
-  useEffect(() => {
-    const newPeer = new Peer(undefined, {
-      path: '/',
-      secure: true,
-    });
-
-    dispatch({ type: GLOBALTYPES.PEER, payload: newPeer });
-  }, [dispatch]);
 
   return (
     <Router>
