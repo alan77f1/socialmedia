@@ -31,6 +31,7 @@ Giảng viên:
 - [Socket.io](https://socket.io/)
 - [Material UI](https://mui.com/)
 - [Docker](https://www.docker.com/)
+- [Firebase](https://firebase.google.com/)
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
