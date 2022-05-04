@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../common/Avatar';
+import Avatar from '../Avatar';
 import EditProfile from './EditProfile';
 // import ChangePassword from "./changePassword";
-import FollowBtn from '../common/FollowBtn';
+import FollowBtn from '../FollowBtn';
 import Followers from './Followers';
 import Following from './Following';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';

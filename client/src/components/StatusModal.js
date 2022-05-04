@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import { createPost, updatePost } from '../../redux/actions/postAction';
+import { GLOBALTYPES } from '../redux/actions/globalTypes';
+import { createPost, updatePost } from '../redux/actions/postAction';
 import Icons from './Icons';
-import { imageShow, videoShow } from '../../utils/mediaShow';
+import { imageShow, videoShow } from '../utils/mediaShow';
 
 const StatusModal = () => {
   const { auth, status, socket } = useSelector((state) => state);

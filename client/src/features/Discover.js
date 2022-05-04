@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoverPosts, DISCOVER_TYPES } from '../redux/actions/discoverAction';
 import LoadIcon from '../assets/images/loading.gif';
-import PostThumb from '../components/common/PostThumb';
-import LoadMoreBtn from '../components/common/LoadMoreBtn';
+import PostThumb from '../components/PostThumb';
+import LoadMoreBtn from '../components/LoadMoreBtn';
 import { getDataAPI } from '../utils/fetchData';
 
 const Discover = () => {

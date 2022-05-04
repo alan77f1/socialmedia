@@ -12,8 +12,8 @@ import Reset from './features/resetPassword';
 
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
-import StatusModal from './components/common/StatusModal';
-import NotFound from './components/common/NotFound';
+import StatusModal from './components/StatusModal';
+import NotFound from './components/NotFound';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { refreshToken } from './redux/actions/authAction';

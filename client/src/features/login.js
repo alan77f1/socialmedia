@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
+import SocialLogin from '../components/SocialLogin';
 
 const Login = () => {
   const initialState = { email: '', password: '' };
@@ -70,6 +71,7 @@ const Login = () => {
         >
           Đăng Nhập
         </button>
+        <SocialLogin />
 
         <Link to="/forgot_password" style={{ color: 'crimson' }}>
           Quên Mật Khẩu?

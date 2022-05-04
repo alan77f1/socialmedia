@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../../common/Avatar';
+import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-import LikeButton from '../../common/LikeButton';
+import LikeButton from '../../LikeButton';
 import { useSelector, useDispatch } from 'react-redux';
 import CommentMenu from './CommentMenu';
 import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';

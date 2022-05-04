@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import PostCard from '../common/PostCard';
+import PostCard from '../PostCard';
 
 import LoadIcon from '../../assets/images/loading.gif';
-import LoadMoreBtn from '../common/LoadMoreBtn';
+import LoadMoreBtn from '../LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { POST_TYPES } from '../../redux/actions/postAction';
 

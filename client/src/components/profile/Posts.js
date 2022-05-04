@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PostThumb from '../common/PostThumb';
+import PostThumb from '../PostThumb';
 import LoadIcon from '../../assets/images/loading.gif';
-import LoadMoreBtn from '../common/LoadMoreBtn';
+import LoadMoreBtn from '../LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { PROFILE_TYPES } from '../../redux/actions/profileAction';
 

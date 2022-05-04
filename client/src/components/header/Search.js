@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import UserCard from '../common/UserCard';
+import UserCard from '../UserCard';
 import LoadIcon from '../../assets/images/loading.gif';
 
 const Search = () => {

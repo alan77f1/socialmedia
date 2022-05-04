@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import UserCard from '../common/UserCard';
-import FollowBtn from '../common/FollowBtn';
+import UserCard from '../UserCard';
+import FollowBtn from '../FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 
