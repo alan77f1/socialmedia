@@ -1,4 +1,3 @@
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
@@ -25,16 +24,10 @@ function SideBar() {
         <li className="sideBarItem">
           <img src="../../assets/sidebar/group.png" alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Nhóm</span>
-            <span className="sideBarItemInfo">9+ dấu trang mới</span>
+            <span className="sideBarItemName">Khám phá</span>
           </div>
         </li>
-        <li className="sideBarItem">
-          <img src="../../assets/sidebar/store.png" alt="" className="sideBarItemBadge" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName">Marketplace</span>
-          </div>
-        </li>
+
         <li className="sideBarItem">
           <img src="../../assets/sidebar/flag.png" alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
@@ -46,12 +39,6 @@ function SideBar() {
           <div className="sideBarItemText">
             <span className="sideBarItemName">Watch</span>
             <span className="sideBarItemInfo">7 Video mới</span>
-          </div>
-        </li>
-        <li className="sideBarItem">
-          <KeyboardArrowDownIcon className="sideBarItemIcon" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName">Xem thêm</span>
           </div>
         </li>
       </ul>
@@ -69,12 +56,7 @@ function SideBar() {
             <span className="shortcutsName">Trần Tuấn Dương</span>
           </div>
         </li>
-        <li className="shortcuts">
-          <img src="../../assets/ads/timviecnhanh.jpg" alt="" className="shortcutsImg" />
-          <div className="shortcutsText">
-            <span className="shortcutsName">Cộng đồng Front-end(HTML/CSS/JS)</span>
-          </div>
-        </li>
+
         <li className="shortcuts">
           <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
           <div className="shortcutsText">
@@ -100,35 +82,21 @@ function SideBar() {
             <span className="shortcutsName">CANVA - Thiết Kế Dễ Như Chơi</span>
           </div>
         </li>
-        <li className="shortcuts">
-          <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
-          <div className="shortcutsText">
-            <span className="shortcutsName">CANVA - Thiết Kế Dễ Như Chơi</span>
-          </div>
-        </li>
-        <li className="shortcuts">
-          <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
-          <div className="shortcutsText">
-            <span className="shortcutsName">CANVA - Thiết Kế Dễ Như Chơi</span>
-          </div>
-        </li>
-        <li className="shortcuts">
-          <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
-          <div className="shortcutsText">
-            <span className="shortcutsName">CANVA - Thiết Kế Dễ Như Chơi</span>
-          </div>
-        </li>
-        <li className="sideBarItem">
-          <KeyboardArrowDownIcon className="sideBarItemIcon" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName">Ẩn bớt</span>
-          </div>
-        </li>
       </ul>
       <div className="sideBarPolicies">
-        <a href="/">Quyền riêng tư</a> · <a href="/">Điều khoản</a> ·<a href="/">Quảng cáo</a> ·{' '}
-        <a href="/">Lựa chọn quảng cáo</a> ·<a href="/">Cookie</a> · <a href="/">Xem thêm</a> ·
-        <a href="/">Facebook © 2021</a>
+        <div style={{ opacity: 1 }} className="my-2">
+          <a
+            href="https://www.facebook.com/profile.php?id=100033670082606"
+            target="_blank"
+            rel="noreferrer"
+            style={{ wordBreak: 'break-all', color: '#002F77' }}
+          >
+            Liên hệ với chúng tôi
+          </a>
+          <small className="d-block">Chào mừng dến với UTC2 News</small>
+
+          <small>&copy; 2022 MẠNG XÃ HỘI UTC2 FROM BÙI VĂN TÂN</small>
+        </div>
       </div>
     </div>
   );

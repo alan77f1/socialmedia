@@ -35,20 +35,6 @@ const RightSideBar = () => {
           ))}
         </div>
       )}
-
-      <div style={{ opacity: 0.6 }} className="my-2">
-        <a
-          href="https://www.facebook.com/profile.php?id=100033670082606"
-          target="_blank"
-          rel="noreferrer"
-          style={{ wordBreak: 'break-all', color: '#002F77' }}
-        >
-          Liên hệ với chúng tôi
-        </a>
-        <small className="d-block">Chào mừng dến với UTC2 News</small>
-
-        <small>&copy; 2022 MẠNG XÃ HỘI UTC2 FROM BÙI VĂN TÂN</small>
-      </div>
     </div>
   );
 };
