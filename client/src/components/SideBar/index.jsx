@@ -1,5 +1,6 @@
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React from 'react';
+import Friend from '../../assets/sidebar/friend.png';
 import './SideBar.css';
 
 SideBar.propTypes = {};
@@ -7,7 +8,7 @@ SideBar.propTypes = {};
 function SideBar() {
   return (
     <div className="sideBar">
-      <ul className="sideBarList mt16">
+      <ul className="sideBarList">
         <li className="sideBarItem">
           <img src="" alt="" className="sideBarItemImg" />
           <div className="sideBarItemText">
@@ -15,7 +16,7 @@ function SideBar() {
           </div>
         </li>
         <li className="sideBarItem">
-          <img src="../../assets/sidebar/friend.png" alt="" className="sideBarItemBadge" />
+          <img src={Friend} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
             <span className="sideBarItemName">Bạn bè</span>
             <span className="sideBarItemInfo">3 Bạn mới</span>

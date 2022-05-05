@@ -74,7 +74,9 @@ const CardFooter = ({ post }) => {
         className="d-flex justify-content-between "
         style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}
       >
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer' }}>{post.likes.length} Thích</h6>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '18px' }}>
+          <i className="far fa-heart"></i> {post.likes.length}
+        </h6>
 
         {saved ? (
           <i
@@ -84,7 +86,7 @@ const CardFooter = ({ post }) => {
               cursor: 'pointer',
               color: '#002F77',
               fontSize: '25px',
-              marginLeft: '25px',
+              marginLeft: '47px',
             }}
             onClick={handleUnSavePost}
           />
@@ -96,15 +98,20 @@ const CardFooter = ({ post }) => {
               cursor: 'pointer',
               color: '#002F77',
               fontSize: '25px',
-              marginLeft: '25px',
+              marginLeft: '47px',
             }}
             onClick={handleSavePost}
           />
         )}
 
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer' }}>{post.comments.length} Bình luận</h6>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '18px' }}>
+          {post.comments.length} Bình luận
+        </h6>
       </div>
-      <div className="card_icon_menu" style={{ borderBottom: '0.5px solid rgb(216,216,216) ' }}>
+      <div
+        className="card_icon_menu"
+        style={{ padding: '5px', borderBottom: '0.5px solid rgb(216,216,216) ' }}
+      >
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">
@@ -113,7 +120,11 @@ const CardFooter = ({ post }) => {
           </Link>
         </div>
         <div className="post_bottom_action_item">
-          <span className="post_bottom_action_item-Text" onClick={() => setIsShare(!isShare)}>
+          <span
+            className="post_bottom_action_item-Text"
+            style={{ padding: '8px' }}
+            onClick={() => setIsShare(!isShare)}
+          >
             Chia sẻ
           </span>
         </div>

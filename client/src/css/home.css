@@ -65,10 +65,11 @@
   justify-content: space-between;
 
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
 }
 .posts .card_icon_menu i {
   margin: 5px;
+  padding: 15px;
 }
 .posts .card_icon_menu img {
   width: 28px;
@@ -105,6 +106,27 @@
   transition: all 0.1s;
 }
 
-.home {
+/* home */
+.container {
+  padding: 0 8px;
+}
+
+.homePage {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.cLeft {
+  width: 345px;
+}
+
+.cMiddle {
+  width: 590px;
+}
+
+.cRight {
+  width: 345px;
 }

@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPost } from '../../redux/actions/postAction';
 import LoadIcon from '../../assets/images/loading.gif';
 import PostCard from '../../components/PostCard';
+import RightSideBar from '../../components/home/RightSideBar';
+import SideBar from '../../components/SideBar';
 
 const Post = () => {
   const { id } = useParams();
@@ -22,13 +24,15 @@ const Post = () => {
   }, [detailPost, dispatch, id, auth]);
 
   return (
-    <div className="main">
-      <div className="posts">
+    <div>
+      <div className="posts home">
+        <SideBar />
         {post.length === 0 && <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />}
 
         {post.map((item) => (
           <PostCard key={item._id} post={item} />
         ))}
+        <RightSideBar />
       </div>
     </div>
   );
