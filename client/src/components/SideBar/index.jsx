@@ -1,19 +1,19 @@
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
+import UserCard from '../UserCard';
 import './SideBar.css';
 
 SideBar.propTypes = {};
 
 function SideBar() {
+  const { auth } = useSelector((state) => state);
   return (
     <div className="sideBar">
       <ul className="sideBarList">
         <li className="sideBarItem">
-          <img src="" alt="" className="sideBarItemImg" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName"></span>
-          </div>
+          <UserCard user={auth.user} />
         </li>
         <li className="sideBarItem">
           <img src={Friend} alt="" className="sideBarItemBadge" />

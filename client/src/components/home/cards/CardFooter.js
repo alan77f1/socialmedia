@@ -74,7 +74,7 @@ const CardFooter = ({ post }) => {
         className="d-flex justify-content-between "
         style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}
       >
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '18px' }}>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>
           <i className="far fa-heart"></i> {post.likes.length}
         </h6>
 
@@ -104,7 +104,7 @@ const CardFooter = ({ post }) => {
           />
         )}
 
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '18px' }}>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>
           {post.comments.length} Bình luận
         </h6>
       </div>

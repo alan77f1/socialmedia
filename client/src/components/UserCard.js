@@ -43,7 +43,7 @@ const UserCard = ({
   };
 
   return (
-    <div className={`d-flex p-2 align-items-center justify-content-between w-100 ${border}`}>
+    <div className={`d-flex align-items-center justify-content-between w-100 ${border}`}>
       <div>
         <Link
           to={`/profile/${user._id}`}
@@ -53,7 +53,7 @@ const UserCard = ({
         >
           <Avatar src={user.avatar} size="big-avatar" />
 
-          <div className="ml-1" style={{ transform: 'translateY(-2px)' }}>
+          <div style={{ transform: 'translateY(-2px)', marginLeft: '15px' }}>
             <span className="d-block">{user.username}</span>
 
             <small style={{ opacity: 0.7 }}>{msg ? showMsg(user) : user.fullname}</small>
