@@ -25,14 +25,22 @@ const Post = () => {
 
   return (
     <div>
-      <div className="posts home">
-        <SideBar />
-        {post.length === 0 && <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />}
+      <div className="posts homePage">
+        <div className="cLeft">
+          <SideBar />
+        </div>
+        <div className="cMiddle">
+          {post.length === 0 && (
+            <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
+          )}
 
-        {post.map((item) => (
-          <PostCard key={item._id} post={item} />
-        ))}
-        <RightSideBar />
+          {post.map((item) => (
+            <PostCard key={item._id} post={item} />
+          ))}
+        </div>
+        <div className="cRight">
+          <RightSideBar />
+        </div>
       </div>
     </div>
   );
