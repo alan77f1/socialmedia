@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
-
+import SideBar from '../components/SideBar';
 import { useSelector } from 'react-redux';
 import LoadIcon from '../assets/images/loading.gif';
 
@@ -25,23 +25,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="main">
-      <div className="home row mx-0">
-        <div className="col-md-8">
-          {homePosts.loading ? (
-            <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
-          ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
-            <h3 className="text-center">
-              Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn
-              cũng sẽ nhận được nhiều đề xuất thích hợp hơn.
-            </h3>
-          ) : (
-            <Posts />
-          )}
-        </div>
-        <div className="col-md-4">
-          <RightSideBar />
-        </div>
+    <div>
+      <div className="home ">
+        <SideBar />
+
+        {homePosts.loading ? (
+          <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
+        ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
+          <h3 className="text-center">
+            Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn
+            cũng sẽ nhận được nhiều đề xuất thích hợp hơn.
+          </h3>
+        ) : (
+          <Posts />
+        )}
+
+        <RightSideBar />
       </div>
     </div>
   );
