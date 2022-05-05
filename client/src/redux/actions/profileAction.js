@@ -134,7 +134,7 @@ export const follow =
       // Notify
       const msg = {
         id: auth.user._id,
-        text: 'bắt đầu theo dõi bạn nhung maf bn co dong y hom.',
+        text: 'bắt đầu theo dõi bạn.',
         recipients: [newUser._id],
         url: `/profile/${auth.user._id}`,
       };
