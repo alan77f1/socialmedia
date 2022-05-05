@@ -83,14 +83,13 @@
   color: rgb(155, 155, 155);
 }
 .header .search_form .users {
-  border-radius: 10px;
   position: absolute;
   width: 100%;
   min-width: 250px;
   background: #fafafa;
   max-height: calc(100vh - 150px);
   overflow: auto;
-  margin-top: 0px;
+  margin-top: 3px;
 }
 .header .search_form .loading {
   position: absolute;
