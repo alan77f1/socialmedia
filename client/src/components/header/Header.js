@@ -14,7 +14,7 @@ const Header = () => {
       >
         <div className="headerLeft">
           <Link to="/" className="logo">
-            <img src={UTC2} alt="" style={{ width: '40px', marginRight: '5px' }} />
+            <img src={UTC2} alt="" style={{ width: '40px', marginRight: '10px' }} />
           </Link>
           <Search />
         </div>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
-import SocialLogin from '../components/SocialLogin';
 
 const Login = () => {
   const initialState = { email: '', password: '' };
@@ -44,6 +43,7 @@ const Login = () => {
             aria-describedby="emailHelp"
             onChange={handleChangeInput}
             value={email}
+            style={{ borderRadius: '50px' }}
           />
         </div>
 
@@ -58,6 +58,7 @@ const Login = () => {
               onChange={handleChangeInput}
               value={password}
               name="password"
+              style={{ borderRadius: '50px' }}
             />
 
             <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
@@ -66,12 +67,12 @@ const Login = () => {
 
         <button
           type="submit"
-          className="btn btn-dark w-100"
+          className="btn btn-primary w-100"
+          style={{ borderRadius: '50px' }}
           disabled={email && password ? false : true}
         >
           Đăng Nhập
         </button>
-        <SocialLogin />
 
         <Link to="/forgot_password" style={{ color: 'crimson' }}>
           Quên Mật Khẩu?

@@ -32,7 +32,8 @@ const Home = () => {
             <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
             <h3 className="text-center">
-              Bạn Chưa có bài viết nào. Hãy theo dõi bạn bè dể xem bài viết của họ
+              Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn
+              cũng sẽ nhận được nhiều đề xuất thích hợp hơn.
             </h3>
           ) : (
             <Posts />

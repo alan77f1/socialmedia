@@ -50,7 +50,7 @@ const Register = () => {
             name="fullname"
             onChange={handleChangeInput}
             value={fullname}
-            style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}` }}
+            style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
           />
 
           <small className="form-text text-danger">{alert.fullname ? alert.fullname : ''}</small>
@@ -65,7 +65,7 @@ const Register = () => {
             name="username"
             onChange={handleChangeInput}
             value={username.toLowerCase().replace(/ /g, '')}
-            style={{ background: `${alert.username ? '#fd2d6a14' : ''}` }}
+            style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
           />
 
           <small className="form-text text-danger">{alert.username ? alert.username : ''}</small>
@@ -80,7 +80,7 @@ const Register = () => {
             name="email"
             onChange={handleChangeInput}
             value={email}
-            style={{ background: `${alert.email ? '#fd2d6a14' : ''}` }}
+            style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
           />
 
           <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
@@ -97,7 +97,7 @@ const Register = () => {
               onChange={handleChangeInput}
               value={password}
               name="password"
-              style={{ background: `${alert.password ? '#fd2d6a14' : ''}` }}
+              style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
             />
 
             <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
@@ -117,7 +117,10 @@ const Register = () => {
               onChange={handleChangeInput}
               value={cf_password}
               name="cf_password"
-              style={{ background: `${alert.cf_password ? '#fd2d6a14' : ''}` }}
+              style={{
+                background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
+                borderRadius: '50px',
+              }}
             />
 
             <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
@@ -164,7 +167,7 @@ const Register = () => {
           </label>
         </div>
 
-        <button type="submit" className="btn btn-dark w-100">
+        <button type="submit" className="btn btn-primary w-100" style={{ borderRadius: '50px' }}>
           Đăng Ký
         </button>
 

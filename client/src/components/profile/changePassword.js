@@ -37,7 +37,13 @@ const ChangePassword = ({ setShowDialogPassword }) => {
 
   return (
     <div className="edit_profile">
-      <button className="btn btn-danger btn_close" onClick={() => setShowDialogPassword(false)}>
+      <button
+        className="btn btn-danger btn_close"
+        onClick={() => setShowDialogPassword(false)}
+        style={{
+          borderRadius: '50px',
+        }}
+      >
         Đóng
       </button>
 
@@ -55,7 +61,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               onChange={handleChangeInput}
               value={email}
               name="email"
-              style={{ background: `${alert.email ? '#fd2d6a14' : ''}` }}
+              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
             />
             <small>{alert.email ? alert.email : ''}</small>
           </div>
@@ -71,7 +77,10 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               onChange={handleChangeInput}
               value={oldPassword}
               name="oldPassword"
-              style={{ background: `${alert.oldPassword ? '#fd2d6a14' : ''}` }}
+              style={{
+                background: `${alert.oldPassword ? '#fd2d6a14' : ''}`,
+                borderRadius: '50px',
+              }}
             />
             <small onClick={() => setTypeOldPass(!typeOldPass)}>
               {typeOldPass ? 'Hide' : 'Show'}
@@ -91,7 +100,10 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               onChange={handleChangeInput}
               value={newPassword}
               name="newPassword"
-              style={{ background: `${alert.newPassword ? '#fd2d6a14' : ''}` }}
+              style={{
+                background: `${alert.newPassword ? '#fd2d6a14' : ''}`,
+                borderRadius: '50px',
+              }}
             />
             <small onClick={() => setTypeNewPass(!typeNewPass)}>
               {typeNewPass ? 'Hide' : 'Show'}
@@ -113,6 +125,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               name="cf_newPassword"
               style={{
                 background: `${alert.cf_newPassword ? '#fd2d6a14' : ''}`,
+                borderRadius: '50px',
               }}
             />
             <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
@@ -122,7 +135,13 @@ const ChangePassword = ({ setShowDialogPassword }) => {
           </small>
         </div>
 
-        <button className="btn btn-info w-100" type="submit">
+        <button
+          className="btn btn-primary w-100"
+          type="submit"
+          style={{
+            borderRadius: '50px',
+          }}
+        >
           Lưu
         </button>
       </form>

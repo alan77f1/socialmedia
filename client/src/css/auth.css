@@ -12,11 +12,11 @@
 }
 .auth_page form {
   background: #fff;
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   border: 1px solid #ddd;
-  padding: 50px 25px;
-  border-radius: 10px;
+  padding: 50px 50px;
+  border-radius: 38px;
 }
 
 .auth_page form .pass {

@@ -44,12 +44,12 @@ const ForgotPassword = () => {
             name="email"
             onChange={handleChangeInput}
             value={email}
-            style={{ background: `${alert.email ? '#fd2d6a14' : ''}` }}
+            style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
           />
 
           <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
         </div>
-        <button type="submit" className="btn btn-dark w-100">
+        <button type="submit" className="btn btn-primary w-100" style={{ borderRadius: '50px' }}>
           Xác Thực Email
         </button>
       </form>

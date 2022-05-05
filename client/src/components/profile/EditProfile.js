@@ -50,7 +50,13 @@ const EditProfile = ({ setOnEdit }) => {
 
   return (
     <div className="edit_profile">
-      <button className="btn btn-danger btn_close" onClick={() => setOnEdit(false)}>
+      <button
+        className="btn btn-danger btn_close"
+        onClick={() => setOnEdit(false)}
+        style={{
+          borderRadius: '50px',
+        }}
+      >
         Đóng
       </button>
 
@@ -74,6 +80,9 @@ const EditProfile = ({ setOnEdit }) => {
               name="fullname"
               value={fullname}
               onChange={handleInput}
+              style={{
+                borderRadius: '50px',
+              }}
             />
             <small
               className="text-danger position-absolute"
@@ -96,6 +105,9 @@ const EditProfile = ({ setOnEdit }) => {
             value={mobile}
             className="form-control"
             onChange={handleInput}
+            style={{
+              borderRadius: '50px',
+            }}
           />
         </div>
 
@@ -107,6 +119,9 @@ const EditProfile = ({ setOnEdit }) => {
             value={address}
             className="form-control"
             onChange={handleInput}
+            style={{
+              borderRadius: '50px',
+            }}
           />
         </div>
 
@@ -118,6 +133,9 @@ const EditProfile = ({ setOnEdit }) => {
             value={gender}
             className="custom-select text-capitalize"
             onChange={handleInput}
+            style={{
+              borderRadius: '50px',
+            }}
           >
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
@@ -125,7 +143,13 @@ const EditProfile = ({ setOnEdit }) => {
           </select>
         </div>
 
-        <button className="btn btn-info w-100" type="submit">
+        <button
+          className="btn btn-primary w-100"
+          type="submit"
+          style={{
+            borderRadius: '50px',
+          }}
+        >
           Lưu
         </button>
       </form>

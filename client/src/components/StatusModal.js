@@ -136,7 +136,11 @@ const StatusModal = () => {
               {!stream && (
                 <>
                   <div className="file_upload ">
-                    <button className="btn btn-primary w-100" type="submit">
+                    <button
+                      className="btn btn-primary w-100"
+                      type="submit"
+                      style={{ borderRadius: '50px' }}
+                    >
                       <input
                         type="file"
                         name="file"
@@ -152,7 +156,11 @@ const StatusModal = () => {
               )}
             </div>
             <div className="status_footer w-50">
-              <button className="btn btn-primary w-100" type="submit">
+              <button
+                className="btn btn-primary w-100"
+                type="submit"
+                style={{ borderRadius: '50px' }}
+              >
                 Đăng bài
               </button>
             </div>
