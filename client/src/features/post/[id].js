@@ -5,7 +5,7 @@ import { getPost } from '../../redux/actions/postAction';
 import LoadIcon from '../../assets/images/loading.gif';
 import PostCard from '../../components/PostCard';
 import RightSideBar from '../../components/home/RightSideBar';
-import SideBar from '../../components/SideBar';
+import SideBar from '../../components/SideBar/SideBar';
 
 const Post = () => {
   const { id } = useParams();

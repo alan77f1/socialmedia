@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
+import Saved from '../../assets/sidebar/saved.png';
+import Posts from '../../assets/sidebar/posts.png';
+import Discover from '../../assets/sidebar/discover.png';
 import UserInfo from './UserInfo';
-import './SideBar.css';
 
 SideBar.propTypes = {};
 
@@ -21,23 +23,22 @@ function SideBar() {
           </div>
         </li>
         <li className="sideBarItem">
-          <img src="../../assets/sidebar/group.png" alt="" className="sideBarItemBadge" />
+          <img src={Posts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Khám phá</span>
+            <span className="sideBarItemName">Bài viết</span>
           </div>
         </li>
 
         <li className="sideBarItem">
-          <img src="../../assets/sidebar/flag.png" alt="" className="sideBarItemBadge" />
+          <img src={Discover} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Trang</span>
+            <span className="sideBarItemName">Khám phá</span>
           </div>
         </li>
         <li className="sideBarItem">
-          <img src="../../assets/sidebar/video.png" alt="" className="sideBarItemBadge" />
+          <img src={Saved} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Watch</span>
-            <span className="sideBarItemInfo">7 Video mới</span>
+            <span className="sideBarItemName">Đã lưu</span>
           </div>
         </li>
       </ul>
