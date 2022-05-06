@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
-import UserCard from '../UserCard';
+import UserInfo from './UserInfo';
 import './SideBar.css';
 
 SideBar.propTypes = {};
@@ -12,13 +12,12 @@ function SideBar() {
     <div className="sideBar">
       <ul className="sideBarList">
         <li className="sideBarItem">
-          <UserCard user={auth.user} />
+          <UserInfo user={auth.user} />
         </li>
         <li className="sideBarItem">
           <img src={Friend} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
             <span className="sideBarItemName">Bạn bè</span>
-            <span className="sideBarItemInfo">3 Bạn mới</span>
           </div>
         </li>
         <li className="sideBarItem">

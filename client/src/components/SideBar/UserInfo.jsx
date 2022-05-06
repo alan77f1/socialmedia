@@ -1,8 +1,8 @@
 import React from 'react';
-import Avatar from './Avatar';
+import Avatar from '../Avatar';
 import { Link } from 'react-router-dom';
 
-const UserCard = ({
+const UserInfo = ({
   children,
   user,
   border,
@@ -43,7 +43,7 @@ const UserCard = ({
   };
 
   return (
-    <div className={`d-flex p-2 align-items-center justify-content-between w-100 ${border}`}>
+    <div className={`d-flex align-items-center justify-content-between w-100 ${border}`}>
       <div>
         <Link
           to={`/profile/${user._id}`}
@@ -52,11 +52,10 @@ const UserCard = ({
           style={{ textDecoration: 'none' }}
         >
           <Avatar src={user.avatar} size="big-avatar" />
-
-          <div style={{ transform: 'translateY(-2px)', marginLeft: '15px' }}>
-            <span className="d-block">{user.username}</span>
-
-            <small style={{ opacity: 0.7 }}>{msg ? showMsg(user) : user.fullname}</small>
+          <div style={{ transform: 'translateY(-2px)', marginLeft: '10px' }}>
+            <small style={{ color: '#002f77', fontWeight: 'bold' }}>
+              {msg ? showMsg(user) : user.fullname}
+            </small>
           </div>
         </Link>
       </div>
@@ -66,4 +65,4 @@ const UserCard = ({
   );
 };
 
-export default UserCard;
+export default UserInfo;
