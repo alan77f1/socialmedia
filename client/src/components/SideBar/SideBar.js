@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
 import Saved from '../../assets/sidebar/saved.png';
@@ -7,27 +7,11 @@ import Discover from '../../assets/sidebar/discover.png';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 
-import LoadIcon from '../../assets/images/loading.gif';
-import { getProfileUsers } from '../../redux/actions/profileAction';
-import { useParams } from 'react-router-dom';
-
 SideBar.propTypes = {};
 
 function SideBar() {
   const navLinks = [{ label: 'Discover', icon: 'explore', path: '/discover' }];
-
-  const { profile, auth } = useSelector((state) => state);
-  const dispatch = useDispatch();
-
-  const { id } = useParams();
-  const [saveTab, setSaveTab] = useState(false);
-
-  useEffect(() => {
-    if (profile.ids.every((item) => item !== id)) {
-      dispatch(getProfileUsers({ id, auth }));
-    }
-  }, [id, auth, dispatch, profile.ids]);
-
+  const { auth } = useSelector((state) => state);
   return (
     <div className="sideBar">
       <ul className="sideBarList">
@@ -43,9 +27,7 @@ function SideBar() {
         <li className="sideBarItem">
           <img src={Posts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName" onClick={() => setSaveTab(false)}>
-              Bài viết
-            </span>
+            <span className="sideBarItemName">Bài viết</span>
           </div>
         </li>
 
@@ -68,7 +50,7 @@ function SideBar() {
         </li>
       </ul>
 
-      <hr className="sideBarHr" />
+      {/* <hr className="sideBarHr" />
 
       <div className="shortcutsTitle">
         <span className="shortcutsTitleText">Lối tắt của bạn</span>
@@ -92,7 +74,7 @@ function SideBar() {
         <li className="shortcuts">
           <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
           <div className="shortcutsText">
-            <span className="shortcutsName">Tân</span>
+            <span className="shortcutsName">T</span>
           </div>
         </li>
         <li className="shortcuts">
@@ -107,7 +89,7 @@ function SideBar() {
             <span className="shortcutsName">CANVA - Thiết Kế Dễ Như Chơi</span>
           </div>
         </li>
-      </ul>
+      </ul> */}
       <div className="sideBarPolicies">
         <div style={{ opacity: 1 }} className="my-2">
           <a
@@ -122,18 +104,6 @@ function SideBar() {
 
           <small>&copy; 2022 MẠNG XÃ HỘI UTC2 FROM BÙI VĂN TÂN</small>
         </div>
-
-        {profile.loading ? (
-          <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
-        ) : (
-          <>
-            {saveTab ? (
-              <Saved auth={auth} dispatch={dispatch} />
-            ) : (
-              <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
-            )}
-          </>
-        )}
       </div>
     </div>
   );
