@@ -16,7 +16,7 @@ const RightSideBar = () => {
         {!suggestions.loading && (
           <h6 // className="fas fa-redo"
             className="text-black"
-            style={{ cursor: 'pointer', marginLeft: '120px' }}
+            style={{ cursor: 'pointer', marginLeft: '154px' }}
             onClick={() => dispatch(getSuggestions(auth.token))}
           >
             Xem thêm

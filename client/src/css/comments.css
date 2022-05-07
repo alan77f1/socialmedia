@@ -26,17 +26,17 @@
   padding: 10px 25px;
 }
 .comment_card .comment_content {
-  background: #eee;
-  padding: 7px;
-  border-radius: 10px;
-  border-top-left-radius: 0;
+  background: #f0f2f5;
+  padding: 12px;
+  border-radius: 25px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .comment_card .comment_content .readMore {
   cursor: pointer;
-  color: crimson;
+  color: rgb(66, 66, 66);
 }
 
 .comment_card .comment_content .nav-item {
