@@ -6,7 +6,7 @@ import PrivateRouter from './routes/PrivateRouter';
 
 import Home from './features/home';
 import Login from './features/login';
-import Register from './features/register';
+import Register from './features/Register';
 import Forgot from './features/forgotPassword';
 import Reset from './features/resetPassword';
 

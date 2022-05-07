@@ -1,16 +1,20 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Friend from '../../assets/sidebar/friend.png';
-import Saved from '../../assets/sidebar/saved.png';
-import Posts from '../../assets/sidebar/posts.png';
-import Discover from '../../assets/sidebar/discover.png';
+import ImgFriend from '../../assets/sidebar/friend.png';
+import ImgSaved from '../../assets/sidebar/saved.png';
+import ImgPosts from '../../assets/sidebar/posts.png';
+import ImgDiscover from '../../assets/sidebar/discover.png';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 
 SideBar.propTypes = {};
 
 function SideBar() {
-  const navLinks = [{ label: 'Discover', icon: 'explore', path: '/discover' }];
+  const navLinks = [
+    { label: 'Discover', path: '/discover' },
+    { label: 'Kaka', path: '/kaka' },
+  ];
+
   const { auth } = useSelector((state) => state);
   return (
     <div className="sideBar">
@@ -19,13 +23,13 @@ function SideBar() {
           <UserInfo user={auth.user} />
         </li>
         <li className="sideBarItem">
-          <img src={Friend} alt="" className="sideBarItemBadge" />
+          <img src={ImgFriend} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
             <span className="sideBarItemName">Bạn bè</span>
           </div>
         </li>
         <li className="sideBarItem">
-          <img src={Posts} alt="" className="sideBarItemBadge" />
+          <img src={ImgPosts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
             <span className="sideBarItemName">Bài viết</span>
           </div>
@@ -34,7 +38,7 @@ function SideBar() {
         {navLinks.map((link, index) => (
           <li className="sideBarItem " key={index}>
             <Link to={link.path} className="sideBarItemlink">
-              <img src={Discover} alt="" className="sideBarItemBadge" />
+              <img src={ImgDiscover} alt="" className="sideBarItemBadge" />
               <div className="sideBarItemText">
                 <span className="sideBarItemName">Khám phá</span>
               </div>
@@ -43,7 +47,7 @@ function SideBar() {
         ))}
 
         <li className="sideBarItem">
-          <img src={Saved} alt="" className="sideBarItemBadge" />
+          <img src={ImgSaved} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
             <span className="sideBarItemName">Đã lưu</span>
           </div>

@@ -13,11 +13,6 @@ const MenuControl = () => {
   ];
 
   const dispatch = useDispatch();
-  const { pathname } = useLocation();
-
-  const isActive = (pn) => {
-    if (pn === pathname) return 'active';
-  };
 
   return (
     <div className="menu menu-middle">
