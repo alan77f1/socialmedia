@@ -12,6 +12,7 @@
 .info_container {
   justify-content: space-around;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .info_content {
@@ -173,10 +174,11 @@
   background: #f0f2f5;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 5px 20px;
   margin: 0 25px;
   opacity: 0.5;
+  /* color: black; */
 }
 .profile_tab button.active {
   border-top: 1px solid #000;
@@ -192,4 +194,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* profile info */
+
+.mainIntroduce {
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  width: 380px;
+  box-shadow: 0 0 4px #ddd;
 }

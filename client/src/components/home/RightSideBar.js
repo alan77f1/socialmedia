@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import UserCard from '../UserCard';
 import FollowBtn from '../FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
+import UTC2Ads from '../../assets/images/utc2ads.jpg';
+import UTC2News from '../../assets/images/utc2media.jpg';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 
 const RightSideBar = () => {
@@ -16,18 +18,18 @@ const RightSideBar = () => {
         <ul className="adsList">
           <li className="adsItem">
             <a rel="noreferrer" target="_blank" href="https://timviecnhanh.com/">
-              <img src="./assets/ads/timviecnhanh.jpg" alt="" className="adsItemImg" />
+              <img src={UTC2Ads} alt="" className="adsItemImg" />
               <div className="adsItemContent">
-                <div className="adsItemContentHeader">Tìm việc nhanh</div>
+                <div className="adsItemContentHeader">UTC2</div>
                 <span className="adsItemContentDonors">timviecnhanh.com</span>
               </div>
             </a>
           </li>
           <li className="adsItem">
             <a rel="noreferrer" target="_blank" href="https://timviecnhanh.com/">
-              <img src="./assets/ads/gearvn.jpg" alt="" className="adsItemImg" />
+              <img src={UTC2News} alt="" className="adsItemImg" />
               <div className="adsItemContent">
-                <div className="adsItemContentHeader">Cẩm nang về GEAR</div>
+                <div className="adsItemContentHeader">UTC2 News</div>
                 <span className="adsItemContentDonors">gearvn.com</span>
               </div>
             </a>
