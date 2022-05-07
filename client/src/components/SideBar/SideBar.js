@@ -1,15 +1,33 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Friend from '../../assets/sidebar/friend.png';
 import Saved from '../../assets/sidebar/saved.png';
 import Posts from '../../assets/sidebar/posts.png';
 import Discover from '../../assets/sidebar/discover.png';
+import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
+
+import LoadIcon from '../../assets/images/loading.gif';
+import { getProfileUsers } from '../../redux/actions/profileAction';
+import { useParams } from 'react-router-dom';
 
 SideBar.propTypes = {};
 
 function SideBar() {
-  const { auth } = useSelector((state) => state);
+  const navLinks = [{ label: 'Discover', icon: 'explore', path: '/discover' }];
+
+  const { profile, auth } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const { id } = useParams();
+  const [saveTab, setSaveTab] = useState(false);
+
+  useEffect(() => {
+    if (profile.ids.every((item) => item !== id)) {
+      dispatch(getProfileUsers({ id, auth }));
+    }
+  }, [id, auth, dispatch, profile.ids]);
+
   return (
     <div className="sideBar">
       <ul className="sideBarList">
@@ -25,16 +43,23 @@ function SideBar() {
         <li className="sideBarItem">
           <img src={Posts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Bài viết</span>
+            <span className="sideBarItemName" onClick={() => setSaveTab(false)}>
+              Bài viết
+            </span>
           </div>
         </li>
 
-        <li className="sideBarItem">
-          <img src={Discover} alt="" className="sideBarItemBadge" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName">Khám phá</span>
-          </div>
-        </li>
+        {navLinks.map((link, index) => (
+          <li className="sideBarItem " key={index}>
+            <Link to={link.path} className="sideBarItemlink">
+              <img src={Discover} alt="" className="sideBarItemBadge" />
+              <div className="sideBarItemText">
+                <span className="sideBarItemName">Khám phá</span>
+              </div>
+            </Link>
+          </li>
+        ))}
+
         <li className="sideBarItem">
           <img src={Saved} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
@@ -53,7 +78,7 @@ function SideBar() {
         <li className="shortcuts">
           <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
           <div className="shortcutsText">
-            <span className="shortcutsName">Trần Tuấn Dương</span>
+            <span className="shortcutsName">Bùi Văn Tân</span>
           </div>
         </li>
 
@@ -67,7 +92,7 @@ function SideBar() {
         <li className="shortcuts">
           <img src="../../assets/ads/gearvn.jpg" alt="" className="shortcutsImg" />
           <div className="shortcutsText">
-            <span className="shortcutsName">Trần Tuấn Dương</span>
+            <span className="shortcutsName">Tân</span>
           </div>
         </li>
         <li className="shortcuts">
@@ -97,6 +122,18 @@ function SideBar() {
 
           <small>&copy; 2022 MẠNG XÃ HỘI UTC2 FROM BÙI VĂN TÂN</small>
         </div>
+
+        {profile.loading ? (
+          <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
+        ) : (
+          <>
+            {saveTab ? (
+              <Saved auth={auth} dispatch={dispatch} />
+            ) : (
+              <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
+            )}
+          </>
+        )}
       </div>
     </div>
   );

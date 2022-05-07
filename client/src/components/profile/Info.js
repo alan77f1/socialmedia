@@ -40,7 +40,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
           <div className="container_content">
             <div className="container_content-title">
               {/* <h2>Thông Tin</h2> */}
-              <h2>{user.username}</h2>
+              <h2>@{user.username}</h2>
 
               {user._id === auth.user._id ? (
                 <button

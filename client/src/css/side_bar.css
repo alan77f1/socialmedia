@@ -39,6 +39,15 @@
   align-items: center;
 }
 
+.sideBarItemlink {
+  padding: 8px 8px;
+  /* border-radius: 8px; */
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
 .sideBarItem:hover,
 .shortcuts:hover {
   background-color: #f9cb00;
@@ -78,6 +87,10 @@
   color: #002f77;
   font-weight: 500;
   font-size: 14px;
+}
+
+.sideBarItemName:hover {
+  text-decoration: none;
 }
 
 .shortcutsName {

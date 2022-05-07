@@ -54,9 +54,10 @@ const UserCard = ({
           <Avatar src={user.avatar} size="big-avatar" />
 
           <div style={{ transform: 'translateY(-2px)', marginLeft: '15px' }}>
-            <span className="d-block">{user.username}</span>
-
-            <small style={{ opacity: 0.7 }}>{msg ? showMsg(user) : user.fullname}</small>
+            <span>{msg ? showMsg(user) : user.fullname}</span>
+            <small className="d-block" style={{ opacity: 0.7 }}>
+              @{user.username}
+            </small>
           </div>
         </Link>
       </div>
