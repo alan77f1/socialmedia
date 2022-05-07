@@ -5,12 +5,11 @@
 /* ------ Info ---------- */
 .info {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   padding: 20px 10px;
 }
 .info_container {
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -186,7 +185,7 @@
 }
 
 .container_content {
-  width: 400px;
+  width: 286px;
 }
 
 .container_content-title {

@@ -39,8 +39,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
 
           <div className="container_content">
             <div className="container_content-title">
-              {/* <h2>Thông Tin</h2> */}
-              <h2>@{user.username}</h2>
+              <h3>@{user.username}</h3>
 
               {user._id === auth.user._id ? (
                 <button
@@ -48,13 +47,12 @@ const Info = ({ id, auth, profile, dispatch }) => {
                   style={{ borderRadius: '50px' }}
                   onClick={() => setOnEdit(true)}
                 >
-                  Chỉnh sửa trang cá nhân
+                  Chỉnh sửa
                 </button>
               ) : (
                 <FollowBtn user={user} />
               )}
             </div>
-
             <div className="follow_btn">
               <span className="mr-4" onClick={() => setShowFollowers(true)}>
                 {user.followers.length} Người theo dõi
@@ -63,16 +61,12 @@ const Info = ({ id, auth, profile, dispatch }) => {
                 {user.following.length} Đang theo dõi
               </span>
             </div>
-
-            <h6>
-              {user.fullname} <span className="text-danger">{user.mobile}</span>
-            </h6>
-            <p className="m-0">{user.address}</p>
+            Tên đầy đủ <span>{user.fullname}</span>
+            <br />
+            Số điện thoại <span className="text-danger">{user.mobile}</span>
+            <br />
+            Sống tại <span className="m-0">{user.address}</span>
             <h6 className="m-0">{user.email}</h6>
-            <a href={user.website} target="_blank" rel="noreferrer">
-              {user.website}
-            </a>
-            <p>{user.story}</p>
           </div>
 
           {onEdit && <EditProfile setOnEdit={setOnEdit} />}

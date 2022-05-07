@@ -60,12 +60,6 @@ export const updateProfileUser =
         payload: { error: 'Tên quá dài.' },
       });
 
-    if (userData.story.length > 200)
-      return dispatch({
-        type: GLOBALTYPES.ALERT,
-        payload: { error: 'Mô tả ít hơn 200 kí tự.' },
-      });
-
     try {
       let media;
       dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
