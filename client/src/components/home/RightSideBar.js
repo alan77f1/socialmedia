@@ -52,11 +52,22 @@ const RightSideBar = () => {
       {suggestions.loading ? (
         <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
       ) : (
-        <div className="suggestions">
+        <div className="suggestions ">
           {suggestions.users.map((user) => (
-            <UserCard key={user._id} user={user}>
-              <FollowBtn user={user} />
-            </UserCard>
+            <div
+              style={{
+                width: '345px',
+                boxShadow: '0 0 4px #ddd',
+                borderRadius: '15px',
+                padding: '10px 20px',
+                margin: '15px 0px ',
+                background: '#ffffff',
+              }}
+            >
+              <UserCard key={user._id} user={user}>
+                <FollowBtn user={user} />
+              </UserCard>
+            </div>
           ))}
         </div>
       )}

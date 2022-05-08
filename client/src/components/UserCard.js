@@ -43,7 +43,7 @@ const UserCard = ({
   };
 
   return (
-    <div className={`d-flex p-2 align-items-center justify-content-between w-100 ${border}`}>
+    <div className={`d-flex p-2 align-items-center justify-content-between  w-100 ${border}  `}>
       <div>
         <Link
           to={`/profile/${user._id}`}
