@@ -131,3 +131,14 @@
 .cRight {
   width: 345px;
 }
+
+/* right side bar */
+
+.suggestions-item {
+  width: 345px;
+  box-shadow: 0 0 4px #ddd;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin: 15px 0px;
+  background: #ffffff;
+}

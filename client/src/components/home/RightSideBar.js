@@ -17,7 +17,7 @@ const RightSideBar = () => {
         <div className="adsTitle">Được tài trợ</div>
         <ul className="adsList">
           <li className="adsItem">
-            <a rel="noreferrer" target="_blank" href="https://timviecnhanh.com/">
+            <a rel="noreferrer" target="_blank" href="https://utc2.edu.vn/">
               <img src={UTC2Ads} alt="" className="adsItemImg" />
               <div className="adsItemContent">
                 <div className="adsItemContentHeader">UTC2</div>
@@ -26,7 +26,7 @@ const RightSideBar = () => {
             </a>
           </li>
           <li className="adsItem">
-            <a rel="noreferrer" target="_blank" href="https://timviecnhanh.com/">
+            <a rel="noreferrer" target="_blank" href="https://www.facebook.com/utc2news">
               <img src={UTC2News} alt="" className="adsItemImg" />
               <div className="adsItemContent">
                 <div className="adsItemContentHeader">UTC2 News</div>
@@ -54,16 +54,7 @@ const RightSideBar = () => {
       ) : (
         <div className="suggestions ">
           {suggestions.users.map((user) => (
-            <div
-              style={{
-                width: '345px',
-                boxShadow: '0 0 4px #ddd',
-                borderRadius: '15px',
-                padding: '10px 20px',
-                margin: '15px 0px ',
-                background: '#ffffff',
-              }}
-            >
+            <div className="suggestions-item">
               <UserCard key={user._id} user={user}>
                 <FollowBtn user={user} />
               </UserCard>
