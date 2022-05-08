@@ -41,7 +41,7 @@ const CardHeader = ({ post }) => {
         <span className="material-icons" id="moreLink" data-toggle="dropdown">
           more_horiz
         </span>
-        <div className="dropdown-menu">
+        <div className="dropdown-menu" style={{ borderRadius: '12px' }}>
           {auth.user._id === post.user._id && (
             <>
               <div className="dropdown-item" onClick={handleEditPost}>
