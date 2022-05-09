@@ -7,6 +7,7 @@ import Followers from './Followers';
 import Following from './Following';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import Status from '../home/Status';
+import ImgBuilding from '../../assets/images/building.jpg';
 
 const Info = ({ id, auth, profile, dispatch }) => {
   const [userData, setUserData] = useState([]);
@@ -37,13 +38,33 @@ const Info = ({ id, auth, profile, dispatch }) => {
       {userData.map((user) => (
         <div className="info_container" key={user._id}>
           <div className="container_left" key={user._id}>
-            <Avatar src={user.avatar} size="supper-avatar" />
+            <div className="profileTop">
+              <img src={ImgBuilding} alt="" className="profileTopCoverImg" />
+              <div className="profileTopWrap">
+                <div className="profileTopAvatar">
+                  <div className="profileTopAvatarImg">
+                    <Avatar src={user.avatar} size="supper-avatar" />
+                  </div>
+                  <div className="profileTopChangeAvatarBtn">
+                    <div
+                      className="profileTopAvatarIcon"
+                      style={{
+                        backgroundImage: `url(./assets/profile/1.png)`,
+                        backgroundPosition: '0px -452px',
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                <div className="profileTopInfo">
+                  <h3>@{user.username}</h3>
+                </div>
+                <hr className="profileTopHr" />
+              </div>
+            </div>
 
             <div className="container_introduce">
               <div className="container_content">
                 <div className="container_content-title">
-                  <h3>@{user.username}</h3>
-
                   {user._id === auth.user._id ? (
                     <button
                       className="btn btn-primary"

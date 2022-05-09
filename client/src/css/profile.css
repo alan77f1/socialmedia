@@ -207,3 +207,89 @@
 .pading {
   padding: 5px;
 }
+
+/* profile header */
+
+.profileTop {
+  position: relative;
+}
+
+.profileTopCoverImg {
+  height: 340px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.profileTopWrap {
+  padding: 0 32px;
+}
+
+.profileTopAvatar {
+  width: 176px;
+  height: 176px;
+  background-color: #242526;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 188px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profileTopAvatarImg {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileTopChangeAvatarBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 2px;
+
+  width: 36px;
+  height: 36px;
+  background-color: #3a3b3c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileTopAvatarIcon {
+  background-size: auto;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  filter: invert(93%) sepia(3%) saturate(224%) hue-rotate(182deg) brightness(97%) contrast(98%);
+}
+
+.profileTopInfo {
+  text-align: center;
+  color: #e4e6ea;
+  margin-top: 26px;
+}
+
+.profileTopInfoName {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.profileTopInfoDesc {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.profileTopHr {
+  padding-top: 12px;
+  border: none;
+  border-bottom: 0.5px solid rgb(61, 61, 61);
+}
