@@ -82,6 +82,10 @@
   height: 100%;
   max-height: 100px;
 }
+
+.wrap {
+  display: flex;
+}
 .status_body .show_images #file_img span {
   position: absolute;
   top: -1px;

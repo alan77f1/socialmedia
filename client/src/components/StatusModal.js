@@ -92,16 +92,18 @@ const StatusModal = () => {
         </div>
 
         <div className="status_body">
-          <textarea
-            name="content"
-            value={content}
-            placeholder={`${auth.user.username} ơi, Bạn đang nghĩ gì thế?`}
-            onChange={(e) => setContent(e.target.value)}
-          />
+          <div className="wrap">
+            <textarea
+              name="content"
+              value={content}
+              placeholder={`${auth.user.username} ơi, Bạn đang nghĩ gì thế?`}
+              onChange={(e) => setContent(e.target.value)}
+            />
 
-          <div className="d-flex">
-            <div className="flex-fill"></div>
-            <Icons setContent={setContent} content={content} />
+            <div className="d-flex">
+              <div className="flex-fill"></div>
+              <Icons setContent={setContent} content={content} />
+            </div>
           </div>
 
           <div className="show_images">
@@ -136,11 +138,7 @@ const StatusModal = () => {
               {!stream && (
                 <>
                   <div className="file_upload ">
-                    <button
-                      className="btn btn-primary w-100"
-                      type="submit"
-                      style={{ borderRadius: '50px' }}
-                    >
+                    <button className="btn btn-primary w-100" type="submit" style={{ borderRadius: '50px' }}>
                       <input
                         type="file"
                         name="file"
@@ -156,11 +154,7 @@ const StatusModal = () => {
               )}
             </div>
             <div className="status_footer w-50">
-              <button
-                className="btn btn-primary w-100"
-                type="submit"
-                style={{ borderRadius: '50px' }}
-              >
+              <button className="btn btn-primary w-100" type="submit" style={{ borderRadius: '50px' }}>
                 Đăng bài
               </button>
             </div>

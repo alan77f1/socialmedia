@@ -31,14 +31,11 @@ Giảng viên:
 - [Socket.io](https://socket.io/)
 - [Material UI](https://mui.com/)
 - [Docker](https://www.docker.com/)
-- [Firebase](https://firebase.google.com/)
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
 1. Xây dựng cơ sở dữ liệu với mongodb
 2. Quản lý hệ thống :
-   - Đăng nhập với gg
-   - Đăng nhập với facebook
    - Đăng ký tài khoản
    - Đổi mât khẩu
    - Lấy lại mật khẩu thông qua gửi mail.

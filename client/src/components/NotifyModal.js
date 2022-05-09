@@ -26,16 +26,12 @@ const NotifyModal = () => {
         <h4>Thông Báo</h4>
       </div>
 
-      {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" style={{ width: '412px' }} />}
+      {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" style={{ width: '395px' }} />}
 
       <div style={{ maxHeight: 'calc(100vh - 200px)', overflow: 'auto' }}>
         {notify.data.map((msg, index) => (
           <div key={index} className="px-2 mb-3">
-            <Link
-              to={`${msg.url}`}
-              className="d-flex text-dark align-items-center"
-              onClick={() => handleIsRead(msg)}
-            >
+            <Link to={`${msg.url}`} className="d-flex text-dark align-items-center" onClick={() => handleIsRead(msg)}>
               <Avatar src={msg.user.avatar} size="big-avatar" />
 
               <div className="mx-1 flex-fill">

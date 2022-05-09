@@ -182,7 +182,6 @@
 }
 .profile_tab button.active {
   border-top: 1px solid #000;
-
   opacity: 0.8;
 }
 
@@ -198,10 +197,13 @@
 
 /* profile info */
 
-.mainIntroduce {
+.container_introduce {
   padding: 16px;
   background-color: #ffffff;
   border-radius: 18px;
   width: 380px;
   box-shadow: 0 0 4px #ddd;
+}
+.pading {
+  padding: 5px;
 }
