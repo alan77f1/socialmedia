@@ -70,13 +70,12 @@ Giảng viên:
 ## Hướng dẫn sử dụng:
 
 1. Clone vào thư mục của bạn.
-2. Tạo database với mongodb trên [MongoDb](https://cloud.mongodb.com)
-3. Tạo file .env và thêm các thông tin cần thiết dựa vào file .env.example
-4. Dán bên trong thư mục gốc (ở đây dùng xampp) xampp/htdocs
-5. Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-6. Tạo cơ sở dữ liệu với tên spa
-7. Nhập tệp spa.sql (trong thư mục tệp Sql)
-8. Vào trình duyệt gõ đường dẫn http://localhost:8080/spa (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-9. link host : https://hovuotsax12.000webhostapp.com/spa
+2. Tạo database với mongodb trên [MongoDb Atlas](https://cloud.mongodb.com) và tạo file .env và thêm các thông tin cần thiết dựa vào file .env.example
+
+3. Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
+4. Tạo cơ sở dữ liệu với tên spa
+5. Nhập tệp spa.sql (trong thư mục tệp Sql)
+6. Vào trình duyệt gõ đường dẫn http://localhost:8080/spa (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
+7. link host : https://hovuotsax12.000webhostapp.com/spa
 
 Xin cám ơn!

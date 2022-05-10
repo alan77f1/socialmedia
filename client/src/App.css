@@ -27,6 +27,26 @@ code {
 img {
   object-fit: cover;
 }
+.form-group input {
+  font-size: 1.6rem;
+  background-color: #eee;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+.form-group input:hover {
+  background-color: #fff;
+  border-color: rgba(240, 128, 128, 0.8);
+}
+
+.form-group input:focus {
+  background-color: #fff;
+  border-color: lightcoral;
+  box-shadow: rgba(240, 128, 128, 0.6) 0px 0px 16px;
+}
 
 @import url('./css/auth.css');
 
