@@ -18,7 +18,7 @@ Họ và tên: Bùi Văn Tân
 
 ## Đề tài: Quản lý mạng xã hội UTC2
 
-Giảng viên:
+Giảng viên: Phạm Thị Miên
 
 ## Phần 1: Công nghệ sử dụng:
 
@@ -78,4 +78,4 @@ Giảng viên:
 6. Vào trình duyệt gõ đường dẫn http://localhost:8080/spa (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
 7. link host : https://hovuotsax12.000webhostapp.com/spa
 
-Xin cám ơn!
+Xin Cảm Ơn!
