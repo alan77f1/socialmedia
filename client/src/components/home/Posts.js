@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import PostCard from '../PostCard';
+import PostCard from './post_card/PostCard';
 
 import LoadIcon from '../../assets/images/loading.gif';
-import LoadMoreBtn from '../LoadMoreBtn';
+import LoadMoreBtn from '../button/LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { POST_TYPES } from '../../redux/actions/postAction';
 
@@ -33,12 +33,7 @@ const Posts = () => {
 
       {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
 
-      <LoadMoreBtn
-        result={homePosts.result}
-        page={homePosts.page}
-        load={load}
-        handleLoadMore={handleLoadMore}
-      />
+      <LoadMoreBtn result={homePosts.result} page={homePosts.page} load={load} handleLoadMore={handleLoadMore} />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../Avatar';
+import Avatar from '../../profile/Avatar';
 import { Link, useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import moment from 'moment';

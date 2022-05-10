@@ -1,7 +1,8 @@
 import React from 'react';
 import Avatar from '../../profile/Avatar';
+import { Link } from 'react-router-dom';
 
-const UserImg = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
+const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
   const handleCloseAll = () => {
     if (handleClose) handleClose();
     if (setShowFollowers) setShowFollowers(false);
@@ -34,10 +35,24 @@ const UserImg = ({ children, user, border, handleClose, setShowFollowers, setSho
   };
 
   return (
-    <div className={`d-flex p-8 align-items-center justify-content-between w-16 ${border}`}>
-      <Avatar src={user.avatar} size="big-avatar" />
+    <div className={`d-flex align-items-center justify-content-between w-100 ${border}`}>
+      <div>
+        <Link
+          to={`/profile/${user._id}`}
+          onClick={handleCloseAll}
+          className="d-flex align-items-center"
+          style={{ textDecoration: 'none' }}
+        >
+          <Avatar src={user.avatar} size="big-avatar" />
+          <div style={{ transform: 'translateY(-2px)', marginLeft: '10px' }}>
+            <small style={{ color: '#002f77', fontWeight: 'bold' }}>{msg ? showMsg(user) : user.fullname}</small>
+          </div>
+        </Link>
+      </div>
+
+      {children}
     </div>
   );
 };
 
-export default UserImg;
+export default UserInfo;

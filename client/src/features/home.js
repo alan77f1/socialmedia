@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
-import SideBar from '../components/SideBar/SideBar';
+import SideBar from '../components/home/side_bar_left/SideBar';
 import { useSelector } from 'react-redux';
 import LoadIcon from '../assets/images/loading.gif';
 
@@ -35,8 +35,8 @@ const Home = () => {
             <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
             <h3 className="text-center">
-              Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn
-              cũng sẽ nhận được nhiều đề xuất thích hợp hơn.
+              Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn cũng sẽ nhận được
+              nhiều đề xuất thích hợp hơn.
             </h3>
           ) : (
             <Posts />

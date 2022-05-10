@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
-import Icons from '../../Icons';
+import Icons from '../post_card/Icons';
 import UserImg from './UserInput';
 
 const InputComment = ({ children, post, onReply, setOnReply }) => {
@@ -39,12 +39,7 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
 
       <UserImg user={auth.user} />
 
-      <input
-        type="text"
-        placeholder="Viết bình luận..."
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
+      <input type="text" placeholder="Viết bình luận..." value={content} onChange={(e) => setContent(e.target.value)} />
 
       <Icons setContent={setContent} content={content} />
     </form>

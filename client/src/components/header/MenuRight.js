@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/actions/authAction';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import Avatar from '../Avatar';
-import NotifyModal from '../NotifyModal';
+import Avatar from '../profile/Avatar';
+import NotifyModal from '../header/NotifyModal';
 import ChangePassword from '../profile/changePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
@@ -22,18 +21,12 @@ const MenuRight = () => {
     <div className="menu menu-right">
       <ul className="navbar-nav flex-row">
         <li className="menu-middle-item_bell">
-          <NotificationsIcon
-            style={{ fontSize: 'inherit', color: '#002f77', marginRight: '5px' }}
-          />
+          <NotificationsIcon style={{ fontSize: 'inherit', color: '#002f77', marginRight: '5px' }} />
 
           <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span className="notify_length">{notify.data.length}</span>
           </span>
-          <div
-            className="dropdown-menu"
-            aria-labelledby="navbarDropdown"
-            style={{ transform: 'translateX(60px)' }}
-          >
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ transform: 'translateX(60px)' }}>
             <NotifyModal />
           </div>
         </li>

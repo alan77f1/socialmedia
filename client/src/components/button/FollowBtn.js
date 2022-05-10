@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { follow, unfollow } from '../redux/actions/profileAction';
+import { follow, unfollow } from '../../redux/actions/profileAction';
 
 const FollowBtn = ({ user }) => {
   const [followed, setFollowed] = useState(false);
@@ -38,11 +38,7 @@ const FollowBtn = ({ user }) => {
   return (
     <>
       {followed ? (
-        <dev
-          className="btn btn-danger border"
-          style={{ borderRadius: '50px' }}
-          onClick={handleUnFollow}
-        >
+        <dev className="btn btn-danger border" style={{ borderRadius: '50px' }} onClick={handleUnFollow}>
           Bỏ theo dõi
         </dev>
       ) : (

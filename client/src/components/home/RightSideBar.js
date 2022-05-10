@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import UserCard from '../UserCard';
-import FollowBtn from '../FollowBtn';
+import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import UTC2Ads from '../../assets/images/utc2ads.jpg';
 import UTC2News from '../../assets/images/utc2media.jpg';

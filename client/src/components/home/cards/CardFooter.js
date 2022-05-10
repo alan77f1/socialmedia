@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LikeButton from '../../LikeButton';
+import LikeButton from '../../button/LikeBtn';
 import { useSelector, useDispatch } from 'react-redux';
 import { likePost, unLikePost, savePost, unSavePost } from '../../../redux/actions/postAction';
-import ShareModal from '../../ShareModal';
+import ShareModal from '../post_card/ShareModal';
 import { BASE_URL } from '../../../utils/config';
 
 const CardFooter = ({ post }) => {
@@ -70,10 +70,7 @@ const CardFooter = ({ post }) => {
 
   return (
     <div className="card_footer">
-      <div
-        className="d-flex justify-content-between "
-        style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}
-      >
+      <div className="d-flex justify-content-between " style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}>
         <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>
           <i className="far fa-heart"></i> {post.likes.length}
         </h6>
@@ -104,14 +101,9 @@ const CardFooter = ({ post }) => {
           />
         )}
 
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>
-          {post.comments.length} Bình luận
-        </h6>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>{post.comments.length} Bình luận</h6>
       </div>
-      <div
-        className="card_icon_menu"
-        style={{ padding: '5px', borderBottom: '0.5px solid rgb(216,216,216) ' }}
-      >
+      <div className="card_icon_menu" style={{ padding: '5px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">

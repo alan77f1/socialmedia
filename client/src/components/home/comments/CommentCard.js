@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../../Avatar';
+import Avatar from '../../profile/Avatar';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-import LikeButton from '../../LikeButton';
+import LikeButton from '../../button/LikeBtn';
 import { useSelector, useDispatch } from 'react-redux';
 import CommentMenu from './CommentMenu';
 import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
@@ -86,13 +86,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
                   @{comment.tag.username}
                 </Link>
               )}
-              <span>
-                {content.length < 100
-                  ? content
-                  : readMore
-                  ? content + ' '
-                  : content.slice(0, 100) + '....'}
-              </span>
+              <span>{content.length < 100 ? content : readMore ? content + ' ' : content.slice(0, 100) + '....'}</span>
               {content.length > 100 && (
                 <span className="readMore" onClick={() => setReadMore(!readMore)}>
                   {readMore ? 'Hide content' : 'Read more'}
