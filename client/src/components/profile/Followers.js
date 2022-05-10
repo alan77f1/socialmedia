@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '../UserCard';
+import UserCard from '../home/cards/UserCard';
 import FollowBtn from '../button/FollowBtn';
 import { useSelector } from 'react-redux';
 

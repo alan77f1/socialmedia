@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from './profile/Avatar';
+import Avatar from '../../profile/Avatar';
 import { Link } from 'react-router-dom';
 
 const UserCard = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {

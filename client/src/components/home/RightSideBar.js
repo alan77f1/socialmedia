@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import UserCard from '../UserCard';
+import UserCard from './cards/UserCard';
 import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import UTC2Ads from '../../assets/images/utc2ads.jpg';

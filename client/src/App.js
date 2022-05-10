@@ -13,7 +13,7 @@ import Reset from './features/resetPassword';
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
 import StatusModal from './components/home/post_card/StatusModal';
-import NotFound from './components/NotFound';
+import NotFound from './components/alert/NotFound';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { refreshToken } from './redux/actions/authAction';

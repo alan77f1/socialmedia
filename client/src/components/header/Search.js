@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import UserCard from '../UserCard';
+import UserCard from '../home/cards/UserCard';
 import LoadIcon from '../../assets/images/loading.gif';
 
 const Search = () => {
@@ -51,11 +51,7 @@ const Search = () => {
         <span>Tìm kiếm trên UTC2</span>
       </div>
 
-      <div
-        className="close_search"
-        onClick={handleClose}
-        style={{ opacity: users.length === 0 ? 0 : 1 }}
-      >
+      <div className="close_search" onClick={handleClose} style={{ opacity: users.length === 0 ? 0 : 1 }}>
         &times;
       </div>
 
@@ -67,9 +63,7 @@ const Search = () => {
 
       <div className="users">
         {search &&
-          users.map((user) => (
-            <UserCard key={user._id} user={user} border="border" handleClose={handleClose} />
-          ))}
+          users.map((user) => <UserCard key={user._id} user={user} border="border" handleClose={handleClose} />)}
       </div>
     </form>
   );
