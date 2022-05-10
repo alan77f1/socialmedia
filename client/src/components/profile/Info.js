@@ -52,7 +52,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
               <div className="container_content-title">
                 {user._id === auth.user._id ? (
                   <button className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={() => setOnEdit(true)}>
-                    Chỉnh sửa
+                    Chỉnh sửa trang cá nhân
                   </button>
                 ) : (
                   <FollowBtn user={user} />
@@ -64,23 +64,32 @@ const Info = ({ id, auth, profile, dispatch }) => {
 
           <div className="container_introduce">
             <div className="container_content">
+              <div className="pading">
+                <h6>
+                  <span className="content_font">Tên đầy đủ</span> {user.fullname}
+                </h6>
+              </div>
               <div className="follow_btn pading">
-                <span className="mr-2" onClick={() => setShowFollowers(true)}>
-                  {user.followers.length} Người theo dõi
-                </span>
-                <span className="ml-2" onClick={() => setShowFollowing(true)}>
-                  {user.following.length} Đang theo dõi
-                </span>
+                <h6 className="mr-2  " onClick={() => setShowFollowers(true)}>
+                  {user.followers.length} <span className="content_font">Người theo dõi</span>
+                </h6>
+                <h6 className="ml-2" onClick={() => setShowFollowing(true)}>
+                  {user.following.length} <span className="content_font">Đang theo dõi</span>
+                </h6>
               </div>
               <div className="pading">
-                <span>Tên đầy đủ {user.fullname}</span>
-              </div>
-              <div className="pading">
-                <span>Số điện thoại {user.mobile}</span>
+                <h6>
+                  <span className="content_font">Số điện thoại</span> {user.mobile}
+                </h6>
               </div>
 
-              <span className="m-0 pading">Sống tại {user.address}</span>
-              <h6 className="m-0 pading">{user.email}</h6>
+              <h6 className="m-0 pading">
+                <span className="content_font">Sống tại</span> {user.address}
+              </h6>
+              <h6 className="m-0 pading">
+                {' '}
+                <span className="content_font">Gmail</span> {user.email}
+              </h6>
             </div>
           </div>
 
@@ -91,6 +100,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
           {showFollowing && <Following users={user.following} setShowFollowing={setShowFollowing} />}
         </div>
       ))}
+      <Status />
     </div>
   );
 };
