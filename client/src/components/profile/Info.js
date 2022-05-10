@@ -37,66 +37,51 @@ const Info = ({ id, auth, profile, dispatch }) => {
     <div className="info">
       {userData.map((user) => (
         <div className="info_container" key={user._id}>
-          <div className="container_left" key={user._id}>
-            <div className="profileTop">
-              <img src={ImgBuilding} alt="" className="profileTopCoverImg" />
-              <div className="profileTopWrap">
-                <div className="profileTopAvatar">
-                  <div className="profileTopAvatarImg">
-                    <Avatar src={user.avatar} size="supper-avatar" />
-                  </div>
-                  <div className="profileTopChangeAvatarBtn">
-                    <div
-                      className="profileTopAvatarIcon"
-                      style={{
-                        backgroundImage: `url(./assets/profile/1.png)`,
-                        backgroundPosition: '0px -452px',
-                      }}
-                    ></div>
-                  </div>
+          <div className="profileTop">
+            <img src={ImgBuilding} alt="" className="profileTopCoverImg" />
+            <div className="profileTopWrap">
+              <div className="profileTopAvatar">
+                <div className="profileTopAvatarImg">
+                  <Avatar src={user.avatar} size="supper-avatar" />
                 </div>
-                <div className="profileTopInfo">
-                  <h3>@{user.username}</h3>
-                </div>
-                <hr className="profileTopHr" />
               </div>
-            </div>
-
-            <div className="container_introduce">
-              <div className="container_content">
-                <div className="container_content-title">
-                  {user._id === auth.user._id ? (
-                    <button
-                      className="btn btn-primary"
-                      style={{ borderRadius: '50px' }}
-                      onClick={() => setOnEdit(true)}
-                    >
-                      Chỉnh sửa
-                    </button>
-                  ) : (
-                    <FollowBtn user={user} />
-                  )}
-                </div>
-                <div className="follow_btn pading">
-                  <span className="mr-2" onClick={() => setShowFollowers(true)}>
-                    {user.followers.length} Người theo dõi
-                  </span>
-                  <span className="ml-2" onClick={() => setShowFollowing(true)}>
-                    {user.following.length} Đang theo dõi
-                  </span>
-                </div>
-                <div className="pading">
-                  <span>Tên đầy đủ {user.fullname}</span>
-                </div>
-                <div className="pading">
-                  <span>Số điện thoại {user.mobile}</span>
-                </div>
-
-                <span className="m-0 pading">Sống tại {user.address}</span>
-                <h6 className="m-0 pading">{user.email}</h6>
+              <div className="profileTopInfo">
+                <h3>@{user.username}</h3>
               </div>
+
+              <div className="container_content-title">
+                {user._id === auth.user._id ? (
+                  <button className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={() => setOnEdit(true)}>
+                    Chỉnh sửa
+                  </button>
+                ) : (
+                  <FollowBtn user={user} />
+                )}
+              </div>
+              <hr className="profileTopHr" />
             </div>
-            <Status />
+          </div>
+
+          <div className="container_introduce">
+            <div className="container_content">
+              <div className="follow_btn pading">
+                <span className="mr-2" onClick={() => setShowFollowers(true)}>
+                  {user.followers.length} Người theo dõi
+                </span>
+                <span className="ml-2" onClick={() => setShowFollowing(true)}>
+                  {user.following.length} Đang theo dõi
+                </span>
+              </div>
+              <div className="pading">
+                <span>Tên đầy đủ {user.fullname}</span>
+              </div>
+              <div className="pading">
+                <span>Số điện thoại {user.mobile}</span>
+              </div>
+
+              <span className="m-0 pading">Sống tại {user.address}</span>
+              <h6 className="m-0 pading">{user.email}</h6>
+            </div>
           </div>
 
           {onEdit && <EditProfile setOnEdit={setOnEdit} />}
