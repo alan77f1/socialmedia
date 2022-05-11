@@ -39,13 +39,20 @@ img {
 }
 .form-group input:hover {
   background-color: #fff;
-  border-color: rgba(240, 128, 128, 0.8);
+  border-color: rgba(252, 214, 0, 0.87);
 }
 
 .form-group input:focus {
   background-color: #fff;
-  border-color: lightcoral;
-  box-shadow: rgba(240, 128, 128, 0.6) 0px 0px 16px;
+  border-color: #f9cb00;
+  box-shadow: rgba(190, 172, 111, 0.6) 0px 0px 16px;
+}
+
+.btn {
+  border-radius: 50px;
+  background-color: #f9cb00;
+  color: #271756;
+  font-weight: bold;
 }
 
 @import url('./css/auth.css');

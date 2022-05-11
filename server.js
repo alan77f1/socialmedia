@@ -2,7 +2,7 @@ const express = require('express');
 const connectDatabase = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const SocketServer = require('./SocketServer');
+const SocketServer = require('./Socket');
 const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
