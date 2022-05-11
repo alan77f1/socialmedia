@@ -17,10 +17,7 @@ const MenuControl = () => {
   return (
     <div className="menu menu-middle">
       <ul className="header-menu-middle">
-        <li
-          className="menu-middle-item"
-          onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}
-        >
+        <li className="menu-middle-item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
           <AddCircleIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
         </li>
         {navLinks.map((link, index) => (

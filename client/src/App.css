@@ -28,7 +28,7 @@ img {
   object-fit: cover;
 }
 .form-group input {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   background-color: #eee;
   width: 100%;
   padding: 8px 16px;
@@ -50,9 +50,6 @@ img {
 
 .btn {
   border-radius: 50px;
-  background-color: #f9cb00;
-  color: #271756;
-  font-weight: bold;
 }
 
 @import url('./css/auth.css');

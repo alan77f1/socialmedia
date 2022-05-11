@@ -38,11 +38,11 @@ const FollowBtn = ({ user }) => {
   return (
     <>
       {followed ? (
-        <dev className="btn btn-danger border" style={{ borderRadius: '50px' }} onClick={handleUnFollow}>
+        <dev className="btn btn-danger border" onClick={handleUnFollow}>
           Bỏ theo dõi
         </dev>
       ) : (
-        <dev className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={handleFollow}>
+        <dev className="btn btn-primary"  onClick={handleFollow}>
           Theo dõi
         </dev>
       )}

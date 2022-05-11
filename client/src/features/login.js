@@ -65,7 +65,7 @@ const Login = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn w-100" disabled={email && password ? false : true}>
+        <button type="submit" className="btn btn-primary w-100" disabled={email && password ? false : true}>
           Đăng Nhập
         </button>
 

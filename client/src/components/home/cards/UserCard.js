@@ -41,7 +41,7 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
           to={`/profile/${user._id}`}
           onClick={handleCloseAll}
           className="d-flex align-items-center"
-          style={{ textDecoration: 'none' }}
+          style={{ textDecoration: 'none', color: '#002f77' }}
         >
           <Avatar src={user.avatar} size="big-avatar" />
 
