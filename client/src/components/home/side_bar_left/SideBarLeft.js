@@ -7,9 +7,7 @@ import ImgDiscover from '../../../assets/sidebar/discover.png';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 
-SideBar.propTypes = {};
-
-function SideBar() {
+const SideBarLeft = () => {
   const navLinks = [
     { label: 'Discover', path: '/discover' },
     { label: 'Kaka', path: '/kaka' },
@@ -111,6 +109,6 @@ function SideBar() {
       </div>
     </div>
   );
-}
+};
 
-export default SideBar;
+export default SideBarLeft;

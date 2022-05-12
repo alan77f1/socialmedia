@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
-import SideBar from '../components/home/side_bar_left/SideBar';
+import SideBar from '../components/home/side_bar_left/SideBarLeft';
 import { useSelector } from 'react-redux';
 import LoadIcon from '../assets/images/loading.gif';
 

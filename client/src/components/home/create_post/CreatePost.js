@@ -1,7 +1,7 @@
 import React from 'react';
-import Avatar from '../profile/Avatar';
+import Avatar from '../../profile/Avatar';
 import { useSelector, useDispatch } from 'react-redux';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
 
 const Status = () => {
   const { auth } = useSelector((state) => state);

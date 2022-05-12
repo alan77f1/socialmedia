@@ -20,7 +20,7 @@ const spawnNotification = (body, icon, url, title) => {
 };
 
 const SocketClient = () => {
-  const { auth, socket, notify, online, call } = useSelector((state) => state);
+  const { auth, socket, notify, call } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const audioRef = useRef();
@@ -87,12 +87,7 @@ const SocketClient = () => {
       dispatch({ type: NOTIFY_TYPES.CREATE_NOTIFY, payload: msg });
 
       if (notify.sound) audioRef.current.play();
-      spawnNotification(
-        msg.user.username + ' ' + msg.text,
-        msg.user.avatar,
-        msg.url,
-        'UTC2-NETWORK'
-      );
+      spawnNotification(msg.user.username + ' ' + msg.text, msg.user.avatar, msg.url, 'UTC2-News');
     });
 
     return () => socket.off('createNotifyToClient');

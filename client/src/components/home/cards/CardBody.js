@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Carousel from '../post_card/Carousel';
+import Carousel from '../create_post/Carousel';
 
 const CardBody = ({ post }) => {
   const [readMore, setReadMore] = useState(false);

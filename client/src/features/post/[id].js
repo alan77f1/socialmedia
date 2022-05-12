@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPost } from '../../redux/actions/postAction';
 import LoadIcon from '../../assets/images/loading.gif';
-import PostCard from '../../components/home/post_card/PostCard';
+import PostCard from '../../components/home/create_post/PostCard';
 import RightSideBar from '../../components/home/RightSideBar';
-import SideBar from '../../components/home/side_bar_left/SideBar';
+import SideBar from '../../components/home/side_bar_left/SideBarLeft';
 
 const Post = () => {
   const { id } = useParams();

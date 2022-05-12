@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/actions/authAction';
 import Avatar from '../profile/Avatar';
 import NotifyModal from '../header/NotifyModal';
-import ChangePassword from '../profile/changePassword';
+import ChangePassword from '../profile/ChangePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const MenuRight = () => {

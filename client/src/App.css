@@ -52,26 +52,26 @@ img {
   border-radius: 50px;
 }
 
-@import url('./css/auth.css');
+@import url('./style/auth.css');
 
-@import url('./css/loading.css');
+@import url('./style/loading.css');
 
-@import url('./css/header.css');
+@import url('./style/header.css');
 
-@import url('./css/avatar.css');
+@import url('./style/avatar.css');
 
-@import url('./css/header.css');
+@import url('./style/header.css');
 
-@import url('./css/side_bar.css');
+@import url('./style/side_bar.css');
 
-@import url('./css/profile.css');
+@import url('./style/profile.css');
 
-@import url('./css/ads.css');
+@import url('./style/ads.css');
 
-@import url('./css/home.css');
+@import url('./style/home.css');
 
-@import url('./css/status_modal.css');
+@import url('./style/status_modal.css');
 
-@import url('./css/comments.css');
+@import url('./style/comments.css');
 
-@import url('./css/post_thumb.css');
+@import url('./style/post_thumb.css');

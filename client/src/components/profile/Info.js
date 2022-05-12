@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Avatar from './Avatar';
 import EditProfile from './EditProfile';
-// import ChangePassword from "./changePassword";
 import FollowBtn from '../button/FollowBtn';
 import Followers from './Followers';
 import Following from './Following';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import Status from '../home/Status';
+import Status from '../home//create_post/CreatePost';
 import ImgBuilding from '../../assets/images/building.jpg';
 
 const Info = ({ id, auth, profile, dispatch }) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import PostCard from './post_card/PostCard';
+import Post from './create_post/PostCard';
 
 import LoadIcon from '../../assets/images/loading.gif';
 import LoadMoreBtn from '../button/LoadMoreBtn';
@@ -28,7 +28,7 @@ const Posts = () => {
   return (
     <div className="posts">
       {homePosts.posts.map((post) => (
-        <PostCard key={post._id} post={post} />
+        <Post key={post._id} post={post} />
       ))}
 
       {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
