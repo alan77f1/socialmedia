@@ -13,10 +13,6 @@ const MenuRight = () => {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
 
-  const isActive = (pn) => {
-    if (pn === pathname) return 'active';
-  };
-
   return (
     <div className="menu menu-right">
       <ul className="navbar-nav flex-row">
@@ -49,7 +45,6 @@ const MenuRight = () => {
             </Link>
 
             <label
-              // htmlFor="setShowDialogPassword"
               className="dropdown-item"
               onClick={() => {
                 setShowDialogPassword(true);

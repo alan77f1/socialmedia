@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import GroupIcon from '@material-ui/icons/Group';
-import HomeIcon from '@material-ui/icons/Home';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 
