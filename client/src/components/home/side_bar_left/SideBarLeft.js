@@ -8,10 +8,7 @@ import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 
 const SideBarLeft = () => {
-  const navLinks = [
-    { label: 'Discover', path: '/discover' },
-    { label: 'Kaka', path: '/kaka' },
-  ];
+  const navLinks = [{ label: 'Discover', path: '/discover' }];
 
   const { auth } = useSelector((state) => state);
   return (
@@ -23,13 +20,13 @@ const SideBarLeft = () => {
         <li className="sideBarItem">
           <img src={ImgFriend} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Bạn bè</span>
+            <span className="sideBarItemName">Người theo dõi</span>
           </div>
         </li>
         <li className="sideBarItem">
-          <img src={ImgPosts} alt="" className="sideBarItemBadge" />
+          <img src={ImgFriend} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Bài viết</span>
+            <span className="sideBarItemName">Đang theo dõi</span>
           </div>
         </li>
 
@@ -43,11 +40,10 @@ const SideBarLeft = () => {
             </Link>
           </li>
         ))}
-
         <li className="sideBarItem">
-          <img src={ImgSaved} alt="" className="sideBarItemBadge" />
+          <img src={ImgPosts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Đã lưu</span>
+            <span className="sideBarItemName">Tin nhắn</span>
           </div>
         </li>
       </ul>

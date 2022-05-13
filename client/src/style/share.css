@@ -1,0 +1,138 @@
+.share {
+  padding: 14px 18px;
+  background-color: #242526;
+
+  border-radius: 15px;
+  max-width: 628px;
+  height: 132px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.shareTop {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 0.5px solid rgba(77, 77, 77, 0.713);
+}
+
+.shareTopImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.shareTopInput {
+  flex: 1;
+  padding: 12px 12px;
+  border: none;
+  background-color: #3a3b3c;
+  border-radius: 20px;
+  color: #b0b3b8;
+}
+
+.shareTopInput:focus {
+  outline: none;
+}
+
+.shareTopInput::placeholder {
+  color: #b0b3b8;
+  font-size: 15px;
+  letter-spacing: 1.1px;
+}
+
+.shareBottom {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shareBottomAction {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 8px 0px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.shareBottomAction:hover {
+  background-color: #3a3b3c;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.shareBottomActionItemBg {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.shareBottomActionItemText {
+  color: #b0b3b8;
+  font-size: 15px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+/* Share img file */
+
+.shareImgContainer {
+  /* position: relative; */
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.shareImgItemWrap {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.shareImgItemWrap + .shareImgItemWrap {
+  margin-left: 4px;
+}
+
+.shareImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.shareCancelImg {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #f0f2f5;
+  cursor: pointer;
+
+  width: 20px;
+  height: 20px;
+  background-color: rgb(175, 62, 62);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.moreImg {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 60px;
+  color: white;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}

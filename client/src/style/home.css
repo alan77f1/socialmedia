@@ -1,7 +1,10 @@
 /* --------- Status ---------- */
-.status {
+/* .status {
   background: white;
   box-shadow: 0 0 5px #ddd;
+  max-width: 250px;
+  height: 100px;
+  width: 100%;
   padding: 15px;
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0, 0.125);
@@ -19,7 +22,7 @@
 }
 .status .statusBtn:hover {
   background: #ddd;
-}
+} */
 
 /* ------------Posts ------ */
 .posts .card {

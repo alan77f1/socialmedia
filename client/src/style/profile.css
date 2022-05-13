@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  padding: 20px 10px;
+  padding: 20px 0;
 }
 .info_container {
   justify-content: space-around;
@@ -191,20 +191,28 @@
 }
 
 .container_content-title {
-  margin-left: 700px;
+  margin: 0 10px;
+  text-align: end;
 }
 
 /* profile info */
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .container_introduce {
+  display: flex;
   padding: 16px;
   background-color: #ffffff;
   border-radius: 18px;
-  width: 380px;
+  max-width: 320px;
+  width: 100%;
   box-shadow: 0 0 4px #ddd;
 }
-.pading {
-  padding: 5px;
+.padding {
+  padding: 5px 0 0 0;
 }
 
 /* profile header */
@@ -222,7 +230,7 @@
 }
 
 .profileTopWrap {
-  padding: 0 32px;
+  padding: 0 2px;
 }
 
 .profileTopAvatar {
@@ -294,4 +302,14 @@
 
 .content_font {
   font-weight: normal;
+}
+
+.content_right {
+  max-width: 646px;
+  height: 100px;
+  width: 100%;
+}
+
+.content_right form h4 {
+  color: white;
 }

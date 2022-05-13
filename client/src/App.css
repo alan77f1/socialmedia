@@ -68,6 +68,8 @@ img {
 
 @import url('./style/ads.css');
 
+@import url('./style/share.css');
+
 @import url('./style/home.css');
 
 @import url('./style/status_modal.css');
