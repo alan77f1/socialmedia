@@ -1,17 +1,18 @@
 .share {
   padding: 14px 18px;
-  background-color: #242526;
-
+  background-color: #ffffff;
   border-radius: 15px;
-  max-width: 628px;
-  height: 132px;
+  max-width: 570px;
+  height: 133px;
   width: 100%;
   margin-bottom: 18px;
+  box-shadow: 0 0 4px #ddd;
 }
 
 .shareTop {
   display: flex;
   align-items: center;
+  text-align: center;
   padding-bottom: 8px;
   border-bottom: 0.5px solid rgba(77, 77, 77, 0.713);
 }

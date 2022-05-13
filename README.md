@@ -1,15 +1,3 @@
-git config --global core.compression 0
-
-git clone --depth 1 https://github.com/buivantann/instagram.git
-
-redux quản lý state / dữ liệu trong app của bạn
-
-## đồng ý kết bạn
-
-## đănn nhập với gg fb
-
-## phân quyền giáo viên và sv
-
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
 
 Họ và tên: Bùi Văn Tân
@@ -29,8 +17,6 @@ Giảng viên: Phạm Thị Miên
 - [Redux](https://redux.js.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Socket.io](https://socket.io/)
-- [Material UI](https://mui.com/)
-- [Docker](https://www.docker.com/)
 
 ## Phần 2: Các chức năng đã hoàn thành:
 
@@ -71,11 +57,5 @@ Giảng viên: Phạm Thị Miên
 
 1. Clone vào thư mục của bạn.
 2. Tạo database với mongodb trên [MongoDb Atlas](https://cloud.mongodb.com) và tạo file .env và thêm các thông tin cần thiết dựa vào file .env.example
-
-3. Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-4. Tạo cơ sở dữ liệu với tên spa
-5. Nhập tệp spa.sql (trong thư mục tệp Sql)
-6. Vào trình duyệt gõ đường dẫn http://localhost:8080/spa (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-7. link host : https://hovuotsax12.000webhostapp.com/spa
 
 Xin Cảm Ơn!

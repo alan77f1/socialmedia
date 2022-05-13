@@ -85,21 +85,10 @@ const Info = ({ id, auth, profile, dispatch }) => {
                 <h6 className="m-0 ">
                   <span className="content_font">Sống tại</span> {user.address}
                 </h6>
-                <h6 className="m-0 padding">
-                  {' '}
-                  <span className="content_font">Gmail</span> {user.email}
-                </h6>
               </div>
             </div>
             <div className="content_right">
               <Status />
-              <form className="share" onSubmit="">
-                <div className="shareTop">
-                  <h4>Quản lý bài viết</h4>
-                </div>
-
-                <div className="shareBottom"></div>
-              </form>
             </div>
           </div>
 
