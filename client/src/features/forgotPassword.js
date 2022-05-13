@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { forgotPassword } from '../redux/actions/authAction';
-
+import LogoUTC2 from '../assets/images/uct2.png';
 const ForgotPassword = () => {
   const { auth, alert } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -32,9 +32,11 @@ const ForgotPassword = () => {
     <div className="auth_page">
       <form onSubmit={handleSubmit}>
         <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
-
+        <img src={LogoUTC2}></img>
         <div className="form-group">
-          <h5 className="text-uppercase text-center mb-4">Quên mật khẩu ?</h5>
+          <h5 className="text-uppercase text-center mb-4" style={{ margin: '10px' }}>
+            Quên mật khẩu ?
+          </h5>
 
           <label htmlFor="exampleInputEmail1">Email</label>
           <input

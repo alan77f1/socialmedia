@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import LogoUTC2 from '../assets/images/uct2.png';
 
 // import { resetPassword } from "../redux/actions/authAction";
 import { postDataAPI } from '../utils/fetchData';
@@ -61,7 +62,7 @@ function ResetPassword() {
     <div className="auth_page">
       <form onSubmit={handleSubmit}>
         <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
-
+        <img src={LogoUTC2}></img>
         <div className="form-group">
           <h5 className="text-uppercase text-center mb-4">Đặt Lại Mật Khẩu</h5>
 
@@ -101,9 +102,7 @@ function ResetPassword() {
             <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
           </div>
 
-          <small className="form-text text-danger">
-            {alert.cf_password ? alert.cf_password : ''}
-          </small>
+          <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
         </div>
         <button type="submit" className="btn btn-dark w-100">
           Hoàn Thành

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 const PostThumb = ({ posts, result }) => {
+  const [readMore, setReadMore] = useState(false);
   if (result === 0) return <h4 className="text-center text-danger">Bạn Chưa có bài viết nào</h4>;
 
   return (
@@ -15,8 +16,18 @@ const PostThumb = ({ posts, result }) => {
             )}
 
             <div className="post_thumb_menu ">
-              <i className="far fa-heart">{post.likes.length}</i>
-              <i className="far fa-comments">{post.comments.length}</i>
+              <span>
+                {post.content.length < 60
+                  ? post.content
+                  : readMore
+                  ? post.content + ' '
+                  : post.content.slice(0, 60) + '... '}
+              </span>
+              {post.content.length > 60 && (
+                <span className="readMore" onClick={() => setReadMore(!readMore)}>
+                  {readMore ? 'Ẩn' : 'Xem thêm'}
+                </span>
+              )}
             </div>
           </div>
         </Link>

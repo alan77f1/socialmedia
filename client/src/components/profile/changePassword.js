@@ -82,13 +82,9 @@ const ChangePassword = ({ setShowDialogPassword }) => {
                 borderRadius: '50px',
               }}
             />
-            <small onClick={() => setTypeOldPass(!typeOldPass)}>
-              {typeOldPass ? 'Hide' : 'Show'}
-            </small>
+            <small onClick={() => setTypeOldPass(!typeOldPass)}>{typeOldPass ? 'Hide' : 'Show'}</small>
           </div>
-          <small className="form-text text-danger">
-            {alert.oldPassword ? alert.oldPassword : ''}
-          </small>
+          <small className="form-text text-danger">{alert.oldPassword ? alert.oldPassword : ''}</small>
         </div>
         <div className="form-group">
           <label htmlFor="newPassword">Nhập mật khẩu mới</label>
@@ -105,13 +101,9 @@ const ChangePassword = ({ setShowDialogPassword }) => {
                 borderRadius: '50px',
               }}
             />
-            <small onClick={() => setTypeNewPass(!typeNewPass)}>
-              {typeNewPass ? 'Hide' : 'Show'}
-            </small>
+            <small onClick={() => setTypeNewPass(!typeNewPass)}>{typeNewPass ? 'Hide' : 'Show'}</small>
           </div>
-          <small className="form-text text-danger">
-            {alert.newPassword ? alert.newPassword : ''}
-          </small>
+          <small className="form-text text-danger">{alert.newPassword ? alert.newPassword : ''}</small>
         </div>
         <div className="form-group">
           <label htmlFor="cf_newPassword">Nhập lại mật khẩu</label>
@@ -130,9 +122,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
             />
             <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
           </div>
-          <small className="form-text text-danger">
-            {alert.cf_newPassword ? alert.cf_newPassword : ''}
-          </small>
+          <small className="form-text text-danger">{alert.cf_newPassword ? alert.cf_newPassword : ''}</small>
         </div>
 
         <button

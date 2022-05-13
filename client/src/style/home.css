@@ -57,6 +57,7 @@
 .posts .card_body-content .readMore {
   color: black;
   cursor: pointer;
+  font-weight: 500;
 }
 
 /* ---------- Post Card Footer ---------- */

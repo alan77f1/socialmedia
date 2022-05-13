@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../redux/actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
+import LogoUTC2 from '../assets/images/uct2.png';
 
 const Login = () => {
   const initialState = { email: '', password: '' };
@@ -32,7 +33,7 @@ const Login = () => {
     <div className="auth_page">
       <form onSubmit={handleSubmit}>
         <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
-
+        <img src={LogoUTC2}></img>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email</label>
           <input
@@ -61,7 +62,7 @@ const Login = () => {
               style={{ borderRadius: '50px' }}
             />
 
-            <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
+            <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Ẩn' : 'Hiện'}</small>
           </div>
         </div>
 

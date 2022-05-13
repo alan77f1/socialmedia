@@ -72,7 +72,7 @@ export const updateProfileUser =
           ...userData,
           avatar: avatar ? media[0].url : auth.user.avatar,
         },
-        auth.token
+        auth.token,
       );
 
       dispatch({

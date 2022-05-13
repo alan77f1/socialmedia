@@ -22,7 +22,7 @@ import { getSuggestions } from './redux/actions/suggestionsAction';
 
 import io from 'socket.io-client';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
-import SocketClient from './SocketClient';
+import Socket from './socket';
 
 import { getNotifies } from './redux/actions/notifyAction';
 
@@ -68,7 +68,7 @@ function App() {
         {auth.token && <Header />}
 
         {status && <StatusModal />}
-        {auth.token && <SocketClient />}
+        {auth.token && <Socket />}
 
         <Route exact path="/" component={auth.token ? Home : Login} />
         <Route exact path="/register" component={isLogged ? NotFound : Register} />
