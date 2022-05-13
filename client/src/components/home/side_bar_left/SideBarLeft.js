@@ -1,13 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ImgFriend from '../../../assets/sidebar/friend.png';
-import ImgSaved from '../../../assets/sidebar/saved.png';
 import ImgPosts from '../../../assets/sidebar/posts.png';
 import ImgDiscover from '../../../assets/sidebar/discover.png';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
+import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
 
 const SideBarLeft = () => {
+  const dispatch = useDispatch();
   const navLinks = [{ label: 'Discover', path: '/discover' }];
 
   const { auth } = useSelector((state) => state);
@@ -17,16 +18,10 @@ const SideBarLeft = () => {
         <li className="sideBarItem">
           <UserInfo user={auth.user} />
         </li>
-        <li className="sideBarItem">
-          <img src={ImgFriend} alt="" className="sideBarItemBadge" />
+        <li className="sideBarItem" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
+          <img src={ImgPosts} alt="" className="sideBarItemBadge" />
           <div className="sideBarItemText">
-            <span className="sideBarItemName">Người theo dõi</span>
-          </div>
-        </li>
-        <li className="sideBarItem">
-          <img src={ImgFriend} alt="" className="sideBarItemBadge" />
-          <div className="sideBarItemText">
-            <span className="sideBarItemName">Đang theo dõi</span>
+            <span className="sideBarItemName">Thêm bài đăng</span>
           </div>
         </li>
 

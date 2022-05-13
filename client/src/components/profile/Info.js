@@ -93,7 +93,6 @@ const Info = ({ id, auth, profile, dispatch }) => {
           </div>
 
           {onEdit && <EditProfile setOnEdit={setOnEdit} />}
-          {/* {onEdit && <ChangePassword setOnEdit={setOnEdit} />} */}
 
           {showFollowers && <Followers users={user.followers} setShowFollowers={setShowFollowers} />}
           {showFollowing && <Following users={user.following} setShowFollowing={setShowFollowing} />}
