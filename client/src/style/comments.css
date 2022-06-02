@@ -55,10 +55,12 @@
   display: flex;
   margin: 10px 0;
 }
-.comment_card .comment_content textarea {
+.comment_card .comment_content input {
   width: 100%;
   border: none;
   outline: none;
+  border-radius: 12px;
+  padding: 0 10px;
 }
 
 .comment_card .comment_content .font-weight-bold {

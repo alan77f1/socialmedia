@@ -4,7 +4,7 @@ import NotFound from '../components/NotFound';
 import { useSelector } from 'react-redux';
 
 const generateRouter = (pageName) => {
-  const component = () => require(`../features/${pageName}`).default;
+  const component = () => require(`../pages/${pageName}`).default;
 
   try {
     return React.createElement(component());

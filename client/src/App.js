@@ -4,11 +4,11 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import RouterRender from './routes/RouterRender';
 import PrivateRouter from './routes/PrivateRouter';
 
-import Home from './features/home';
-import Login from './features/login';
-import Register from './features/register';
-import Forgot from './features/forgotPassword';
-import Reset from './features/resetPassword';
+import Home from './pages/home';
+import Login from './pages/login';
+import Register from './pages/register';
+import Forgot from './pages/forgotPassword';
+import Reset from './pages/resetPassword';
 
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
