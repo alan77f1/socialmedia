@@ -2,25 +2,24 @@
 .auth_page {
   width: 100%;
   min-height: 100vh;
-  background: #fdfdfd;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../assets/images/network.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+  border: 1px solid #dbdbdb;
+  background-color: #f0f2f5;
+  box-shadow: 0 0 4px #ddd;
 }
 
 .auth_page img {
   width: 100%;
-  max-width: 200px;
-  margin-left: 100px;
+  max-width: 180px;
+  margin-left: 115px;
 }
 .auth_page form {
   background: #fff;
   max-width: 500px;
   width: 100%;
-  border: 1px solid #ddd;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
   border-radius: 38px;
 }
@@ -46,36 +45,46 @@
   opacity: 0.5;
 }
 
-/* register */
+/* page register  */
 .auth_page_register {
   width: 100%;
   min-height: 100vh;
-  background: #fdfdfd;
   display: flex;
   align-items: center;
+  border: 1px solid #dbdbdb;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../assets/images/network.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f0f2f5;
 }
 
 .auth_page_register img {
   width: 100%;
-  max-width: 200px;
-  margin-left: 164px;
+  max-width: 180px;
+  margin-left: 222px;
 }
 .auth_page_register form {
   background: #fff;
-  max-width: 610px;
+  max-width: 700px;
   width: 100%;
-  border: 1px solid #ddd;
-  padding: 35px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   border-radius: 38px;
 }
 
 .auth_page_register form .form {
   display: flex;
   gap: 30px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.auth_page_register form .form .form-left {
+  width: 100%;
+  max-width: 300px;
+}
+
+.auth_page_register form .form .form-right {
+  width: 100%;
+  max-width: 300px;
 }
 
 .auth_page_register form .pass {

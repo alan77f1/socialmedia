@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import LogoUTC2 from '../assets/images/uct2.png';
 
@@ -8,6 +8,7 @@ import LogoUTC2 from '../assets/images/uct2.png';
 import { postDataAPI } from '../utils/fetchData';
 import { GLOBALTYPES } from '../redux/actions/globalTypes';
 import validReset from '../utils/validreset';
+import Helmet from '../components/Helmet';
 
 function ResetPassword() {
   const { token } = useParams();
@@ -59,56 +60,58 @@ function ResetPassword() {
   };
 
   return (
-    <div className="auth_page">
-      <form onSubmit={handleSubmit}>
-        <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
-        <img src={LogoUTC2}></img>
-        <div className="form-group">
-          <h5 className="text-uppercase text-center mb-4">Đặt Lại Mật Khẩu</h5>
+    <Helmet title="Đặt lại mật khẩu">
+      <div className="auth_page">
+        <form onSubmit={handleSubmit}>
+          <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
+          <img src={LogoUTC2}></img>
+          <div className="form-group">
+            <h5 className="text-uppercase text-center mb-4">Đặt Lại Mật Khẩu</h5>
 
-          <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
+            <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
 
-          <div className="pass">
-            <input
-              type={typePass ? 'text' : 'password'}
-              className="form-control"
-              id="exampleInputPassword1"
-              onChange={handleChangeInput}
-              value={password}
-              name="password"
-              style={{ background: `${alert.password ? '#fd2d6a14' : ''}` }}
-            />
+            <div className="pass">
+              <input
+                type={typePass ? 'text' : 'password'}
+                className="form-control"
+                id="exampleInputPassword1"
+                onChange={handleChangeInput}
+                value={password}
+                name="password"
+                style={{ background: `${alert.password ? '#fd2d6a14' : ''}` }}
+              />
 
-            <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
+              <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
+            </div>
+
+            <small className="form-text text-danger">{alert.password ? alert.password : ''}</small>
           </div>
 
-          <small className="form-text text-danger">{alert.password ? alert.password : ''}</small>
-        </div>
+          <div className="form-group">
+            <label htmlFor="cf_password">Nhập Lại Mật Khẩu</label>
 
-        <div className="form-group">
-          <label htmlFor="cf_password">Nhập Lại Mật Khẩu</label>
+            <div className="pass">
+              <input
+                type={typeCfPass ? 'text' : 'password'}
+                className="form-control"
+                id="cf_password"
+                onChange={handleChangeInput}
+                value={cf_password}
+                name="cf_password"
+                style={{ background: `${alert.cf_password ? '#fd2d6a14' : ''}` }}
+              />
 
-          <div className="pass">
-            <input
-              type={typeCfPass ? 'text' : 'password'}
-              className="form-control"
-              id="cf_password"
-              onChange={handleChangeInput}
-              value={cf_password}
-              name="cf_password"
-              style={{ background: `${alert.cf_password ? '#fd2d6a14' : ''}` }}
-            />
+              <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
+            </div>
 
-            <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
+            <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
           </div>
-
-          <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
-        </div>
-        <button type="submit" className="btn btn-dark w-100">
-          Hoàn Thành
-        </button>
-      </form>
-    </div>
+          <button type="submit" className="btn btn-warning w-100">
+            Hoàn Thành
+          </button>
+        </form>
+      </div>
+    </Helmet>
   );
 }
 

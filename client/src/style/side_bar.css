@@ -1,34 +1,34 @@
-.sideBar {
+.sidebar {
   position: sticky;
   top: 57px; /*56px header + 1px header border bottom*/
   height: calc(100vh - 56px);
   overflow-y: scroll;
 }
 
-.sideBar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   width: 8px;
   display: none;
 }
 
-.sideBar:hover::-webkit-scrollbar {
+.sidebar:hover::-webkit-scrollbar {
   display: block;
 }
 
-.sideBar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
   background-color: rgba(109, 109, 109, 0.576);
   border-radius: 8px;
 }
 
-.sideBar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
   background-color: #acacac06;
 }
 
-.sideBarList {
+.sidebar-List {
   list-style: none;
   padding: 0;
 }
 
-.sideBarItem,
+.sidebar-Item,
 .shortcuts {
   padding: 8px 8px;
   border-top-left-radius: 8px;
@@ -37,21 +37,22 @@
   align-items: center;
 }
 
-.sideBarItemlink {
+.sidebar-Itemlink {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   display: flex;
   align-items: center;
 }
 
-.sideBarItem:hover,
+.sidebar-Itemlink:hover,
+.sidebar-Item:hover,
 .shortcuts:hover {
   background-color: #f9cb00;
   cursor: pointer;
   transition: all 0.25s;
 }
 
-.sideBarItemImg {
+.sidebar-ItemImg {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -65,28 +66,28 @@
   object-fit: cover;
 }
 
-.sideBarItemBadge,
+.sidebar-ItemBadge,
 .shortcutsBadge {
   width: 36px;
   height: 36px;
 }
 
-.sideBarItemText {
+.sidebar-ItemText {
   display: flex;
   flex-direction: column;
   margin-left: 8px;
   justify-content: space-between;
 }
 
-.sideBarItemName,
+.sidebar-ItemName,
 .shortcutsName {
-  color: #002f77;
+  color: black;
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
 }
 
-.sideBarItemName:hover {
+.sidebar-ItemName:hover {
   text-decoration: none;
 }
 
@@ -94,7 +95,7 @@
   margin-left: 8px;
 }
 
-.sideBarItemInfo {
+.sidebar-ItemInfo {
   margin-top: 5px;
   color: #2a75d5;
   font-size: 12px;
@@ -102,7 +103,7 @@
   margin-left: 12px;
 }
 
-.sideBarItemInfo::after {
+.sidebar-ItemInfo::after {
   content: '';
   width: 8px;
   height: 8px;
@@ -113,14 +114,14 @@
   border-radius: 50%;
 }
 
-.sideBarItemIcon {
+.sidebar-ItemIcon {
   color: #cfd1d5;
   background-color: #3a3b3c;
   border-radius: 50%;
   padding: 4px;
 }
 
-.sideBarHr {
+.sidebar-Hr {
   border: none;
   border-bottom: 0.5px solid rgba(187, 187, 187, 0.433);
   margin: 8px 0;
@@ -135,14 +136,14 @@
 
 .shortcutsTitleText {
   font-size: 18px;
-  color: #9a9ea2;
+  color: black;
   font-weight: 500;
   margin-left: 8px;
 }
 
 .shortcutsTitleAction {
   padding: 8px 16px;
-  color: #18191a;
+  color: black;
   border-radius: 5px;
 }
 
@@ -155,18 +156,18 @@
   cursor: pointer;
 }
 
-.sideBarPolicies {
+.sidebar-Policies {
   color: #94969a;
 
   margin: 16px 8px;
 }
 
-.sideBarPolicies a {
+.sidebar-Policies a {
   color: #94969a;
   text-decoration: none;
   font-size: 14px;
 }
 
-.sideBarPolicies a:hover {
+.sidebar-Policies a:hover {
   text-decoration: underline;
 }

@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
-import SideBar from '../components/home/side_bar_left/SideBarLeft';
+import SideBar from '../components/home/sidebar_left/SideBarLeft';
 import { useSelector } from 'react-redux';
-import LoadIcon from '../assets/images/loading.gif';
+import Helmet from '../components/Helmet';
+import LoadData from '../components/alert/LoadData';
 
 let scroll = 0;
 
@@ -25,19 +26,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <Helmet title="Trang chủ">
       <div className="homePage ">
         <div className="cLeft">
           <SideBar />
         </div>
         <div className="cMiddle">
           {homePosts.loading ? (
-            <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
+            <LoadData />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
-            <h3 className="text-center">
-              Khi bạn theo dõi ai đó, bạn sẽ thấy các bài viết của họ ở Dòng thời gian của bạn. Bạn cũng sẽ nhận được
-              nhiều đề xuất thích hợp hơn.
-            </h3>
+            <h4 className="text-center text-danger" style={{ padding: '10px' }}>
+              Chưa có bài viết nào
+            </h4>
           ) : (
             <Posts />
           )}
@@ -46,7 +46,7 @@ const Home = () => {
           <RightSideBar />
         </div>
       </div>
-    </div>
+    </Helmet>
   );
 };
 

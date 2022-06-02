@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { changePassword } from '../../redux/actions/authAction';
 
@@ -126,7 +126,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
         </div>
 
         <button
-          className="btn btn-primary w-100"
+          className="btn btn-success w-100"
           type="submit"
           style={{
             borderRadius: '50px',

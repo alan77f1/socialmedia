@@ -33,7 +33,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
             more_vert
           </span>
 
-          <div className="dropdown-menu" aria-labelledby="moreLink">
+          <div className="dropdown-menu" aria-labelledby="moreLink" style={{ borderRadius: '15px' }}>
             {post.user._id === auth.user._id ? (
               comment.user._id === auth.user._id ? (
                 MenuItem()

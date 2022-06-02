@@ -14,9 +14,7 @@
 .header .logo-search {
   display: flex;
 }
-
 /* ----------- Header Menu ---------- */
-
 .header .menu-middle {
   margin-right: 200px;
 }
@@ -28,7 +26,7 @@
   position: absolute;
   left: inherit;
   right: 0;
-  box-shadow: 0 0 4px #ddd;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 }
 .header .menu label {
@@ -55,7 +53,7 @@
 .header .search_form #search {
   background: #f0f2f5;
   border: 0.5px solid #f0f2f5;
-  min-width: 235px;
+  min-width: 255px;
   width: 80%;
   height: 40px;
   outline: none;
@@ -88,10 +86,12 @@
   position: absolute;
   width: 100%;
   min-width: 250px;
-  background: #fafafa;
+  background: #ffffff;
   max-height: calc(100vh - 150px);
   overflow: auto;
-  margin-top: 3px;
+  margin-top: 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #ddd;
 }
 .header .search_form .loading {
   position: absolute;

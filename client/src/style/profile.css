@@ -186,10 +186,10 @@
   background: #f0f2f5;
 }
 .profile_tab button.active {
-  border-bottom: 3px solid #002f77;
+  border-bottom: 3px solid black;
   opacity: 0.8;
   font-weight: bold;
-  color: #002f77;
+  color: black;
   background: #f0f2f5;
 }
 
@@ -241,17 +241,16 @@
 }
 
 .profileTopAvatar {
-  width: 170px;
-  height: 170px;
+  width: 165px;
+  height: 165px;
   background-color: #242526;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-
   position: absolute;
-  top: 188px;
-  left: 50%;
+  top: 227px;
+  left: 11%;
   transform: translateX(-50%);
 }
 
@@ -286,9 +285,10 @@
 }
 
 .profileTopInfo {
-  text-align: center;
+  text-align: start;
   color: #000;
-  margin-top: 20px;
+  margin-top: 49px;
+  margin-left: 43px;
 }
 
 .profileTopInfoName {

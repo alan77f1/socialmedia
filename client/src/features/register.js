@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
 import { register } from '../redux/actions/authAction';
 import LogoUTC2 from '../assets/images/uct2.png';
+import Helmet from '../components/Helmet';
 
 const Register = () => {
   const { auth, alert } = useSelector((state) => state);
@@ -38,130 +39,139 @@ const Register = () => {
   };
 
   return (
-    <div className="auth_page_register">
-      <form onSubmit={handleSubmit}>
-        <h3 className="text-uppercase text-center mb-1">UTC2 News</h3>
-        <img src={LogoUTC2}></img>
-        <div className="form">
-          <div className="form-left">
-            <div className="form-group">
-              <label htmlFor="fullname">Họ và tên</label>
-              <input
-                type="text"
-                className="form-control"
-                id="fullname"
-                name="fullname"
-                onChange={handleChangeInput}
-                value={fullname}
-                style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
-              />
-
-              <small className="form-text text-danger">{alert.fullname ? alert.fullname : ''}</small>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="username">Tên tài khoản</label>
-              <input
-                type="text"
-                className="form-control"
-                id="username"
-                name="username"
-                onChange={handleChangeInput}
-                value={username.toLowerCase().replace(/ /g, '')}
-                style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
-              />
-
-              <small className="form-text text-danger">{alert.username ? alert.username : ''}</small>
-            </div>
-            <label htmlFor="username">Giới tính</label>
-            <div className="row justify-content-between mx-0 mb-1">
-              <label htmlFor="male">
-                Nam:{' '}
-                <input type="radio" id="male" name="gender" value="male" defaultChecked onChange={handleChangeInput} />
-              </label>
-
-              <label htmlFor="female">
-                Nữ: <input type="radio" id="female" name="gender" value="female" onChange={handleChangeInput} />
-              </label>
-
-              <label htmlFor="other">
-                Khác: <input type="radio" id="other" name="gender" value="other" onChange={handleChangeInput} />
-              </label>
-            </div>
-          </div>
-          <div className="form-right">
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Email</label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                name="email"
-                onChange={handleChangeInput}
-                value={email}
-                style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
-              />
-
-              <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="exampleInputPassword1">Mật khẩu </label>
-
-              <div className="pass">
+    <Helmet title="Đăng ký">
+      <div className="auth_page_register">
+        <form onSubmit={handleSubmit}>
+          <h3 className="text-uppercase text-center mb-1">UTC2 News</h3>
+          <img src={LogoUTC2}></img>
+          <div className="form">
+            <div className="form-left">
+              <div className="form-group">
+                <label htmlFor="fullname">Họ và tên</label>
                 <input
-                  type={typePass ? 'text' : 'password'}
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="fullname"
+                  name="fullname"
                   onChange={handleChangeInput}
-                  value={password}
-                  name="password"
-                  style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                  value={fullname}
+                  style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
                 />
 
-                <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Ẩn' : 'Hiện'}</small>
+                <small className="form-text text-danger">{alert.fullname ? alert.fullname : ''}</small>
               </div>
 
-              <small className="form-text text-danger">{alert.password ? alert.password : ''}</small>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="cf_password">Nhập lại mật khẩu</label>
-
-              <div className="pass">
+              <div className="form-group">
+                <label htmlFor="username">Tên tài khoản</label>
                 <input
-                  type={typeCfPass ? 'text' : 'password'}
+                  type="text"
                   className="form-control"
-                  id="cf_password"
+                  id="username"
+                  name="username"
                   onChange={handleChangeInput}
-                  value={cf_password}
-                  name="cf_password"
-                  style={{
-                    background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
-                    borderRadius: '50px',
-                  }}
+                  value={username.toLowerCase().replace(/ /g, '')}
+                  style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
                 />
 
-                <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Ẩn' : 'Hiện'}</small>
+                <small className="form-text text-danger">{alert.username ? alert.username : ''}</small>
+              </div>
+              <label htmlFor="username">Giới tính</label>
+              <div className="row justify-content-between mx-0 mb-1">
+                <label htmlFor="male">
+                  Nam:{' '}
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    defaultChecked
+                    onChange={handleChangeInput}
+                  />
+                </label>
+
+                <label htmlFor="female">
+                  Nữ: <input type="radio" id="female" name="gender" value="female" onChange={handleChangeInput} />
+                </label>
+
+                <label htmlFor="other">
+                  Khác: <input type="radio" id="other" name="gender" value="other" onChange={handleChangeInput} />
+                </label>
+              </div>
+            </div>
+            <div className="form-right">
+              <div className="form-group">
+                <label htmlFor="exampleInputEmail1">Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="exampleInputEmail1"
+                  name="email"
+                  onChange={handleChangeInput}
+                  value={email}
+                  style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                />
+
+                <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
               </div>
 
-              <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
+              <div className="form-group">
+                <label htmlFor="exampleInputPassword1">Mật khẩu </label>
+
+                <div className="pass">
+                  <input
+                    type={typePass ? 'text' : 'password'}
+                    className="form-control"
+                    id="exampleInputPassword1"
+                    onChange={handleChangeInput}
+                    value={password}
+                    name="password"
+                    style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                  />
+
+                  <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Ẩn' : 'Hiện'}</small>
+                </div>
+
+                <small className="form-text text-danger">{alert.password ? alert.password : ''}</small>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="cf_password">Nhập lại mật khẩu</label>
+
+                <div className="pass">
+                  <input
+                    type={typeCfPass ? 'text' : 'password'}
+                    className="form-control"
+                    id="cf_password"
+                    onChange={handleChangeInput}
+                    value={cf_password}
+                    name="cf_password"
+                    style={{
+                      background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
+                      borderRadius: '50px',
+                    }}
+                  />
+
+                  <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Ẩn' : 'Hiện'}</small>
+                </div>
+
+                <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
+              </div>
             </div>
           </div>
-        </div>
 
-        <button type="submit" className="btn btn-primary w-100" style={{ borderRadius: '50px' }}>
-          Đăng Ký
-        </button>
+          <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '50px' }}>
+            Đăng Ký
+          </button>
 
-        <p className="my-2">
-          Đã Có Tài Khoản?{' '}
-          <Link to="/" style={{ color: 'crimson' }}>
-            Đăng Nhập
-          </Link>
-        </p>
-      </form>
-    </div>
+          <p className="my-2">
+            Đã Có Tài Khoản?{' '}
+            <Link to="/" style={{ color: '#0075FF' }}>
+              Đăng Nhập
+            </Link>
+          </p>
+        </form>
+      </div>
+    </Helmet>
   );
 };
 

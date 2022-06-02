@@ -15,9 +15,6 @@ const CardFooter = ({ post }) => {
   const { auth, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const [saved, setSaved] = useState(false);
-  const [saveLoad, setSaveLoad] = useState(false);
-
   // Likes
   useEffect(() => {
     if (post.likes.find((like) => like._id === auth.user._id)) {
@@ -44,66 +41,20 @@ const CardFooter = ({ post }) => {
   };
 
   // Saved
-  useEffect(() => {
-    if (auth.user.saved.find((id) => id === post._id)) {
-      setSaved(true);
-    } else {
-      setSaved(false);
-    }
-  }, [auth.user.saved, post._id]);
-
-  const handleSavePost = async () => {
-    if (saveLoad) return;
-
-    setSaveLoad(true);
-    await dispatch(savePost({ post, auth }));
-    setSaveLoad(false);
-  };
-
-  const handleUnSavePost = async () => {
-    if (saveLoad) return;
-
-    setSaveLoad(true);
-    await dispatch(unSavePost({ post, auth }));
-    setSaveLoad(false);
-  };
+  useEffect(() => {}, [post._id]);
 
   return (
     <div className="card_footer">
       <div className="d-flex justify-content-between " style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}>
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px', color: '#65676B' }}>
           <i className="far fa-heart"></i> {post.likes.length}
         </h6>
 
-        {saved ? (
-          <i
-            className="fas fa-bookmark "
-            style={{
-              padding: '5px 15px',
-              cursor: 'pointer',
-              color: '#002F77',
-              fontSize: '25px',
-              marginLeft: '47px',
-            }}
-            onClick={handleUnSavePost}
-          />
-        ) : (
-          <i
-            className="far fa-bookmark"
-            style={{
-              padding: '5px 15px',
-              cursor: 'pointer',
-              color: '#002F77',
-              fontSize: '25px',
-              marginLeft: '47px',
-            }}
-            onClick={handleSavePost}
-          />
-        )}
-
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px' }}>{post.comments.length} Bình luận</h6>
+        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px', color: '#65676B' }}>
+          {post.comments.length} Bình luận
+        </h6>
       </div>
-      <div className="card_icon_menu" style={{ padding: '5px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
+      <div className="card_icon_menu" style={{ padding: '7px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">
@@ -111,6 +62,7 @@ const CardFooter = ({ post }) => {
             Bình luận
           </Link>
         </div>
+
         <div className="post_bottom_action_item">
           <span
             className="post_bottom_action_item-Text"

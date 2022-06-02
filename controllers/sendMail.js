@@ -14,7 +14,7 @@ const oauth2Client = new OAuth2(
   MAILING_SERVICE_CLIENT_ID,
   MAILING_SERVICE_CLIENT_SECRET,
   MAILING_SERVICE_REFRESH_TOKEN,
-  OAUTH_PLAYGROUND
+  OAUTH_PLAYGROUND,
 );
 
 // send mail
@@ -36,13 +36,12 @@ const sendEmail = (to, url, txt) => {
     },
   });
 
-
   const mailOptions = {
     from: SENDER_EMAIL_ADDRESS,
     to: to,
     subject: 'UTC2 News',
     html: `
-            <div style="max-width: 700px; margin:auto; border: 15px solid #F9CB00; padding: 50px 20px; border-radius:25px; font-size: 110%;">
+            <div>
             <h2 style="text-align: center; text-transform: uppercase;color:#281756;">Chào mừng đến với UTC2 News.</h2>
             <p >Xin chào mừng! Bạn đến với UTC2 News. 
 

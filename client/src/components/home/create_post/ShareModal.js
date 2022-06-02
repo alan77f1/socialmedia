@@ -7,7 +7,6 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from 'react-share';
-
 const ShareModal = ({ url }) => {
   return (
     <div className="d-flex justify-content-between px-4 py-2">

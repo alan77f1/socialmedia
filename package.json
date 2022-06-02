@@ -1,8 +1,13 @@
 {
-  "name": "instagram",
+  "name": "utc2-news",
   "version": "1.0.0",
-  "description": "",
+  "description": "UTC2 News",
   "main": "server.js",
+  "engines": {
+    "node": "v14.17.3",
+    "npm": "6.14.13",
+    "yarn": "1.22.17"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -17,20 +22,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
     "concurrently": "^6.5.1",
-    "cookie-parser": "^1.4.5",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
     "googleapis": "^92.0.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.13",
-    "nodemailer": "^6.7.2",
+    "mongoose": "^5.13.14",
+    "nodemailer": "^6.7.5",
     "peer": "^0.6.1",
     "socket.io": "^3.1.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.16"
   }
 }

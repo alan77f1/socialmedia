@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDiscoverPosts, DISCOVER_TYPES } from '../redux/actions/discoverAction';
 import LoadIcon from '../assets/images/loading.gif';
-import PostThumb from '../components/profile/PostThumb';
+import PostThumb from '../components/PostThumb';
 import LoadMoreBtn from '../components/button/LoadMoreBtn';
 import { getDataAPI } from '../utils/fetchData';
+import Helmet from '../components/Helmet';
 
 const Discover = () => {
   const { auth, discover } = useSelector((state) => state);
@@ -26,19 +27,21 @@ const Discover = () => {
   };
 
   return (
-    <div className="main">
-      {discover.loading ? (
-        <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
-      ) : (
-        <PostThumb posts={discover.posts} result={discover.result} />
-      )}
+    <Helmet title="Khám phá">
+      <div className="main">
+        {discover.loading ? (
+          <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
+        ) : (
+          <PostThumb posts={discover.posts} result={discover.result} />
+        )}
 
-      {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
+        {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
 
-      {!discover.loading && (
-        <LoadMoreBtn result={discover.result} page={discover.page} load={load} handleLoadMore={handleLoadMore} />
-      )}
-    </div>
+        {!discover.loading && (
+          <LoadMoreBtn result={discover.result} page={discover.page} load={load} handleLoadMore={handleLoadMore} />
+        )}
+      </div>
+    </Helmet>
   );
 };
 

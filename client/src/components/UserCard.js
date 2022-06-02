@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../profile/Avatar';
+import Avatar from './Avatar';
 import { Link } from 'react-router-dom';
 
 const UserCard = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
@@ -37,19 +37,14 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
   return (
     <div className={`d-flex p-2 align-items-center justify-content-between  w-100 ${border}  `}>
       <div>
-        <Link
-          to={`/profile/${user._id}`}
-          onClick={handleCloseAll}
-          className="d-flex align-items-center"
-          style={{ textDecoration: 'none', color: '#002f77' }}
-        >
+        <Link to={`/profile/${user._id}`} onClick={handleCloseAll} className="d-flex align-items-center">
           <Avatar src={user.avatar} size="big-avatar" />
 
           <div style={{ transform: 'translateY(-2px)', marginLeft: '15px' }}>
-            <span>{msg ? showMsg(user) : user.fullname}</span>
-            <small className="d-block" style={{ opacity: 0.7 }}>
+            <small className="d-block" style={{ opacity: 0.8, fontSize: '1rem' }}>
               @{user.username}
             </small>
+            <span style={{ fontSize: '1rem' }}>{msg ? showMsg(user) : user.fullname}</span>
           </div>
         </Link>
       </div>

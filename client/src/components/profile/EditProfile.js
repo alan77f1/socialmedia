@@ -144,7 +144,7 @@ const EditProfile = ({ setOnEdit }) => {
         </div>
 
         <button
-          className="btn btn-primary w-100"
+          className="btn btn-success w-100"
           type="submit"
           style={{
             borderRadius: '50px',

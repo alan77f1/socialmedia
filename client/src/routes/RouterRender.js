@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import NotFound from '../components/alert/NotFound';
+import NotFound from '../components/NotFound';
 import { useSelector } from 'react-redux';
 
-const generatePage = (pageName) => {
+const generateRouter = (pageName) => {
   const component = () => require(`../features/${pageName}`).default;
 
   try {
@@ -13,7 +13,7 @@ const generatePage = (pageName) => {
   }
 };
 
-const PageRender = () => {
+const RouterRender = () => {
   const { page, id } = useParams();
   const { auth } = useSelector((state) => state);
 
@@ -27,7 +27,7 @@ const PageRender = () => {
     }
   }
 
-  return generatePage(pageName);
+  return generateRouter(pageName);
 };
 
-export default PageRender;
+export default RouterRender;

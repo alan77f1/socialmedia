@@ -15,15 +15,14 @@ const Notify = () => {
 
       {alert.error && (
         <Toast
-          msg={{ title: 'Lỗi', body: alert.error }}
+          msg={{ title: 'Thông báo', body: alert.error }}
           handleShow={() => dispatch({ type: GLOBALTYPES.ALERT, payload: {} })}
-          bgColor="bg-danger"
         />
       )}
 
       {alert.success && (
         <Toast
-          msg={{ title: 'Thành Công', body: alert.success }}
+          msg={{ title: 'Thông báo', body: alert.success }}
           handleShow={() => dispatch({ type: GLOBALTYPES.ALERT, payload: {} })}
         />
       )}

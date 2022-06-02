@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../profile/Avatar';
+import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
 
 const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
@@ -45,7 +45,7 @@ const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setSh
         >
           <Avatar src={user.avatar} size="big-avatar" />
           <div style={{ transform: 'translateY(-2px)', marginLeft: '10px' }}>
-            <small style={{ color: '#002f77', fontWeight: 'bold' }}>{msg ? showMsg(user) : user.fullname}</small>
+            <small style={{ color: 'black', fontWeight: 'bold' }}>{msg ? showMsg(user) : user.fullname}</small>
           </div>
         </Link>
       </div>

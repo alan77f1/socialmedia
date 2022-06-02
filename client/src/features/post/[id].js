@@ -5,7 +5,8 @@ import { getPost } from '../../redux/actions/postAction';
 import LoadIcon from '../../assets/images/loading.gif';
 import PostCard from '../../components/home/create_post/PostCard';
 import RightSideBar from '../../components/home/RightSideBar';
-import SideBar from '../../components/home/side_bar_left/SideBarLeft';
+import SideBar from '../../components/home/sidebar_left/SideBarLeft';
+import Helmet from '../../components/Helmet';
 
 const Post = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const Post = () => {
   }, [detailPost, dispatch, id, auth]);
 
   return (
-    <div>
+    <Helmet title="Bài viết">
       <div className="posts homePage">
         <div className="cLeft">
           <SideBar />
@@ -40,7 +41,7 @@ const Post = () => {
           <RightSideBar />
         </div>
       </div>
-    </div>
+    </Helmet>
   );
 };
 

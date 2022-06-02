@@ -48,7 +48,7 @@ const postCtrl = {
         Posts.find({
           user: [...req.user.following, req.user._id],
         }),
-        req.query
+        req.query,
       ).paginating();
 
       const posts = await features.query
@@ -80,7 +80,7 @@ const postCtrl = {
         {
           content,
           images,
-        }
+        },
       )
         .populate('user likes', 'avatar username fullname')
         .populate({
@@ -116,7 +116,7 @@ const postCtrl = {
         {
           $push: { likes: req.user._id },
         },
-        { new: true }
+        { new: true },
       );
 
       if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
@@ -133,7 +133,7 @@ const postCtrl = {
         {
           $pull: { likes: req.user._id },
         },
-        { new: true }
+        { new: true },
       );
 
       if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
@@ -184,13 +184,10 @@ const postCtrl = {
 
       const num = req.query.num || 9;
 
-      const posts = await Posts.aggregate([
-        { $match: { user: { $nin: newArr } } },
-        { $sample: { size: Number(num) } },
-      ]);
+      const posts = await Posts.aggregate([{ $match: { user: { $nin: newArr } } }, { $sample: { size: Number(num) } }]);
 
       return res.json({
-        msg: "Thành công!",
+        msg: 'Thành công!',
         result: posts.length,
         posts,
       });
@@ -231,7 +228,7 @@ const postCtrl = {
         {
           $push: { saved: req.params.id },
         },
-        { new: true }
+        { new: true },
       );
 
       if (!save) return res.status(400).json({ msg: 'Người dùng  không tồn tại.' });
@@ -248,7 +245,7 @@ const postCtrl = {
         {
           $pull: { saved: req.params.id },
         },
-        { new: true }
+        { new: true },
       );
 
       if (!save) return res.status(400).json({ msg: 'Người dùng không tồn tại.' });
@@ -264,7 +261,7 @@ const postCtrl = {
         Posts.find({
           _id: { $in: req.user.saved },
         }),
-        req.query
+        req.query,
       ).paginating();
 
       const savePosts = await features.query.sort('-createdAt');

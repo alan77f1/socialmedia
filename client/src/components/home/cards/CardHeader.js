@@ -1,7 +1,8 @@
-import React from 'react';
-import Avatar from '../../profile/Avatar';
+import React, { useState, useEffect } from 'react';
+import Avatar from '../../Avatar';
 import { Link, useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { savePost, unSavePost } from '../../../redux/actions/postAction';
 import moment from 'moment';
 import 'moment/locale/vi';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
@@ -9,6 +10,8 @@ import { deletePost } from '../../../redux/actions/postAction';
 import { BASE_URL } from '../../../utils/config';
 const CardHeader = ({ post }) => {
   const { auth, socket } = useSelector((state) => state);
+  const [saved, setSaved] = useState(false);
+  const [saveLoad, setSaveLoad] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
   const handleEditPost = () => {
@@ -23,6 +26,32 @@ const CardHeader = ({ post }) => {
   const handleCopyLink = () => {
     navigator.clipboard.writeText(`${BASE_URL}/post/${post._id}`);
   };
+
+  const handleSavePost = async () => {
+    if (saveLoad) return;
+
+    setSaveLoad(true);
+    await dispatch(savePost({ post, auth }));
+    setSaveLoad(false);
+  };
+
+  const handleUnSavePost = async () => {
+    if (saveLoad) return;
+
+    setSaveLoad(true);
+    await dispatch(unSavePost({ post, auth }));
+    setSaveLoad(false);
+  };
+
+  // Saved
+  useEffect(() => {
+    if (auth.user.saved.find((id) => id === post._id)) {
+      setSaved(true);
+    } else {
+      setSaved(false);
+    }
+  }, [auth.user.saved, post._id]);
+
   return (
     <div className="card_header">
       <div className="d-flex">
@@ -42,19 +71,28 @@ const CardHeader = ({ post }) => {
           more_horiz
         </span>
         <div className="dropdown-menu" style={{ borderRadius: '12px' }}>
+          {saved ? (
+            <div className="dropdown-item " onClick={handleUnSavePost}>
+              <span className="material-icons">bookmarks</span> Bỏ lưu
+            </div>
+          ) : (
+            <div className="dropdown-item" onClick={handleSavePost}>
+              <span className="material-icons">bookmarks</span> Lưu bài viết
+            </div>
+          )}
+
           {auth.user._id === post.user._id && (
             <>
               <div className="dropdown-item" onClick={handleEditPost}>
-                <span className="material-icons">create</span> Chỉnh Sửa
+                <span className="material-icons">create</span> Chỉnh sửa
               </div>
               <div className="dropdown-item" onClick={handleDeletePost}>
-                <span className="material-icons">delete_outline</span> Xoá
+                <span className="material-icons">delete_outline</span> Xoá bài viết
               </div>
             </>
           )}
-
           <div className="dropdown-item" onClick={handleCopyLink}>
-            <span className="material-icons">content_copy</span> Sao Chép
+            <span className="material-icons">content_copy</span> Sao chép
           </div>
         </div>
       </div>

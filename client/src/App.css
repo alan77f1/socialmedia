@@ -8,9 +8,6 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-#theme {
-  display: none;
-}
 
 .App {
   width: 100%;
@@ -67,8 +64,6 @@ img {
 @import url('./style/profile.css');
 
 @import url('./style/ads.css');
-
-@import url('./style/share.css');
 
 @import url('./style/home.css');
 

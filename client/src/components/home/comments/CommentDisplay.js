@@ -3,7 +3,7 @@ import CommentCard from './CommentCard';
 
 const CommentDisplay = ({ comment, post, replyCm }) => {
   const [showRep, setShowRep] = useState([]);
-  const [next, setNext] = useState(1);  
+  const [next, setNext] = useState(1);
 
   useEffect(() => {
     setShowRep(replyCm.slice(replyCm.length - next));
@@ -15,14 +15,12 @@ const CommentDisplay = ({ comment, post, replyCm }) => {
         <div className="pl-4">
           {showRep.map(
             (item, index) =>
-              item.reply && (
-                <CommentCard key={index} comment={item} post={post} commentId={comment._id} />
-              )
+              item.reply && <CommentCard key={index} comment={item} post={post} commentId={comment._id} />,
           )}
 
           {replyCm.length - next > 0 ? (
             <div
-              style={{ cursor: 'pointer', color: '#65676B', fontWeight: 'bold', fontSize: '14px' }}
+              style={{ cursor: 'pointer', color: '#65676B', fontWeight: '500', fontSize: '14px' }}
               onClick={() => setNext(next + 10)}
             >
               Xem thêm bình luận
@@ -34,7 +32,7 @@ const CommentDisplay = ({ comment, post, replyCm }) => {
                 style={{
                   cursor: 'pointer',
                   color: '#65676B',
-                  fontWeight: 'bold',
+                  fontWeight: '500',
                   fontSize: '14px',
                 }}
               >

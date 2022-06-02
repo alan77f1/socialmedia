@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
 import Icons from '../create_post/Icons';
+import Comments from './Comments';
 import UserImg from './UserInput';
 
 const InputComment = ({ children, post, onReply, setOnReply }) => {
@@ -32,12 +33,10 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
 
     if (setOnReply) return setOnReply(false);
   };
-
   return (
     <form className="card-footer comment_input" onSubmit={handleSubmit}>
       {children}
-
-      <UserImg user={auth.user} />
+      {!setOnReply && <UserImg user={auth.user} />}
 
       <input type="text" placeholder="Viết bình luận..." value={content} onChange={(e) => setContent(e.target.value)} />
 

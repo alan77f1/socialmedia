@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PostThumb from '../profile/PostThumb';
+import PostThumb from '../PostThumb';
 import LoadIcon from '../../assets/images/loading.gif';
 import LoadMoreBtn from '../button/LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';

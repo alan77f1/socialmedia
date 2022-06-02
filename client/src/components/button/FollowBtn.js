@@ -42,7 +42,7 @@ const FollowBtn = ({ user }) => {
           Bỏ theo dõi
         </dev>
       ) : (
-        <dev className="btn btn-primary"  onClick={handleFollow}>
+        <dev className="btn btn-primary" onClick={handleFollow}>
           Theo dõi
         </dev>
       )}

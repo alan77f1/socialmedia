@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import UserCard from './cards/UserCard';
+import UserCard from '../UserCard';
 import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import UTC2Ads from '../../assets/images/utc2ads.jpg';
@@ -21,7 +21,6 @@ const RightSideBar = () => {
               <img src={UTC2Ads} alt="" className="adsItemImg" />
               <div className="adsItemContent">
                 <div className="adsItemContentHeader">UTC2</div>
-                <span className="adsItemContentDonors">timviecnhanh.com</span>
               </div>
             </a>
           </li>
@@ -30,7 +29,6 @@ const RightSideBar = () => {
               <img src={UTC2News} alt="" className="adsItemImg" />
               <div className="adsItemContent">
                 <div className="adsItemContentHeader">UTC2 News</div>
-                <span className="adsItemContentDonors">gearvn.com</span>
               </div>
             </a>
           </li>

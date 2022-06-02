@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../../profile/Avatar';
+import Avatar from '../../Avatar';
 
 const UserImg = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
   const handleCloseAll = () => {

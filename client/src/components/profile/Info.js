@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from './Avatar';
+import Avatar from '../Avatar';
 import EditProfile from './EditProfile';
 import FollowBtn from '../button/FollowBtn';
 import Followers from './Followers';
 import Following from './Following';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import Status from '../home/create_post/Status';
+
 import ImgBuilding from '../../assets/images/building.jpg';
 
 const Info = ({ id, auth, profile, dispatch }) => {
@@ -61,34 +61,29 @@ const Info = ({ id, auth, profile, dispatch }) => {
             </div>
           </div>
           <div className="container">
-            <div className="container_introduce">
-              <div className="container_content">
-                <div className="">
-                  <h6>
-                    <span className="content_font">Tên đầy đủ</span> {user.fullname}
-                  </h6>
-                </div>
-                <div className="follow_btn ">
-                  <h6 className="" onClick={() => setShowFollowers(true)}>
-                    {user.followers.length} <span className="content_font">Người theo dõi</span>
-                  </h6>
-                  <h6 className="" onClick={() => setShowFollowing(true)}>
-                    {user.following.length} <span className="content_font">Đang theo dõi</span>
-                  </h6>
-                </div>
-                <div className="">
-                  <h6>
-                    <span className="content_font">Số điện thoại</span> {user.mobile}
-                  </h6>
-                </div>
-
-                <h6 className="m-0 ">
-                  <span className="content_font">Sống tại</span> {user.address}
+            <div className="container_content">
+              <div className="">
+                <h6>
+                  <span className="content_font">Tên đầy đủ</span> {user.fullname}
                 </h6>
               </div>
-            </div>
-            <div className="content_right">
-              <Status />
+              <div className="follow_btn ">
+                <h6 className="" onClick={() => setShowFollowers(true)}>
+                  {user.followers.length} <span className="content_font">Người theo dõi</span>
+                </h6>
+                <h6 className="" onClick={() => setShowFollowing(true)}>
+                  {user.following.length} <span className="content_font">Đang theo dõi</span>
+                </h6>
+              </div>
+              <div className="">
+                <h6>
+                  <span className="content_font">Số điện thoại</span> {user.mobile}
+                </h6>
+              </div>
+
+              <h6 className="m-0 ">
+                <span className="content_font">Sống tại</span> {user.address}
+              </h6>
             </div>
           </div>
 

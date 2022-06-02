@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 const PostThumb = ({ posts, result }) => {
   const [readMore, setReadMore] = useState(false);
-  if (result === 0) return <h4 className="text-center text-danger">Bạn Chưa có bài viết nào</h4>;
+  if (result === 0)
+    return (
+      <h4 className="text-center text-danger" style={{ padding: '10px' }}>
+        Chưa có bài viết nào
+      </h4>
+    );
 
   return (
     <div className="post_thumb">

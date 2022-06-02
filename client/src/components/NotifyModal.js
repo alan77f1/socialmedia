@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import NoNotice from '../../assets/images/notice.png';
+import NoNotice from '../assets/images/notice.png';
 import { Link } from 'react-router-dom';
-import Avatar from '../profile/Avatar';
-import { isReadNotify, deleteAllNotifies } from '../../redux/actions/notifyAction';
+import Avatar from './Avatar';
+import { isReadNotify, deleteAllNotifies } from '../redux/actions/notifyAction';
 
 const NotifyModal = () => {
   const { auth, notify } = useSelector((state) => state);
@@ -22,7 +22,7 @@ const NotifyModal = () => {
   return (
     <div style={{ minWidth: '425px' }}>
       <div className="d-flex justify-content-between align-items-center px-3">
-        <h4>Thông Báo</h4>
+        <h4 style={{ margin: '15px 0' }}>Thông Báo</h4>
       </div>
 
       {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" style={{ width: '395px' }} />}
@@ -57,7 +57,7 @@ const NotifyModal = () => {
       <hr className="my-1" />
       <div
         className="text-right mr-2"
-        style={{ cursor: 'pointer', color: 'black', padding: '10px' }}
+        style={{ cursor: 'pointer', color: 'black', padding: '10px', margin: '10px 0 3px 0' }}
         onClick={handleDeleteAll}
       >
         Xoá Tất Cả

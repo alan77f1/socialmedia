@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import PostThumb from '../profile/PostThumb';
-import LoadIcon from '../../assets/images/loading.gif';
+import PostThumb from '../PostThumb';
 import LoadMoreBtn from '../button/LoadMoreBtn';
 import { getDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import LoadData from '../alert/LoadData';
 
 const Saved = ({ auth, dispatch }) => {
   const [savePosts, setSavePosts] = useState([]);
@@ -39,7 +39,7 @@ const Saved = ({ auth, dispatch }) => {
     <div>
       <PostThumb posts={savePosts} result={result} />
 
-      {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
+      {load && <LoadData />}
 
       <LoadMoreBtn result={result} page={page} load={load} handleLoadMore={handleLoadMore} />
     </div>

@@ -5,9 +5,10 @@ import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
 
 import { useSelector, useDispatch } from 'react-redux';
-import LoadIcon from '../../assets/images/loading.gif';
 import { getProfileUsers } from '../../redux/actions/profileAction';
 import { useParams } from 'react-router-dom';
+import Helmet from '../../components/Helmet';
+import LoadData from '../../components/alert/LoadData';
 
 const Profile = () => {
   const { profile, auth } = useSelector((state) => state);
@@ -23,34 +24,36 @@ const Profile = () => {
   }, [id, auth, dispatch, profile.ids]);
 
   return (
-    <div className="main">
-      <div className="profile">
-        <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
+    <Helmet title="Trang cá nhân">
+      <div className="main">
+        <div className="profile">
+          <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-        {auth.user._id === id && (
-          <div className="profile_tab">
-            <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
-              Bài Viết
-            </button>
-            <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
-              Đã Lưu
-            </button>
-          </div>
-        )}
+          {auth.user._id === id && (
+            <div className="profile_tab">
+              <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
+                Bài Viết
+              </button>
+              <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
+                Đã Lưu
+              </button>
+            </div>
+          )}
 
-        {profile.loading ? (
-          <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
-        ) : (
-          <>
-            {saveTab ? (
-              <Saved auth={auth} dispatch={dispatch} />
-            ) : (
-              <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
-            )}
-          </>
-        )}
+          {profile.loading ? (
+            <LoadData />
+          ) : (
+            <>
+              {saveTab ? (
+                <Saved auth={auth} dispatch={dispatch} />
+              ) : (
+                <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
+              )}
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </Helmet>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../../profile/Avatar';
+import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
@@ -78,7 +78,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
       <div className="comment_content">
         <div className="flex-fill">
           {onEdit ? (
-            <textarea rows="5" value={content} onChange={(e) => setContent(e.target.value)} />
+            <input value={content} onChange={(e) => setContent(e.target.value)} />
           ) : (
             <div>
               {comment.tag && comment.tag._id !== comment.user._id && (
@@ -86,10 +86,10 @@ const CommentCard = ({ children, comment, post, commentId }) => {
                   @{comment.tag.username}
                 </Link>
               )}
-              <span>{content.length < 100 ? content : readMore ? content + ' ' : content.slice(0, 100) + '....'}</span>
-              {content.length > 100 && (
-                <span className="readMore" onClick={() => setReadMore(!readMore)}>
-                  {readMore ? 'Hide content' : 'Read more'}
+              <span>{content.length < 40 ? content : readMore ? content + ' ' : content.slice(0, 40) + '...'}</span>
+              {content.length > 40 && (
+                <span className="readMore" onClick={() => setReadMore(!readMore)} style={{ fontWeight: '500' }}>
+                  {readMore ? 'Ẩn' : 'Xem thêm'}
                 </span>
               )}
             </div>
@@ -111,7 +111,7 @@ const CommentCard = ({ children, comment, post, commentId }) => {
               </>
             ) : (
               <small className="font-weight-bold mr-3" onClick={handleReply}>
-                {onReply ? 'Huỷ' : 'Trả Lời'}
+                {onReply ? 'Huỷ' : 'Trả lời'}
               </small>
             )}
           </div>

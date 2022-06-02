@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-import PageRender from './routes/PageRender';
+import RouterRender from './routes/RouterRender';
 import PrivateRouter from './routes/PrivateRouter';
 
 import Home from './features/home';
@@ -13,7 +13,7 @@ import Reset from './features/resetPassword';
 import Alert from './components/alert/Alert';
 import Header from './components/header/Header';
 import StatusModal from './components/home/create_post/StatusModal';
-import NotFound from './components/alert/NotFound';
+import NotFound from './components/NotFound';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { refreshToken } from './redux/actions/authAction';
@@ -23,7 +23,6 @@ import { getSuggestions } from './redux/actions/suggestionsAction';
 import io from 'socket.io-client';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
 import Socket from './socket';
-
 import { getNotifies } from './redux/actions/notifyAction';
 
 function App() {
@@ -48,17 +47,17 @@ function App() {
     }
   }, [dispatch, auth.token]);
 
-  useEffect(() => {
-    if (!('Notification' in window)) {
-      alert('This browser does not support desktop notification');
-    } else if (Notification.permission === 'granted') {
-    } else if (Notification.permission !== 'denied') {
-      Notification.requestPermission().then(function (permission) {
-        if (permission === 'granted') {
-        }
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!('Notification' in window)) {
+  //     alert('This browser does not support desktop notification');
+  //   } else if (Notification.permission === 'granted') {
+  //   } else if (Notification.permission !== 'denied') {
+  //     Notification.requestPermission().then(function (permission) {
+  //       if (permission === 'granted') {
+  //       }
+  //     });
+  //   }
+  // }, []);
 
   return (
     <Router>
@@ -75,8 +74,8 @@ function App() {
         <Route exact path="/forgot_password" component={isLogged ? NotFound : Forgot} />
         <Route exact path="/reset/:token" component={isLogged ? NotFound : Reset} />
 
-        <PrivateRouter exact path="/:page" component={PageRender} />
-        <PrivateRouter exact path="/:page/:id" component={PageRender} />
+        <PrivateRouter exact path="/:page" component={RouterRender} />
+        <PrivateRouter exact path="/:page/:id" component={RouterRender} />
       </div>
     </Router>
   );

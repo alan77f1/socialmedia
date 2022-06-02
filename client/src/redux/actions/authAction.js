@@ -118,37 +118,7 @@ export const forgotPassword = (data) => async (dispatch) => {
     });
   }
 };
-// export const resetPassword = (data, token) => async (dispatch) => {
-//   const check = valid(data);
-//   if (check.errLength > 0)
-//     return dispatch({ type: GLOBALTYPES.ALERT, payload: check.errMsg });
-//   try {
-//     dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
-//     const res = await postDataAPI("reset", data, token);
 
-//     dispatch({
-//       type: GLOBALTYPES.AUTH,
-//       payload: {
-//         token: res.data.access_token,
-//         user: res.data.user,
-//       },
-//     });
-
-//     dispatch({
-//       type: GLOBALTYPES.ALERT,
-//       payload: {
-//         success: res.data.msg,
-//       },
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: GLOBALTYPES.ALERT,
-//       payload: {
-//         error: err.response.data.msg,
-//       },
-//     });
-//   }
-// };
 export const changePassword = (data) => async (dispatch) => {
   try {
     dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });

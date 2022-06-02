@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/actions/authAction';
-import Avatar from '../profile/Avatar';
-import NotifyModal from '../header/NotifyModal';
-import ChangePassword from '../profile/ChangePassword';
+import Avatar from '../Avatar';
+import NotifyModal from '../NotifyModal';
+import ChangePassword from '../profile/changePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const MenuRight = () => {

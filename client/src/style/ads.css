@@ -30,7 +30,6 @@
 .adsItem a {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .adsItem:hover {
@@ -43,13 +42,7 @@
 }
 
 .adsItemContentHeader {
-  color: #002f77;
+  color: black;
   font-size: 16px;
   font-weight: 500;
-}
-
-.adsItemContentDonors {
-  color: #002f77;
-  font-size: 12px;
-  font-weight: 400;
 }
