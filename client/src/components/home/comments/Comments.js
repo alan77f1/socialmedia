@@ -33,7 +33,13 @@ const Comments = ({ post }) => {
       {comments.length - next > 0 ? (
         <div
           className="p-2 border-top"
-          style={{ cursor: 'pointer', color: '#65676B', fontWeight: '500', fontSize: '14px' }}
+          style={{
+            cursor: 'pointer',
+            color: '#65676B',
+            fontWeight: '500',
+            fontSize: '14px',
+            textDecoration: 'underline',
+          }}
           onClick={() => setNext(next + 10)}
         >
           Xem thêm bình luận
@@ -42,7 +48,13 @@ const Comments = ({ post }) => {
         comments.length > 2 && (
           <div
             className="p-2 border-top"
-            style={{ cursor: 'pointer', color: '#65676B', fontWeight: '500', fontSize: '14px' }}
+            style={{
+              cursor: 'pointer',
+              color: '#65676B',
+              fontWeight: '500',
+              fontSize: '14px',
+              textDecoration: 'underline',
+            }}
             onClick={() => setNext(2)}
           >
             Ẩn bình luận

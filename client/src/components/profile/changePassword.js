@@ -52,7 +52,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
           <img src={auth.user.avatar} alt="avatar" />
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Nhập Email Đăng Ký</label>
+          <label htmlFor="exampleInputEmail1">Email dăng ký</label>
           <div className="position-relative">
             <input
               type={'email'}

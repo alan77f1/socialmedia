@@ -49,7 +49,7 @@ const Search = () => {
 
       <div className="search_icon" style={{ opacity: search ? 0 : 0.5 }}>
         <span className="material-icons">search</span>
-        <span>Tìm kiếm trên UTC2</span>
+        <span>Tìm kiếm trên UTC2 News</span>
       </div>
 
       <div className="close_search" onClick={handleClose} style={{ opacity: users.length === 0 ? 0 : 1 }}>

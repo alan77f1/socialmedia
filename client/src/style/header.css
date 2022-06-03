@@ -60,6 +60,7 @@
   text-indent: 5px;
   border-radius: 20px;
   padding: 10px 15px;
+  margin-left: -10px;
 }
 .header .search_form .search_icon {
   position: absolute;

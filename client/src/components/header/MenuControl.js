@@ -12,7 +12,7 @@ const MenuControl = () => {
 
   return (
     <div className="menu menu-middle">
-      <ul className="header-menu-middle">
+      <ul className="header-menu-middle" style={{ margin: '0 100px 0 0', color: '#002f77' }}>
         {navLinksHome.map((link, index) => (
           <li className="menu-middle-item " key={index}>
             <Link to={link.path}>
