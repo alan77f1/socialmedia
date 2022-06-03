@@ -140,7 +140,7 @@
   margin: 0 5px;
   border-radius: 4px;
   position: relative;
-  background-color: #f9cb00;
+  background-color: #f0f2f5;
 }
 
 .menu-middle-item:hover {
@@ -164,8 +164,7 @@
 }
 
 .menu-middle-item:hover {
-  background-color: #f0f2f5;
-  color: #f9cb00;
+  background-color: #f9cb00;
 }
 
 .menu-middle-item_badge {

@@ -61,6 +61,11 @@ const ForgotPassword = () => {
           <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '50px' }}>
             Xác Thực Email
           </button>
+          <p className="my-2">
+            <Link to="/" style={{ color: '#0075FF' }}>
+              Đăng nhập
+            </Link>
+          </p>
         </form>
       </div>
     </Helmet>
