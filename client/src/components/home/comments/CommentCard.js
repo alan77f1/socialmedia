@@ -86,8 +86,8 @@ const CommentCard = ({ children, comment, post, commentId }) => {
                   @{comment.tag.username}
                 </Link>
               )}
-              <span>{content.length < 40 ? content : readMore ? content + ' ' : content.slice(0, 40) + '...'}</span>
-              {content.length > 40 && (
+              <span>{content.length < 100 ? content : readMore ? content + ' ' : content.slice(0, 100) + '....'}</span>
+              {content.length > 100 && (
                 <span className="readMore" onClick={() => setReadMore(!readMore)} style={{ fontWeight: '500' }}>
                   {readMore ? 'Ẩn' : 'Xem thêm'}
                 </span>
