@@ -6,6 +6,7 @@ import PostThumb from '../components/PostThumb';
 import LoadMoreBtn from '../components/button/LoadMoreBtn';
 import { getDataAPI } from '../utils/fetchData';
 import Helmet from '../components/Helmet';
+import LoadData from '../components/alert/LoadData';
 
 const Discover = () => {
   const { auth, discover } = useSelector((state) => state);
@@ -29,13 +30,9 @@ const Discover = () => {
   return (
     <Helmet title="Khám phá">
       <div className="main">
-        {discover.loading ? (
-          <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
-        ) : (
-          <PostThumb posts={discover.posts} result={discover.result} />
-        )}
+        {discover.loading ? <LoadData /> : <PostThumb posts={discover.posts} result={discover.result} />}
 
-        {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto" />}
+        {load && <LoadData />}
 
         {!discover.loading && (
           <LoadMoreBtn result={discover.result} page={discover.page} load={load} handleLoadMore={handleLoadMore} />

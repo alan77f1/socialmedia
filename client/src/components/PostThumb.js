@@ -4,7 +4,7 @@ const PostThumb = ({ posts, result }) => {
   const [readMore, setReadMore] = useState(false);
   if (result === 0)
     return (
-      <h4 className="text-center text-danger" style={{ padding: '10px' }}>
+      <h4 className="text-center" style={{ padding: '10px' }}>
         Chưa có bài viết nào
       </h4>
     );

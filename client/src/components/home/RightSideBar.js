@@ -4,6 +4,7 @@ import UserCard from '../UserCard';
 import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
+import LoadData from '../alert/LoadData';
 
 const RightSideBar = () => {
   const { auth, suggestions } = useSelector((state) => state);
@@ -27,7 +28,7 @@ const RightSideBar = () => {
       </div>
 
       {suggestions.loading ? (
-        <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
+        <LoadData />
       ) : (
         <div className="suggestions ">
           {suggestions.users.map((user) => (
