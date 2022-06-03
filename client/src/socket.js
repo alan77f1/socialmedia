@@ -101,17 +101,6 @@ const SocketClient = () => {
     return () => socket.off('removeNotifyToClient');
   }, [socket, dispatch]);
 
-  useEffect(() => {
-    socket.on('userBusy', (data) => {
-      dispatch({
-        type: GLOBALTYPES.ALERT,
-        payload: { error: `${call.username} is busy!` },
-      });
-    });
-
-    return () => socket.off('userBusy');
-  }, [socket, dispatch, call]);
-
   return (
     <>
       <audio controls ref={audioRef} style={{ display: 'none' }}>

@@ -194,7 +194,7 @@
 }
 .profile_tab button.active {
   opacity: 0.8;
-  font-weight: 700;
+  font-weight: 650;
   color: #002f77;
   background: #f0f2f5;
   width: 100%;
