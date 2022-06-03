@@ -38,11 +38,11 @@
   border-radius: 8px;
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 }
 
 .sidebar-Itemlink {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
 }
