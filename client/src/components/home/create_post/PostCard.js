@@ -8,7 +8,7 @@ import InputComment from '../comments/InputComment';
 
 const PostCard = ({ post }) => {
   return (
-    <div className="card my-3">
+    <div className="card" style={{ margin: '16px 0 0 0' }}>
       <CardHeader post={post} />
       <CardBody post={post} />
       <CardFooter post={post} />
