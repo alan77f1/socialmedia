@@ -35,11 +35,13 @@ const RightSideBar = () => {
         </ul>
       </div>
       <div className="d-flex align-items-center my-2">
-        <h6 className="text-black">Gợi ý cho bạn</h6>
+        <h6 className="text-black" style={{ color: '#9A9CA1' }}>
+          Gợi ý cho bạn
+        </h6>
         {!suggestions.loading && (
           <h6 // className="fas fa-redo"
             className="text-black"
-            style={{ cursor: 'pointer', marginLeft: '154px' }}
+            style={{ cursor: 'pointer', marginLeft: '154px', color: '#9A9CA1' }}
             onClick={() => dispatch(getSuggestions(auth.token))}
           >
             Xem thêm

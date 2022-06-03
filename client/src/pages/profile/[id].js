@@ -29,7 +29,7 @@ const Profile = () => {
         <div className="profile">
           <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-          <div style={{ marginLeft: '42%', fontSize: '23px', fontWeight: '700', marginBottom: '5px' }}>
+          <div style={{ marginLeft: '42%', fontSize: '21px', fontWeight: '650', marginBottom: '5px' }}>
             Quản lý bài viết
           </div>
           {auth.user._id === id && (
