@@ -29,13 +29,14 @@ const Profile = () => {
         <div className="profile">
           <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
+          <div style={{ marginLeft: '42%', fontSize: '23px', fontWeight: '700' }}>Quản lý bài viết</div>
           {auth.user._id === id && (
             <div className="profile_tab">
               <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
-                Bài Viết
+                Tất cả bài viết
               </button>
               <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
-                Đã Lưu
+                Bài viết đã lưu
               </button>
             </div>
           )}

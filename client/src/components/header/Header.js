@@ -16,18 +16,20 @@ const Header = () => {
           <Link to="/" className="logo">
             <img src={UTC2} alt="" style={{ width: '40px', marginRight: '2px' }} />
           </Link>
-          <p
-            style={{
-              margin: '1px 12px 1px 1px',
-              fontSize: '17px',
-              width: '100px',
-              height: '100%',
-              color: '#002F77',
-              fontWeight: '650',
-            }}
-          >
-            UTC2 News
-          </p>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <p
+              style={{
+                margin: '1px 12px 1px 1px',
+                fontSize: '17px',
+                width: '100px',
+                height: '100%',
+                color: '#002F77',
+                fontWeight: '650',
+              }}
+            >
+              UTC2 News
+            </p>
+          </Link>
           <Search />
         </div>
 

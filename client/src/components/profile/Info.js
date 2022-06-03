@@ -48,15 +48,6 @@ const Info = ({ id, auth, profile, dispatch }) => {
                 <h3>@{user.username}</h3>
               </div>
 
-              <div className="container_content-title">
-                {user._id === auth.user._id ? (
-                  <button className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={() => setOnEdit(true)}>
-                    Chỉnh sửa trang cá nhân
-                  </button>
-                ) : (
-                  <FollowBtn user={user} />
-                )}
-              </div>
               <hr className="profileTopHr" />
             </div>
           </div>
@@ -84,6 +75,15 @@ const Info = ({ id, auth, profile, dispatch }) => {
               <h6 className="m-0 ">
                 <span className="content_font">Sống tại</span> {user.address}
               </h6>
+            </div>
+            <div className="container_content-title">
+              {user._id === auth.user._id ? (
+                <button className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={() => setOnEdit(true)}>
+                  Chỉnh sửa trang cá nhân
+                </button>
+              ) : (
+                <FollowBtn user={user} />
+              )}
             </div>
           </div>
 
