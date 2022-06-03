@@ -4,7 +4,7 @@
   height: calc(100vh - 56px);
   overflow-y: scroll;
   background-color: #ffffff;
-  border-top-right-radius: 30px;
+  border-top-right-radius: 10px;
   box-shadow: 0 0 4px #ddd;
   padding: 0 10px;
 }
