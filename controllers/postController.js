@@ -109,7 +109,7 @@ const postCtrl = {
         _id: req.params.id,
         likes: req.user._id,
       });
-      if (post.length > 0) return res.status(400).json({ msg: 'Bạn đã thích bài đăng này.' });
+      if (post.length > 0) return res.status(400).json({ msg: 'Bạn đã thích bài viết này.' });
 
       const like = await Posts.findOneAndUpdate(
         { _id: req.params.id },
@@ -119,9 +119,9 @@ const postCtrl = {
         { new: true },
       );
 
-      if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
+      if (!like) return res.status(400).json({ msg: 'Bài viết không tồn tại.' });
 
-      res.json({ msg: 'Đã thích bài đăng!' });
+      res.json({ msg: 'Đã thích bài viết!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -136,9 +136,9 @@ const postCtrl = {
         { new: true },
       );
 
-      if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
+      if (!like) return res.status(400).json({ msg: 'Bài viết không tồn tại.' });
 
-      res.json({ msg: 'Đã bỏ thích bài đăng!' });
+      res.json({ msg: 'Đã bỏ thích bài viết!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -168,7 +168,7 @@ const postCtrl = {
           },
         });
 
-      if (!post) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
+      if (!post) return res.status(400).json({ msg: 'Bài viết không tồn tại.' });
 
       res.json({
         post,
@@ -205,7 +205,7 @@ const postCtrl = {
       await Comments.deleteMany({ _id: { $in: post.comments } });
 
       res.json({
-        msg: 'Đã xoá bài đăng!',
+        msg: 'Đã xoá bài viết!',
         newPost: {
           ...post,
           user: req.user,
@@ -221,7 +221,7 @@ const postCtrl = {
         _id: req.user._id,
         saved: req.params.id,
       });
-      if (user.length > 0) return res.status(400).json({ msg: 'Bạn đã lưu bài đăng này.' });
+      if (user.length > 0) return res.status(400).json({ msg: 'Bạn đã lưu bài viết này.' });
 
       const save = await Users.findOneAndUpdate(
         { _id: req.user._id },
@@ -233,7 +233,7 @@ const postCtrl = {
 
       if (!save) return res.status(400).json({ msg: 'Người dùng  không tồn tại.' });
 
-      res.json({ msg: 'Đã lưu bài đăng!' });
+      res.json({ msg: 'Đã lưu bài viết!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -250,7 +250,7 @@ const postCtrl = {
 
       if (!save) return res.status(400).json({ msg: 'Người dùng không tồn tại.' });
 
-      res.json({ msg: 'Đã bỏ lưu bài đăng!' });
+      res.json({ msg: 'Đã bỏ lưu bài viết!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

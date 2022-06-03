@@ -32,7 +32,7 @@ export const createPost =
       // Notify
       const msg = {
         id: res.data.newPost._id,
-        text: 'đã thêm bài đăng mới.',
+        text: 'đã thêm bài viết mới.',
         recipients: res.data.newPost.user.followers,
         url: `/post/${res.data.newPost._id}`,
         content,
@@ -114,7 +114,7 @@ export const likePost =
       // Notify
       const msg = {
         id: auth.user._id,
-        text: 'thích bài đăng của bạn.',
+        text: 'thích bài viết của bạn.',
         recipients: [post.user._id],
         url: `/post/${post._id}`,
         content: post.content,
@@ -147,7 +147,7 @@ export const unLikePost =
       // Notify
       const msg = {
         id: auth.user._id,
-        text: 'thích bài đăng của bạn.',
+        text: 'thích bài viết của bạn.',
         recipients: [post.user._id],
         url: `/post/${post._id}`,
       };
@@ -187,7 +187,7 @@ export const deletePost =
       // Notify
       const msg = {
         id: post._id,
-        text: 'đã thêm bài đăng mới.',
+        text: 'đã thêm bài viết mới.',
         recipients: res.data.newPost.user.followers,
         url: `/post/${post._id}`,
       };

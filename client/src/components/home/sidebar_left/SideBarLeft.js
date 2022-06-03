@@ -20,7 +20,7 @@ const SideBarLeft = () => {
         <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
           <img src={ImgPosts} alt="" className="sidebar-ItemBadge" />
           <div className="sidebar-ItemText">
-            <span className="sidebar-ItemName">Thêm bài đăng</span>
+            <span className="sidebar-ItemName">Thêm bài viết</span>
           </div>
         </li>
 

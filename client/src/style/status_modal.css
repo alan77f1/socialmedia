@@ -12,7 +12,7 @@
   max-width: 550px;
   width: 100%;
   background: white;
-  margin: 30px auto;
+  margin: 222px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
@@ -36,6 +36,9 @@
   border: none;
   outline: none;
   resize: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #65676b;
 }
 .status_body .input_images {
   justify-content: center;

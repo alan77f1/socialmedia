@@ -64,7 +64,7 @@ const commentCtrl = {
         likes: req.user._id,
       });
       if (comment.length > 0)
-        return res.status(400).json({ msg: "Bạn đã thích bài đăng này." });
+        return res.status(400).json({ msg: "Bạn đã thích bài viết này." });
 
       await Comments.findOneAndUpdate(
         { _id: req.params.id },

@@ -18,7 +18,7 @@ const CardHeader = ({ post }) => {
     dispatch({ type: GLOBALTYPES.STATUS, payload: { ...post, onEdit: true } });
   };
   const handleDeletePost = () => {
-    if (window.confirm('Bạn muốn xoá bài đăng này?')) {
+    if (window.confirm('Bạn muốn xoá bài viết này?')) {
       dispatch(deletePost({ post, auth, socket }));
       return history.push('/');
     }

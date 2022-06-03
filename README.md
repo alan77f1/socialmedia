@@ -39,8 +39,8 @@ Giảng viên: Phạm Thị Miên
    - Bài viết mới nhất
    - Những ai đã bình luận trên bài viết của bạn
 5. Quản lý bình luận:
-   - Trả lời bình luận,
-   - Bày tỏ cảm xúc: thích bài đăng, thích bình luận (thích)
+   - Phản hồi bình luận,
+   - Bày tỏ cảm xúc: thích bài viết, thích bình luận (thích)
 6. Tìm kiếm người dùng theo tên
 7. Quản lý thông tin trang cá nhân:
    - Chỉnh sửa thông tin

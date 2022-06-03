@@ -46,15 +46,40 @@ const CardFooter = ({ post }) => {
   return (
     <div className="card_footer">
       <div className="d-flex justify-content-between " style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}>
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px', color: '#65676B' }}>
-          <i className="far fa-heart"></i> {post.likes.length}
+        <h6
+          style={{
+            padding: '5px 15px 0 15px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            fontWeight: '350',
+            color: '#65676B',
+          }}
+        >
+          <i
+            className="fa fa-thumbs-up "
+            style={{
+              cursor: 'pointer',
+              fontSize: '16px',
+              fontWeight: '350',
+              color: '#65676B',
+            }}
+          ></i>{' '}
+          {post.likes.length}
         </h6>
 
-        <h6 style={{ padding: '5px 15px', cursor: 'pointer', fontSize: '17px', color: '#65676B' }}>
-          {post.comments.length} Bình luận
+        <h6
+          style={{
+            padding: '5px 15px 0 15px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            fontWeight: '350',
+            color: '#65676B',
+          }}
+        >
+          {post.comments.length} bình luận
         </h6>
       </div>
-      <div className="card_icon_menu" style={{ padding: '7px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
+      <div className="card_icon_menu" style={{ padding: '4px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">

@@ -96,8 +96,6 @@ const CommentCard = ({ children, comment, post, commentId }) => {
           )}
 
           <div style={{ cursor: 'pointer' }}>
-            <small className="text-muted mr-3">{moment(comment.createdAt).fromNow()}</small>
-
             <small className="font-weight-bold mr-3">{comment.likes.length} Thích</small>
 
             {onEdit ? (
@@ -111,9 +109,11 @@ const CommentCard = ({ children, comment, post, commentId }) => {
               </>
             ) : (
               <small className="font-weight-bold mr-3" onClick={handleReply}>
-                {onReply ? 'Huỷ' : 'Trả lời'}
+                {onReply ? 'Huỷ' : 'Phản hồi'}
               </small>
             )}
+
+            <small className="text-muted mr-3">{moment(comment.createdAt).fromNow()}</small>
           </div>
         </div>
 

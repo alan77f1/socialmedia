@@ -96,7 +96,7 @@ const StatusModal = () => {
             <textarea
               name="content"
               value={content}
-              placeholder={`${auth.user.username} ơi, Bạn đang nghĩ gì thế?`}
+              placeholder={`${auth.user.username} ơi, bạn đang nghĩ gì thế?`}
               onChange={(e) => setContent(e.target.value)}
             />
 

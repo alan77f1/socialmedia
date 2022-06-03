@@ -60,10 +60,12 @@
   display: flex;
   align-items: center;
   position: relative;
+  height: inherit;
 }
 
 .post_bottom_action_item-Text {
   font-weight: 500;
+  font-size: 15px;
 }
 
 .post_bottom_action_item-Text:hover {
@@ -76,6 +78,7 @@
   justify-content: center;
   border-radius: 10px;
   transition: 0.1s;
+  margin: 0 3px;
 }
 
 .post_bottom_action_item:hover {
