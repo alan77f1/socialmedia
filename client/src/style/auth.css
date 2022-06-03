@@ -26,7 +26,7 @@
 .auth_page img {
   width: 100%;
   max-width: 180px;
-  margin-left: 85px;
+  margin: 0 0 15px 85px;
 }
 .auth_page form {
   background: #fff;
@@ -72,7 +72,7 @@
 .auth_page_register img {
   width: 100%;
   max-width: 180px;
-  margin-left: 222px;
+  margin: 0 0 15px 222px;
 }
 .auth_page_register form {
   background: #fff;

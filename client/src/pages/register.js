@@ -47,7 +47,6 @@ const Register = () => {
           <div className="form">
             <div className="form-left">
               <div className="form-group">
-                <label htmlFor="fullname">Họ và tên</label>
                 <input
                   type="text"
                   className="form-control"
@@ -56,13 +55,13 @@ const Register = () => {
                   onChange={handleChangeInput}
                   value={fullname}
                   style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                  placeholder="Họ và tên..."
                 />
 
                 <small className="form-text text-danger">{alert.fullname ? alert.fullname : ''}</small>
               </div>
 
               <div className="form-group">
-                <label htmlFor="username">Tên tài khoản</label>
                 <input
                   type="text"
                   className="form-control"
@@ -71,6 +70,7 @@ const Register = () => {
                   onChange={handleChangeInput}
                   value={username.toLowerCase().replace(/ /g, '')}
                   style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                  placeholder="Tên tài khoản..."
                 />
 
                 <small className="form-text text-danger">{alert.username ? alert.username : ''}</small>
@@ -100,7 +100,6 @@ const Register = () => {
             </div>
             <div className="form-right">
               <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Email</label>
                 <input
                   type="email"
                   className="form-control"
@@ -109,14 +108,13 @@ const Register = () => {
                   onChange={handleChangeInput}
                   value={email}
                   style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                  placeholder="Email..."
                 />
 
                 <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
               </div>
 
               <div className="form-group">
-                <label htmlFor="exampleInputPassword1">Mật khẩu </label>
-
                 <div className="pass">
                   <input
                     type={typePass ? 'text' : 'password'}
@@ -126,6 +124,7 @@ const Register = () => {
                     value={password}
                     name="password"
                     style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                    placeholder="Mật khẩu..."
                   />
 
                   <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Ẩn' : 'Hiện'}</small>
@@ -135,8 +134,6 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="cf_password">Nhập lại mật khẩu</label>
-
                 <div className="pass">
                   <input
                     type={typeCfPass ? 'text' : 'password'}
@@ -149,6 +146,7 @@ const Register = () => {
                       background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
                       borderRadius: '50px',
                     }}
+                    placeholder="Nhập lại mật khẩu..."
                   />
 
                   <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Ẩn' : 'Hiện'}</small>

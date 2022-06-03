@@ -40,7 +40,6 @@ const Login = () => {
           <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
           <img src={LogoUTC2}></img>
           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email</label>
             <input
               type="email"
               className="form-control"
@@ -50,12 +49,11 @@ const Login = () => {
               onChange={handleChangeInput}
               value={email}
               style={{ borderRadius: '50px' }}
+              placeholder="Email..."
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
-
             <div className="pass">
               <input
                 type={typePass ? 'text' : 'password'}
@@ -65,6 +63,7 @@ const Login = () => {
                 value={password}
                 name="password"
                 style={{ borderRadius: '50px' }}
+                placeholder="Mật khẩu..."
               />
 
               <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Ẩn' : 'Hiện'}</small>
