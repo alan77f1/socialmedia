@@ -37,7 +37,9 @@ const Login = () => {
           UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
         </div>
         <form onSubmit={handleSubmit}>
-          <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
+          <h3 className="text-uppercase text-center mb-2" style={{ color: '#002F77' }}>
+            UTC2 News
+          </h3>
           <img src={LogoUTC2}></img>
           <div className="form-group">
             <input
@@ -70,20 +72,30 @@ const Login = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-warning w-100" disabled={email && password ? false : true}>
+          <button
+            type="submit"
+            className="btn btn-warning w-100"
+            disabled={email && password ? false : true}
+            style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600' }}
+          >
             Đăng Nhập
           </button>
 
-          <Link to="/forgot_password" style={{ color: '#0075FF' }}>
+          <Link
+            to="/forgot_password"
+            style={{ color: '#0075FF', margin: '12px 0 10px 139px', borderBottom: '1px solid #dbdbdb', width: '100px' }}
+          >
             Quên Mật Khẩu?
           </Link>
-
-          <p className="my-2">
-            Chưa có tài khoản?{' '}
-            <Link to="/register" style={{ color: '#0075FF' }}>
-              Đăng Ký
-            </Link>
-          </p>
+          <Link to="/register">
+            <button
+              type="submit"
+              className="btn btn-success w-100"
+              style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600', marginTop: '20px' }}
+            >
+              Đăng ký tài khoản
+            </button>
+          </Link>
         </form>
       </div>
     </Helmet>
