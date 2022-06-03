@@ -33,6 +33,9 @@ const Login = () => {
   return (
     <Helmet title="Đăng nhập">
       <div className="auth_page">
+        <div className="auth_page-title">
+          UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
+        </div>
         <form onSubmit={handleSubmit}>
           <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
           <img src={LogoUTC2}></img>
