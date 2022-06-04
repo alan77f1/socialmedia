@@ -15,7 +15,15 @@ const SideBarLeft = () => {
   return (
     <div className="sidebar">
       <ul classFName="sidebar-List">
-        <li className="sidebar-Item" style={{ marginTop: '10px' }}>
+        <Link to="/discover">
+          <li className="sidebar-Item" style={{ marginTop: '10px' }}>
+            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+            <div className="sidebar-ItemText">
+              <span className="sidebar-ItemName">Trang chủ</span>
+            </div>
+          </li>
+        </Link>
+        <li className="sidebar-Item">
           <UserInfo user={auth.user} />
         </li>
         <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
@@ -33,8 +41,34 @@ const SideBarLeft = () => {
             </div>
           </li>
         </Link>
+
+        <Link to="/discover" className="sidebar-Itemlink">
+          <li className="sidebar-Item">
+            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+            <div className="sidebar-ItemText">
+              <span className="sidebar-ItemName">Thông báo</span>
+            </div>
+          </li>
+        </Link>
+        <Link to="/discover" className="sidebar-Itemlink">
+          <li className="sidebar-Item">
+            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+            <div className="sidebar-ItemText">
+              <span className="sidebar-ItemName">Đổi mật khẩu</span>
+            </div>
+          </li>
+        </Link>
+
+        <Link to="/discover" className="sidebar-Itemlink">
+          <li className="sidebar-Item">
+            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+            <div className="sidebar-ItemText">
+              <span className="sidebar-ItemName">Đăng xuất</span>
+            </div>
+          </li>
+        </Link>
       </ul>
-      <div className="ads">
+      {/* <div className="ads">
         <div className="adsTitle">Được tài trợ</div>
         <ul className="adsList">
           <li className="adsItem">
@@ -54,7 +88,7 @@ const SideBarLeft = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div className="sidebar-Policies">
         <div style={{ opacity: 1 }} className="my-2">
           <a
