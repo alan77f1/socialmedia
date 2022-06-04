@@ -34,11 +34,21 @@ const InputComment = ({ children, post, onReply, setOnReply }) => {
     if (setOnReply) return setOnReply(false);
   };
   return (
-    <form className="card-footer comment_input" onSubmit={handleSubmit}>
+    <form
+      className="card-footer comment_input"
+      onSubmit={handleSubmit}
+      style={{ border: 'none', borderRadius: '10px' }}
+    >
       {children}
       {!setOnReply && <UserImg user={auth.user} />}
 
-      <input type="text" placeholder="Viết bình luận..." value={content} onChange={(e) => setContent(e.target.value)} />
+      <input
+        type="text"
+        placeholder="Viết bình luận..."
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+        style={{ border: 'none', borderRadius: '50px', padding: '6px 10px', backgroundColor: '#F0F2F5' }}
+      />
 
       <Icons setContent={setContent} content={content} />
     </form>

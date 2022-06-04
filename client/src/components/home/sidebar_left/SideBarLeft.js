@@ -1,29 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import UTC2Ads from '../../../assets/images/utc2ads.jpg';
 import UTC2News from '../../../assets/images/utc2media.jpg';
 import ImgPosts from '../../../assets/sidebar/posts.png';
 import ImgDiscover from '../../../assets/sidebar/discover.png';
+import { logout } from '../../../redux/actions/authAction';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
+import ChangePassword from '../../profile/changePassword';
 
 const SideBarLeft = () => {
+  const [showDialogPassword, setShowDialogPassword] = useState(false);
   const dispatch = useDispatch();
 
   const { auth } = useSelector((state) => state);
   return (
     <div className="sidebar">
       <ul classFName="sidebar-List">
-        <Link to="/discover">
-          <li className="sidebar-Item" style={{ marginTop: '10px' }}>
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Trang chủ</span>
-            </div>
-          </li>
-        </Link>
-        <li className="sidebar-Item">
+        <li className="sidebar-Item" style={{ marginTop: '10px' }}>
           <UserInfo user={auth.user} />
         </li>
         <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
@@ -41,21 +36,8 @@ const SideBarLeft = () => {
             </div>
           </li>
         </Link>
-
-        <li className="sidebar-Item">
-          <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-          <div className="sidebar-ItemText">
-            <span className="sidebar-ItemName">Đổi mật khẩu</span>
-          </div>
-        </li>
-
-        <li className="sidebar-Item">
-          <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-          <div className="sidebar-ItemText">
-            <span className="sidebar-ItemName">Đăng xuất</span>
-          </div>
-        </li>
       </ul>
+
       <div className="ads">
         <div className="adsTitle">Được tài trợ</div>
         <ul className="adsList">

@@ -29,7 +29,7 @@ const MenuRight = () => {
           <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ transform: 'translateX(60px)' }}>
             <NotifyModal />
           </div>
-        </li>
+        </li> */}
 
         <li className="nav-item dropdown" style={{ opacity: 1 }}>
           <span
@@ -62,9 +62,9 @@ const MenuRight = () => {
               Đăng xuất
             </Link>
           </div>
-        </li> */}
+        </li>
       </ul>
-      {/* {showDialogPassword && <ChangePassword setShowDialogPassword={setShowDialogPassword} />} */}
+      {showDialogPassword && <ChangePassword setShowDialogPassword={setShowDialogPassword} />}
     </div>
   );
 };
