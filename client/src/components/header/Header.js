@@ -30,7 +30,6 @@ const Header = () => {
               UTC2 News
             </p>
           </Link>
-          <Search />
         </div>
 
         <MenuControl />

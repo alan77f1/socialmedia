@@ -120,12 +120,13 @@
 
 /* right side bar */
 .suggestions-item {
-  width: 310px;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  width: 100%;
   padding: 15px 12px;
-  margin: 15px 0 15px 18px;
+  background: #ffffff;
+}
+.suggestions-item:hover {
   background: #f0f2f5;
+  cursor: pointer;
 }
 
 /* btn follow */

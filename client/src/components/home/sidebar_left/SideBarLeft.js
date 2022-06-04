@@ -41,15 +41,6 @@ const SideBarLeft = () => {
             </div>
           </li>
         </Link>
-
-        <Link to="/discover" className="sidebar-Itemlink">
-          <li className="sidebar-Item">
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Thông báo</span>
-            </div>
-          </li>
-        </Link>
         <Link to="/discover" className="sidebar-Itemlink">
           <li className="sidebar-Item">
             <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
@@ -68,7 +59,7 @@ const SideBarLeft = () => {
           </li>
         </Link>
       </ul>
-      {/* <div className="ads">
+      <div className="ads">
         <div className="adsTitle">Được tài trợ</div>
         <ul className="adsList">
           <li className="adsItem">
@@ -88,7 +79,7 @@ const SideBarLeft = () => {
             </a>
           </li>
         </ul>
-      </div> */}
+      </div>
       <div className="sidebar-Policies">
         <div style={{ opacity: 1 }} className="my-2">
           <a
