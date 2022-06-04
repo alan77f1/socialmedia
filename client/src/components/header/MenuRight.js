@@ -6,6 +6,7 @@ import Avatar from '../Avatar';
 import NotifyModal from '../NotifyModal';
 import ChangePassword from '../profile/changePassword';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import Search from './Search';
 
 const MenuRight = () => {
   const [showDialogPassword, setShowDialogPassword] = useState(false);
@@ -16,7 +17,10 @@ const MenuRight = () => {
   return (
     <div className="menu menu-right">
       <ul className="navbar-nav flex-row">
-        <li className="menu-middle-item_bell">
+        <li>
+          <Search />
+        </li>
+        {/* <li className="menu-middle-item_bell">
           <NotificationsIcon style={{ fontSize: 'inherit', color: '#002f77', marginRight: '5px' }} />
 
           <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,9 +62,9 @@ const MenuRight = () => {
               Đăng xuất
             </Link>
           </div>
-        </li>
+        </li> */}
       </ul>
-      {showDialogPassword && <ChangePassword setShowDialogPassword={setShowDialogPassword} />}
+      {/* {showDialogPassword && <ChangePassword setShowDialogPassword={setShowDialogPassword} />} */}
     </div>
   );
 };

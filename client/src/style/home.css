@@ -65,7 +65,7 @@
 }
 
 .post_bottom_action_item-Text {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
 }
 
@@ -103,7 +103,7 @@
 
 .cLeft {
   width: 345px;
-  padding: 19px 0;
+  padding: 16px 0 0 0;
 }
 
 .cMiddle {
@@ -112,16 +112,21 @@
 
 .cRight {
   width: 345px;
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  margin: 16px 0 0 0;
+  box-shadow: 0 0 4px #ddd;
 }
 
 /* right side bar */
 .suggestions-item {
-  width: 330px;
-  box-shadow: 0 0 4px #ddd;
-  border-radius: 15px;
-  padding: 15px 20px;
-  margin: 15px 0px;
+  width: 100%;
+  padding: 15px 12px;
   background: #ffffff;
+}
+.suggestions-item:hover {
+  background: #f0f2f5;
+  cursor: pointer;
 }
 
 /* btn follow */

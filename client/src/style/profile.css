@@ -194,7 +194,7 @@
 }
 .profile_tab button.active {
   opacity: 0.8;
-  font-weight: 700;
+  font-weight: 650;
   color: #002f77;
   background: #f0f2f5;
   width: 100%;
@@ -242,8 +242,8 @@
   height: 340px;
   width: 100%;
   object-fit: cover;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .profileTopWrap {

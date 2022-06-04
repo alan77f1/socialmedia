@@ -35,6 +35,9 @@ const MenuControl = () => {
             </Link>
           </li>
         ))}
+        <li className="menu-middle-item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
+          <AddCircleIcon style={{ fontSize: 'inherit', color: '#002f77' }} />
+        </li>
       </ul>
     </div>
   );

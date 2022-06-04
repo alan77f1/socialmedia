@@ -3,43 +3,23 @@ import { useSelector, useDispatch } from 'react-redux';
 import UserCard from '../UserCard';
 import FollowBtn from '../button/FollowBtn';
 import LoadIcon from '../../assets/images/loading.gif';
-import UTC2Ads from '../../assets/images/utc2ads.jpg';
-import UTC2News from '../../assets/images/utc2media.jpg';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
+import LoadData from '../alert/LoadData';
 
 const RightSideBar = () => {
   const { auth, suggestions } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   return (
-    <div className="mt-3">
-      <div className="ads">
-        <div className="adsTitle">Được tài trợ</div>
-        <ul className="adsList">
-          <li className="adsItem">
-            <a rel="noreferrer" target="_blank" href="https://utc2.edu.vn/">
-              <img src={UTC2Ads} alt="" className="adsItemImg" />
-              <div className="adsItemContent">
-                <div className="adsItemContentHeader">UTC2</div>
-              </div>
-            </a>
-          </li>
-          <li className="adsItem">
-            <a rel="noreferrer" target="_blank" href="https://www.facebook.com/utc2news">
-              <img src={UTC2News} alt="" className="adsItemImg" />
-              <div className="adsItemContent">
-                <div className="adsItemContentHeader">UTC2 News</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div>
       <div className="d-flex align-items-center my-2">
-        <h6 className="text-black">Gợi ý cho bạn</h6>
+        <h6 className="text-black" style={{ color: '#9A9CA1', marginLeft: '20px' }}>
+          Gợi ý cho bạn
+        </h6>
         {!suggestions.loading && (
           <h6 // className="fas fa-redo"
             className="text-black"
-            style={{ cursor: 'pointer', marginLeft: '154px' }}
+            style={{ cursor: 'pointer', marginLeft: '125px', color: '#9A9CA1' }}
             onClick={() => dispatch(getSuggestions(auth.token))}
           >
             Xem thêm
@@ -48,7 +28,7 @@ const RightSideBar = () => {
       </div>
 
       {suggestions.loading ? (
-        <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
+        <LoadData />
       ) : (
         <div className="suggestions ">
           {suggestions.users.map((user) => (

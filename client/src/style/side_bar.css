@@ -3,6 +3,10 @@
   top: 57px; /*56px header + 1px header border bottom*/
   height: calc(100vh - 56px);
   overflow-y: scroll;
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  box-shadow: 0 0 4px #ddd;
+  padding: 0 10px;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -31,15 +35,14 @@
 .sidebar-Item,
 .shortcuts {
   padding: 8px 8px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 }
 
 .sidebar-Itemlink {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
 }
@@ -62,7 +65,7 @@
 .shortcutsImg {
   width: 36px;
   height: 36px;
-  border-radius: 8px;
+  border-radius: 50px;
   object-fit: cover;
 }
 

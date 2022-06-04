@@ -7,6 +7,7 @@ import PostCard from '../../components/home/create_post/PostCard';
 import RightSideBar from '../../components/home/RightSideBar';
 import SideBar from '../../components/home/sidebar_left/SideBarLeft';
 import Helmet from '../../components/Helmet';
+import LoadData from '../../components/alert/LoadData';
 
 const Post = () => {
   const { id } = useParams();
@@ -31,7 +32,7 @@ const Post = () => {
           <SideBar />
         </div>
         <div className="cMiddle">
-          {post.length === 0 && <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />}
+          {post.length === 0 && <LoadData />}
 
           {post.map((item) => (
             <PostCard key={item._id} post={item} />

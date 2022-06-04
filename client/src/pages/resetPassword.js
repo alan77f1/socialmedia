@@ -62,13 +62,16 @@ function ResetPassword() {
   return (
     <Helmet title="Đặt lại mật khẩu">
       <div className="auth_page">
+        <div className="auth_page-title">
+          UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
+        </div>
         <form onSubmit={handleSubmit}>
-          <h3 className="text-uppercase text-center mb-4">UTC2 News</h3>
+          <h3 className="text-uppercase text-center mb-4" style={{ color: '#002F77' }}>
+            UTC2 News
+          </h3>
           <img src={LogoUTC2}></img>
           <div className="form-group">
-            <h5 className="text-uppercase text-center mb-4">Đặt Lại Mật Khẩu</h5>
-
-            <label htmlFor="exampleInputPassword1">Mật Khẩu</label>
+            <h5 className="text-uppercase text-center mb-4">Đặt lại mật khẩu</h5>
 
             <div className="pass">
               <input
@@ -79,6 +82,7 @@ function ResetPassword() {
                 value={password}
                 name="password"
                 style={{ background: `${alert.password ? '#fd2d6a14' : ''}` }}
+                placeholder="Mật khẩu mới..."
               />
 
               <small onClick={() => setTypePass(!typePass)}>{typePass ? 'Hide' : 'Show'}</small>
@@ -88,8 +92,6 @@ function ResetPassword() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="cf_password">Nhập Lại Mật Khẩu</label>
-
             <div className="pass">
               <input
                 type={typeCfPass ? 'text' : 'password'}
@@ -99,6 +101,7 @@ function ResetPassword() {
                 value={cf_password}
                 name="cf_password"
                 style={{ background: `${alert.cf_password ? '#fd2d6a14' : ''}` }}
+                placeholder="Nhập lại mật khẩu..."
               />
 
               <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
@@ -106,8 +109,8 @@ function ResetPassword() {
 
             <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
           </div>
-          <button type="submit" className="btn btn-warning w-100">
-            Hoàn Thành
+          <button type="submit" className="btn btn-success w-100">
+            Xác nhận
           </button>
         </form>
       </div>
