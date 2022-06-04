@@ -14,13 +14,13 @@ const Header = () => {
       >
         <div className="headerLeft">
           <Link to="/" className="logo">
-            <img src={UTC2} alt="" style={{ width: '40px', marginRight: '2px' }} />
+            <img src={UTC2} alt="" style={{ width: '45px', marginRight: '2px' }} />
           </Link>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <p
               style={{
-                margin: '1px 12px 1px 1px',
-                fontSize: '17px',
+                margin: '1px 12px 1px 5px',
+                fontSize: '18px',
                 width: '100px',
                 height: '100%',
                 color: '#002F77',
@@ -30,7 +30,6 @@ const Header = () => {
               UTC2 News
             </p>
           </Link>
-          <Search />
         </div>
 
         <MenuControl />

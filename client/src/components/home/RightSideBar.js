@@ -11,7 +11,7 @@ const RightSideBar = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="mt-3">
+    <div>
       <div className="d-flex align-items-center my-2">
         <h6 className="text-black" style={{ color: '#9A9CA1', marginLeft: '20px' }}>
           Gợi ý cho bạn
