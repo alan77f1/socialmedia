@@ -41,23 +41,20 @@ const SideBarLeft = () => {
             </div>
           </li>
         </Link>
-        <Link to="/discover" className="sidebar-Itemlink">
-          <li className="sidebar-Item">
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Đổi mật khẩu</span>
-            </div>
-          </li>
-        </Link>
 
-        <Link to="/discover" className="sidebar-Itemlink">
-          <li className="sidebar-Item">
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Đăng xuất</span>
-            </div>
-          </li>
-        </Link>
+        <li className="sidebar-Item">
+          <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+          <div className="sidebar-ItemText">
+            <span className="sidebar-ItemName">Đổi mật khẩu</span>
+          </div>
+        </li>
+
+        <li className="sidebar-Item">
+          <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
+          <div className="sidebar-ItemText">
+            <span className="sidebar-ItemName">Đăng xuất</span>
+          </div>
+        </li>
       </ul>
       <div className="ads">
         <div className="adsTitle">Được tài trợ</div>
