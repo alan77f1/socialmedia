@@ -23,6 +23,13 @@ const NotifyModal = () => {
     <div style={{ minWidth: '425px' }}>
       <div className="d-flex justify-content-between align-items-center px-3">
         <h4 style={{ margin: '15px 0' }}>Thông Báo</h4>
+        <div
+          className="btn btn-warning mr-2"
+          style={{ cursor: 'pointer', color: '#ffffff', padding: '8px', fontSize: '15px' }}
+          onClick={handleDeleteAll}
+        >
+          Xoá Tất Cả
+        </div>
       </div>
 
       {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" style={{ width: '395px' }} />}
@@ -52,15 +59,6 @@ const NotifyModal = () => {
             </Link>
           </div>
         ))}
-      </div>
-
-      <hr className="my-1" />
-      <div
-        className="text-right mr-2"
-        style={{ cursor: 'pointer', color: 'black', padding: '10px', margin: '10px 0 3px 0' }}
-        onClick={handleDeleteAll}
-      >
-        Xoá Tất Cả
       </div>
     </div>
   );
