@@ -13,13 +13,13 @@ const Carousel = ({ images, id }) => {
         ))}
       </ol>
 
-      <div className="carousel-inner">
+      <div className="carousel-inner" style={{ padding: '2px 40px' }}>
         {images.map((img, index) => (
           <div key={index} className={`carousel-item ${isActive(index)}`}>
             {img.url.match(/video/i) ? (
               <video controls src={img.url} className="d-block w-100" alt={img.url} />
             ) : (
-              <img src={img.url} className="d-block w-100" alt={img.url} />
+              <img src={img.url} className="d-block w-100" alt={img.url} style={{ borderRadius: '22px' }} />
             )}
           </div>
         ))}
