@@ -50,7 +50,7 @@
 .sidebar-Itemlink:hover,
 .sidebar-Item:hover,
 .shortcuts:hover {
-  background-color: #f9cb00;
+  background-color: #f0f2f5;
   cursor: pointer;
   transition: all 0.25s;
 }

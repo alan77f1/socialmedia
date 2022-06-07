@@ -79,16 +79,25 @@ const StatusModal = () => {
       <form onSubmit={handleSubmit}>
         <div className="status_header">
           <h5 style={{ marginLeft: '178px' }}>Tạo bài viết mới</h5>
-          <span
+
+          <button
+            className="btn  btn_close"
             onClick={() =>
               dispatch({
                 type: GLOBALTYPES.STATUS,
                 payload: false,
               })
             }
+            style={{
+              borderRadius: '50px',
+              background: '#E4E6EB',
+              fontWeight: 'bold',
+              color: '#606770',
+              fontSize: '17px',
+            }}
           >
             &times;
-          </span>
+          </button>
         </div>
 
         <div className="status_body">
