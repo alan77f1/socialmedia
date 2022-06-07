@@ -89,8 +89,8 @@
 }
 .edit_profile .btn_close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 30px;
+  right: 543px;
 }
 .edit_profile .info_avatar {
   width: 150px;

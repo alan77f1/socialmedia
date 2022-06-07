@@ -20,6 +20,7 @@
 .status_header {
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
   align-items: center;
   border-bottom: 1px solid #ddd;
   transform: translateY(-13px);
