@@ -51,13 +51,17 @@ const EditProfile = ({ setOnEdit }) => {
   return (
     <div className="edit_profile">
       <button
-        className="btn btn-danger btn_close"
+        className="btn btn_close"
         onClick={() => setOnEdit(false)}
         style={{
           borderRadius: '50px',
+          background: '#E4E6EB',
+          fontWeight: 'bold',
+          color: '#606770',
+          fontSize: '20px',
         }}
       >
-        Đóng
+        &times;
       </button>
 
       <form onSubmit={handleSubmit}>

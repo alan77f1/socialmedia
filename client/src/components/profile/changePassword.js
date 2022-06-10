@@ -38,13 +38,17 @@ const ChangePassword = ({ setShowDialogPassword }) => {
   return (
     <div className="edit_profile">
       <button
-        className="btn btn-danger btn_close"
+        className="btn  btn_close"
         onClick={() => setShowDialogPassword(false)}
         style={{
           borderRadius: '50px',
+          background: '#E4E6EB',
+          fontWeight: 'bold',
+          color: '#606770',
+          fontSize: '17px',
         }}
       >
-        Đóng
+        &times;
       </button>
 
       <form onSubmit={handleSubmit}>
@@ -82,7 +86,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
                 borderRadius: '50px',
               }}
             />
-            <small onClick={() => setTypeOldPass(!typeOldPass)}>{typeOldPass ? 'Hide' : 'Show'}</small>
+            <small onClick={() => setTypeOldPass(!typeOldPass)}>{typeOldPass ? 'Ẩn' : 'Hiện'}</small>
           </div>
           <small className="form-text text-danger">{alert.oldPassword ? alert.oldPassword : ''}</small>
         </div>
@@ -101,7 +105,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
                 borderRadius: '50px',
               }}
             />
-            <small onClick={() => setTypeNewPass(!typeNewPass)}>{typeNewPass ? 'Hide' : 'Show'}</small>
+            <small onClick={() => setTypeNewPass(!typeNewPass)}>{typeNewPass ? 'Ẩn' : 'Hiện'}</small>
           </div>
           <small className="form-text text-danger">{alert.newPassword ? alert.newPassword : ''}</small>
         </div>
@@ -120,7 +124,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
                 borderRadius: '50px',
               }}
             />
-            <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Hide' : 'Show'}</small>
+            <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Ẩn' : 'Hiện'}</small>
           </div>
           <small className="form-text text-danger">{alert.cf_newPassword ? alert.cf_newPassword : ''}</small>
         </div>

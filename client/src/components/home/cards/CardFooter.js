@@ -56,7 +56,7 @@ const CardFooter = ({ post }) => {
           }}
         >
           <i
-            className="fa fa-thumbs-up "
+            className="fa fa-heart"
             style={{
               cursor: 'pointer',
               fontSize: '16px',

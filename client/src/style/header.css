@@ -34,9 +34,10 @@
 }
 .header .menu .notify_length {
   position: absolute;
+
   display: block;
   font-size: 14px;
-  min-width: 18px;
+  min-width: 20px;
   min-height: 18px;
   text-align: center;
   line-height: 18px;
@@ -44,8 +45,9 @@
   border-radius: 20px;
   color: #fff;
   top: 4px;
-  right: 3px;
+  right: 56px;
 }
+
 /* ---------- Header Search -------- */
 .header .search_form {
   position: relative;
