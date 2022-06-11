@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
 import { createPost, updatePost } from '../../../redux/actions/postAction';
-import Icons from './Icons';
+import Icons from '../../Icons';
 import { imageShow, videoShow } from '../../../utils/mediaShow';
 
 const StatusModal = () => {
@@ -79,16 +79,25 @@ const StatusModal = () => {
       <form onSubmit={handleSubmit}>
         <div className="status_header">
           <h5 style={{ marginLeft: '178px' }}>Tạo bài viết mới</h5>
-          <span
+
+          <button
+            className="btn  btn_close"
             onClick={() =>
               dispatch({
                 type: GLOBALTYPES.STATUS,
                 payload: false,
               })
             }
+            style={{
+              borderRadius: '50px',
+              background: '#E4E6EB',
+              fontWeight: 'bold',
+              color: '#606770',
+              fontSize: '17px',
+            }}
           >
             &times;
-          </span>
+          </button>
         </div>
 
         <div className="status_body">
@@ -138,7 +147,11 @@ const StatusModal = () => {
               {!stream && (
                 <>
                   <div className="file_upload ">
-                    <button className="btn btn-primary w-100" type="submit" style={{ borderRadius: '50px' }}>
+                    <button
+                      className="btn btn-warning w-100"
+                      type="submit"
+                      style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
+                    >
                       <input
                         type="file"
                         name="file"
@@ -154,7 +167,11 @@ const StatusModal = () => {
               )}
             </div>
             <div className="status_footer w-50">
-              <button className="btn btn-primary w-100" type="submit" style={{ borderRadius: '50px' }}>
+              <button
+                className="btn btn-warning w-100"
+                type="submit"
+                style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
+              >
                 Đăng bài
               </button>
             </div>

@@ -59,7 +59,10 @@ const CardHeader = ({ post }) => {
         <div className="card_name">
           <h6 className="m-0">
             <Link to={`/profile/${post.user._id}`} className="text-dark">
-              @{post.user.username}
+              {post.user.fullname}
+              <small style={{ opacity: 0.8, fontSize: '1rem', color: '#536471', marginLeft: '5px' }}>
+                @{post.user.username}
+              </small>
             </Link>
           </h6>
           <small className="text-muted">{moment(post.createdAt).fromNow()}</small>

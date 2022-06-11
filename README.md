@@ -1,63 +1,67 @@
-# THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
+# Intern Project Years 2021-2022
 
-Họ và tên: Bùi Văn Tân
+Full name: Bui Van Tan
 
-- Lớp: Công nghệ thông tin - K60
+- Class: Information Technology - K60
 
-## Đề tài: Quản lý mạng xã hội UTC2
+## Topic: Managing social networks UTC2
 
-Giảng viên: Phạm Thị Miên
+Lecturer: Pham Thi Mien
 
-## Phần 1: Công nghệ sử dụng:
+## Part 1: Used Technology:
 
-- [MongoDb](https://www.mongodb.com/)
-- [React](https://reactjs.org/)
-- [Nodejs](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [Redux](https://redux.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Socket.io](https://socket.io/)
+- [MongoDb] (https://www.mongodb.com/)
+- [React] (https://reactjs.org/)
+- [Nodejs] (https://nodejs.org/en/)
+- [Express] (https://expressjs.com/)
+- [Redux] (https://redux.js.org/)
+- [Bootstrap] (https://getbootstrap.com/)
+- [Socket.io] (https://socket.io/)
 
-## Phần 2: Các chức năng đã hoàn thành:
+## Part 2: Completed features:
 
-1. Xây dựng cơ sở dữ liệu với mongodb
-2. Quản lý hệ thống :
-   - Đăng ký tài khoản
-   - Đổi mât khẩu
-   - Lấy lại mật khẩu thông qua gửi mail.
-   - Đăng nhập
-   - Đăng xuất
-3. Quản lý bài viết:
-   - Thêm sửa xóa bài viết
-   - Upload ảnh và video
-   - Hỗ trọ đăng và hiển thị nhiều ảnh
-   - Lưu bài viết
-   - Chia sẻ bài viết lên các trang mạng xã hội khác như facebook , Twitter
-   - Bình luận và thả tim trên bài viết
-4. Quản lý thông báo
-   - Cho những ai đang theo dõi bạn
-   - Bài viết mới nhất
-   - Những ai đã bình luận trên bài viết của bạn
-5. Quản lý bình luận:
-   - Phản hồi bình luận,
-   - Bày tỏ cảm xúc: thích bài viết, thích bình luận (thích)
-6. Tìm kiếm người dùng theo tên
-7. Quản lý thông tin trang cá nhân:
-   - Chỉnh sửa thông tin
-   - Số người theo dõi
-   - Đang theo dõi
-   - Xem những bài viết hiện tại và đã lưu
-8. Mã hóa mật khẩu người dùng
-9. Xem thêm bài viết (load more)
-10. Gợi ý các bạn bè liên quan.
-11. Hiển thị thông tin chi tiết bài viết.
-12. Deploy website.
+- Build database with mongodb
+- Management system:
+  - Account Sign
+  - Change password
+  - Retrieve password via email.
+  - Log in
+  - Log out
+- Post manager:
 
-## Phần 3: Các chức năng chưa hoàn thành:
+  - Add mod to delete posts
+  - Upload pictures and videos
+  - Support to register and display multiple images
+  - Save post
+  - Share the post on other social networking sites like facebook, Twitter
+  - Comment and drop hearts on the post
 
-## Hướng dẫn sử dụng:
+- Message manager:
+  - Send message to other users
+  - Display message
+  - Delete message
+  - Search message
+- Notify manager:
+  - For those who are following you
+  - Latest posts
+  - The ai commented on your bai viet
+- Comment manager:
+  - Comments post,
+  - Express feelings: like the post, like to comment (like)
+- Search for user in name
+- Personal information management page:
+  - Edit information
+  - Follow the number of people
+  - Follow
+  - View current and saved posts
+- Suggest related friends.
 
-1. Clone vào thư mục của bạn.
-2. Tạo database với mongodb trên [MongoDb Atlas](https://cloud.mongodb.com) và tạo file .env và thêm các thông tin cần thiết dựa vào file .env.example
+## Part 3: Using instructions:
 
-Xin Cảm Ơn!
+### Step 1. git clone https://github.com/buivantann/Social_Network.git
+
+### Step 2. Create database with mongodb on [MongoDb Atlas](https://cloud.mongodb.com) and create .env file and add necessary information based on .env.example file
+
+### Step 3. npm install && npm run dev
+
+Thank you!

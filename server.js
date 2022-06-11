@@ -1,8 +1,8 @@
 const express = require('express');
-const connectDatabase = require('./config/database');
+const connectDatabase = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const SocketServer = require('./Socket');
+const SocketServer = require('./SocketServer');
 const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
@@ -28,6 +28,7 @@ app.use('/api', require('./routes/userRouter'));
 app.use('/api', require('./routes/postRouter'));
 app.use('/api', require('./routes/commentRouter'));
 app.use('/api', require('./routes/notifyRouter'));
+app.use('/api', require('./routes/messageRouter'));
 
 // Connecting to database
 connectDatabase();

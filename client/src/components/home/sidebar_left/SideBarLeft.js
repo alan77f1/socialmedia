@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import UTC2Ads from '../../../assets/images/utc2ads.jpg';
 import UTC2News from '../../../assets/images/utc2media.jpg';
-import ImgPosts from '../../../assets/sidebar/posts.png';
-import ImgDiscover from '../../../assets/sidebar/discover.png';
-import { logout } from '../../../redux/actions/authAction';
 import { Link } from 'react-router-dom';
 import UserInfo from './UserInfo';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
-import ChangePassword from '../../profile/changePassword';
 
 const SideBarLeft = () => {
-  const [showDialogPassword, setShowDialogPassword] = useState(false);
   const dispatch = useDispatch();
 
   const { auth } = useSelector((state) => state);
@@ -22,17 +17,17 @@ const SideBarLeft = () => {
           <UserInfo user={auth.user} />
         </li>
         <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
-          <img src={ImgPosts} alt="" className="sidebar-ItemBadge" />
-          <div className="sidebar-ItemText">
-            <span className="sidebar-ItemName">Thêm bài viết</span>
+          <div className="sidebar-ItemText" style={{ display: 'contents', width: '100%', maxWidth: '300px' }}>
+            <i class="fas fa-plus-circle" style={{ fontSize: '35px', color: '#002F77' }} />
+            <span style={{ fontSize: '17px', color: '#000', marginLeft: '8px' }}> Thêm bài viết</span>
           </div>
         </li>
 
-        <Link to="/discover" className="sidebar-Itemlink">
+        <Link to="/message" className="sidebar-Itemlink" style={{ textDecoration: 'none' }}>
           <li className="sidebar-Item">
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Khám phá</span>
+            <div className="sidebar-ItemText" style={{ display: 'contents', width: '100%', maxWidth: '300px' }}>
+              <i className="fab fa-facebook-messenger" style={{ fontSize: '35px', color: '#002F77' }} />
+              <span style={{ fontSize: '17px', color: '#000', marginLeft: '8px' }}>Tin nhắn</span>
             </div>
           </li>
         </Link>

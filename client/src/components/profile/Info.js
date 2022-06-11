@@ -78,7 +78,11 @@ const Info = ({ id, auth, profile, dispatch }) => {
             </div>
             <div className="container_content-title">
               {user._id === auth.user._id ? (
-                <button className="btn btn-primary" style={{ borderRadius: '50px' }} onClick={() => setOnEdit(true)}>
+                <button
+                  className="btn btn-warning"
+                  style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
+                  onClick={() => setOnEdit(true)}
+                >
                   Chỉnh sửa trang cá nhân
                 </button>
               ) : (

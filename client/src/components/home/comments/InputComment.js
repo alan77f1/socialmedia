@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
-import Icons from '../create_post/Icons';
-import Comments from './Comments';
+import Icons from '../../Icons';
 import UserImg from './UserInput';
 
 const InputComment = ({ children, post, onReply, setOnReply }) => {
   const [content, setContent] = useState('');
-  const [userData, setUserData] = useState([]);
   const { auth, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 

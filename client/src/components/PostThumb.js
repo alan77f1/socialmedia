@@ -21,15 +21,15 @@ const PostThumb = ({ posts, result }) => {
             )}
 
             <div className="post_thumb_menu ">
-              <span>
-                {post.content.length < 60
+              <span style={{ fontSize: '22px' }}>
+                {post.content.length < 15
                   ? post.content
                   : readMore
                   ? post.content + ' '
-                  : post.content.slice(0, 60) + '... '}
+                  : post.content.slice(0, 15) + '... '}
               </span>
-              {post.content.length > 60 && (
-                <span className="readMore" onClick={() => setReadMore(!readMore)}>
+              {post.content.length > 15 && (
+                <span className="readMore" onClick={() => setReadMore(!readMore)} style={{ fontSize: '15px' }}>
                   {readMore ? 'Ẩn' : 'Xem thêm'}
                 </span>
               )}

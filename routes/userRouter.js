@@ -1,17 +1,19 @@
-const router = require('express').Router();
-const auth = require('../middleware/auth');
-const userController = require('../controllers/userController');
+const router = require('express').Router()
+const auth = require("../middleware/auth")
+const userCtrl = require("../controllers/userCtrl")
 
-router.get('/search', auth, userController.searchUser);
 
-router.get('/user/:id', auth, userController.getUser);
+router.get('/search', auth, userCtrl.searchUser)
 
-router.patch('/user', auth, userController.updateUser);
+router.get('/user/:id', auth, userCtrl.getUser)
 
-router.patch('/user/:id/follow', auth, userController.follow);
+router.patch('/user', auth, userCtrl.updateUser)
 
-router.patch('/user/:id/unfollow', auth, userController.unfollow);
+router.patch('/user/:id/follow', auth, userCtrl.follow)
+router.patch('/user/:id/unfollow', auth, userCtrl.unfollow)
 
-router.get('/suggestionsUser', auth, userController.suggestionsUser);
+router.get('/suggestionsUser', auth, userCtrl.suggestionsUser)
 
-module.exports = router;
+
+
+module.exports = router

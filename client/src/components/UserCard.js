@@ -46,10 +46,13 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
           <Avatar src={user.avatar} size="big-avatar" />
 
           <div style={{ transform: 'translateY(-2px)', marginLeft: '7px' }}>
-            <small className="d-block" style={{ opacity: 0.8, fontSize: '1rem' }}>
+            <span style={{ fontSize: '1rem', color: '#0F1419', fontWeight: '600' }}>
+              {msg ? showMsg(user) : user.fullname}
+            </span>
+
+            <small className="d-block" style={{ opacity: 0.8, fontSize: '1rem', color: '#536471' }}>
               @{user.username}
             </small>
-            <span style={{ fontSize: '1rem' }}>{msg ? showMsg(user) : user.fullname}</span>
           </div>
         </Link>
       </div>

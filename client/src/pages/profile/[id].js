@@ -7,8 +7,8 @@ import Saved from '../../components/profile/Saved';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProfileUsers } from '../../redux/actions/profileAction';
 import { useParams } from 'react-router-dom';
-import Helmet from '../../components/Helmet';
 import LoadData from '../../components/alert/LoadData';
+import Helmet from '../../components/Helmet';
 
 const Profile = () => {
   const { profile, auth } = useSelector((state) => state);
@@ -30,7 +30,7 @@ const Profile = () => {
           <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
           <div style={{ marginLeft: '42%', fontSize: '21px', fontWeight: '650', marginBottom: '5px' }}>
-            Quản lý bài viết
+            TTất cả bài viết
           </div>
           {auth.user._id === id && (
             <div className="profile_tab">

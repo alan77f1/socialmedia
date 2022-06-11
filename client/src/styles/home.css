@@ -121,7 +121,7 @@
 /* right side bar */
 .suggestions-item {
   width: 100%;
-  padding: 15px 12px;
+  padding: 11px 5px 11px 10px;
   background: #ffffff;
 }
 .suggestions-item:hover {

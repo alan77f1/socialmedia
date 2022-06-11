@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Helmet = ({ title, children }) => {
-  document.title = title + ' - UTC2 New';
+  document.title = title + ' | UTC2 New';
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
