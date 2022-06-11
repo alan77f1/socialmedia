@@ -59,7 +59,7 @@ img {
 
 @import url('./style/header.css');
 
-@import url('./style/side_bar.css');
+@import url('./style/sidebar-left.css');
 
 @import url('./style/profile.css');
 
@@ -67,8 +67,10 @@ img {
 
 @import url('./style/home.css');
 
-@import url('./style/status_modal.css');
+@import url('./style/status-modal.css');
 
 @import url('./style/comments.css');
 
-@import url('./style/post_thumb.css');
+@import url('./style/post-thumb.css');
+
+@import url('./style/message.css');

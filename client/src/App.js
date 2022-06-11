@@ -24,9 +24,11 @@ import io from 'socket.io-client';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
 import Socket from './socket';
 import { getNotifies } from './redux/actions/notifyAction';
+import CallModal from './components/message/CallModal';
+import Peer from 'peerjs';
 
 function App() {
-  const { auth, status, modal } = useSelector((state) => state);
+  const { auth, status, modal, call } = useSelector((state) => state);
   const { isLogged } = auth;
 
   const dispatch = useDispatch();
@@ -47,6 +49,15 @@ function App() {
     }
   }, [dispatch, auth.token]);
 
+  useEffect(() => {
+    const newPeer = new Peer(undefined, {
+      path: '/',
+      secure: true,
+    });
+
+    dispatch({ type: GLOBALTYPES.PEER, payload: newPeer });
+  }, [dispatch]);
+
   return (
     <Router>
       <Alert />
@@ -55,6 +66,7 @@ function App() {
         {auth.token && <Header />}
         {status && <StatusModal />}
         {auth.token && <Socket />}
+        {call && <CallModal />}
 
         <Route exact path="/" component={auth.token ? Home : Login} />
         <Route exact path="/register" component={isLogged ? NotFound : Register} />
