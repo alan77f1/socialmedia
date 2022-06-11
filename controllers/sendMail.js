@@ -14,7 +14,7 @@ const oauth2Client = new OAuth2(
   MAILING_SERVICE_CLIENT_ID,
   MAILING_SERVICE_CLIENT_SECRET,
   MAILING_SERVICE_REFRESH_TOKEN,
-  OAUTH_PLAYGROUND,
+  OAUTH_PLAYGROUND
 );
 
 // send mail
@@ -39,25 +39,19 @@ const sendEmail = (to, url, txt) => {
   const mailOptions = {
     from: SENDER_EMAIL_ADDRESS,
     to: to,
-    subject: 'UTC2 News',
+    subject: 'INSTAGRAM',
     html: `
-            <div>
-            <h2 style="text-align: center; text-transform: uppercase;color:#281756;">Chào mừng đến với UTC2 News.</h2>
-            <p >Xin chào mừng! Bạn đến với UTC2 News. 
-
+            <div style="max-width: 700px; margin:auto; border: 10px solid #ddd; padding: 50px 20px; font-size: 110%;">
+            <h2 style="text-align: center; text-transform: uppercase;color: teal;">Chào mừng đến với INSTAGRAM.</h2>
+            <p>Xin chúc mừng! Bạn sắp bắt đầu sử dụng INSTAGRAM.
+               Chỉ cần nhấp vào nút bên dưới để xác thực địa chỉ email của bạn.
             </p>
-
-            <p>
-               Để xác thực địa chỉ email của bạn. 
-            </p>
-
-            <p>
-            Chỉ cần nhấp vào nút bên dưới
-         </p>
-    
-            <a href=${url} style="background:#281756; text-decoration: none; color: white; padding: 10px 20px; margin: 10px 0; border-radius:10px; display: inline-block;">${txt}</a>
+            
+            <a href=${url} style="background: crimson; text-decoration: none; color: white; padding: 10px 20px; margin: 10px 0; display: inline-block;">${txt}</a>
         
-         
+            <p>Nếu nút không hoạt động vì bất kỳ lý do gì, bạn cũng có thể nhấp vào liên kết bên dưới:</p>
+        
+            <div>${url}</div>
             </div>
         `,
   };

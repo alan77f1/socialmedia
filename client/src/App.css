@@ -49,26 +49,28 @@ img {
   border-radius: 50px;
 }
 
-@import url('./style/auth.css');
+@import url('./styles/auth.css');
 
-@import url('./style/loading.css');
+@import url('./styles/loading.css');
 
-@import url('./style/header.css');
+@import url('./styles/header.css');
 
-@import url('./style/avatar.css');
+@import url('./styles/avatar.css');
 
-@import url('./style/header.css');
+@import url('./styles/header.css');
 
-@import url('./style/side_bar.css');
+@import url('./styles/sidebar-left.css');
 
-@import url('./style/profile.css');
+@import url('./styles/profile.css');
 
-@import url('./style/ads.css');
+@import url('./styles/ads.css');
 
-@import url('./style/home.css');
+@import url('./styles/home.css');
 
-@import url('./style/status_modal.css');
+@import url('./styles/status-modal.css');
 
-@import url('./style/comments.css');
+@import url('./styles/comments.css');
 
-@import url('./style/post_thumb.css');
+@import url('./styles/post-thumb.css');
+
+@import url('./styles/message.css');

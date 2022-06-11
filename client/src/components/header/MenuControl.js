@@ -9,7 +9,7 @@ import NotifyModal from '../NotifyModal';
 const MenuControl = () => {
   const navLinksHome = [{ label: 'Home', icon: 'home', path: '/' }];
 
-  const navLinksMessage = [{ label: 'discover', icon: 'explore', path: '/discover' }];
+  const navLinksMessage = [{ label: 'Message', icon: 'message', path: '/message' }];
   const dispatch = useDispatch();
   const { auth, notify } = useSelector((state) => state);
 
