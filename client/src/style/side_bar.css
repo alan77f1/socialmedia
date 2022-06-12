@@ -1,0 +1,176 @@
+.sidebar {
+  position: sticky;
+  top: 57px; /*56px header + 1px header border bottom*/
+  height: calc(100vh - 56px);
+  overflow-y: scroll;
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  box-shadow: 0 0 4px #ddd;
+  padding: 0 10px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+.sidebar:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(109, 109, 109, 0.576);
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #acacac06;
+}
+
+.sidebar-List {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-Item,
+.shortcuts {
+  padding: 8px 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sidebar-Itemlink {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-Itemlink:hover,
+.sidebar-Item:hover,
+.shortcuts:hover {
+  background-color: #f0f2f5;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.sidebar-ItemImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.shortcutsImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.sidebar-ItemBadge,
+.shortcutsBadge {
+  width: 36px;
+  height: 36px;
+}
+
+.sidebar-ItemText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  justify-content: space-between;
+}
+
+.sidebar-ItemName,
+.shortcutsName {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.sidebar-ItemName:hover {
+  text-decoration: none;
+}
+
+.shortcutsName {
+  margin-left: 8px;
+}
+
+.sidebar-ItemInfo {
+  margin-top: 5px;
+  color: #2a75d5;
+  font-size: 12px;
+  position: relative;
+  margin-left: 12px;
+}
+
+.sidebar-ItemInfo::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 2px;
+  left: -12px;
+  background-color: #2a75d5;
+  border-radius: 50%;
+}
+
+.sidebar-ItemIcon {
+  color: #cfd1d5;
+  background-color: #3a3b3c;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.sidebar-Hr {
+  border: none;
+  border-bottom: 0.5px solid rgba(187, 187, 187, 0.433);
+  margin: 8px 0;
+}
+
+.shortcutsTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.shortcutsTitleText {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.shortcutsTitleAction {
+  padding: 8px 16px;
+  color: black;
+  border-radius: 5px;
+}
+
+.shortcutsTitle:hover .shortcutsTitleAction {
+  color: rgb(57, 127, 218);
+}
+
+.shortcutsTitleAction:hover {
+  background-color: #3a3b3c3a;
+  cursor: pointer;
+}
+
+.sidebar-Policies {
+  color: #94969a;
+
+  margin: 16px 8px;
+}
+
+.sidebar-Policies a {
+  color: #94969a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar-Policies a:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+>>>>>>> 6598dce543c512dc852e791c0f08582246a291cf
 import { logout } from '../../redux/actions/authAction';
 import Avatar from '../Avatar';
 

@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+>>>>>>> 6598dce543c512dc852e791c0f08582246a291cf
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+<<<<<<< HEAD
+=======
+import NotificationsIcon from '@material-ui/icons/Notifications';
+>>>>>>> 6598dce543c512dc852e791c0f08582246a291cf
 import NotifyModal from '../NotifyModal';
 
 const MenuControl = () => {
@@ -41,11 +51,15 @@ const MenuControl = () => {
           <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span className="notify_length">{notify.data.length}</span>
           </span>
+<<<<<<< HEAD
           <div
             className="dropdown-menu"
             aria-labelledby="navbarDropdown"
             style={{ transform: 'translateX(60px)', border: 'none' }}
           >
+=======
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ transform: 'translateX(60px)' }}>
+>>>>>>> 6598dce543c512dc852e791c0f08582246a291cf
             <NotifyModal />
           </div>
         </li>

@@ -12,7 +12,11 @@ const Carousel = ({ images, id }) => {
         ))}
       </ol>
 
+<<<<<<< HEAD
       <div className="carousel-inner" style={{ padding: '2px 46px' }}>
+=======
+      <div className="carousel-inner" style={{ padding: '2px 40px' }}>
+>>>>>>> 6598dce543c512dc852e791c0f08582246a291cf
         {images.map((img, index) => (
           <div key={index} className={`carousel-item ${isActive(index)}`}>
             {img.url.match(/video/i) ? (
