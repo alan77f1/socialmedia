@@ -1,65 +1,59 @@
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import UTC2Ads from '../../../assets/images/utc2ads.jpg';
 import UTC2News from '../../../assets/images/utc2media.jpg';
-import ImgPosts from '../../../assets/sidebar/posts.png';
-import ImgDiscover from '../../../assets/sidebar/discover.png';
-import { logout } from '../../../redux/actions/authAction';
-import { Link } from 'react-router-dom';
-import UserInfo from './UserInfo';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
-import ChangePassword from '../../profile/changePassword';
+import UserInfo from './UserInfo';
 
 const SideBarLeft = () => {
-  const [showDialogPassword, setShowDialogPassword] = useState(false);
   const dispatch = useDispatch();
 
   const { auth } = useSelector((state) => state);
   return (
     <div className="sidebar">
-      <ul classFName="sidebar-List">
-        <li className="sidebar-Item" style={{ marginTop: '10px' }}>
+      <ul classFName="sidebar_list">
+        <li className="sidebar_item" style={{ marginTop: '10px' }}>
           <UserInfo user={auth.user} />
         </li>
-        <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
-          <img src={ImgPosts} alt="" className="sidebar-ItemBadge" />
-          <div className="sidebar-ItemText">
-            <span className="sidebar-ItemName">Thêm bài viết</span>
+        <li className="sidebar_item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
+          <div className="sidebar_item_text">
+            <i className="fas fa-plus-circle sidebar_item_icon" />
+            <span> Thêm bài viết</span>
           </div>
         </li>
 
-        <Link to="/discover" className="sidebar-Itemlink">
-          <li className="sidebar-Item">
-            <img src={ImgDiscover} alt="" className="sidebar-ItemBadge" />
-            <div className="sidebar-ItemText">
-              <span className="sidebar-ItemName">Khám phá</span>
+        <Link to="/message" className="sidebar_item_link" style={{ textDecoration: 'none' }}>
+          <li className="sidebar_item">
+            <div className="sidebar_item_text">
+              <i className="fab fa-facebook-messenger sidebar_item_icon" />
+              <span>Tin nhắn</span>
             </div>
           </li>
         </Link>
       </ul>
 
-      <div className="ads">
-        <div className="adsTitle">Được tài trợ</div>
-        <ul className="adsList">
-          <li className="adsItem">
+      <div className="sidebar_ads">
+        <div className="sidebar_ads_title">Được tài trợ</div>
+        <ul className="sidebar_ads_list">
+          <li className="sidebar_ads_item">
             <a rel="noreferrer" target="_blank" href="https://utc2.edu.vn/">
-              <img src={UTC2Ads} alt="" className="adsItemImg" />
-              <div className="adsItemContent">
-                <div className="adsItemContentHeader">UTC2</div>
+              <img src={UTC2Ads} alt="" className="sidebar_ads_item-img" />
+              <div className="sidebar_ads_item-content">
+                <div className="sidebar_ads_item-header">UTC2</div>
               </div>
             </a>
           </li>
-          <li className="adsItem">
+          <li className="sidebar_ads_item">
             <a rel="noreferrer" target="_blank" href="https://www.facebook.com/utc2news">
-              <img src={UTC2News} alt="" className="adsItemImg" />
-              <div className="adsItemContent">
-                <div className="adsItemContentHeader">UTC2 News</div>
+              <img src={UTC2News} alt="" className="sidebar_ads_item-img" />
+              <div className="sidebar_ads_item-content">
+                <div className="sidebar_ads_item-header">UTC2 News</div>
               </div>
             </a>
           </li>
         </ul>
       </div>
-      <div className="sidebar-Policies">
+      <div className="sidebar_Policies">
         <div style={{ opacity: 1 }} className="my-2">
           <a
             href="https://www.facebook.com/profile.php?id=100033670082606"

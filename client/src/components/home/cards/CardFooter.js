@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import LikeButton from '../../button/LikeBtn';
-import { useSelector, useDispatch } from 'react-redux';
-import { likePost, unLikePost, savePost, unSavePost } from '../../../redux/actions/postAction';
-import ShareModal from '../create_post/ShareModal';
+import { likePost, unLikePost } from '../../../redux/actions/postAction';
 import { BASE_URL } from '../../../utils/config';
+import LikeButton from '../../button/LikeBtn';
+import ShareModal from '../create_post/ShareModal';
 
 const CardFooter = ({ post }) => {
   const [isLike, setIsLike] = useState(false);

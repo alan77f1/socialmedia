@@ -1,5 +1,5 @@
+import { deleteDataAPI, getDataAPI, patchDataAPI, postDataAPI } from '../../utils/fetchData';
 import { GLOBALTYPES } from './globalTypes';
-import { postDataAPI, deleteDataAPI, getDataAPI, patchDataAPI } from '../../utils/fetchData';
 
 export const NOTIFY_TYPES = {
   GET_NOTIFIES: 'GET_NOTIFIES',

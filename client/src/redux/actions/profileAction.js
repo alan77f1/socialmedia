@@ -1,7 +1,7 @@
-import { GLOBALTYPES, DeleteData } from './globalTypes';
 import { getDataAPI, patchDataAPI } from '../../utils/fetchData';
 import { imageUpload } from '../../utils/imageUpload';
 import { createNotify, removeNotify } from '../actions/notifyAction';
+import { DeleteData, GLOBALTYPES } from './globalTypes';
 
 export const PROFILE_TYPES = {
   LOADING: 'LOADING_PROFILE',

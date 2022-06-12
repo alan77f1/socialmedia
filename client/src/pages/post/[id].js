@@ -27,18 +27,18 @@ const Post = () => {
 
   return (
     <Helmet title="Bài viết">
-      <div className="posts homePage">
-        <div className="cLeft">
+      <div className="posts home_page">
+        <div className="home_page_left">
           <SideBar />
         </div>
-        <div className="cMiddle">
+        <div className="home_page_middle">
           {post.length === 0 && <LoadData />}
 
           {post.map((item) => (
             <PostCard key={item._id} post={item} />
           ))}
         </div>
-        <div className="cRight">
+        <div className="home_page_right">
           <RightSideBar />
         </div>
       </div>

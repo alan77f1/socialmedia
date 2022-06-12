@@ -1,7 +1,6 @@
-import React from 'react';
-import UserCard from '../UserCard';
-import FollowBtn from '../button/FollowBtn';
 import { useSelector } from 'react-redux';
+import FollowBtn from '../button/FollowBtn';
+import UserCard from '../UserCard';
 
 const Followers = ({ users, setShowFollowers }) => {
   const { auth } = useSelector((state) => state);

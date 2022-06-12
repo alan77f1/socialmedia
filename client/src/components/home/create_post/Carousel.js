@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Carousel = ({ images, id }) => {
   const isActive = (index) => {
@@ -13,7 +12,7 @@ const Carousel = ({ images, id }) => {
         ))}
       </ol>
 
-      <div className="carousel-inner" style={{ padding: '2px 40px' }}>
+      <div className="carousel-inner" style={{ padding: '2px 46px' }}>
         {images.map((img, index) => (
           <div key={index} className={`carousel-item ${isActive(index)}`}>
             {img.url.match(/video/i) ? (

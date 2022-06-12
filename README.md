@@ -1,80 +1,67 @@
-## đồng ý kết bạn
+# Intern Project Years 2021-2022
 
-## đănn nhập với gg fb
+Full name: Bui Van Tan
 
-## xử lý loangding
+- Class: Information Technology - K60
 
-## bỏ theo dõi -> show cái status model
+## Topic: Managing social networks UTC2
 
-# THỰC TẬP CHUYÊN MÔN NĂM HỌC 2021-2022
+Lecturer: Pham Thi Mien
 
-Họ và tên: Bùi Văn Tân
+## Part 1: Used Technology:
 
-- Lớp: Công nghệ thông tin - K60
+- [MongoDb] (https://www.mongodb.com/)
+- [React] (https://reactjs.org/)
+- [Nodejs] (https://nodejs.org/en/)
+- [Express] (https://expressjs.com/)
+- [Redux] (https://redux.js.org/)
+- [Bootstrap] (https://getbootstrap.com/)
+- [Socket.io] (https://socket.io/)
 
-## Đề tài: Quản lý mạng xã hội
+## Part 2: Completed features:
 
-Giảng viên:
+- Build database with mongodb
+- Management system:
+  - Account Sign
+  - Change password
+  - Retrieve password via email.
+  - Log in
+  - Log out
+- Post manager:
 
-## Phần 1: Công nghệ sử dụng:
+  - Add mod to delete posts
+  - Upload pictures and videos
+  - Support to register and display multiple images
+  - Save post
+  - Share the post on other social networking sites like facebook, Twitter
+  - Comment and drop hearts on the post
 
-- [MongoDb](https://www.mongodb.com/)
-- [React](https://reactjs.org/)
-- [Nodejs](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [Redux](https://redux.js.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Socket.io](https://socket.io/)
-- [Peerjs](https://peerjs.com/)
-- [JWT](https://jwt.io/)
+- Message manager:
+  - Send message to other users
+  - Display message
+  - Delete message
+  - Search message
+- Notify manager:
+  - For those who are following you
+  - Latest posts
+  - The ai commented on your bai viet
+- Comment manager:
+  - Comments post,
+  - Express feelings: like the post, like to comment (like)
+- Search for user in name
+- Personal information management page:
+  - Edit information
+  - Follow the number of people
+  - Follow
+  - View current and saved posts
+- Suggest related friends.
 
-## Phần 2: Các chức năng đã hoàn thành:
+## Part 3: Using instructions:
 
-1. Xây dựng cơ sở dữ liệu.
-2. Đăng nhập :
-   - Đăng ký tài khoản
-   - Đăng nhập với Facebook
-   - Đăng nhập với Google.
-3. Đăng xuất
-4. Đổi mật khẩu, quên mật khẩu thông qua gửi mail.
-5. Quản lý bài viết:
-   - Thêm sửa xóa bài viết
-   - Upload ảnh và video
-   - Đăng nhiều hình ảnh cho bài viết
-6. Quản lý bình luận:
-   trả lời,
-   thả cảm xúc: thích bài đăng, thích bình luận (haha, wow, thích, tức giận ...)
-7. tìm kiếm người dùng
-8. Quản lý thông tin người dùng:
+### Step 1. git clone https://github.com/buivantann/Social_Network.git
 
-   - Chỉnh sửa thông tin
-   - Số người theo dõi
-   - Đang theo dõi
+### Step 2. Create database with mongodb on [MongoDb Atlas](https://cloud.mongodb.com) and create .env file and add necessary information based on .env.example file
 
-9. Quản lý tin nhắn message
+### Step 3. npm install && npm run dev
 
-10. Mã hóa mật khẩu người dùng
-11. Quản lý bài viết đã lưu.
-12. Xử lý page not found.
-13. Xem thêm bài viết (load more)
-14. Gợi ý các bạn bè liên quan.
-15. Xem số lượng người theo dõi và đang theo dõi.
-16. Hiển thị thông tin chi tiết bài viết.
-17. Deploy website.
-18. Chia sẻ bài viết lên facebook , Twitter, Email
-19. Hủy đơn hàng.
-
-## Phần 3: Các chức năng chưa hoàn thành:
-
-## Hướng dẫn sử dụng:
-
-1. Clone vào thư mục của bạn.
-2. Giải nén tệp và sao chép thư mục.
-3. Dán bên trong thư mục gốc (ở đây dùng xampp) xampp/htdocs
-4. Mở PHPMyAdmin (http://localhost:8080/phpmyadmin) (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-5. Tạo cơ sở dữ liệu với tên spa
-6. Nhập tệp spa.sql (trong thư mục tệp Sql)
-7. Vào trình duyệt gõ đường dẫn http://localhost:8080/spa (tùy vào cổng mà thay đổi 8080 thành cổng hiện tại trong xampp).
-8. link host : https://hovuotsax12.000webhostapp.com/spa
-
-Xin cám ơn!
+Thank you!

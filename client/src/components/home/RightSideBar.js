@@ -1,10 +1,8 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import UserCard from '../UserCard';
-import FollowBtn from '../button/FollowBtn';
-import LoadIcon from '../../assets/images/loading.gif';
+import { useDispatch, useSelector } from 'react-redux';
 import { getSuggestions } from '../../redux/actions/suggestionsAction';
 import LoadData from '../alert/LoadData';
+import FollowBtn from '../button/FollowBtn';
+import UserCard from '../UserCard';
 
 const RightSideBar = () => {
   const { auth, suggestions } = useSelector((state) => state);
@@ -32,7 +30,7 @@ const RightSideBar = () => {
       ) : (
         <div className="suggestions ">
           {suggestions.users.map((user) => (
-            <div className="suggestions-item">
+            <div className="suggestions_item">
               <UserCard key={user._id} user={user}>
                 <FollowBtn user={user} />
               </UserCard>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { follow, unfollow } from '../../redux/actions/profileAction';
 
 const FollowBtn = ({ user }) => {
@@ -41,7 +41,7 @@ const FollowBtn = ({ user }) => {
         <dev
           className="btn btn-light border"
           onClick={handleUnFollow}
-          style={{ fontSize: '17px', fontWeight: '500', lineHeight: '30px' }}
+          style={{ fontSize: '17px', fontWeight: '500', lineHeight: '30px', borderRadius: '30px' }}
         >
           Bỏ theo dõi
         </dev>

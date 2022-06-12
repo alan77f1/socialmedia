@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import PostThumb from '../PostThumb';
-import LoadMoreBtn from '../button/LoadMoreBtn';
-import { getDataAPI } from '../../utils/fetchData';
+import { useEffect, useState } from 'react';
 import { PROFILE_TYPES } from '../../redux/actions/profileAction';
+import { getDataAPI } from '../../utils/fetchData';
 import LoadData from '../alert/LoadData';
+import LoadMoreBtn from '../button/LoadMoreBtn';
+import PostThumb from '../PostThumb';
 
 const Posts = ({ auth, id, dispatch, profile }) => {
   const [posts, setPosts] = useState([]);

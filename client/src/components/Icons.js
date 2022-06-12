@@ -1,4 +1,3 @@
-import React from 'react';
 import icon from '../assets/images/iconkaka.png';
 const Icons = ({ setContent, content }) => {
   const EMOJI_ICON = [

@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Info from '../../components/profile/Info';
 import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
 
-import { useSelector, useDispatch } from 'react-redux';
-import LoadIcon from '../../assets/images/loading.gif';
-import { getProfileUsers } from '../../redux/actions/profileAction';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import LoadData from '../../components/alert/LoadData';
+import Helmet from '../../components/Helmet';
+import { getProfileUsers } from '../../redux/actions/profileAction';
 
 const Profile = () => {
   const { profile, auth } = useSelector((state) => state);
@@ -23,32 +24,37 @@ const Profile = () => {
   }, [id, auth, dispatch, profile.ids]);
 
   return (
-    <div className="profile">
-      <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
+    <Helmet title="Trang cá nhân">
+      <div className="main">
+        <div className="profile">
+          <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-      {auth.user._id === id && (
-        <div className="profile_tab">
-          <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
-            Bài Đăng
-          </button>
-          <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
-            Đã Lưu
-          </button>
-        </div>
-      )}
-
-      {profile.loading ? (
-        <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
-      ) : (
-        <>
-          {saveTab ? (
-            <Saved auth={auth} dispatch={dispatch} />
-          ) : (
-            <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
+          <div className="profile_title">Tất cả bài viết</div>
+          {auth.user._id === id && (
+            <div className="profile_tab">
+              <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
+                Tất cả bài viết
+              </button>
+              <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
+                Bài viết đã lưu
+              </button>
+            </div>
           )}
-        </>
-      )}
-    </div>
+
+          {profile.loading ? (
+            <LoadData />
+          ) : (
+            <>
+              {saveTab ? (
+                <Saved auth={auth} dispatch={dispatch} />
+              ) : (
+                <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </Helmet>
   );
 };
 

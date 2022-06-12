@@ -1,5 +1,5 @@
-import { GLOBALTYPES } from '../actions/globalTypes';
 import { getDataAPI } from '../../utils/fetchData';
+import { GLOBALTYPES } from '../actions/globalTypes';
 
 export const SUGGES_TYPES = {
   LOADING: 'LOADING_SUGGES',

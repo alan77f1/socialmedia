@@ -93,7 +93,7 @@
   padding: 0 8px;
 }
 
-.homePage {
+.home_page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -101,16 +101,16 @@
   padding: 0 8px;
 }
 
-.cLeft {
+.home_page_left {
   width: 345px;
   padding: 16px 0 0 0;
 }
 
-.cMiddle {
+.home_page_middle {
   width: 590px;
 }
 
-.cRight {
+.home_page_right {
   width: 345px;
   background-color: #ffffff;
   border-top-left-radius: 10px;
@@ -119,12 +119,12 @@
 }
 
 /* right side bar */
-.suggestions-item {
+.suggestions_item {
   width: 100%;
-  padding: 15px 12px;
+  padding: 11px 5px 11px 10px;
   background: #ffffff;
 }
-.suggestions-item:hover {
+.suggestions_item:hover {
   background: #f0f2f5;
   cursor: pointer;
 }

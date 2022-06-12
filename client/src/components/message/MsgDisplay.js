@@ -1,8 +1,7 @@
-import React from 'react';
-import Avatar from '../Avatar';
-import { imageShow, videoShow } from '../../utils/mediaShow';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteMessages } from '../../redux/actions/messageAction';
+import { imageShow, videoShow } from '../../utils/mediaShow';
+import Avatar from '../Avatar';
 import Times from './Times';
 
 const MsgDisplay = ({ user, msg, theme, data }) => {
@@ -25,9 +24,7 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
       </div>
 
       <div className="you_content">
-        {user._id === auth.user._id && (
-          <i className="fas fa-trash text-danger" onClick={handleDeleteMessages} />
-        )}
+        {user._id === auth.user._id && <i className="fas fa-trash text-danger" onClick={handleDeleteMessages} />}
 
         <div>
           {msg.text && (
@@ -36,17 +33,12 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
             </div>
           )}
           {msg.media.map((item, index) => (
-            <div key={index}>
-              {item.url.match(/video/i) ? videoShow(item.url, theme) : imageShow(item.url, theme)}
-            </div>
+            <div key={index}>{item.url.match(/video/i) ? videoShow(item.url, theme) : imageShow(item.url, theme)}</div>
           ))}
         </div>
 
         {msg.call && (
-          <button
-            className="btn d-flex align-items-center py-3"
-            style={{ background: '#eee', borderRadius: '10px' }}
-          >
+          <button className="btn d-flex align-items-center py-3" style={{ background: '#eee', borderRadius: '10px' }}>
             <span
               className="material-icons font-weight-bold mr-1"
               style={{
@@ -67,11 +59,7 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
             <div className="text-left">
               <h6>{msg.call.video ? 'Video Call' : 'Audio Call'}</h6>
               <small>
-                {msg.call.times > 0 ? (
-                  <Times total={msg.call.times} />
-                ) : (
-                  new Date(msg.createdAt).toLocaleTimeString()
-                )}
+                {msg.call.times > 0 ? <Times total={msg.call.times} /> : new Date(msg.createdAt).toLocaleTimeString()}
               </small>
             </div>
           </button>

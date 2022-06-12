@@ -1,9 +1,8 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import NoNotice from '../assets/images/notice.png';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import NoNotice from '../assets/images/notice.png';
+import { deleteAllNotifies, isReadNotify } from '../redux/actions/notifyAction';
 import Avatar from './Avatar';
-import { isReadNotify, deleteAllNotifies } from '../redux/actions/notifyAction';
 
 const NotifyModal = () => {
   const { auth, notify } = useSelector((state) => state);
@@ -31,8 +30,6 @@ const NotifyModal = () => {
           Xoá Tất Cả
         </div>
       </div>
-
-      {notify.data.length === 0 && <img src={NoNotice} alt="NoNotice" style={{ width: '395px' }} />}
 
       <div style={{ maxHeight: 'calc(100vh - 200px)', overflow: 'auto' }}>
         {notify.data.map((msg, index) => (

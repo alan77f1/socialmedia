@@ -1,7 +1,7 @@
-import { GLOBALTYPES, EditData, DeleteData } from './globalTypes';
-import { POST_TYPES } from './postAction';
-import { postDataAPI, patchDataAPI, deleteDataAPI } from '../../utils/fetchData';
+import { deleteDataAPI, patchDataAPI, postDataAPI } from '../../utils/fetchData';
 import { createNotify, removeNotify } from '../actions/notifyAction';
+import { DeleteData, EditData, GLOBALTYPES } from './globalTypes';
+import { POST_TYPES } from './postAction';
 
 export const createComment =
   ({ post, newComment, auth, socket }) =>

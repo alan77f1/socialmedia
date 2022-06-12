@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteComment } from '../../../redux/actions/commentAction';
 
@@ -33,7 +32,7 @@ const CommentMenu = ({ post, comment, setOnEdit }) => {
             more_vert
           </span>
 
-          <div className="dropdown-menu" aria-labelledby="moreLink" style={{ borderRadius: '15px' }}>
+          <div className="dropdown-menu" aria-labelledby="moreLink" style={{ borderRadius: '15px', border: 'none' }}>
             {post.user._id === auth.user._id ? (
               comment.user._id === auth.user._id ? (
                 MenuItem()

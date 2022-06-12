@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { createComment } from '../../../redux/actions/commentAction';
 import Icons from '../../Icons';
 import UserImg from './UserInput';

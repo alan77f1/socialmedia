@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { forgotPassword } from '../redux/actions/authAction';
 import LogoUTC2 from '../assets/images/uct2.png';
 import Helmet from '../components/Helmet';
+import { forgotPassword } from '../redux/actions/authAction';
 const ForgotPassword = () => {
   const { auth, alert } = useSelector((state) => state);
   const dispatch = useDispatch();

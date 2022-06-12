@@ -1,6 +1,5 @@
-import React from 'react';
-import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
+import Avatar from '../../Avatar';
 
 const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
   const handleCloseAll = () => {
@@ -45,7 +44,13 @@ const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setSh
         >
           <Avatar src={user.avatar} size="big-avatar" />
           <div style={{ transform: 'translateY(-2px)', marginLeft: '10px' }}>
-            <small style={{ color: 'black', fontWeight: 'bold' }}>{msg ? showMsg(user) : user.fullname}</small>
+            <span style={{ fontSize: '1rem', color: '#000', fontWeight: '600' }}>
+              {msg ? showMsg(user) : user.fullname}
+            </span>
+
+            <small className="d-block" style={{ opacity: 0.8, fontSize: '1rem', color: '#536471' }}>
+              @{user.username}
+            </small>
           </div>
         </Link>
       </div>

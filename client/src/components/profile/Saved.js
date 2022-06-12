@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import PostThumb from '../PostThumb';
-import LoadMoreBtn from '../button/LoadMoreBtn';
-import { getDataAPI } from '../../utils/fetchData';
+import { useEffect, useState } from 'react';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { getDataAPI } from '../../utils/fetchData';
 import LoadData from '../alert/LoadData';
+import LoadMoreBtn from '../button/LoadMoreBtn';
+import PostThumb from '../PostThumb';
 
 const Saved = ({ auth, dispatch }) => {
   const [savePosts, setSavePosts] = useState([]);

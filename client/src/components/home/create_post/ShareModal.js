@@ -1,11 +1,10 @@
-import React from 'react';
 import {
-  EmailShareButton,
   EmailIcon,
-  FacebookShareButton,
+  EmailShareButton,
   FacebookIcon,
-  TwitterShareButton,
+  FacebookShareButton,
   TwitterIcon,
+  TwitterShareButton,
 } from 'react-share';
 const ShareModal = ({ url }) => {
   return (

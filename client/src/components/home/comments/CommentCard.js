@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Avatar from '../../Avatar';
-import { Link } from 'react-router-dom';
 import moment from 'moment';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Avatar from '../../Avatar';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { likeComment, unLikeComment, updateComment } from '../../../redux/actions/commentAction';
 import LikeButton from '../../button/LikeBtn';
-import { useSelector, useDispatch } from 'react-redux';
-import CommentMenu from './CommentMenu';
-import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
 import InputComment from '../comments/InputComment';
+import CommentMenu from './CommentMenu';
 
 const CommentCard = ({ children, comment, post, commentId }) => {
   const { auth } = useSelector((state) => state);
@@ -72,7 +72,14 @@ const CommentCard = ({ children, comment, post, commentId }) => {
     <div className="comment_card mt-2" style={styleCard}>
       <Link to={`/profile/${comment.user._id}`} className="d-flex text-dark">
         <Avatar src={comment.user.avatar} size="small-avatar" />
-        <h6 className="mx-1">@{comment.user.username}</h6>
+        <span style={{ fontSize: '1rem', color: '#0F1419', fontWeight: '600', marginLeft: '6px' }}>
+          {' '}
+          {comment.user.fullname}
+        </span>
+
+        <small style={{ opacity: 0.8, fontSize: '1rem', color: '#536471', marginLeft: '5px' }}>
+          @{comment.user.username}
+        </small>
       </Link>
 
       <div className="comment_content">

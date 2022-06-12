@@ -1,19 +1,21 @@
-import React from 'react'
-import LeftSide from '../../components/message/LeftSide'
-import RightSide from '../../components/message/RightSide'
+import Helmet from '../../components/Helmet';
+import LeftSide from '../../components/message/LeftSide';
+import RightSide from '../../components/message/RightSide';
 
 const Conversation = () => {
-    return (
-        <div className="message d-flex">
-            <div className="col-md-4 border-right px-0 left_mess">
-                <LeftSide />
-            </div>
-
-            <div className="col-md-8 px-0">
-                <RightSide />
-            </div>
+  return (
+    <Helmet title="Tin nhắn">
+      <div className="message d-flex">
+        <div className="col-md-4 border-right px-0 left_mess">
+          <LeftSide />
         </div>
-    )
-}
 
-export default Conversation
+        <div className="col-md-8 px-0">
+          <RightSide />
+        </div>
+      </div>
+    </Helmet>
+  );
+};
+
+export default Conversation;

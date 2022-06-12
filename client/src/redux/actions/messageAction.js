@@ -1,5 +1,5 @@
-import { GLOBALTYPES, DeleteData } from '../actions/globalTypes';
-import { postDataAPI, getDataAPI, deleteDataAPI } from '../../utils/fetchData';
+import { deleteDataAPI, getDataAPI, postDataAPI } from '../../utils/fetchData';
+import { DeleteData, GLOBALTYPES } from '../actions/globalTypes';
 
 export const MESS_TYPES = {
   ADD_USER: 'ADD_USER',

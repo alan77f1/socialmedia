@@ -1,6 +1,6 @@
-const Posts = require("../models/postModel");
-const Comments = require("../models/commentModel");
-const Users = require("../models/userModel");
+const Posts = require('../models/postModel');
+const Comments = require('../models/commentModel');
+const Users = require('../models/userModel');
 
 class APIfeatures {
   constructor(query, queryString) {
@@ -22,8 +22,7 @@ const postCtrl = {
     try {
       const { content, images } = req.body;
 
-      if (images.length === 0)
-        return res.status(400).json({ msg: "Vui lòng thêm ảnh của bạn." });
+      if (images.length === 0) return res.status(400).json({ msg: 'Vui lòng thêm ảnh của bạn.' });
 
       const newPost = new Posts({
         content,
@@ -33,7 +32,7 @@ const postCtrl = {
       await newPost.save();
 
       res.json({
-        msg: "Created Post!",
+        msg: 'Created Post!',
         newPost: {
           ...newPost._doc,
           user: req.user,
@@ -49,22 +48,22 @@ const postCtrl = {
         Posts.find({
           user: [...req.user.following, req.user._id],
         }),
-        req.query
+        req.query,
       ).paginating();
 
       const posts = await features.query
-        .sort("-createdAt")
-        .populate("user likes", "avatar username fullname followers")
+        .sort('-createdAt')
+        .populate('user likes', 'avatar username fullname followers')
         .populate({
-          path: "comments",
+          path: 'comments',
           populate: {
-            path: "user likes",
-            select: "-password",
+            path: 'user likes',
+            select: '-password',
           },
         });
 
       res.json({
-        msg: "Thành công!",
+        msg: 'Thành công!',
         result: posts.length,
         posts,
       });
@@ -81,19 +80,19 @@ const postCtrl = {
         {
           content,
           images,
-        }
+        },
       )
-        .populate("user likes", "avatar username fullname")
+        .populate('user likes', 'avatar username fullname')
         .populate({
-          path: "comments",
+          path: 'comments',
           populate: {
-            path: "user likes",
-            select: "-password",
+            path: 'user likes',
+            select: '-password',
           },
         });
 
       res.json({
-        msg: "Cập nhật thành công!",
+        msg: 'Cập nhật thành công!',
         newPost: {
           ...post._doc,
           content,
@@ -110,21 +109,19 @@ const postCtrl = {
         _id: req.params.id,
         likes: req.user._id,
       });
-      if (post.length > 0)
-        return res.status(400).json({ msg: "Bạn đã thích bài đăng này." });
+      if (post.length > 0) return res.status(400).json({ msg: 'Bạn đã thích bài đăng này.' });
 
       const like = await Posts.findOneAndUpdate(
         { _id: req.params.id },
         {
           $push: { likes: req.user._id },
         },
-        { new: true }
+        { new: true },
       );
 
-      if (!like)
-        return res.status(400).json({ msg: "Bài đăng không tồn tại." });
+      if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
 
-      res.json({ msg: "Đã thích bài đăng!" });
+      res.json({ msg: 'Đã thích bài đăng!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -136,24 +133,20 @@ const postCtrl = {
         {
           $pull: { likes: req.user._id },
         },
-        { new: true }
+        { new: true },
       );
 
-      if (!like)
-        return res.status(400).json({ msg: "Bài đăng không tồn tại." });
+      if (!like) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
 
-      res.json({ msg: "Đã bỏ thích bài đăng!" });
+      res.json({ msg: 'Đã bỏ thích bài đăng!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
   },
   getUserPosts: async (req, res) => {
     try {
-      const features = new APIfeatures(
-        Posts.find({ user: req.params.id }),
-        req.query
-      ).paginating();
-      const posts = await features.query.sort("-createdAt");
+      const features = new APIfeatures(Posts.find({ user: req.params.id }), req.query).paginating();
+      const posts = await features.query.sort('-createdAt');
 
       res.json({
         posts,
@@ -166,17 +159,16 @@ const postCtrl = {
   getPost: async (req, res) => {
     try {
       const post = await Posts.findById(req.params.id)
-        .populate("user likes", "avatar username fullname followers")
+        .populate('user likes', 'avatar username fullname followers')
         .populate({
-          path: "comments",
+          path: 'comments',
           populate: {
-            path: "user likes",
-            select: "-password",
+            path: 'user likes',
+            select: '-password',
           },
         });
 
-      if (!post)
-        return res.status(400).json({ msg: "Bài đăng không tồn tại." });
+      if (!post) return res.status(400).json({ msg: 'Bài đăng không tồn tại.' });
 
       res.json({
         post,
@@ -185,26 +177,7 @@ const postCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
-  getPostsDicover: async (req, res) => {
-    try {
-      const newArr = [...req.user.following, req.user._id];
 
-      const num = req.query.num || 9;
-
-      const posts = await Posts.aggregate([
-        { $match: { user: { $nin: newArr } } },
-        { $sample: { size: Number(num) } },
-      ]);
-
-      return res.json({
-        msg: "Thành công!",
-        result: posts.length,
-        posts,
-      });
-    } catch (err) {
-      return res.status(500).json({ msg: err.message });
-    }
-  },
   deletePost: async (req, res) => {
     try {
       const post = await Posts.findOneAndDelete({
@@ -214,7 +187,7 @@ const postCtrl = {
       await Comments.deleteMany({ _id: { $in: post.comments } });
 
       res.json({
-        msg: "Đã xoá bài đăng!",
+        msg: 'Đã xoá bài đăng!',
         newPost: {
           ...post,
           user: req.user,
@@ -230,21 +203,19 @@ const postCtrl = {
         _id: req.user._id,
         saved: req.params.id,
       });
-      if (user.length > 0)
-        return res.status(400).json({ msg: "Bạn đã lưu bài đăng này." });
+      if (user.length > 0) return res.status(400).json({ msg: 'Bạn đã lưu bài đăng này.' });
 
       const save = await Users.findOneAndUpdate(
         { _id: req.user._id },
         {
           $push: { saved: req.params.id },
         },
-        { new: true }
+        { new: true },
       );
 
-      if (!save)
-        return res.status(400).json({ msg: "Người dùng  không tồn tại." });
+      if (!save) return res.status(400).json({ msg: 'Người dùng  không tồn tại.' });
 
-      res.json({ msg: "Đã lưu bài đăng!" });
+      res.json({ msg: 'Đã lưu bài đăng!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -256,13 +227,12 @@ const postCtrl = {
         {
           $pull: { saved: req.params.id },
         },
-        { new: true }
+        { new: true },
       );
 
-      if (!save)
-        return res.status(400).json({ msg: "Người dùng không tồn tại." });
+      if (!save) return res.status(400).json({ msg: 'Người dùng không tồn tại.' });
 
-      res.json({ msg: "Đã bỏ lưu bài đăng!" });
+      res.json({ msg: 'Đã bỏ lưu bài đăng!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -273,10 +243,10 @@ const postCtrl = {
         Posts.find({
           _id: { $in: req.user.saved },
         }),
-        req.query
+        req.query,
       ).paginating();
 
-      const savePosts = await features.query.sort("-createdAt");
+      const savePosts = await features.query.sort('-createdAt');
 
       res.json({
         savePosts,

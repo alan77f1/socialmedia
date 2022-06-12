@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import LogoUTC2 from '../assets/images/uct2.png';
-
-// import { resetPassword } from "../redux/actions/authAction";
-import { postDataAPI } from '../utils/fetchData';
-import { GLOBALTYPES } from '../redux/actions/globalTypes';
-import validReset from '../utils/validreset';
 import Helmet from '../components/Helmet';
+import { GLOBALTYPES } from '../redux/actions/globalTypes';
+import { postDataAPI } from '../utils/fetchData';
+import validReset from '../utils/validreset';
 
 function ResetPassword() {
   const { token } = useParams();
