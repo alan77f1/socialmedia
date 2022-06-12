@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { login } from '../redux/actions/authAction';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import LogoUTC2 from '../assets/images/uct2.png';
 import Helmet from '../components/Helmet';
+import { login } from '../redux/actions/authAction';
 
 const Login = () => {
   const initialState = { email: '', password: '' };

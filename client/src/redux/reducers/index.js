@@ -1,19 +1,17 @@
 import { combineReducers } from 'redux';
-import auth from './authReducer';
 import alert from './alertReducer';
-import profile from './profileReducer';
-import status from './statusReducer';
-import homePosts from './postReducer';
+import auth from './authReducer';
 import message from './messageReducer';
 import modal from './modalReducer';
-import discover from './discoverReducer';
+import homePosts from './postReducer';
+import profile from './profileReducer';
+import status from './statusReducer';
 import detailPost from './detailPostReducer';
-import suggestions from './suggestionsReducer';
-import socket from './socketReducer';
 import notify from './notifyReducer';
-import call from './callReducer';
-import peer from './peerReducer';
+import socket from './socketReducer';
+import suggestions from './suggestionsReducer';
 import online from './onlineReducer';
+import peer from './peerReducer';
 
 export default combineReducers({
   auth,
@@ -22,13 +20,11 @@ export default combineReducers({
   status,
   homePosts,
   message,
-  discover,
   modal,
   detailPost,
   suggestions,
   socket,
   notify,
   online,
-  call,
   peer,
 });

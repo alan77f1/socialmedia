@@ -1,7 +1,6 @@
-import React from 'react';
-import CardHeader from '../cards/CardHeader';
 import CardBody from '../cards/CardBody';
 import CardFooter from '../cards/CardFooter';
+import CardHeader from '../cards/CardHeader';
 
 import Comments from '../comments/Comments';
 import InputComment from '../comments/InputComment';

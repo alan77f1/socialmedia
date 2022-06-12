@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Info from '../../components/profile/Info';
 import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { getProfileUsers } from '../../redux/actions/profileAction';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import LoadData from '../../components/alert/LoadData';
 import Helmet from '../../components/Helmet';
+import { getProfileUsers } from '../../redux/actions/profileAction';
 
 const Profile = () => {
   const { profile, auth } = useSelector((state) => state);
@@ -29,9 +29,7 @@ const Profile = () => {
         <div className="profile">
           <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-          <div style={{ marginLeft: '42%', fontSize: '21px', fontWeight: '650', marginBottom: '5px' }}>
-            TTất cả bài viết
-          </div>
+          <div className="profile_title">Tất cả bài viết</div>
           {auth.user._id === id && (
             <div className="profile_tab">
               <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
+import { useSelector } from 'react-redux';
+import LoadData from '../components/alert/LoadData';
+import Helmet from '../components/Helmet';
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
 import SideBar from '../components/home/sidebar_left/SideBarLeft';
-import { useSelector } from 'react-redux';
-import Helmet from '../components/Helmet';
-import LoadData from '../components/alert/LoadData';
 
 let scroll = 0;
 
@@ -27,11 +27,11 @@ const Home = () => {
 
   return (
     <Helmet title="Trang chủ">
-      <div className="homePage ">
-        <div className="cLeft">
+      <div className="home_page ">
+        <div className="home_page_left">
           <SideBar />
         </div>
-        <div className="cMiddle">
+        <div className="home_page_middle">
           {homePosts.loading ? (
             <LoadData />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
@@ -42,7 +42,7 @@ const Home = () => {
             <Posts />
           )}
         </div>
-        <div className="cRight">
+        <div className="home_page_right">
           <RightSideBar />
         </div>
       </div>

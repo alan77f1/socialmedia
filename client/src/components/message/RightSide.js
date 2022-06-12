@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import UserCard from '../UserCard';
-import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
-import MsgDisplay from './MsgDisplay';
-import Icons from '../Icons';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
-import { imageShow, videoShow } from '../../utils/mediaShow';
-import { imageUpload } from '../../utils/imageUpload';
-import { addMessage, getMessages, loadMoreMessages, deleteConversation } from '../../redux/actions/messageAction';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
 import LoadIcon from '../../assets/images/loading.gif';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { addMessage, deleteConversation, getMessages, loadMoreMessages } from '../../redux/actions/messageAction';
+import { imageUpload } from '../../utils/imageUpload';
+import { imageShow, videoShow } from '../../utils/mediaShow';
+import Icons from '../Icons';
+import UserCard from '../UserCard';
+import MsgDisplay from './MsgDisplay';
 
 const RightSide = () => {
   const { auth, message, theme, socket, peer } = useSelector((state) => state);

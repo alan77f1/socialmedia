@@ -1,9 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import MenuRight from './MenuRight';
-import MenuControl from './MenuControl';
 import UTC2 from '../../assets/images/uct2.png';
-import Search from './Search';
+import MenuControl from './MenuControl';
+import MenuRight from './MenuRight';
 
 const Header = () => {
   return (

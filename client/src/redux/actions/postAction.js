@@ -1,6 +1,6 @@
-import { GLOBALTYPES } from './globalTypes';
+import { deleteDataAPI, getDataAPI, patchDataAPI, postDataAPI } from '../../utils/fetchData';
 import { imageUpload } from '../../utils/imageUpload';
-import { postDataAPI, getDataAPI, patchDataAPI, deleteDataAPI } from '../../utils/fetchData';
+import { GLOBALTYPES } from './globalTypes';
 import { createNotify, removeNotify } from './notifyAction';
 
 export const POST_TYPES = {

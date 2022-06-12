@@ -45,6 +45,11 @@ img {
   box-shadow: rgba(190, 172, 111, 0.6) 0px 0px 16px;
 }
 
+.notfound {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .btn {
   border-radius: 50px;
 }
@@ -62,8 +67,6 @@ img {
 @import url('./styles/sidebar-left.css');
 
 @import url('./styles/profile.css');
-
-@import url('./styles/ads.css');
 
 @import url('./styles/home.css');
 

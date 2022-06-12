@@ -1,8 +1,7 @@
-import React from 'react';
-import Avatar from '../Avatar';
-import { imageShow, videoShow } from '../../utils/mediaShow';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteMessages } from '../../redux/actions/messageAction';
+import { imageShow, videoShow } from '../../utils/mediaShow';
+import Avatar from '../Avatar';
 import Times from './Times';
 
 const MsgDisplay = ({ user, msg, theme, data }) => {

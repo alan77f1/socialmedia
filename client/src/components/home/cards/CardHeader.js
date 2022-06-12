@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Avatar from '../../Avatar';
-import { Link, useHistory } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { savePost, unSavePost } from '../../../redux/actions/postAction';
 import moment from 'moment';
 import 'moment/locale/vi';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
-import { deletePost } from '../../../redux/actions/postAction';
+import { deletePost, savePost, unSavePost } from '../../../redux/actions/postAction';
 import { BASE_URL } from '../../../utils/config';
+import Avatar from '../../Avatar';
+
 const CardHeader = ({ post }) => {
   const { auth, socket } = useSelector((state) => state);
   const [saved, setSaved] = useState(false);
@@ -73,7 +73,7 @@ const CardHeader = ({ post }) => {
         <span className="material-icons" id="moreLink" data-toggle="dropdown">
           more_horiz
         </span>
-        <div className="dropdown-menu" style={{ borderRadius: '12px' }}>
+        <div className="dropdown-menu" style={{ borderRadius: '12px', border: 'none' }}>
           {saved ? (
             <div className="dropdown-item " onClick={handleUnSavePost}>
               <span className="material-icons">bookmarks</span> Bỏ lưu

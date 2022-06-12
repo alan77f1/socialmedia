@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import NotifyModal from '../NotifyModal';
 
 const MenuControl = () => {
@@ -42,7 +41,11 @@ const MenuControl = () => {
           <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span className="notify_length">{notify.data.length}</span>
           </span>
-          <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ transform: 'translateX(60px)' }}>
+          <div
+            className="dropdown-menu"
+            aria-labelledby="navbarDropdown"
+            style={{ transform: 'translateX(60px)', border: 'none' }}
+          >
             <NotifyModal />
           </div>
         </li>

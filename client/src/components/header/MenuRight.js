@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/actions/authAction';
 import Avatar from '../Avatar';
 
@@ -32,7 +32,7 @@ const MenuRight = () => {
             <Avatar src={auth.user.avatar} size="medium-avatar" />
           </span>
 
-          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ border: 'none' }}>
             <Link className="dropdown-item" to={`/profile/${auth.user._id}`}>
               Trang cá nhân
             </Link>

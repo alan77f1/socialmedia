@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import UserCard from '../UserCard';
-import { useSelector, useDispatch } from 'react-redux';
-import { getDataAPI } from '../../utils/fetchData';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import { MESS_TYPES, getConversations } from '../../redux/actions/messageAction';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
+import { getConversations, MESS_TYPES } from '../../redux/actions/messageAction';
+import { getDataAPI } from '../../utils/fetchData';
+import UserCard from '../UserCard';
 
 const LeftSide = () => {
   const { auth, message, online } = useSelector((state) => state);

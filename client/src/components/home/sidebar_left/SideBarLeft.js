@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import UTC2Ads from '../../../assets/images/utc2ads.jpg';
 import UTC2News from '../../../assets/images/utc2media.jpg';
-import { Link } from 'react-router-dom';
-import UserInfo from './UserInfo';
 import { GLOBALTYPES } from '../../../redux/actions/globalTypes';
+import UserInfo from './UserInfo';
 
 const SideBarLeft = () => {
   const dispatch = useDispatch();
@@ -12,22 +11,22 @@ const SideBarLeft = () => {
   const { auth } = useSelector((state) => state);
   return (
     <div className="sidebar">
-      <ul classFName="sidebar-List">
-        <li className="sidebar-Item" style={{ marginTop: '10px' }}>
+      <ul classFName="sidebar_list">
+        <li className="sidebar_item" style={{ marginTop: '10px' }}>
           <UserInfo user={auth.user} />
         </li>
-        <li className="sidebar-Item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
-          <div className="sidebar-ItemText" style={{ display: 'contents', width: '100%', maxWidth: '300px' }}>
-            <i class="fas fa-plus-circle" style={{ fontSize: '35px', color: '#002F77' }} />
-            <span style={{ fontSize: '17px', color: '#000', marginLeft: '8px' }}> Thêm bài viết</span>
+        <li className="sidebar_item" onClick={() => dispatch({ type: GLOBALTYPES.STATUS, payload: true })}>
+          <div className="sidebar_item_text">
+            <i className="fas fa-plus-circle sidebar_item_icon" />
+            <span> Thêm bài viết</span>
           </div>
         </li>
 
-        <Link to="/message" className="sidebar-Itemlink" style={{ textDecoration: 'none' }}>
-          <li className="sidebar-Item">
-            <div className="sidebar-ItemText" style={{ display: 'contents', width: '100%', maxWidth: '300px' }}>
-              <i className="fab fa-facebook-messenger" style={{ fontSize: '35px', color: '#002F77' }} />
-              <span style={{ fontSize: '17px', color: '#000', marginLeft: '8px' }}>Tin nhắn</span>
+        <Link to="/message" className="sidebar_itemlink" style={{ textDecoration: 'none' }}>
+          <li className="sidebar_item">
+            <div className="sidebar_item_text">
+              <i className="fab fa-facebook-messenger sidebar_item_icon" />
+              <span>Tin nhắn</span>
             </div>
           </li>
         </Link>
@@ -54,7 +53,7 @@ const SideBarLeft = () => {
           </li>
         </ul>
       </div>
-      <div className="sidebar-Policies">
+      <div className="sidebar_Policies">
         <div style={{ opacity: 1 }} className="my-2">
           <a
             href="https://www.facebook.com/profile.php?id=100033670082606"

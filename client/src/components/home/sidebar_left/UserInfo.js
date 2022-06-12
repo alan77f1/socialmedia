@@ -1,6 +1,5 @@
-import React from 'react';
-import Avatar from '../../Avatar';
 import { Link } from 'react-router-dom';
+import Avatar from '../../Avatar';
 
 const UserInfo = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
   const handleCloseAll = () => {

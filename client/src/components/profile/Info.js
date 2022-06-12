@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import Avatar from '../Avatar';
-import EditProfile from './EditProfile';
 import FollowBtn from '../button/FollowBtn';
+import EditProfile from './EditProfile';
 import Followers from './Followers';
 import Following from './Following';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 
 import ImgBuilding from '../../assets/images/building.jpg';
 
@@ -90,7 +90,6 @@ const Info = ({ id, auth, profile, dispatch }) => {
               )}
             </div>
           </div>
-
           {onEdit && <EditProfile setOnEdit={setOnEdit} />}
 
           {showFollowers && <Followers users={user.followers} setShowFollowers={setShowFollowers} />}

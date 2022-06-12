@@ -27,13 +27,12 @@
   background-color: #acacac06;
 }
 
-.sidebar-List {
+.sidebar_List {
   list-style: none;
   padding: 0;
 }
 
-.sidebar-Item,
-.shortcuts {
+.sidebar_item {
   padding: 8px 8px;
   border-radius: 8px;
   display: flex;
@@ -41,21 +40,27 @@
   margin-bottom: 8px;
 }
 
-.sidebar-Itemlink {
+.sidebar_item span {
+  font-size: 17px;
+  color: #000;
+  margin-left: 8px;
+}
+
+.sidebar_itemlink {
   border-radius: 8px;
   display: flex;
   align-items: center;
 }
 
-.sidebar-Itemlink:hover,
-.sidebar-Item:hover,
+.sidebar_itemlink:hover,
+.sidebar_item:hover,
 .shortcuts:hover {
   background-color: #f0f2f5;
   cursor: pointer;
   transition: all 0.25s;
 }
 
-.sidebar-ItemImg {
+.sidebar_itemImg {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -69,108 +74,65 @@
   object-fit: cover;
 }
 
-.sidebar-ItemBadge,
-.shortcutsBadge {
-  width: 36px;
-  height: 36px;
-}
-
-.sidebar-ItemText {
-  display: flex;
+.sidebar_item_text {
+  display: contents;
   flex-direction: column;
   margin-left: 8px;
   justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
 }
 
-.sidebar-ItemName,
-.shortcutsName {
-  color: black;
+.sidebar_item_icon {
+  font-size: 35px;
+  color: #002f77;
+}
+
+.ads {
+  margin-top: 16px;
+}
+
+.adsTitle {
+  color: #9a9ca1;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
+  padding: 0 11px;
 }
 
-.sidebar-ItemName:hover {
-  text-decoration: none;
+.adsItemImg {
+  width: 102px;
+  height: 102px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
-.shortcutsName {
-  margin-left: 8px;
+.adsList {
+  padding: 0;
+  list-style: none;
+  margin-top: 2px;
 }
 
-.sidebar-ItemInfo {
-  margin-top: 5px;
-  color: #2a75d5;
-  font-size: 12px;
-  position: relative;
-  margin-left: 12px;
+.adsItem {
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
-.sidebar-ItemInfo::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 2px;
-  left: -12px;
-  background-color: #2a75d5;
-  border-radius: 50%;
-}
-
-.sidebar-ItemIcon {
-  color: #cfd1d5;
-  background-color: #3a3b3c;
-  border-radius: 50%;
-  padding: 4px;
-}
-
-.sidebar-Hr {
-  border: none;
-  border-bottom: 0.5px solid rgba(187, 187, 187, 0.433);
-  margin: 8px 0;
-}
-
-.shortcutsTitle {
+.adsItem a {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  justify-content: space-between;
 }
 
-.shortcutsTitleText {
-  font-size: 18px;
-  color: black;
-  font-weight: 500;
-  margin-left: 8px;
-}
-
-.shortcutsTitleAction {
-  padding: 8px 16px;
-  color: black;
-  border-radius: 5px;
-}
-
-.shortcutsTitle:hover .shortcutsTitleAction {
-  color: rgb(57, 127, 218);
-}
-
-.shortcutsTitleAction:hover {
-  background-color: #3a3b3c3a;
+.adsItem:hover {
   cursor: pointer;
+  background-color: #f0f2f5;
 }
 
-.sidebar-Policies {
-  color: #94969a;
-
-  margin: 16px 8px;
+.adsItemContent {
+  margin-left: 10px;
 }
 
-.sidebar-Policies a {
-  color: #94969a;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.sidebar-Policies a:hover {
-  text-decoration: underline;
+.adsItemContentHeader {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
 }

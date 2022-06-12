@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Post from './create_post/PostCard';
 
 import LoadData from '../../components/alert/LoadData';
-import LoadMoreBtn from '../button/LoadMoreBtn';
-import { getDataAPI } from '../../utils/fetchData';
 import { POST_TYPES } from '../../redux/actions/postAction';
+import { getDataAPI } from '../../utils/fetchData';
+import LoadMoreBtn from '../button/LoadMoreBtn';
 
 const Posts = () => {
   const { homePosts, auth } = useSelector((state) => state);

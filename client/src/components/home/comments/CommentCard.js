@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Avatar from '../../Avatar';
-import { Link } from 'react-router-dom';
 import moment from 'moment';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Avatar from '../../Avatar';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { likeComment, unLikeComment, updateComment } from '../../../redux/actions/commentAction';
 import LikeButton from '../../button/LikeBtn';
-import { useSelector, useDispatch } from 'react-redux';
-import CommentMenu from './CommentMenu';
-import { updateComment, likeComment, unLikeComment } from '../../../redux/actions/commentAction';
 import InputComment from '../comments/InputComment';
+import CommentMenu from './CommentMenu';
 
 const CommentCard = ({ children, comment, post, commentId }) => {
   const { auth } = useSelector((state) => state);
