@@ -50,6 +50,28 @@ const RightSide = () => {
     }
   }, [message.users, id]);
 
+<<<<<<< HEAD
+=======
+  const handleChangeMedia = (e) => {
+    const files = [...e.target.files];
+    let err = '';
+    let newMedia = [];
+
+    files.forEach((file) => {
+      if (!file) return (err = 'Không tìm thấy tập tin.');
+
+      if (file.size > 1024 * 1024 * 5) {
+        return (err = 'Dung lượng tối đa 5mb.');
+      }
+
+      return newMedia.push(file);
+    });
+
+    if (err) dispatch({ type: GLOBALTYPES.ALERT, payload: { error: err } });
+    setMedia([...media, ...newMedia]);
+  };
+
+>>>>>>> develop
   const handleDeleteMedia = (index) => {
     const newArr = [...media];
     newArr.splice(index, 1);
@@ -161,12 +183,32 @@ const RightSide = () => {
     socket.emit('callUser', msg);
   };
 
+<<<<<<< HEAD
+=======
+  const handleAudioCall = () => {
+    caller({ video: false });
+    callUser({ video: false });
+  };
+
+  const handleVideoCall = () => {
+    caller({ video: true });
+    callUser({ video: true });
+  };
+
+>>>>>>> develop
   return (
     <>
       <div className="message_header" style={{ cursor: 'pointer' }}>
         {user.length !== 0 && (
           <UserCard user={user}>
             <div>
+<<<<<<< HEAD
+=======
+              <i className="fas fa-phone-alt" onClick={handleAudioCall} />
+
+              <i className="fas fa-video mx-3" onClick={handleVideoCall} />
+
+>>>>>>> develop
               <i className="fas fa-trash text-danger" onClick={handleDeleteConversation} />
             </div>
           </UserCard>
@@ -217,6 +259,7 @@ const RightSide = () => {
       <form className="chat_input" onSubmit={handleSubmit}>
         <input
           type="text"
+<<<<<<< HEAD
           placeholder="Aa"
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -226,11 +269,28 @@ const RightSide = () => {
             padding: '6px 10px',
             backgroundColor: '#F0F2F5',
             height: '35px',
+=======
+          placeholder="Nhập tin nhắn..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          style={{
+            filter: theme ? 'invert(1)' : 'invert(0)',
+            background: theme ? '#040404' : '',
+            color: theme ? 'white' : '',
+>>>>>>> develop
           }}
         />
 
         <Icons setContent={setText} content={text} theme={theme} />
 
+<<<<<<< HEAD
+=======
+        <div className="file_upload">
+          <i className="fas fa-image text-danger" />
+          <input type="file" name="file" id="file" multiple accept="image/*,video/*" onChange={handleChangeMedia} />
+        </div>
+
+>>>>>>> develop
         <button type="submit" className="material-icons" disabled={text || media.length > 0 ? false : true}>
           send
         </button>

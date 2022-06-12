@@ -87,8 +87,17 @@ const LeftSide = () => {
   return (
     <>
       <form className="message_header" onSubmit={handleSearch}>
+<<<<<<< HEAD
         <div className="message_header_title">Tin nhắn</div>
         <input type="text" value={search} placeholder="Tìm kiếm" onChange={(e) => setSearch(e.target.value)} />
+=======
+        <input
+          type="text"
+          value={search}
+          placeholder="Nhập để tìm kiếm..."
+          onChange={(e) => setSearch(e.target.value)}
+        />
+>>>>>>> develop
 
         <button type="submit" style={{ display: 'none' }}>
           Tìm kiếm

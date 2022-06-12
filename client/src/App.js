@@ -26,7 +26,7 @@ import { getNotifies } from './redux/actions/notifyAction';
 import SocketClient from './SocketClient';
 
 function App() {
-  const { auth, status, modal } = useSelector((state) => state);
+  const { auth, status, modal, call } = useSelector((state) => state);
   const { isLogged } = auth;
 
   const dispatch = useDispatch();
@@ -46,6 +46,15 @@ function App() {
       dispatch(getNotifies(auth.token));
     }
   }, [dispatch, auth.token]);
+
+  useEffect(() => {
+    const newPeer = new Peer(undefined, {
+      path: '/',
+      secure: true,
+    });
+
+    dispatch({ type: GLOBALTYPES.PEER, payload: newPeer });
+  }, [dispatch]);
 
   return (
     <Router>
