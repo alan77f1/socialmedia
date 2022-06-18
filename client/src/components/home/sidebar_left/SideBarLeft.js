@@ -47,7 +47,7 @@ const SideBarLeft = () => {
             <a rel="noreferrer" target="_blank" href="https://www.facebook.com/utc2news">
               <img src={UTC2News} alt="" className="sidebar_ads_item-img" />
               <div className="sidebar_ads_item-content">
-                <div className="sidebar_ads_item-header">UTC2 News</div>
+                <div className="sidebar_ads_item-header">UTC2 Media</div>
               </div>
             </a>
           </li>

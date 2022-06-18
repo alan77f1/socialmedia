@@ -19,13 +19,13 @@ const Header = () => {
               style={{
                 margin: '1px 12px 1px 5px',
                 fontSize: '18px',
-                width: '100px',
+                width: '120px',
                 height: '100%',
                 color: '#002F77',
                 fontWeight: '650',
               }}
             >
-              UTC2 News
+              UTC2 Media
             </p>
           </Link>
         </div>

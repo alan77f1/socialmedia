@@ -66,7 +66,8 @@
 
 .post_bottom_action_item-Text {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 7px 105px;
 }
 
 .post_bottom_action_item-Text:hover {

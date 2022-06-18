@@ -42,11 +42,11 @@ const Register = () => {
     <Helmet title="Đăng ký">
       <div className="auth_page">
         <div className="auth_page-title">
-          UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
+          UTC2 Media <h5>UTC2 Media giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
         </div>
         <form onSubmit={handleSubmit}>
           <h3 className="text-uppercase text-center mb-1" style={{ color: '#002F77' }}>
-            UTC2 News
+            UTC2 Media
           </h3>
           <img src={LogoUTC2}></img>
 

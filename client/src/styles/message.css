@@ -164,19 +164,20 @@
   font-size: 13px;
   color: #8a8d91;
   font-weight: 500;
-  margin-right: 448px;
+  margin-right: 458px;
+  margin-left: 468px;
 }
 .you_message .chat_text {
   background: #0048aa;
   color: white;
   border: 1px solid #0048aa;
-  border-radius: 14px 14px 0 14px;
+  border-radius: 24px 24px 0 24px;
 }
 .other_message .chat_text {
-  background: white;
+  background: #e4e6eb;
   color: #111;
-  border: 1px solid #ddd;
-  border-radius: 14px 14px 14px 0;
+  border: 1px solid #e4e6eb;
+  border-radius: 24px 24px 24px 0;
 }
 .chat_title {
   margin-bottom: 3px;
@@ -184,16 +185,16 @@
 .you_content {
   position: relative;
 }
-.you_content .fa-trash {
+.you_content .you_content_detele {
   position: absolute;
-  top: 50%;
-  left: -15px;
+  top: 117%;
+  left: 20px;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 14px;
   opacity: 0;
 }
-.you_content:hover .fa-trash {
+.you_content:hover .you_content_detele {
   opacity: 1;
 }
 .chat_input .dropdown-menu {

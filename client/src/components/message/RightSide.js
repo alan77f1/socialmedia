@@ -123,7 +123,7 @@ const RightSide = () => {
   }, [isLoadMore]);
 
   const handleDeleteConversation = () => {
-    if (window.confirm('Bạn muốn xoá phòng chat này ?')) {
+    if (window.confirm('Bạn muốn xoá đoạn chat này ?')) {
       dispatch(deleteConversation({ auth, id }));
       return history.push('/message');
     }
@@ -167,7 +167,13 @@ const RightSide = () => {
         {user.length !== 0 && (
           <UserCard user={user}>
             <div>
-              <i className="fas fa-trash text-danger" onClick={handleDeleteConversation} />
+              <div
+                className="btn btn-warning mr-2"
+                style={{ cursor: 'pointer', color: '#ffffff', padding: '8px', fontSize: '15px' }}
+                onClick={handleDeleteConversation}
+              >
+                Xoá đoạn chat
+              </div>
             </div>
           </UserCard>
         )}

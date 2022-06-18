@@ -24,7 +24,11 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
       </div>
 
       <div className="you_content">
-        {user._id === auth.user._id && <i className="fas fa-trash text-danger" onClick={handleDeleteMessages} />}
+        {user._id === auth.user._id && (
+          <i className="you_content_detele" onClick={handleDeleteMessages}>
+            Thu hồi tin nhắn
+          </i>
+        )}
 
         <div>
           {msg.text && (
