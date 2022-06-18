@@ -11,7 +11,7 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
   const handleDeleteMessages = () => {
     if (!data) return;
 
-    if (window.confirm('Bạn muốn xoá tin nhắn này?')) {
+    if (window.confirm('Bạn có muốn thu hồi tin nhắn này không?')) {
       dispatch(deleteMessages({ msg, data, auth }));
     }
   };
@@ -40,34 +40,6 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
             <div key={index}>{item.url.match(/video/i) ? videoShow(item.url, theme) : imageShow(item.url, theme)}</div>
           ))}
         </div>
-
-        {msg.call && (
-          <button className="btn d-flex align-items-center py-3" style={{ background: '#eee', borderRadius: '10px' }}>
-            <span
-              className="material-icons font-weight-bold mr-1"
-              style={{
-                fontSize: '2.5rem',
-                color: msg.call.times === 0 ? 'crimson' : 'green',
-                filter: theme ? 'invert(1)' : 'invert(0)',
-              }}
-            >
-              {msg.call.times === 0
-                ? msg.call.video
-                  ? 'videocam_off'
-                  : 'phone_disabled'
-                : msg.call.video
-                ? 'video_camera_front'
-                : 'call'}
-            </span>
-
-            <div className="text-left">
-              <h6>{msg.call.video ? 'Video Call' : 'Audio Call'}</h6>
-              <small>
-                {msg.call.times > 0 ? <Times total={msg.call.times} /> : new Date(msg.createdAt).toLocaleTimeString()}
-              </small>
-            </div>
-          </button>
-        )}
       </div>
 
       <div className="chat_time">{new Date(msg.createdAt).toLocaleString()}</div>
