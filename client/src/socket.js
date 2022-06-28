@@ -20,8 +20,8 @@ const spawnNotification = (body, icon, url, title) => {
   };
 };
 
-const SocketClient = () => {
-  const { auth, socket, notify, online, call } = useSelector((state) => state);
+const Socket = () => {
+  const { auth, socket, notify } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const audioRef = useRef();
@@ -120,42 +120,6 @@ const SocketClient = () => {
     return () => socket.off('addMessageToClient');
   }, [socket, dispatch]);
 
-  // Check User Online / Offline
-  useEffect(() => {
-    socket.emit('checkUserOnline', auth.user);
-  }, [socket, auth.user]);
-
-  useEffect(() => {
-    socket.on('checkUserOnlineToMe', (data) => {
-      data.forEach((item) => {
-        if (!online.includes(item.id)) {
-          dispatch({ type: GLOBALTYPES.ONLINE, payload: item.id });
-        }
-      });
-    });
-
-    return () => socket.off('checkUserOnlineToMe');
-  }, [socket, dispatch, online]);
-
-  useEffect(() => {
-    socket.on('checkUserOnlineToClient', (id) => {
-      if (!online.includes(id)) {
-        dispatch({ type: GLOBALTYPES.ONLINE, payload: id });
-      }
-    });
-
-    return () => socket.off('checkUserOnlineToClient');
-  }, [socket, dispatch, online]);
-
-  // Check User Offline
-  useEffect(() => {
-    socket.on('CheckUserOffline', (id) => {
-      dispatch({ type: GLOBALTYPES.OFFLINE, payload: id });
-    });
-
-    return () => socket.off('CheckUserOffline');
-  }, [socket, dispatch]);
-
   return (
     <>
       <audio controls ref={audioRef} style={{ display: 'none' }}>
@@ -165,4 +129,4 @@ const SocketClient = () => {
   );
 };
 
-export default SocketClient;
+export default Socket;

@@ -2,7 +2,7 @@ const express = require('express');
 const connectDatabase = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const SocketServer = require('./SocketServer');
+const Socket = require('./Socket');
 const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
@@ -16,7 +16,7 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
 io.on('connection', (socket) => {
-  SocketServer(socket);
+  Socket(socket);
 });
 
 // Create peer server

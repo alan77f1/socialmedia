@@ -2,9 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteMessages } from '../../redux/actions/messageAction';
 import { imageShow, videoShow } from '../../utils/mediaShow';
 import Avatar from '../Avatar';
-import Times from './Times';
 
-const MsgDisplay = ({ user, msg, theme, data }) => {
+const MsgDisplay = ({ user, msg, data }) => {
   const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -31,13 +30,9 @@ const MsgDisplay = ({ user, msg, theme, data }) => {
         )}
 
         <div>
-          {msg.text && (
-            <div className="chat_text" style={{ filter: theme ? 'invert(1)' : 'invert(0)' }}>
-              {msg.text}
-            </div>
-          )}
+          {msg.text && <div className="chat_text">{msg.text}</div>}
           {msg.media.map((item, index) => (
-            <div key={index}>{item.url.match(/video/i) ? videoShow(item.url, theme) : imageShow(item.url, theme)}</div>
+            <div key={index}>{item.url.match(/video/i) ? videoShow(item.url) : imageShow(item.url)}</div>
           ))}
         </div>
       </div>

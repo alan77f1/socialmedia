@@ -2,31 +2,31 @@ const valid = ({ fullname, username, email, password, cf_password }) => {
   const err = {};
 
   if (!fullname) {
-    err.fullname = "Vui lòng thêm tên đầy đủ của bạn.";
+    err.fullname = 'Vui lòng thêm tên đầy đủ của bạn.';
   } else if (fullname.length > 25) {
-    err.fullname = "Tên đầy đủ phải nhỏ hơn 25 kí tự.";
+    err.fullname = 'Tên đầy đủ phải nhỏ hơn 25 kí tự.';
   }
 
   if (!username) {
-    err.username = "Vui lòng thêm tên đăng nhập của bạn.";
-  } else if (username.replace(/ /g, "").length > 25) {
-    err.username = "Tên đăng nhập phải nhỏ hơn 25 kí tự.";
+    err.username = 'Vui lòng thêm tên đăng nhập của bạn.';
+  } else if (username.replace(/ /g, '').length > 25) {
+    err.username = 'Tên đăng nhập phải nhỏ hơn 25 kí tự.';
   }
 
   if (!email) {
-    err.email = "Vui lòng thêm email của bạn.";
+    err.email = 'Vui lòng thêm email của bạn.';
   } else if (!validateEmail(email)) {
-    err.email = "Định dạng email không đúng.";
+    err.email = 'Định dạng email không đúng.';
   }
 
   if (!password) {
-    err.password = "Vui lòng thêm mật khẩu của bạn.";
+    err.password = 'Vui lòng thêm mật khẩu của bạn.';
   } else if (password.length < 6) {
-    err.password = "Mật khẩu phải từ 6 kí tự trở lên.";
+    err.password = 'Mật khẩu phải từ 6 kí tự trở lên.';
   }
 
   if (password !== cf_password) {
-    err.cf_password = "Mật khẩu không trùng khớp.";
+    err.cf_password = 'Mật khẩu không trùng khớp.';
   }
 
   return {

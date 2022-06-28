@@ -11,7 +11,7 @@ import UserCard from '../UserCard';
 import MsgDisplay from './MsgDisplay';
 
 const RightSide = () => {
-  const { auth, message, theme, socket, peer } = useSelector((state) => state);
+  const { auth, message, socket, peer } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -189,13 +189,13 @@ const RightSide = () => {
             <div key={index}>
               {msg.sender !== auth.user._id && (
                 <div className="chat_row other_message">
-                  <MsgDisplay user={user} msg={msg} theme={theme} />
+                  <MsgDisplay user={user} msg={msg} />
                 </div>
               )}
 
               {msg.sender === auth.user._id && (
                 <div className="chat_row you_message">
-                  <MsgDisplay user={auth.user} msg={msg} theme={theme} data={data} />
+                  <MsgDisplay user={auth.user} msg={msg} data={data} />
                 </div>
               )}
             </div>
@@ -212,9 +212,7 @@ const RightSide = () => {
       <div className="show_media" style={{ display: media.length > 0 ? 'grid' : 'none' }}>
         {media.map((item, index) => (
           <div key={index} id="file_media">
-            {item.type.match(/video/i)
-              ? videoShow(URL.createObjectURL(item), theme)
-              : imageShow(URL.createObjectURL(item), theme)}
+            {item.type.match(/video/i) ? videoShow(URL.createObjectURL(item)) : imageShow(URL.createObjectURL(item))}
             <span onClick={() => handleDeleteMedia(index)}>&times;</span>
           </div>
         ))}
@@ -235,7 +233,7 @@ const RightSide = () => {
           }}
         />
 
-        <Icons setContent={setText} content={text} theme={theme} />
+        <Icons setContent={setText} content={text} />
 
         <button type="submit" className="material-icons" disabled={text || media.length > 0 ? false : true}>
           send
