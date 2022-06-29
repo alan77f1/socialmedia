@@ -61,7 +61,7 @@ const Search = () => {
         Tìm Kiếm
       </button>
 
-      {load && <img className="loading" src={LoadIcon} alt="loading" />}
+      {load && <img className="loading_search" src={LoadIcon} alt="loading" />}
 
       <div className="users">
         {search &&

@@ -113,7 +113,7 @@
   box-shadow: 0 0 4px #ddd;
   margin-left: 91px;
 }
-.header .search_form .loading {
+.header .search_form .loading_search {
   position: absolute;
   top: 50%;
   right: 42px;
