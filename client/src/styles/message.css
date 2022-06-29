@@ -164,4 +164,5 @@
 }
 .chat_input .dropdown-menu {
   transform: translate3d(-110px, -200px, 0px) !important;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 10%), -1px -1px 8px rgb(0 0 0 / 10%);
 }
