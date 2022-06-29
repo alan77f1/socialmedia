@@ -37,7 +37,7 @@ const ForgotPassword = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <h3 className="text-uppercase text-center mb-4" style={{ color: '#002F77' }}>
-          UTC2 Media
+            UTC2 Media
           </h3>
           <img src={LogoUTC2}></img>
           <div className="form-group">
@@ -52,13 +52,13 @@ const ForgotPassword = () => {
               name="email"
               onChange={handleChangeInput}
               value={email}
-              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Email..."
             />
 
             <small className="form-text text-danger">{alert.email ? alert.email : ''}</small>
           </div>
-          <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '50px' }}>
+          <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '10px' }}>
             Xác Thực Email
           </button>
           <p className="my-2">

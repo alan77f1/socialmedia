@@ -75,7 +75,7 @@ const EditProfile = ({ setOnEdit }) => {
               value={fullname}
               onChange={handleInput}
               style={{
-                borderRadius: '50px',
+                borderRadius: '10px',
               }}
             />
             <small
@@ -100,7 +100,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="form-control"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           />
         </div>
@@ -114,7 +114,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="form-control"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           />
         </div>
@@ -128,7 +128,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="custom-select text-capitalize"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           >
             <option value="male">Nam</option>
@@ -141,7 +141,7 @@ const EditProfile = ({ setOnEdit }) => {
           className="btn btn-success w-100"
           type="submit"
           style={{
-            borderRadius: '50px',
+            borderRadius: '10px',
           }}
         >
           Lưu

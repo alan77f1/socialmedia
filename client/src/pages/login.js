@@ -50,7 +50,7 @@ const Login = () => {
               aria-describedby="emailHelp"
               onChange={handleChangeInput}
               value={email}
-              style={{ borderRadius: '50px' }}
+              style={{ borderRadius: '10px' }}
               placeholder="Email..."
             />
           </div>
@@ -64,7 +64,7 @@ const Login = () => {
                 onChange={handleChangeInput}
                 value={password}
                 name="password"
-                style={{ borderRadius: '50px' }}
+                style={{ borderRadius: '10px' }}
                 placeholder="Mật khẩu..."
               />
 

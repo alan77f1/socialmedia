@@ -76,7 +76,7 @@
   height: 40px;
   outline: none;
   text-indent: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px 15px;
   margin-left: 62px;
 }
@@ -182,7 +182,7 @@
 }
 
 .menu-middle-item:hover {
-  background-color: #f9cb00;
+  background-color: var(--yellow);
 }
 
 .menu-middle-item_badge {

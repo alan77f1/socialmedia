@@ -55,7 +55,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               onChange={handleChangeInput}
               value={email}
               name="email"
-              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
             />
             <small>{alert.email ? alert.email : ''}</small>
           </div>
@@ -73,7 +73,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               name="oldPassword"
               style={{
                 background: `${alert.oldPassword ? '#fd2d6a14' : ''}`,
-                borderRadius: '50px',
+                borderRadius: '10px',
               }}
             />
             <small onClick={() => setTypeOldPass(!typeOldPass)}>{typeOldPass ? 'Ẩn' : 'Hiện'}</small>
@@ -92,7 +92,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               name="newPassword"
               style={{
                 background: `${alert.newPassword ? '#fd2d6a14' : ''}`,
-                borderRadius: '50px',
+                borderRadius: '10px',
               }}
             />
             <small onClick={() => setTypeNewPass(!typeNewPass)}>{typeNewPass ? 'Ẩn' : 'Hiện'}</small>
@@ -111,7 +111,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
               name="cf_newPassword"
               style={{
                 background: `${alert.cf_newPassword ? '#fd2d6a14' : ''}`,
-                borderRadius: '50px',
+                borderRadius: '10px',
               }}
             />
             <small onClick={() => setTypeCfPass(!typeCfPass)}>{typeCfPass ? 'Ẩn' : 'Hiện'}</small>
@@ -123,7 +123,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
           className="btn btn-success w-100"
           type="submit"
           style={{
-            borderRadius: '50px',
+            borderRadius: '10px',
           }}
         >
           Lưu

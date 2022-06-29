@@ -58,7 +58,7 @@ const Register = () => {
               name="fullname"
               onChange={handleChangeInput}
               value={fullname}
-              style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Họ và tên..."
             />
 
@@ -73,7 +73,7 @@ const Register = () => {
               name="username"
               onChange={handleChangeInput}
               value={username.toLowerCase().replace(/ /g, '')}
-              style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Tên tài khoản..."
             />
 
@@ -88,7 +88,7 @@ const Register = () => {
               name="email"
               onChange={handleChangeInput}
               value={email}
-              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Email..."
             />
 
@@ -104,7 +104,7 @@ const Register = () => {
                 onChange={handleChangeInput}
                 value={password}
                 name="password"
-                style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
                 placeholder="Mật khẩu..."
               />
 
@@ -125,7 +125,7 @@ const Register = () => {
                 name="cf_password"
                 style={{
                   background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
-                  borderRadius: '50px',
+                  borderRadius: '10px',
                 }}
                 placeholder="Nhập lại mật khẩu..."
               />

@@ -239,11 +239,11 @@
 }
 
 .profile_cover {
-  height: 340px;
+  height: 357px;
   width: 100%;
   object-fit: cover;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
 }
 
 .profile_avatar_wrap {
@@ -251,9 +251,9 @@
 }
 
 .profile_avatar_avar {
-  width: 145px;
-  height: 142px;
-  background-color: #242526;
+  width: 161px;
+  height: 159px;
+  background-color: #f9cc01;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +318,7 @@
 .info_card {
   top: 0;
   left: 0;
-  background: #dddddda3;
+  background: #ffffff;
   width: 273px;
   height: 55px;
   display: flex;
@@ -328,6 +328,7 @@
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 0 4px #ddd;
 }
 .info_card > span:nth-of-type(1) {
   font-weight: bold;

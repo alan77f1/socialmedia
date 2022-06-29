@@ -8,7 +8,6 @@ const CardFooter = ({ post }) => {
   const [isLike, setIsLike] = useState(false);
   const [loadLike, setLoadLike] = useState(false);
 
-
   const { auth, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -85,7 +84,6 @@ const CardFooter = ({ post }) => {
           </Link>
         </div>
       </div>
-
     </div>
   );
 };
