@@ -22,6 +22,9 @@
 .info_container {
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 40px;
+  height: 627px;
 }
 
 .info_content {
@@ -242,8 +245,8 @@
   height: 357px;
   width: 100%;
   object-fit: cover;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 .profile_avatar_wrap {
@@ -313,12 +316,13 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  padding: 0 10px;
 }
 
 .info_card {
   top: 0;
   left: 0;
-  background: #ffffff;
+  background: #f0f2f5;
   width: 273px;
   height: 55px;
   display: flex;
