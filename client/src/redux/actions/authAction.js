@@ -1,5 +1,5 @@
 import { postDataAPI } from '../../utils/fetchData';
-import valid from '../../utils/valid';
+import valid from '../../utils/validata';
 import { GLOBALTYPES } from './globalTypes';
 
 export const login = (data) => async (dispatch) => {

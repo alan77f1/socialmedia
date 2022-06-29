@@ -42,11 +42,11 @@ const Register = () => {
     <Helmet title="Đăng ký">
       <div className="auth_page">
         <div className="auth_page-title">
-          UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
+          UTC2 Media <h5>UTC2 Media giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
         </div>
         <form onSubmit={handleSubmit}>
           <h3 className="text-uppercase text-center mb-1" style={{ color: '#002F77' }}>
-            UTC2 News
+            UTC2 Media
           </h3>
           <img src={LogoUTC2}></img>
 
@@ -58,7 +58,7 @@ const Register = () => {
               name="fullname"
               onChange={handleChangeInput}
               value={fullname}
-              style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.fullname ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Họ và tên..."
             />
 
@@ -73,7 +73,7 @@ const Register = () => {
               name="username"
               onChange={handleChangeInput}
               value={username.toLowerCase().replace(/ /g, '')}
-              style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.username ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Tên tài khoản..."
             />
 
@@ -88,7 +88,7 @@ const Register = () => {
               name="email"
               onChange={handleChangeInput}
               value={email}
-              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+              style={{ background: `${alert.email ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
               placeholder="Email..."
             />
 
@@ -104,7 +104,7 @@ const Register = () => {
                 onChange={handleChangeInput}
                 value={password}
                 name="password"
-                style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '50px' }}
+                style={{ background: `${alert.password ? '#fd2d6a14' : ''}`, borderRadius: '10px' }}
                 placeholder="Mật khẩu..."
               />
 
@@ -125,7 +125,7 @@ const Register = () => {
                 name="cf_password"
                 style={{
                   background: `${alert.cf_password ? '#fd2d6a14' : ''}`,
-                  borderRadius: '50px',
+                  borderRadius: '10px',
                 }}
                 placeholder="Nhập lại mật khẩu..."
               />
@@ -176,7 +176,7 @@ const Register = () => {
             </label>
           </div>
 
-          <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '50px' }}>
+          <button type="submit" className="btn btn-login btn-warning w-100">
             Đăng Ký
           </button>
 

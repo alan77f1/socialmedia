@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-
 import { useSelector } from 'react-redux';
-import LoadData from '../components/alert/LoadData';
+import LoadIcon from '../assets/images/loading.gif';
 import Helmet from '../components/Helmet';
 import Posts from '../components/home/Posts';
 import RightSideBar from '../components/home/RightSideBar';
@@ -33,7 +32,7 @@ const Home = () => {
         </div>
         <div className="home_page_middle">
           {homePosts.loading ? (
-            <LoadData />
+            <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
           ) : homePosts.result === 0 && homePosts.posts.length === 0 ? (
             <h4 className="text-center text-danger" style={{ padding: '10px' }}>
               Chưa có bài viết nào

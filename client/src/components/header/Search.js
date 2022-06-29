@@ -50,7 +50,7 @@ const Search = () => {
         <span className="material-icons" style={{ fontSize: '22px' }}>
           search
         </span>
-        <span>Tìm kiếm trên UTC2 News</span>
+        <span>Tìm kiếm</span>
       </div>
 
       <div className="close_search" onClick={handleClose} style={{ opacity: users.length === 0 ? 0 : 1 }}>

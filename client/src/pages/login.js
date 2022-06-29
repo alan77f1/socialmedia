@@ -34,11 +34,11 @@ const Login = () => {
     <Helmet title="Đăng nhập">
       <div className="auth_page">
         <div className="auth_page-title">
-          UTC2 News <h5>UTC2 News giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
+          UTC2 Media <h5>UTC2 Media giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h5>
         </div>
         <form onSubmit={handleSubmit}>
           <h3 className="text-uppercase text-center mb-2" style={{ color: '#002F77' }}>
-            UTC2 News
+            UTC2 Media
           </h3>
           <img src={LogoUTC2}></img>
           <div className="form-group">
@@ -50,7 +50,7 @@ const Login = () => {
               aria-describedby="emailHelp"
               onChange={handleChangeInput}
               value={email}
-              style={{ borderRadius: '50px' }}
+              style={{ borderRadius: '10px' }}
               placeholder="Email..."
             />
           </div>
@@ -64,7 +64,7 @@ const Login = () => {
                 onChange={handleChangeInput}
                 value={password}
                 name="password"
-                style={{ borderRadius: '50px' }}
+                style={{ borderRadius: '10px' }}
                 placeholder="Mật khẩu..."
               />
 
@@ -72,30 +72,26 @@ const Login = () => {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="btn btn-warning w-100"
-            disabled={email && password ? false : true}
-            style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600' }}
-          >
+          <button type="submit" className="btn btn-login btn-warning w-100" disabled={email && password ? false : true}>
             Đăng Nhập
           </button>
 
-          <Link
-            to="/forgot_password"
-            style={{ color: '#0075FF', margin: '12px 0 10px 139px', borderBottom: '1px solid #dbdbdb', width: '100px' }}
+          <div
+            className=""
+            style={{
+              color: '#0075FF',
+              margin: '17px 5px 12px 64px',
+              borderBottom: '1px solid #dbdbdb',
+              width: '67%',
+              textAlign: 'center',
+            }}
           >
-            Quên Mật Khẩu?
-          </Link>
-          <Link to="/register">
-            <button
-              type="submit"
-              className="btn btn-success w-100"
-              style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600', marginTop: '20px' }}
-            >
-              Đăng ký tài khoản
-            </button>
-          </Link>
+            <Link to="/forgot_password" style={{ marginRight: '10px' }}>
+              Quên Mật Khẩu?
+            </Link>
+
+            <Link to="/register">Đăng ký tài khoản</Link>
+          </div>
         </form>
       </div>
     </Helmet>

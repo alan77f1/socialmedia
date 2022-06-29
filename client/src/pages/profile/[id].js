@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import Info from '../../components/profile/Info';
 import Posts from '../../components/profile/Posts';
 import Saved from '../../components/profile/Saved';
-
+import LoadIcon from '../../assets/images/loading.gif';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import LoadData from '../../components/alert/LoadData';
+
 import Helmet from '../../components/Helmet';
 import { getProfileUsers } from '../../redux/actions/profileAction';
 
@@ -29,20 +29,27 @@ const Profile = () => {
         <div className="profile">
           <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
 
-          <div className="profile_title">Tất cả bài viết</div>
           {auth.user._id === id && (
             <div className="profile_tab">
-              <button className={saveTab ? '' : 'active'} onClick={() => setSaveTab(false)}>
+              <button
+                className={`btn saveTab ? '' : 'active'`}
+                onClick={() => setSaveTab(false)}
+                style={{ color: 'black' }}
+              >
                 Tất cả bài viết
               </button>
-              <button className={saveTab ? 'active' : ''} onClick={() => setSaveTab(true)}>
+              <button
+                className={`btn saveTab ? 'active' : ''`}
+                onClick={() => setSaveTab(true)}
+                style={{ color: 'black' }}
+              >
                 Bài viết đã lưu
               </button>
             </div>
           )}
 
           {profile.loading ? (
-            <LoadData />
+            <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />
           ) : (
             <>
               {saveTab ? (

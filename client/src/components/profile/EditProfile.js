@@ -50,17 +50,7 @@ const EditProfile = ({ setOnEdit }) => {
 
   return (
     <div className="edit_profile">
-      <button
-        className="btn btn_close"
-        onClick={() => setOnEdit(false)}
-        style={{
-          borderRadius: '50px',
-          background: '#E4E6EB',
-          fontWeight: 'bold',
-          color: '#606770',
-          fontSize: '20px',
-        }}
-      >
+      <button className="btn btn_close" onClick={() => setOnEdit(false)}>
         &times;
       </button>
 
@@ -85,7 +75,7 @@ const EditProfile = ({ setOnEdit }) => {
               value={fullname}
               onChange={handleInput}
               style={{
-                borderRadius: '50px',
+                borderRadius: '10px',
               }}
             />
             <small
@@ -110,7 +100,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="form-control"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           />
         </div>
@@ -124,7 +114,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="form-control"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           />
         </div>
@@ -138,7 +128,7 @@ const EditProfile = ({ setOnEdit }) => {
             className="custom-select text-capitalize"
             onChange={handleInput}
             style={{
-              borderRadius: '50px',
+              borderRadius: '10px',
             }}
           >
             <option value="male">Nam</option>
@@ -151,7 +141,7 @@ const EditProfile = ({ setOnEdit }) => {
           className="btn btn-success w-100"
           type="submit"
           style={{
-            borderRadius: '50px',
+            borderRadius: '10px',
           }}
         >
           Lưu

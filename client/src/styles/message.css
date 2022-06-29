@@ -70,6 +70,11 @@
   height: 49px;
   border: none;
   outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 10px;
+  background-color: #f0f2f5;
+  height: 35px;
 }
 .chat_input button {
   border: none;
@@ -87,46 +92,6 @@
   top: 0;
   left: 0;
   opacity: 0;
-}
-.show_media {
-  width: 100%;
-  height: 70px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-  place-items: center;
-  grid-gap: 10px;
-  background: #f3f3f3;
-  border-radius: 5px;
-  padding: 0 5px;
-}
-.show_media #file_media {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 70px;
-  max-height: 70px;
-}
-.show_media #file_media img,
-.show_media #file_media video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-}
-.show_media #file_media span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  background: white;
-  border: 1px solid crimson;
-  padding: 3px 7px;
-  color: crimson;
-  border-radius: 50%;
-  font-size: 10px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 /* -------- Chat Container ----- */
@@ -164,19 +129,20 @@
   font-size: 13px;
   color: #8a8d91;
   font-weight: 500;
-  margin-right: 448px;
+  margin-right: 458px;
+  margin-left: 468px;
 }
 .you_message .chat_text {
   background: #0048aa;
   color: white;
   border: 1px solid #0048aa;
-  border-radius: 14px 14px 0 14px;
+  border-radius: 24px 24px 0 24px;
 }
 .other_message .chat_text {
-  background: white;
+  background: #e4e6eb;
   color: #111;
-  border: 1px solid #ddd;
-  border-radius: 14px 14px 14px 0;
+  border: 1px solid #e4e6eb;
+  border-radius: 24px 24px 24px 0;
 }
 .chat_title {
   margin-bottom: 3px;
@@ -184,16 +150,16 @@
 .you_content {
   position: relative;
 }
-.you_content .fa-trash {
+.you_content .you_content_detele {
   position: absolute;
-  top: 50%;
-  left: -15px;
+  top: 117%;
+  left: 20px;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 14px;
   opacity: 0;
 }
-.you_content:hover .fa-trash {
+.you_content:hover .you_content_detele {
   opacity: 1;
 }
 .chat_input .dropdown-menu {

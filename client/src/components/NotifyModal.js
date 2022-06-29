@@ -22,11 +22,7 @@ const NotifyModal = () => {
     <div style={{ minWidth: '425px' }}>
       <div className="d-flex justify-content-between align-items-center px-3">
         <h4 style={{ margin: '15px 0' }}>Thông Báo</h4>
-        <div
-          className="btn btn-warning mr-2"
-          style={{ cursor: 'pointer', color: '#ffffff', padding: '8px', fontSize: '15px' }}
-          onClick={handleDeleteAll}
-        >
+        <div className="btn btn-delete btn-warning mr-2" onClick={handleDeleteAll}>
           Xoá Tất Cả
         </div>
       </div>

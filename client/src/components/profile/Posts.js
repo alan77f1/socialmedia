@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { PROFILE_TYPES } from '../../redux/actions/profileAction';
 import { getDataAPI } from '../../utils/fetchData';
-import LoadData from '../alert/LoadData';
+import LoadIcon from '../../assets/images/loading.gif';
 import LoadMoreBtn from '../button/LoadMoreBtn';
 import PostThumb from '../PostThumb';
 
@@ -33,7 +33,7 @@ const Posts = ({ auth, id, dispatch, profile }) => {
     <div>
       <PostThumb posts={posts} result={result} />
 
-      {load && <LoadData />}
+      {load && <img src={LoadIcon} alt="loading" className="d-block mx-auto my-4" />}
 
       <LoadMoreBtn result={result} page={page} load={load} handleLoadMore={handleLoadMore} />
     </div>

@@ -7,7 +7,7 @@ const Followers = ({ users, setShowFollowers }) => {
   return (
     <div className="follow">
       <div className="follow_box">
-        <h5 className="text-center">Người Theo Dõi</h5>
+        <h5 className="text-center">Người theo dõi</h5>
         <hr />
 
         <div className="follow_content">
@@ -18,9 +18,9 @@ const Followers = ({ users, setShowFollowers }) => {
           ))}
         </div>
 
-        <div className="close" onClick={() => setShowFollowers(false)}>
+        <button className="btn btn_close" onClick={() => setShowFollowers(false)}>
           &times;
-        </div>
+        </button>
       </div>
     </div>
   );

@@ -10,7 +10,6 @@ import detailPost from './detailPostReducer';
 import notify from './notifyReducer';
 import socket from './socketReducer';
 import suggestions from './suggestionsReducer';
-import online from './onlineReducer';
 import peer from './peerReducer';
 
 export default combineReducers({
@@ -25,6 +24,5 @@ export default combineReducers({
   suggestions,
   socket,
   notify,
-  online,
   peer,
 });

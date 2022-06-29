@@ -23,7 +23,7 @@ import { getSuggestions } from './redux/actions/suggestionsAction';
 import io from 'socket.io-client';
 import { GLOBALTYPES } from './redux/actions/globalTypes';
 import { getNotifies } from './redux/actions/notifyAction';
-import SocketClient from './SocketClient';
+import Socket from './socket';
 
 function App() {
   const { auth, status, modal } = useSelector((state) => state);
@@ -54,7 +54,7 @@ function App() {
       <div className={`App ${(status || modal) && 'mode'}`}>
         {auth.token && <Header />}
         {status && <StatusModal />}
-        {auth.token && <SocketClient />}
+        {auth.token && <Socket />}
 
         <Route exact path="/" component={auth.token ? Home : Login} />
         <Route exact path="/register" component={isLogged ? NotFound : Register} />
