@@ -1,5 +1,5 @@
-const Conversations = require("../models/conversationModel");
-const Messages = require("../models/messageModel");
+const Conversations = require('../models/conversationModel');
+const Messages = require('../models/messageModel');
 
 class APIfeatures {
   constructor(query, queryString) {
@@ -19,30 +19,25 @@ class APIfeatures {
 const messageCtrl = {
   createMessage: async (req, res) => {
     try {
-      const { sender, recipient, text, media, call } = req.body;
+      const { sender, recipient, text, media } = req.body;
 
-      if (!recipient || (!text.trim() && media.length === 0 && !call)) return;
+      if (!recipient || (!text.trim() && media.length === 0)) return;
 
       const newConversation = await Conversations.findOneAndUpdate(
         {
-          $or: [
-            { recipients: [sender, recipient] },
-            { recipients: [recipient, sender] },
-          ],
+          $or: [{ recipients: [sender, recipient] }, { recipients: [recipient, sender] }],
         },
         {
           recipients: [sender, recipient],
           text,
           media,
-          call,
         },
-        { new: true, upsert: true }
+        { new: true, upsert: true },
       );
 
       const newMessage = new Messages({
         conversation: newConversation._id,
         sender,
-        call,
         recipient,
         text,
         media,
@@ -50,7 +45,7 @@ const messageCtrl = {
 
       await newMessage.save();
 
-      res.json({ msg: "Tạo thành công !" });
+      res.json({ msg: 'Tạo thành công !' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -61,12 +56,10 @@ const messageCtrl = {
         Conversations.find({
           recipients: req.user._id,
         }),
-        req.query
+        req.query,
       ).paginating();
 
-      const conversations = await features.query
-        .sort("-updatedAt")
-        .populate("recipients", "avatar username fullname");
+      const conversations = await features.query.sort('-updatedAt').populate('recipients', 'avatar username fullname');
 
       res.json({
         conversations,
@@ -85,10 +78,10 @@ const messageCtrl = {
             { sender: req.params.id, recipient: req.user._id },
           ],
         }),
-        req.query
+        req.query,
       ).paginating();
 
-      const messages = await features.query.sort("-createdAt");
+      const messages = await features.query.sort('-createdAt');
 
       res.json({
         messages,
@@ -104,7 +97,7 @@ const messageCtrl = {
         _id: req.params.id,
         sender: req.user._id,
       });
-      res.json({ msg: "Xoá thành công!" });
+      res.json({ msg: 'Xoá thành công!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
@@ -112,14 +105,11 @@ const messageCtrl = {
   deleteConversation: async (req, res) => {
     try {
       const newConver = await Conversations.findOneAndDelete({
-        $or: [
-          { recipients: [req.user._id, req.params.id] },
-          { recipients: [req.params.id, req.user._id] },
-        ],
+        $or: [{ recipients: [req.user._id, req.params.id] }, { recipients: [req.params.id, req.user._id] }],
       });
       await Messages.deleteMany({ conversation: newConver._id });
 
-      res.json({ msg: "Xoá thành công!" });
+      res.json({ msg: 'Xoá thành công!' });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

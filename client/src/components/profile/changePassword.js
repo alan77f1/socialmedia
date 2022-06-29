@@ -37,17 +37,7 @@ const ChangePassword = ({ setShowDialogPassword }) => {
 
   return (
     <div className="edit_profile">
-      <button
-        className="btn  btn_close"
-        onClick={() => setShowDialogPassword(false)}
-        style={{
-          borderRadius: '50px',
-          background: '#E4E6EB',
-          fontWeight: 'bold',
-          color: '#606770',
-          fontSize: '17px',
-        }}
-      >
+      <button className="btn btn_close" onClick={() => setShowDialogPassword(false)}>
         &times;
       </button>
 

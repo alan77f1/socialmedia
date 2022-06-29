@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import Avatar from '../Avatar';
-import FollowBtn from '../button/FollowBtn';
 import EditProfile from './EditProfile';
 import Followers from './Followers';
 import Following from './Following';
 
 import ImgBuilding from '../../assets/images/building.jpg';
+import FollowBtn from '../button/FollowBtn';
 
 const Info = ({ id, auth, profile, dispatch }) => {
   const [userData, setUserData] = useState([]);
   const [onEdit, setOnEdit] = useState(false);
-
   const [showFollowers, setShowFollowers] = useState(false);
   const [showFollowing, setShowFollowing] = useState(false);
 
@@ -36,59 +35,53 @@ const Info = ({ id, auth, profile, dispatch }) => {
     <div className="info">
       {userData.map((user) => (
         <div className="info_container" key={user._id}>
-          <div className="profileTop">
-            <img src={ImgBuilding} alt="" className="profileTopCoverImg" />
-            <div className="profileTopWrap">
-              <div className="profileTopAvatar">
-                <div className="profileTopAvatarImg">
+          <div className="profile_avatar">
+            <img src={ImgBuilding} alt="" className="profile_cover" />
+            <div className="profile_avatar_wrap">
+              <div className="profile_avatar_avar">
+                <div className="profile_avatar_img">
                   <Avatar src={user.avatar} size="supper-avatar" />
                 </div>
               </div>
-              <div className="profileTopInfo">
-                <h3>@{user.username}</h3>
+              <div className="profile_avatar_info">
+                <h4>@{user.username}</h4>
+                <h4>{user.fullname}</h4>
               </div>
-
-              <hr className="profileTopHr" />
+              <div className="container_content-title">
+                {user._id === auth.user._id ? (
+                  <button className="btn btn-follow btn-warning" onClick={() => setOnEdit(true)}>
+                    Chỉnh sửa trang cá nhân
+                  </button>
+                ) : (
+                  <FollowBtn user={user} />
+                )}
+              </div>
             </div>
           </div>
-          <div className="container">
-            <div className="container_content">
-              <div className="">
-                <h6>
-                  <span className="content_font">Tên đầy đủ</span> {user.fullname}
-                </h6>
-              </div>
-              <div className="follow_btn ">
-                <h6 className="" onClick={() => setShowFollowers(true)}>
-                  {user.followers.length} <span className="content_font">Người theo dõi</span>
-                </h6>
-                <h6 className="" onClick={() => setShowFollowing(true)}>
-                  {user.following.length} <span className="content_font">Đang theo dõi</span>
-                </h6>
-              </div>
-              <div className="">
-                <h6>
-                  <span className="content_font">Số điện thoại</span> {user.mobile}
-                </h6>
+
+          <div className="info_status">
+            <hr />
+            <div>
+              <div className="info_card">
+                <span onClick={() => setShowFollowers(true)}>{user.followers.length}</span>
+                <span>Người theo dõi</span>
               </div>
 
-              <h6 className="m-0 ">
-                <span className="content_font">Sống tại</span> {user.address}
-              </h6>
+              <div className="info_card">
+                <span onClick={() => setShowFollowers(true)}>{user.following.length}</span>
+                <span>Đang theo dõi</span>
+              </div>
+              <div className="info_card">
+                <span className="content_font">{user.mobile}</span>
+                <span>Số điện thoại</span>
+              </div>
+
+              <div className="info_card">
+                <span className="content_font">{user.address}</span>
+                <span>Sống tại</span>
+              </div>
             </div>
-            <div className="container_content-title">
-              {user._id === auth.user._id ? (
-                <button
-                  className="btn btn-warning"
-                  style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
-                  onClick={() => setOnEdit(true)}
-                >
-                  Chỉnh sửa trang cá nhân
-                </button>
-              ) : (
-                <FollowBtn user={user} />
-              )}
-            </div>
+            <hr />
           </div>
           {onEdit && <EditProfile setOnEdit={setOnEdit} />}
 

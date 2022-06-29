@@ -11,6 +11,20 @@
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 10px rgba(0, 0, 0, 0.1);
 }
 
+.header .logo img {
+  width: 45px;
+  margin-right: 2px;
+}
+
+.header .header-title {
+  margin: 1px 12px 1px 5px;
+  font-size: 18px;
+  width: 120px;
+  height: 100%;
+  color: #002f77;
+  font-weight: 650;
+}
+
 .header .logo-search {
   display: flex;
 }
@@ -113,8 +127,6 @@
   align-items: center;
 }
 
-/* ok */
-
 /* Header middle */
 .header-menu-middle {
   display: flex;
@@ -123,7 +135,8 @@
   width: 600px;
   justify-content: space-around;
   padding: 0;
-  margin: 0;
+  margin: 0 100px 0 0;
+  color: #002f77;
 }
 .menu-middle-item_bell {
   color: #b0b3b8;

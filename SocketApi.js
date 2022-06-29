@@ -1,6 +1,6 @@
 let users = [];
 
-const Socket = (socket) => {
+const SocketApi = (socket) => {
   // Connect - Disconnect
   socket.on('joinUser', (user) => {
     users.push({ id: user._id, socketId: socket.id, followers: user.followers });
@@ -95,4 +95,4 @@ const Socket = (socket) => {
   });
 };
 
-module.exports = Socket;
+module.exports = SocketApi;

@@ -1,21 +1,9 @@
-
 const Toast = ({ msg, handleShow, bgColor }) => {
   return (
-    <div
-      className={`toast show position-fixed text-black ${bgColor}`}
-      style={{ bottom: '5px', left: '5px', minWidth: '200px', zIndex: 50, borderRadius: '12px' }}
-    >
-      <div
-        className={`toast-header text-black ${bgColor}`}
-        style={{ borderRadius: '12px', color: 'black' }}
-      >
+    <div className={`toast show position-fixed text-black ${bgColor}`}>
+      <div className={`toast-header text-black ${bgColor}`}>
         <strong className="mr-auto text-black">{msg.title}</strong>
-        <button
-          className="ml-2 mb-1 close text-black"
-          data-dismiss="toast"
-          style={{ outline: 'none' }}
-          onClick={handleShow}
-        >
+        <button className=" toast-close ml-2 mb-1 close text-black" data-dismiss="toast" onClick={handleShow}>
           &times;
         </button>
       </div>

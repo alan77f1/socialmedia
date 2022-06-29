@@ -70,20 +70,13 @@ const StatusModal = () => {
           <h5 style={{ marginLeft: '178px' }}>Tạo bài viết mới</h5>
 
           <button
-            className="btn  btn_close"
+            className="btn btn_close"
             onClick={() =>
               dispatch({
                 type: GLOBALTYPES.STATUS,
                 payload: false,
               })
             }
-            style={{
-              borderRadius: '50px',
-              background: '#E4E6EB',
-              fontWeight: 'bold',
-              color: '#606770',
-              fontSize: '17px',
-            }}
           >
             &times;
           </button>
@@ -107,9 +100,7 @@ const StatusModal = () => {
           <div className="show_images">
             {images.map((img, index) => (
               <div key={index} id="file_img">
-                {img.camera ? (
-                  imageShow(img.camera)
-                ) : img.url ? (
+                {img.url ? (
                   <>{img.url.match(/video/i) ? videoShow(img.url) : imageShow(img.url)}</>
                 ) : (
                   <>
@@ -126,11 +117,7 @@ const StatusModal = () => {
           <div className="status_footer">
             <div className="input_images w-50">
               <div className="file_upload ">
-                <button
-                  className="btn btn-warning w-100"
-                  type="submit"
-                  style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
-                >
+                <button className="btn btn-warning w-100" type="submit">
                   <input
                     type="file"
                     name="file"
@@ -144,11 +131,7 @@ const StatusModal = () => {
               </div>
             </div>
             <div className="status_footer w-50">
-              <button
-                className="btn btn-warning w-100"
-                type="submit"
-                style={{ borderRadius: '50px', color: '#ffffff', fontSize: '17px', fontWeight: '500' }}
-              >
+              <button className="btn btn-warning w-100" type="submit">
                 Đăng bài
               </button>
             </div>

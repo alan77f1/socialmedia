@@ -176,7 +176,7 @@ const Register = () => {
             </label>
           </div>
 
-          <button type="submit" className="btn btn-warning w-100" style={{ borderRadius: '50px' }}>
+          <button type="submit" className="btn btn-login btn-warning w-100">
             Đăng Ký
           </button>
 

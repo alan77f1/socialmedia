@@ -2,16 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import LoadIcon from '../../assets/images/loading.gif';
-import { GLOBALTYPES } from '../../redux/actions/globalTypes';
 import { addMessage, deleteConversation, getMessages, loadMoreMessages } from '../../redux/actions/messageAction';
 import { imageUpload } from '../../utils/imageUpload';
-import { imageShow, videoShow } from '../../utils/mediaShow';
 import Icons from '../Icons';
 import UserCard from '../UserCard';
 import MsgDisplay from './MsgDisplay';
 
 const RightSide = () => {
-  const { auth, message, socket, peer } = useSelector((state) => state);
+  const { auth, message, socket } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -129,38 +127,6 @@ const RightSide = () => {
     }
   };
 
-  // Call
-  const caller = ({ video }) => {
-    const { _id, avatar, username, fullname } = user;
-
-    const msg = {
-      sender: auth.user._id,
-      recipient: _id,
-      avatar,
-      username,
-      fullname,
-      video,
-    };
-    dispatch({ type: GLOBALTYPES.CALL, payload: msg });
-  };
-
-  const callUser = ({ video }) => {
-    const { _id, avatar, username, fullname } = auth.user;
-
-    const msg = {
-      sender: _id,
-      recipient: user._id,
-      avatar,
-      username,
-      fullname,
-      video,
-    };
-
-    if (peer.open) msg.peerId = peer._id;
-
-    socket.emit('callUser', msg);
-  };
-
   return (
     <>
       <div className="message_header" style={{ cursor: 'pointer' }}>
@@ -212,30 +178,17 @@ const RightSide = () => {
       <div className="show_media" style={{ display: media.length > 0 ? 'grid' : 'none' }}>
         {media.map((item, index) => (
           <div key={index} id="file_media">
-            {item.type.match(/video/i) ? videoShow(URL.createObjectURL(item)) : imageShow(URL.createObjectURL(item))}
             <span onClick={() => handleDeleteMedia(index)}>&times;</span>
           </div>
         ))}
       </div>
 
       <form className="chat_input" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Aa"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          style={{
-            border: 'none',
-            borderRadius: '50px',
-            padding: '6px 10px',
-            backgroundColor: '#F0F2F5',
-            height: '35px',
-          }}
-        />
+        <input type="text" placeholder="Aa" value={text} onChange={(e) => setText(e.target.value)} />
 
         <Icons setContent={setText} content={text} />
 
-        <button type="submit" className="material-icons" disabled={text || media.length > 0 ? false : true}>
+        <button type="submit" className="material-icons" disabled={text > 0 ? false : true}>
           send
         </button>
       </form>

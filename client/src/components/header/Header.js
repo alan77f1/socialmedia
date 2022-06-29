@@ -12,21 +12,10 @@ const Header = () => {
       >
         <div className="headerLeft">
           <Link to="/" className="logo">
-            <img src={UTC2} alt="" style={{ width: '45px', marginRight: '2px' }} />
+            <img src={UTC2} alt="" />
           </Link>
           <Link to="/" style={{ textDecoration: 'none' }}>
-            <p
-              style={{
-                margin: '1px 12px 1px 5px',
-                fontSize: '18px',
-                width: '120px',
-                height: '100%',
-                color: '#002F77',
-                fontWeight: '650',
-              }}
-            >
-              UTC2 Media
-            </p>
+            <p className="header-title"> UTC2 Media</p>
           </Link>
         </div>
 

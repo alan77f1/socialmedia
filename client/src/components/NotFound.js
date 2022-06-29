@@ -1,7 +1,7 @@
 const NotFound = () => {
   return (
-    <div className="position-relative" style={{ minHeight: 'calc(100vh - 70px)' }}>
-      <h2 className="position-absolute text-secondary notfound">404 | Not Found.</h2>
+    <div className="position-relative">
+      <h2 className="position-absolute notfound">404 | Not Found.</h2>
     </div>
   );
 };

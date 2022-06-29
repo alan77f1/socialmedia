@@ -72,30 +72,26 @@ const Login = () => {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="btn btn-warning w-100"
-            disabled={email && password ? false : true}
-            style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600' }}
-          >
+          <button type="submit" className="btn btn-login btn-warning w-100" disabled={email && password ? false : true}>
             Đăng Nhập
           </button>
 
-          <Link
-            to="/forgot_password"
-            style={{ color: '#0075FF', margin: '12px 0 10px 139px', borderBottom: '1px solid #dbdbdb', width: '100px' }}
+          <div
+            className=""
+            style={{
+              color: '#0075FF',
+              margin: '17px 5px 12px 64px',
+              borderBottom: '1px solid #dbdbdb',
+              width: '67%',
+              textAlign: 'center',
+            }}
           >
-            Quên Mật Khẩu?
-          </Link>
-          <Link to="/register">
-            <button
-              type="submit"
-              className="btn btn-success w-100"
-              style={{ color: '#ffffff', fontSize: '18px', fontWeight: '600', marginTop: '20px' }}
-            >
-              Đăng ký tài khoản
-            </button>
-          </Link>
+            <Link to="/forgot_password" style={{ marginRight: '10px' }}>
+              Quên Mật Khẩu?
+            </Link>
+
+            <Link to="/register">Đăng ký tài khoản</Link>
+          </div>
         </form>
       </div>
     </Helmet>

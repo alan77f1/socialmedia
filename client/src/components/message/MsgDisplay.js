@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteMessages } from '../../redux/actions/messageAction';
-import { imageShow, videoShow } from '../../utils/mediaShow';
 import Avatar from '../Avatar';
 
 const MsgDisplay = ({ user, msg, data }) => {
@@ -29,12 +28,7 @@ const MsgDisplay = ({ user, msg, data }) => {
           </i>
         )}
 
-        <div>
-          {msg.text && <div className="chat_text">{msg.text}</div>}
-          {msg.media.map((item, index) => (
-            <div key={index}>{item.url.match(/video/i) ? videoShow(item.url) : imageShow(item.url)}</div>
-          ))}
-        </div>
+        <div>{msg.text && <div className="chat_text">{msg.text}</div>}</div>
       </div>
 
       <div className="chat_time">{new Date(msg.createdAt).toLocaleString()}</div>

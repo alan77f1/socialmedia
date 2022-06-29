@@ -101,7 +101,13 @@
   position: absolute;
   top: 30px;
   right: 543px;
+  border-radius: 50px;
+  background: #e4e6eb;
+  font-weight: bold;
+  color: #606770;
+  font-size: 17px;
 }
+
 .edit_profile .info_avatar {
   width: 150px;
   height: 150px;
@@ -146,20 +152,12 @@
 }
 
 /* ----------- Follow ------- */
-.follow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #dddddda3;
-  width: 100%;
-  height: 100vh;
-  z-index: 4;
-}
+
 .follow_box {
-  width: 350px;
+  width: 400px;
   border-radius: 15px;
   background: white;
-  padding: 20px 10px;
+  padding: 10px 12px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -171,12 +169,13 @@
   height: 350px;
   overflow: auto;
 }
-.follow_box .close {
+.follow_box .btn_close {
   position: absolute;
-  top: 0;
-  right: 3px;
-  font-size: 3rem;
+  top: 7px;
+  right: 9px;
+  font-size: 1rem;
   cursor: pointer;
+  border-radius: 50px;
 }
 
 /* --------- Save Tab ----------- */
@@ -187,30 +186,22 @@
   justify-content: center;
 }
 .profile_tab button {
-  outline: none;
-  border: none;
-  background: #f0f2f5;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 5px 20px;
-  opacity: 0.5;
-  background: #f0f2f5;
-  width: 100%;
-  max-width: 300px;
+  cursor: pointer;
+  color: var(--);
+  background: transparent;
+  padding: 5px 100px;
 }
 
-.profile_tab button:hover {
-  cursor: pointer;
-}
 .profile_tab button.active {
-  opacity: 0.8;
-  font-weight: 650;
-  color: #002f77;
-  background: #f0f2f5;
-  width: 100%;
-  max-width: 300px;
-  border: 2px solid #002f77;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out;
+  padding: 5px 100px;
 }
 
 .container_content {
@@ -218,8 +209,7 @@
 }
 
 .container_content-title {
-  margin: 0 10px;
-  text-align: end;
+  margin-left: 78%;
 }
 
 /* profile info */
@@ -244,11 +234,11 @@
 
 /* profile header */
 
-.profileTop {
+.profile_avatar {
   position: relative;
 }
 
-.profileTopCoverImg {
+.profile_cover {
   height: 340px;
   width: 100%;
   object-fit: cover;
@@ -256,13 +246,13 @@
   border-bottom-right-radius: 12px;
 }
 
-.profileTopWrap {
+.profile_avatar_wrap {
   padding: 0 2px;
 }
 
-.profileTopAvatar {
-  width: 165px;
-  height: 165px;
+.profile_avatar_avar {
+  width: 145px;
+  height: 142px;
   background-color: #242526;
   display: flex;
   justify-content: center;
@@ -274,56 +264,17 @@
   transform: translateX(-50%);
 }
 
-.profileTopAvatarImg {
-  width: 168px;
-  height: 168px;
+.profile_avatar_img {
+  width: 145px;
+  height: 145px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.profileTopChangeAvatarBtn {
-  position: absolute;
-  bottom: 20px;
-  right: 2px;
-
-  width: 36px;
-  height: 36px;
-  background-color: #3a3b3c;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profileTopAvatarIcon {
-  background-size: auto;
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  filter: invert(93%) sepia(3%) saturate(224%) hue-rotate(182deg) brightness(97%) contrast(98%);
-}
-
-.profileTopInfo {
+.profile_avatar_info {
   text-align: center;
   color: #000;
-  margin-top: 53px;
-}
-
-.profileTopInfoName {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.profileTopInfoDesc {
-  font-weight: 400;
-  font-size: 16px;
-  margin-top: 8px;
-}
-
-.profileTopHr {
-  border: none;
-  border-bottom: 0.5px solid rgb(61, 61, 61);
+  margin-top: 29px;
 }
 
 .content_font {
@@ -338,4 +289,51 @@
 
 .content_right form h4 {
   color: white;
+}
+
+/* Follow Status */
+.info_status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.info_status > hr {
+  width: 100%;
+  border: 1px solid var(--hrColor);
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.info_status > div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info_card {
+  top: 0;
+  left: 0;
+  background: #dddddda3;
+  width: 273px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.info_card > span:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.info_card > span:nth-of-type(2) {
+  color: var(--gray);
+  font-size: 13px;
 }

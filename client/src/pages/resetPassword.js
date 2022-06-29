@@ -106,7 +106,7 @@ function ResetPassword() {
 
             <small className="form-text text-danger">{alert.cf_password ? alert.cf_password : ''}</small>
           </div>
-          <button type="submit" className="btn btn-success w-100">
+          <button type="submit" className="btn btn-login btn-success w-100">
             Xác nhận
           </button>
         </form>

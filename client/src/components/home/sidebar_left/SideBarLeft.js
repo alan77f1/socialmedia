@@ -63,7 +63,7 @@ const SideBarLeft = () => {
           >
             Liên hệ với chúng tôi
           </a>
-          <small className="d-block">Chào mừng dến với UTC2 News</small>
+          <small className="d-block">Chào mừng dến với UTC2 Media</small>
         </div>
       </div>
     </div>

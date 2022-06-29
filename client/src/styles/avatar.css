@@ -1,6 +1,6 @@
 .supper-avatar {
-  width: 165px;
-  height: 168px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
 }
 
@@ -30,4 +30,10 @@
 }
 .reactions span {
   margin: 3px 0;
+}
+
+.username {
+  opacity: 0.8;
+  font-size: 1rem;
+  color: #536471;
 }
