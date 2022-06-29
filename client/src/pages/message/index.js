@@ -14,7 +14,7 @@ const Message = () => {
             className="d-flex justify-content-center 
                 align-items-center flex-column h-100"
           >
-            <i className="fab fa-facebook-messenger " style={{ fontSize: '5rem', color: '#002F77' }} />
+            <i className="fab fa-facebook-messenger icon_messenger " />
             <h4 style={{ marginTop: '12px' }}>Tin nhắn của bạn</h4>
           </div>
         </div>
