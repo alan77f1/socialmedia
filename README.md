@@ -4,7 +4,7 @@ Full name: Bui Van Tan
 
 - Class: Information Technology - K60
 
-## Topic: Managing social networks UTC2
+## Topic: Social Media UTC2
 
 Lecturer: Pham Thi Mien
 
@@ -58,7 +58,7 @@ Lecturer: Pham Thi Mien
 
 ## Part 3: Using instructions:
 
-### Step 1. git clone https://github.com/buivantann/Social_Network.git
+### Step 1. git clone https://github.com/buivantann/SocialMedia.git
 
 ### Step 2. Create database with mongodb on [MongoDb Atlas](https://cloud.mongodb.com) and create .env file and add necessary information based on .env.example file
 
