@@ -64,4 +64,22 @@ Lecturer: Pham Thi Mien
 
 ### Step 3. npm install && npm run dev
 
+## Some images demo
+
+### Login page
+
+![login-page](https://user-images.githubusercontent.com/67332180/176631641-aa8050ec-f492-47a6-adc2-fe167b480cec.jpg)
+
+### Home page
+
+![home-page](https://user-images.githubusercontent.com/67332180/176631695-acc17770-382c-467c-acb9-fbda70685921.jpg)
+
+### create post
+
+![create-post](https://user-images.githubusercontent.com/67332180/176631661-a1201965-892b-43d9-9b29-235752f6f2e3.jpg)
+
+### info page
+
+![info](https://user-images.githubusercontent.com/67332180/176631717-c5c8639f-6847-456f-b7ac-3ea4dd6fd001.jpg)
+
 Thank you!
