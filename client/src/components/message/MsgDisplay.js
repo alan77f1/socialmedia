@@ -24,7 +24,7 @@ const MsgDisplay = ({ user, msg, data }) => {
       <div className="you_content">
         {user._id === auth.user._id && (
           <i className="you_content_detele" onClick={handleDeleteMessages}>
-            Thu hồi tin nhắn
+            Thu hồi
           </i>
         )}
 
