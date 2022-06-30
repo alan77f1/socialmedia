@@ -126,7 +126,17 @@ const CommentCard = ({ children, comment, post, commentId }) => {
 
         <div className="d-flex align-items-center mx-2" style={{ cursor: 'pointer' }}>
           <CommentMenu post={post} comment={comment} setOnEdit={setOnEdit} />
-          <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
+          <div className="post_bottom_action_item">
+            {isLike ? (
+              <span onClick={handleUnLike} className="post_bottom_action_comment" style={{ color: '#002F77' }}>
+                Thích
+              </span>
+            ) : (
+              <span onClick={handleLike} className="post_bottom_action_comment" style={{ color: 'black' }}>
+                Thích
+              </span>
+            )}
+          </div>
         </div>
       </div>
 

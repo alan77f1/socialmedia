@@ -99,7 +99,7 @@
   width: 100%;
   height: calc(100% - 110px);
   overflow-y: auto;
-  padding: 0 10px;
+  padding: 0 14px;
 }
 .chat_display {
   width: 100%;
@@ -133,9 +133,9 @@
   margin-left: 468px;
 }
 .you_message .chat_text {
-  background: #0048aa;
+  background: var(--buttonBg);
   color: white;
-  border: 1px solid #0048aa;
+  border: 1px solid var(--buttonBg);
   border-radius: 24px 24px 0 24px;
 }
 .other_message .chat_text {
@@ -164,4 +164,10 @@
 }
 .chat_input .dropdown-menu {
   transform: translate3d(-110px, -200px, 0px) !important;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 10%), -1px -1px 8px rgb(0 0 0 / 10%);
+}
+
+.icon_messenger {
+  font-size: 5rem;
+  color: #002f77;
 }

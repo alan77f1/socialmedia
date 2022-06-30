@@ -19,6 +19,7 @@
   position: absolute;
   right: 0;
   left: inherit;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 10%), -1px -1px 8px rgb(0 0 0 / 10%);
 }
 .posts .card_header .dropdown-item {
   display: flex;
@@ -64,13 +65,23 @@
   height: inherit;
 }
 
-.post_bottom_action_item-Text {
+.post_bottom_action_item-text {
   font-weight: 600;
   font-size: 16px;
   padding: 7px 105px;
 }
 
-.post_bottom_action_item-Text:hover {
+.post_bottom_action_item-text:hover {
+  text-decoration: none;
+}
+
+.post_bottom_action_comment {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 7px 0px;
+}
+
+.post_bottom_action_comment:hover {
   text-decoration: none;
 }
 

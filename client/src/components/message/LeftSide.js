@@ -107,13 +107,7 @@ const LeftSide = () => {
           <>
             {message.users.map((user) => (
               <div key={user._id} className={`message_user ${isActive(user)}`} onClick={() => handleAddUser(user)}>
-                <UserCard user={user} msg={true}>
-                  {user.online ? (
-                    <i className="fas fa-circle text-success" />
-                  ) : (
-                    auth.user.following.find((item) => item._id === user._id) && <i className="fas fa-circle" />
-                  )}
-                </UserCard>
+                <UserCard user={user} msg={true}></UserCard>
               </div>
             ))}
           </>

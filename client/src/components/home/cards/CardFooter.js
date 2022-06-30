@@ -79,7 +79,7 @@ const CardFooter = ({ post }) => {
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">
-          <Link to={`/post/${post._id}`} className="post_bottom_action_item-Text text-dark">
+          <Link to={`/post/${post._id}`} className="post_bottom_action_item-text text-dark">
             Bình luận
           </Link>
         </div>

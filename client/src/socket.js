@@ -26,7 +26,7 @@ const Socket = () => {
 
   const audioRef = useRef();
 
-  // joinUser
+  // Replays joinUser
   useEffect(() => {
     socket.emit('joinUser', auth.user);
   }, [socket, auth.user]);

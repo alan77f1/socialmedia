@@ -35,7 +35,7 @@
   width: 100%;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 8px rgba(0, 0, 0, 0.1);
   padding: 22px;
-  border-radius: 38px;
+  border-radius: 22px;
 }
 
 .auth_page form .pass {
@@ -52,7 +52,7 @@
 }
 .position-relative small {
   position: absolute;
-  top: 116%;
+  top: 460%;
   right: 5px;
   transform: translateY(-50%);
   cursor: pointer;

@@ -81,7 +81,7 @@ const EditProfile = ({ setOnEdit }) => {
             <small
               className="text-danger position-absolute"
               style={{
-                top: '50%',
+                top: '460%',
                 right: '5px',
                 transform: 'translateY(-50%)',
               }}

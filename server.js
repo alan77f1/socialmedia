@@ -3,7 +3,6 @@ const connectDatabase = require('./config/db');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const SocketApi = require('./SocketApi');
-const { ExpressPeerServer } = require('peer');
 const path = require('path');
 
 const app = express();
@@ -15,12 +14,10 @@ app.use(cookieParser());
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
+// Create connect client and server
 io.on('connection', (socket) => {
   SocketApi(socket);
 });
-
-// Create peer server
-ExpressPeerServer(http, { path: '/' });
 
 // Routes
 app.use('/api', require('./routes/authRouter'));

@@ -68,7 +68,7 @@ const Info = ({ id, auth, profile, dispatch }) => {
               </div>
 
               <div className="info_card">
-                <span onClick={() => setShowFollowers(true)}>{user.following.length}</span>
+                <span onClick={() => setShowFollowing(true)}>{user.following.length}</span>
                 <span>Đang theo dõi</span>
               </div>
               <div className="info_card">
