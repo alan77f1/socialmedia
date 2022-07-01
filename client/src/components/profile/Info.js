@@ -44,8 +44,8 @@ const Info = ({ id, auth, profile, dispatch }) => {
                 </div>
               </div>
               <div className="profile_avatar_info">
-                <h4>@{user.username}</h4>
                 <h4>{user.fullname}</h4>
+                <h4>@{user.username}</h4>
               </div>
               <div className="container_content-title">
                 {user._id === auth.user._id ? (

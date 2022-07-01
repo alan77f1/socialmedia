@@ -72,7 +72,7 @@ Lecturer: Pham Thi Mien
 
 ### Home page
 
-![home-page](https://user-images.githubusercontent.com/67332180/176631695-acc17770-382c-467c-acb9-fbda70685921.jpg)
+![image](https://user-images.githubusercontent.com/67332180/176822364-433f2ae2-9525-4eff-b84a-385a51d55c32.png)
 
 ### Create post
 
@@ -80,6 +80,6 @@ Lecturer: Pham Thi Mien
 
 ### Info page
 
-![info](https://user-images.githubusercontent.com/67332180/176631717-c5c8639f-6847-456f-b7ac-3ea4dd6fd001.jpg)
+![image](https://user-images.githubusercontent.com/67332180/176822482-fda7cc78-febe-48ee-bcbd-60727de216fa.png)
 
 Thank you!
