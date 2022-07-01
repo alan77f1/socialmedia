@@ -74,11 +74,11 @@ Lecturer: Pham Thi Mien
 
 ![home-page](https://user-images.githubusercontent.com/67332180/176631695-acc17770-382c-467c-acb9-fbda70685921.jpg)
 
-### create post
+### Create post
 
 ![create-post](https://user-images.githubusercontent.com/67332180/176631661-a1201965-892b-43d9-9b29-235752f6f2e3.jpg)
 
-### info page
+### Info page
 
 ![info](https://user-images.githubusercontent.com/67332180/176631717-c5c8639f-6847-456f-b7ac-3ea4dd6fd001.jpg)
 

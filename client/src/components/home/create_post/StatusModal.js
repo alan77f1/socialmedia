@@ -42,7 +42,7 @@ const StatusModal = () => {
     if (images.length === 0)
       return dispatch({
         type: GLOBALTYPES.ALERT,
-        payload: { error: 'Vui Lòng Thêm Ảnh Của Bạn.' },
+        payload: { error: 'Vui lòng thêm ảnh của bạn.' },
       });
 
     if (status.onEdit) {
