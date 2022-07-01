@@ -55,7 +55,7 @@
 .sidebar_item_link:hover,
 .sidebar_item:hover,
 .shortcuts:hover {
-  background-color: var(--yellow);
+  background-color: var(--orange);
   cursor: pointer;
   transition: all 0.25s;
 }
@@ -110,7 +110,7 @@
 
 .sidebar_ads_item:hover {
   cursor: pointer;
-  background-color: var(--yellow);
+  background-color: var(--orange);
 }
 
 .sidebar_ads_item-content {

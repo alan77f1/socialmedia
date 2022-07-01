@@ -43,19 +43,34 @@
 .posts .card_icon_menu {
   display: flex;
   justify-content: space-between;
-
   cursor: pointer;
   font-size: 14px;
+  padding: 4px;
+  border-bottom: 0.5px solid rgb(216, 216, 216);
 }
-.posts .card_icon_menu i {
-  margin: 5px;
-  padding: 15px;
+
+.posts .card_show_like {
+  padding: 5px 15px 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 350;
+  color: #65676b;
 }
-.posts .card_icon_menu img {
-  width: 28px;
-  height: 28px;
-  transform: translate(5px, -5px);
-  opacity: 0.9;
+
+.posts .card_show_like-icon {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 350;
+  color: #65676b;
+  margin-right: 3px;
+}
+
+.posts .card_show_comments {
+  padding: 5px 15px 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 350;
+  color: #65676b;
 }
 
 .post_bottom_action_item {
@@ -95,7 +110,7 @@
 }
 
 .post_bottom_action_item:hover {
-  background-color: var(--yellow);
+  background-color: var(--orange);
   transition: all 0.1s;
 }
 

@@ -42,40 +42,14 @@ const CardFooter = ({ post }) => {
   return (
     <div className="card_footer">
       <div className="d-flex justify-content-between " style={{ borderBottom: '0.5px solid rgb(216,216,216)' }}>
-        <h6
-          style={{
-            padding: '5px 15px 0 15px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            fontWeight: '350',
-            color: '#65676B',
-          }}
-        >
-          <i
-            className="fa fa-heart"
-            style={{
-              cursor: 'pointer',
-              fontSize: '16px',
-              fontWeight: '350',
-              color: '#65676B',
-            }}
-          ></i>{' '}
+        <h6 className="card_show_like">
+          <i className="fa fa-heart card_show_like-icon"></i>
           {post.likes.length}
         </h6>
 
-        <h6
-          style={{
-            padding: '5px 15px 0 15px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            fontWeight: '350',
-            color: '#65676B',
-          }}
-        >
-          {post.comments.length} bình luận
-        </h6>
+        <h6 className="card_show_comments">{post.comments.length} bình luận</h6>
       </div>
-      <div className="card_icon_menu" style={{ padding: '4px', borderBottom: '0.5px solid rgb(216,216,216) ' }}>
+      <div className="card_icon_menu">
         <LikeButton isLike={isLike} handleLike={handleLike} handleUnLike={handleUnLike} />
 
         <div className="post_bottom_action_item">
