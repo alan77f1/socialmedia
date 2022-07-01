@@ -22,6 +22,7 @@
   display: block;
   object-fit: cover;
   border-radius: 15px;
+  border: 5px solid #fcb61f;
 }
 .post_thumb_display .post_thumb_menu {
   position: absolute;
