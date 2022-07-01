@@ -182,7 +182,7 @@
 }
 
 .menu-middle-item:hover {
-  background-color: var(--yellow);
+  background-color: var(--orange);
 }
 
 .menu-middle-item_badge {

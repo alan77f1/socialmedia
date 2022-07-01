@@ -95,7 +95,7 @@
 }
 
 .post_bottom_action_item:hover {
-  background-color: var(--yellow);
+  background-color: var(--orange);
   transition: all 0.1s;
 }
 
