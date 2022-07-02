@@ -16,6 +16,9 @@ const MsgDisplay = ({ user, msg, data }) => {
 
   return (
     <>
+      <div className="chat_title">
+        <Avatar src={user.avatar} size="small-avatar" />
+      </div>
       <div className="you_content">
         {user._id === auth.user._id && (
           <i className="you_content_detele" onClick={handleDeleteMessages}>

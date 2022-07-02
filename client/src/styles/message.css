@@ -121,6 +121,10 @@
   justify-content: start;
   justify-items: start;
 }
+.chat_title {
+  margin-bottom: 3px;
+}
+
 .chat_text {
   padding: 9px 14px;
   margin-bottom: 5px;

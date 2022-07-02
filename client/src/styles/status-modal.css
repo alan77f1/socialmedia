@@ -12,7 +12,7 @@
   max-width: 550px;
   width: 100%;
   background: white;
-  margin: 222px auto;
+  margin: 167px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
 }
 .status_body textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 250px;
   border: none;
   outline: none;
   resize: none;
