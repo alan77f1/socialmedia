@@ -20,11 +20,11 @@ const MsgDisplay = ({ user, msg, data }) => {
         <Avatar src={user.avatar} size="small-avatar" />
       </div>
       <div className="you_content">
-        {user._id === auth.user._id && (
+        {/* {user._id === auth.user._id && (
           <i className="you_content_detele" onClick={handleDeleteMessages}>
             Thu hồi
           </i>
-        )}
+        )} */}
 
         <div>{msg.text && <div className="chat_text">{msg.text}</div>}</div>
       </div>
