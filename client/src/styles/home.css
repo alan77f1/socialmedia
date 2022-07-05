@@ -28,7 +28,7 @@
 
 /* ---------- Post Card Body ---------- */
 .posts .card_body-content {
-  padding: 0 25px;
+  padding: 0 44px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
@@ -164,7 +164,7 @@
   max-width: 100px;
   height: 38px;
   color: #fff;
-  background-color: #002f77;
+  background-color: #fcb61f;
   border-radius: 5rem;
   border: none;
 }
